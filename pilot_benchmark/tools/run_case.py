@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 
 import _common as C
@@ -57,6 +58,10 @@ def run_one(case_dir, variant, device_ok):
         C.save_metadata(case_dir, meta)
         print(f"[FAIL] {cid}: no {variant}_run_command")
         return
+
+    # The run command writes its result to output/<variant>_output.txt; make
+    # sure that directory exists (it is gitignored and absent on a fresh clone).
+    os.makedirs(os.path.join(case_dir, "output"), exist_ok=True)
 
     rc, _ = C.run_logged(command, case_dir, log, timeout=600)
     C.set_status(meta, run_key, "pass" if rc == 0 else "fail")
