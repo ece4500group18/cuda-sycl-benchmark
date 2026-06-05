@@ -1,0 +1,23 @@
+# Sensitive: server connection manual / credentials
+s_sh/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+build/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

@@ -1,0 +1,17 @@
+# Case: embedding (ai)
+
+| field | value |
+| --- | --- |
+| category | ai |
+| operation | Embedding lookup |
+| correctness | cpu_reference / exact (tol 0.0) |
+| CUDA features | __global__, gather |
+| libraries | - |
+
+Notes: Gather rows from a table. sizes=[vocab,dim,num_ids].
+
+## Pipeline
+Build CUDA -> run -> verify, then SYCLomatic migrate -> build SYCL -> run ->
+verify. Inputs are deterministic; `tests/verify.py` recomputes a CPU reference
+and compares `output/<variant>_output.txt` within tolerance. Missing
+toolchains/devices yield `skipped_*` statuses (never hard failures).

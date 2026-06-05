@@ -1,0 +1,17 @@
+# Case: jacobi2d (hpc)
+
+| field | value |
+| --- | --- |
+| category | hpc |
+| operation | Jacobi iteration (2D Laplace) |
+| correctness | cpu_reference / max_rel_error (tol 0.001) |
+| CUDA features | __global__, iterative, 2D_indexing |
+| libraries | - |
+
+Notes: Fixed boundaries, K iterations. sizes=[ny,nx,iters].
+
+## Pipeline
+Build CUDA -> run -> verify, then SYCLomatic migrate -> build SYCL -> run ->
+verify. Inputs are deterministic; `tests/verify.py` recomputes a CPU reference
+and compares `output/<variant>_output.txt` within tolerance. Missing
+toolchains/devices yield `skipped_*` statuses (never hard failures).
