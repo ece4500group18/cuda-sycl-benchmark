@@ -1,0 +1,6 @@
+id:        graph-11
+upstream:  https://github.com/IntelligentSoftwareSystems/Galois @ b67f9420
+path:      lonestar/analytics/gpu/sssp
+license:   BSD-3 (UT Austin) (full text: ../_licenses/Galois-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     needs ../_deps/galois-libgpu; see graph-10

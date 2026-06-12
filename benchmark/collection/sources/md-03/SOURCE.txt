@@ -1,0 +1,6 @@
+id:        md-03
+upstream:  https://github.com/zjin-lcf/HeCBench @ 01f58fc5
+path:      src/md-cuda
+license:   BSD-3-Clause (full text: ../_licenses/HeCBench-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     origin: SHOC; ships own LICENSE file (kept)
