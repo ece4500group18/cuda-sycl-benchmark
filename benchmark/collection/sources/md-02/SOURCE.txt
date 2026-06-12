@@ -1,0 +1,6 @@
+id:        md-02
+upstream:  https://github.com/yuhc/gpu-rodinia (Rodinia 3.1 mirror) @ 9c10d3ea
+path:      cuda/lavaMD
+license:   BSD-style (UVA Rodinia) (full text: ../_licenses/gpu-rodinia-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     result.txt (4.7MB output dump) excluded

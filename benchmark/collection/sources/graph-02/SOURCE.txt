@@ -1,0 +1,6 @@
+id:        graph-02
+upstream:  https://github.com/zjin-lcf/HeCBench @ 01f58fc5
+path:      src/sssp-cuda
+license:   BSD-3-Clause (full text: ../_licenses/HeCBench-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     origin: UIUC Chai; input data via 'dvc pull' in upstream repo

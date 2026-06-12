@@ -1,0 +1,6 @@
+id:        md-07
+upstream:  https://github.com/NVIDIA/cuda-samples @ b7c5481c
+path:      cpp/2_Concepts_and_Techniques/particles
+license:   BSD-style (NVIDIA) (full text: ../_licenses/cuda-samples-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     doc/ excluded; uses thrust sort; ref_particles.bin (512KB) kept

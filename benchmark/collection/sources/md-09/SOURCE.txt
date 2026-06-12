@@ -1,0 +1,6 @@
+id:        md-09
+upstream:  https://github.com/NVIDIA/CoMD-CUDA @ c3b39ed5
+path:      src-mpi/ + cub/ + pots/ (src-openmp, src-serial, examples excluded)
+license:   BSD-style (LANL+NVIDIA) (LICENSE.md included)
+retrieved: 2026-06-11
+notes:     full mini-app; EAM potentials in pots/; vendored cub kept

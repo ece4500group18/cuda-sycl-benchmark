@@ -1,0 +1,6 @@
+id:        md-01
+upstream:  https://github.com/NVIDIA/cuda-samples @ b7c5481c
+path:      cpp/5_Domain_Specific/nbody
+license:   BSD-style (NVIDIA) (full text: ../_licenses/cuda-samples-LICENSE.txt)
+retrieved: 2026-06-11
+notes:     doc/ excluded; OpenGL renderer to be stripped during adaptation
