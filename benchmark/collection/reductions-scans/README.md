@@ -1,6 +1,6 @@
 # reductions and scans collection
 
-Owner: TBD
+Owner: Zijian
 
 See `../README.md` for the shared workflow, CSV columns, SOURCE.txt
 format, and snapshot rules. Fill in the coverage matrix below, then
