@@ -1,117 +1,115 @@
-# Benchmark Collection: graph/irregular + MD/simulation
+# Collection workspace
 
-Collection workspace for the two categories owned by liqui. Strategy:
-coverage-matrix-driven, not count-driven. We stop collecting when new
-candidates no longer light up new cells in the matrices below.
+This is the **collection-phase working area** for the CUDA-to-SYCL
+benchmark. It holds the candidate registries and CUDA source snapshots we
+gather before adapting selected cases into the final pilot-style format
+(`pilot_benchmark/` layout: `original/main.cu` + `CMakeLists` +
+deterministic inputs + `tests/verify.py` + `metadata.json`).
 
-Candidates are registered in `candidates.csv` (one row per candidate;
-registration != inclusion). Workflow:
+**One folder per category. One owner per category.** Each member works
+inside their own category folder, so registries never collide.
+Registration in a `candidates.csv` is *not* a decision to include a case —
+the `final_decision` column is.
 
-1. Round 1 (desk review): fill id/repo/url/license/name/domain/features/
-   difficulty by reading code. No building.
-2. Round 2 (validation): for shortlisted rows only, fill build/run status
-   and design the correctness oracle. Requires an nvcc machine (local
-   machine has none).
-3. Final: mark include/exclude; included cases get adapted to the
-   `pilot_benchmark/` case format (deterministic inputs, verify.py,
-   metadata.json).
+## Layout
 
-## Sources and licenses (verified 2026-06-11)
+```
+collection/
+├── README.md                 <- this file: the shared contribution guide
+├── _TEMPLATE/                <- copy this to start a new category
+│   ├── README.md
+│   └── candidates.csv
+└── <category-slug>/          <- one per category (see table below)
+    ├── README.md             <- owner + coverage matrix + gaps for this category
+    ├── candidates.csv         <- this category's registry (columns defined below)
+    └── sources/
+        ├── <id>/             <- one snapshot per non-excluded candidate
+        │   ├── <upstream CUDA source, trimmed>
+        │   └── SOURCE.txt    <- provenance (format below)
+        ├── _deps/            <- shared headers a case compiles against (optional)
+        └── _licenses/        <- upstream license texts, referenced by SOURCE.txt
+```
 
-| Source | License | Notes |
+## How to add your category
+
+1. `cp -r _TEMPLATE <your-category-slug>` (use the slug from the table below).
+2. Edit `<slug>/README.md`: put your name as owner and define your
+   coverage matrix (the dimensions your category should span). Collection
+   is **coverage-driven, not count-driven** — you stop when new candidates
+   stop lighting up new matrix cells, not at a fixed number.
+3. Register every candidate as a row in `<slug>/candidates.csv` using the
+   columns below. IDs are `<slug-prefix>-NN` (e.g. `graph-01`, `md-01`).
+4. For each candidate whose `final_decision` is not `exclude`, snapshot
+   its CUDA source under `<slug>/sources/<id>/` and add a `SOURCE.txt`
+   (format below).
+5. Open a PR. A teammate reviews format compliance before merge.
+
+## candidates.csv columns
+
+`id, source_repo, source_url, license, kernel_application_name, domain,
+cuda_features_used, estimated_difficulty, build_status, run_status,
+correctness_oracle, input_size, reason_selected, migration_notes,
+final_decision`
+
+- `estimated_difficulty`: A (straightforward) / B / C (hardest).
+- `build_status` / `run_status`: `not_attempted` until validated on a
+  machine with the toolchain (see note below); then `ok` / `fail:<why>` /
+  `skipped`.
+- `correctness_oracle`: how a migrated version is checked (built-in
+  reference, CPU recompute, checksum, tolerance/statistical check). A case
+  with no designable oracle should be excluded.
+- `final_decision`: `candidate` / `exclude` / or a routing note such as
+  `transfer-to-stencil` when a case belongs to another category.
+
+## SOURCE.txt format
+
+One per snapshot, recording exactly where the code came from so anyone can
+re-fetch or extend it:
+
+```
+id:        graph-01
+upstream:  <repo URL> @ <short commit sha>
+path:      <subpath within the upstream repo>
+license:   <name> (full text: ../_licenses/<source>-LICENSE.txt)
+retrieved: YYYY-MM-DD
+notes:     <inputs location, what was stripped, build caveats>
+```
+
+## Snapshot rules
+
+- Pin the upstream **commit** in `SOURCE.txt`; sparse-checkout of the
+  recorded `path` is enough to reproduce a snapshot.
+- Keep it minimal: strip `.git`, `doc/`, IDE configs, and large output
+  dumps. Keep small upstream-shipped inputs (e.g. a sample graph);
+  otherwise record the download URL in `notes`.
+- Put the upstream license text once in `sources/_licenses/` and reference
+  it from each `SOURCE.txt`. Preserve any per-case `LICENSE` file that
+  ships inside the source.
+- Headers shared by several cases (e.g. a runtime library) go in
+  `sources/_deps/` and are referenced from the cases' `SOURCE.txt`.
+
+## Validation note
+
+Build/run validation needs an nvcc + SYCL toolchain. Members without a
+local toolchain leave `build_status`/`run_status` as `not_attempted` and
+validate on the team's designated GPU machine. Desk review (sources,
+licenses, features, difficulty, oracle plan) needs no GPU and comes first.
+
+## Categories and owners
+
+| Slug | Category | Owner |
 |---|---|---|
-| HeCBench (zjin-lcf/HeCBench) | BSD-3-Clause | Each case also ships an official SYCL port — useful as oracle, but a training-data contamination risk if used to evaluate LLM-based migration. Team decision pending. Desk review confirmed nearly all shortlisted cases have built-in CPU verification (`reference.h`); provenance per case recorded in CSV (ECL suite, Chai, cuGraph, SHOC, ising-gpu, motionsim). |
-| Rodinia (rodinia.cs.virginia.edu) | BSD-style (UVA) | Permissive; some sub-apps carry their own licenses — check per app. Datasets are a separate download. |
-| Pannotia (pannotia/pannotia) | BSD-style (AMD) | **Excluded as direct source** (desk review 2026-06-11): upstream kernels are OpenCL `.cl`, not CUDA. CUDA equivalents come via HeCBench ports. |
-| Galois / LonestarGPU (IntelligentSoftwareSystems/Galois) | BSD-3 (UT Austin) | Worklist-based irregular apps; hardest tier. GPU apps depend on the in-repo `libgpu` (gg/IrGL) runtime + cub — extracting a case means vendoring those headers. |
-| NVIDIA cuda-samples | BSD-style (NVIDIA) | Clean kernels, idiomatic CUDA. Repo restructured 2025: samples live under `cpp/<tier>/`. |
-| CoMD-CUDA (NVIDIA/CoMD-CUDA) | BSD-style (LANL+NVIDIA) | Full MD mini-app; richest CUDA feature set of all candidates (shfl, ballot, streams, async copies, vendored cub). |
-| Gunrock | Apache-2.0 | Template-heavy framework; whole-app migration likely out of scope. |
-| miniMD (Mantevo) | LGPL-3 | **Excluded**: copyleft + no plain-CUDA variant (Kokkos/OpenMP-target only). |
+| `simple-kernels` | simple-but-not-trivial kernels | TBD |
+| `memory-movement` | memory movement & layout | TBD |
+| `stencil-convolution` | stencil / convolution / image processing | TBD |
+| `reductions-scans` | reductions and scans | TBD |
+| `graph-irregular` | graph / irregular access | liqui |
+| `molecular-dynamics` | molecular dynamics / simulation | liqui |
+| `linear-algebra` | linear algebra | TBD |
+| `multi-kernel-pipelines` | multi-kernel pipelines | TBD |
+| `cuda-library-usage` | CUDA library usage | TBD |
+| `streams-atomics-templates` | streams, events, shared memory, atomics, templates, macros | TBD |
 
-Local working copies for desk review live in `sources/` (gitignored,
-sparse checkouts).
-
-## Coverage matrix: graph / irregular access
-
-Dimensions (a case "covers" a cell if its kernels exercise it):
-
-- **Rep**: input representation — `CSR`, `COO/edge-list`, `dense-adj`
-- **Par**: parallelization — `topo` (topology-driven, all vertices each
-  iter), `edge` (edge-centric), `wl` (data-driven worklist/frontier)
-- **Sync**: `flag` (host-loop convergence flag), `atomic`
-  (add/min/CAS), `warp` (shfl/ballot/vote)
-- **LB**: load balancing — `tpv` (thread-per-vertex), `coop`
-  (warp/block-cooperative), `dp` (dynamic parallelism)
-- **Mem**: `smem` (shared-memory staging/queues), `ldg` (texture/__ldg),
-  `dynalloc` (in-kernel allocation)
-
-Matrix below reflects desk review (2026-06-11), not just registration
-guesses. `RNG` column added after finding curand in independentset.
-
-| Candidate | Rep | Par | Sync | LB | Mem | RNG |
-|---|---|---|---|---|---|---|
-| rodinia/bfs | CSR | topo | flag | tpv | — | — |
-| hecbench/sssp (Chai) | CSR | wl | atomic(min,add,CAS) | tpv | smem | — |
-| hecbench/page-rank | CSR | topo | flag | tpv | — | — |
-| hecbench/mis (ECL-MIS) | CSR | topo | flag | tpv | — | hash priorities |
-| hecbench/cc (ECL-CC) | CSR/edge | edge | atomic(CAS,add)+warp(shfl) | tpv | smem | — |
-| hecbench/jaccard (cuGraph) | CSR | edge | atomic(add)+warp(shfl) | coop | — | — |
-| hecbench/floydwarshall | dense-adj | — | — | tpv | — (fw2 variant: smem tiled) | — |
-| hecbench/bh (ECL-BH) | tree | wl | atomic(CAS)+warp(ballot) | coop | smem | — |
-| lonestar/bfs-wl | CSR | wl | warp(ballot) | coop | smem queue | — |
-| lonestar/sssp-wl | CSR | wl | atomic(min)+warp(ballot) | coop | smem queue | — |
-| lonestar/spanningtree | CSR | wl | flag | coop | smem | — |
-| lonestar/triangle-counting | CSR | edge | atomic(add) | coop | smem | — |
-| lonestar/independentset | CSR | topo | flag | tpv | — | curand |
-| lonestar/dmr | mesh | wl | atomic(add,min) | coop | dynalloc | — |
-
-Cells still dark after this set: dynamic parallelism (`dp`) — only if a
-clean candidate shows up; not worth forcing. **Algorithm gaps**: graph
-coloring (Pannotia color is OpenCL-only; ECL-GC is a CUDA alternative,
-license unverified) and betweenness centrality (Pannotia bc also
-OpenCL-only) — acceptable gaps unless a clean candidate appears.
-
-## Coverage matrix: MD / simulation
-
-- **Neigh**: interaction handling — `all-pairs`, `cell-list`,
-  `verlet-list`
-- **Force**: `LJ`, `EAM`, `gravity`, `SPH`, `spin-MC` (Metropolis)
-- **Pipe**: `single-k` vs `multi-k` (multi-kernel + host time loop)
-- **Red**: energy/virial reduction present
-- **RNG**: `none`, `hash` (inline LCG/hash), `curand`
-- **Layout**: `AoS`, `SoA`, `vec` (float4 etc.)
-- **FPatomic**: atomic accumulation on floating point
-
-Matrix below reflects desk review (2026-06-11). Corrections vs
-registration: sph has NO atomics and is double-precision throughout;
-particle-diffusion RNG is host-pregenerated (kernel deterministic);
-fdtd3d turned out to be the cuda-samples FDTD3d port (pure stencil →
-proposed transfer); mcmd excluded (16.8K-LOC full application).
-
-| Candidate | Neigh | Force | Pipe | Red | RNG | Layout | Notable |
-|---|---|---|---|---|---|---|---|
-| cuda-samples/nbody | all-pairs | gravity | multi-k | — | none | vec (float4) | precision templates (51), __constant__ |
-| rodinia/lavaMD | cell-list | LJ-like | single-k | — | none | AoS+vec | — |
-| hecbench/md (SHOC) | verlet-list | LJ | single-k | yes | none | vec | precision templates |
-| hecbench/haccmk | all-pairs (cutoff) | poly-fit | single-k | yes | none | SoA | clean A-tier |
-| hecbench/ising | lattice | spin-MC | multi-k | yes | **curand** | SoA | library-RNG cell |
-| hecbench/sph | cell-list | SPH | multi-k (4 kernels) | — | none | AoS, double | no built-in verify — oracle to design |
-| cuda-samples/particles | cell-list (thrust sort) | DEM springs | multi-k | — | none | vec | thrust→oneDPL crossover |
-| hecbench/particle-diffusion | — | random walk | single-k | yes | host-pregen | SoA | deterministic kernel, exact-match oracle |
-| CoMD-CUDA | cell-list | LJ+EAM | multi-k | yes | none | SoA | shfl×48, ballot, streams×39, cub |
-
-Notes: `particles` uses thrust sort (library-usage crossover — coordinate
-with the CUDA-library category owner). `fdtd3d` moved to
-`transfer-to-stencil` in the CSV. `bh` overlaps graph and n-body; counted
-under graph. Float-atomic force accumulation is now a dark cell (sph
-doesn't have it) — CoMD's force kernels may cover it; re-check during
-build round.
-
-## Dedup policy
-
-Same algorithm from multiple suites (e.g. bfs in Rodinia, HeCBench,
-Lonestar): include at most two variants and only if they cover different
-matrix cells (e.g. rodinia/bfs is topo+flag, lonestar/bfs is
-wl+atomic+smem-queue — both stay). Otherwise prefer the smaller,
-cleaner source.
+Cross-category cases (e.g. a simulation case that is really a stencil) are
+assigned to exactly one owner; note the hand-off in `final_decision` and
+raise it at the weekly sync.
