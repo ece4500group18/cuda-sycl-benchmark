@@ -101,7 +101,7 @@ licenses, features, difficulty, oracle plan) needs no GPU and comes first.
 |---|---|---|
 | `simple-kernels` | simple-but-not-trivial kernels | TBD |
 | `memory-movement` | memory movement & layout | TBD |
-| `stencil-convolution` | stencil / convolution / image processing | TBD |
+| `stencil-convolution` | stencil / convolution / image processing | Zijian |
 | `reductions-scans` | reductions and scans | TBD |
 | `graph-irregular` | graph / irregular access | liqui |
 | `molecular-dynamics` | molecular dynamics / simulation | liqui |
