@@ -1,6 +1,6 @@
 # CUDA library usage collection
 
-Owner: TBD
+Owner: Weixuan Zhang
 
 See `../README.md` for the shared workflow, CSV columns, SOURCE.txt
 format, and snapshot rules. Fill in the coverage matrix below, then
