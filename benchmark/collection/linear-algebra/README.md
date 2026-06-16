@@ -1,6 +1,15 @@
 # linear algebra collection
 
-Owner: TBD
+Owner: Zi Ye
+
+sources:
+
+https://github.com/socal-ucr/polybench-gpu/tree/master (paper work, cite paper if used)
+
+https://github.com/NVIDIA/CUDALibrarySamples (planning to pick a few complex ones, the aim is to separate “translate CUDA kernel code” and “replace CUDA library calls with SYCL/oneAPI equivalents”)
+
+https://github.com/oneapi-src/Velocity-Bench optimization
+
 
 See `../README.md` for the shared workflow, CSV columns, SOURCE.txt
 format, and snapshot rules. Fill in the coverage matrix below, then

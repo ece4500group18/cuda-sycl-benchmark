@@ -1,1 +1,2 @@
 id,source_repo,source_url,license,kernel_application_name,domain,cuda_features_used,estimated_difficulty,build_status,run_status,correctness_oracle,input_size,reason_selected,migration_notes,final_decision
+2mm,https://github.com/socal-ucr/polybench-gpu/tree/master,https://github.com/socal-ucr/polybench-gpu/tree/master/CUDA/2MM,NULL,2mm,linear-algebra,NULL,easy
