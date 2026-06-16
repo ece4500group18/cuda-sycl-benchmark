@@ -1,0 +1,9 @@
+id: lib-01
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path: cuBLAS/Level-3/gemm
+license: Apache-2.0
+retrieved: 2026-06-16
+notes:
+cuBLAS GEMM example using cublasDgemm().
+Includes CUDA stream integration and asynchronous memory copies.
+Correctness can be verified via CPU matrix multiplication.
