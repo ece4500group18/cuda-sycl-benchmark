@@ -1,6 +1,14 @@
 # multi-kernel pipelines collection
 
-Owner: TBD
+Owner: Zi Ye
+
+sources:
+
+https://github.com/oneapi-src/Velocity-Bench optimization, look into folders `cudaSift`, `QuickSilver`, `reverse_time_migration`
+
+https://github.com/Dao-AILab/flash-attention multi-kernel shared memory (BSD 3-Clause License, usable?)
+
+https://github.com/nvidia/cutlass, also BSD-3-Clause
 
 See `../README.md` for the shared workflow, CSV columns, SOURCE.txt
 format, and snapshot rules. Fill in the coverage matrix below, then
