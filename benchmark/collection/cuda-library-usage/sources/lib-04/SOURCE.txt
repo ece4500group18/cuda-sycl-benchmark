@@ -1,0 +1,21 @@
+id: lib-04
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path: cuTENSOR/reduction.cu
+license: Apache-2.0
+retrieved: 2026-06-17
+notes:
+cuTENSOR tensor reduction example.
+
+Computes:
+C_{m,v} = alpha * A_{m,h,k,v} + beta * C_{m,v}
+
+Reduction dimensions:
+h, k
+
+Representative tensor reduction workload for CUDA→SYCL migration evaluation.
+
+Key migration challenges:
+- reduction dimensions
+- tensor descriptor creation
+- reduction operator mapping
+- workspace management
