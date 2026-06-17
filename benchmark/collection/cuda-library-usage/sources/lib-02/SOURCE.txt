@@ -1,0 +1,10 @@
+id: lib-02
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path: cuSOLVER/getrf
+license: Apache-2.0
+retrieved: 2026-06-17
+notes:
+cuSOLVER LU factorization (GETRF) example.
+Uses cusolverDn API for dense matrix factorization.
+Representative solver-library workload for CUDA→SYCL migration evaluation.
+Correctness can be verified via LU decomposition residual checks or reference output.
