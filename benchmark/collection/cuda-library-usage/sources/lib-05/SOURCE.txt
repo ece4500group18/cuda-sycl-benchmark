@@ -1,0 +1,21 @@
+id: lib-05
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path: cuTENSOR/elementwise_permute.cu
+license: Apache-2.0
+retrieved: 2026-06-17
+notes:
+cuTENSOR tensor permutation example.
+
+Computes:
+C_{c,w,h,n} = alpha * A_{w,h,c,n}
+
+Representative tensor layout transformation workload.
+
+This example performs NCHW <-> NHWC style tensor permutation while transferring
+data between host and device memory.
+
+Key migration challenges:
+- tensor index remapping
+- layout transformation
+- descriptor construction
+- memory ordering correctness
