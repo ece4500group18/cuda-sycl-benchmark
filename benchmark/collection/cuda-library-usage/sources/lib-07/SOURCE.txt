@@ -1,0 +1,24 @@
+id: lib-07
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: nvCOMP/examples/nzstd_cpu_compression.cu
+
+license: Apache-2.0
+
+retrieved: 2026-06-18
+
+notes:
+nvCOMP Zstandard (ZSTD) compression example.
+
+Performs batched compression using nvCOMP ZSTD APIs.
+
+Uses:
+- nvCOMP ZSTD compression APIs
+- BatchData abstraction
+- host-side preprocessing
+- chunked compression workflow
+
+Representative data-compression workload for CUDA→SYCL migration evaluation.
+
+Correctness can be validated through decompression and comparison with the original input data.
