@@ -1,0 +1,14 @@
+id: lib-06
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path: nvCOMP/examples/nvcomp_crc32.cu
+license: Apache-2.0
+retrieved: 2026-06-18
+notes: nvCOMP CRC32 example. Computes CRC32 checksums on batched input data using GPU acceleration.
+Uses:
+- nvCOMP CRC32 APIs
+- CUDA streams
+- CUDA events
+- batched device processing
+
+Contains an independent CPU CRC32 implementation used for correctness validation,
+making it suitable for CUDA→SYCL migration benchmarking.
