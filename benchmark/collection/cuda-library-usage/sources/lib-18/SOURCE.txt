@@ -1,0 +1,15 @@
+id: lib-17
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLAS/Extensions/GemmEx
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot includes cublas_GemmEx_example.cu and required helper files (e.g., cublas_utils.h). 
+
+Demonstrates cublasGemmEx with explicit data-type and compute-type configuration and verifies output against known GEMM results.
