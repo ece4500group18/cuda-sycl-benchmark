@@ -1,0 +1,19 @@
+id: streamprio-01
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/3_CUDA_Features/StreamPriorities
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-20
+
+notes:   
+
+CUDA sample demonstrating stream priority scheduling using two streams (high/low priority). 
+
+Uses cudaEventRecord for timing overlap measurement. 
+
+Kernel is a simple memcpy loop used to stress scheduling and concurrency. 
+
+No external dependencies beyond cuda_runtime and helper_cuda.
