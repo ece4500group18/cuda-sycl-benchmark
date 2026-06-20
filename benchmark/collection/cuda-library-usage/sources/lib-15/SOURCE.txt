@@ -1,0 +1,17 @@
+id: lib-15
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuFFT/lto_callback_window_1d/src
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot of cuFFT LTO callback device implementation. 
+
+Retained r2c_c2r_lto_callback_device.cu and callback_params.h. 
+
+Excluded host-side LTO examples, NVRTC examples, reference implementation, and build files.
