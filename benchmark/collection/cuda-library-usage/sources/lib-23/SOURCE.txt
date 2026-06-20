@@ -1,0 +1,17 @@
+id: lib-23
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLASMp
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot contains gemm.cu together with required helper files and matrix generation utilities. 
+
+Demonstrates distributed GEMM using cuBLASMp, MPI, NCCL communicators, distributed matrix descriptors, matrix gather/scatter operations, and correctness verification against a reference result. 
+
+Requires a multi-process MPI execution environment and cuBLASMp installation.
