@@ -1,0 +1,17 @@
+id: lib-13
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLASLt/LtSgemmSimpleAutoTuning
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot of cuBLASLt LtSgemmSimpleAutoTuning sample. 
+
+Retained sample_cublasLt_LtSgemmSimpleAutoTuning.{cu,h} and common helpers.{h,cpp} required by the sample. 
+
+Excluded build files and standalone driver main.cpp.
