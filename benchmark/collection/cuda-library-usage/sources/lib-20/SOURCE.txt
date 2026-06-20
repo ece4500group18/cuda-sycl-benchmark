@@ -1,0 +1,15 @@
+id: lib-20
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuSOLVER/gesvd
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot includes cusolver_gesvd_example.cu and required helper files (e.g., cusolver_utils.h). 
+
+Demonstrates dense singular value decomposition using cusolverDnDgesvd and verifies singular values against known reference results.
