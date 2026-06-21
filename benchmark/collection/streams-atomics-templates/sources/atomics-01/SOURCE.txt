@@ -1,0 +1,17 @@
+id: atomics-01
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/simpleAtomicIntrinsics
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates CUDA atomic intrinsic operations including atomicAdd atomicSub atomicExch atomicMax atomicMin atomicInc atomicDec atomicCAS atomicAnd atomicOr and atomicXor. 
+
+Uses asynchronous memory copies and a non-blocking CUDA stream. 
+
+Includes built-in correctness verification through computeGold().
