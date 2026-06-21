@@ -1,0 +1,17 @@
+id: atomics-02
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/systemWideAtomics
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates CUDA system-wide atomic operations using Unified Memory and CPU/GPU shared access. 
+
+Covers atomicAdd_system atomicExch_system atomicMax_system atomicMin_system atomicInc_system atomicDec_system atomicCAS_system atomicAnd_system atomicOr_system and atomicXor_system. 
+
+Includes built-in correctness verification against CPU execution.
