@@ -1,4 +1,4 @@
-id: streamprio-01
+id: streams-01
 
 upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
 
