@@ -1,0 +1,19 @@
+id: events-01
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/asyncAPI
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates asynchronous host-to-device copy, kernel execution, and device-to-host copy using stream 0. 
+
+Uses CUDA events for timing and completion detection through cudaEventQuery polling. Allocates pinned host memory with cudaMallocHost. 
+
+Correctness verified through built-in correct_output() function. 
+
+No external inputs required.
