@@ -1,0 +1,19 @@
+id: shared-memory-01
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/6_Performance/transpose
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-22
+
+notes:   
+
+Main source file is transpose.cu. 
+
+Sample evaluates multiple matrix transpose kernels including naive, coalesced, shared-memory, and bank-conflict-free variants. 
+
+Correctness is validated using built-in reference checking. 
+
+IDE metadata (.vscode, .sln, .vcxproj) excluded.
