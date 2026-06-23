@@ -1,0 +1,19 @@
+id: shared-memory-02
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/template
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+Single-block dynamic shared-memory example. 
+
+Kernel multiplies each element by blockDim.x using extern __shared__. 
+
+CPU computeGold() provides correctness oracle. 
+
+Input size fixed at 32 floats.
