@@ -1,0 +1,19 @@
+id: shared-memory-05
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/3_CUDA_Features/tf32TensorCoreGemm
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+Tensor Core GEMM sample using TF32 precision and the WMMA API. 
+
+Demonstrates CTA-level shared-memory tiling, dynamic shared-memory allocation, async-copy pipelines via cuda::pipeline, skew-padding for bank-conflict reduction, and multiple kernel variants. 
+
+Includes optional CPU-side verification and performance measurement. 
+
+Requires Ampere (SM80) or newer GPUs.
