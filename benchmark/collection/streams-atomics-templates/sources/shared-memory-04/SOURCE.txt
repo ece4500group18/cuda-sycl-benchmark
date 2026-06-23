@@ -1,0 +1,21 @@
+id: shared-memory-04
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/3_CUDA_Features/bf16TensorCoreGemm
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+BF16 Tensor Core GEMM implementation using __nv_bfloat16 inputs and nvcuda::wmma APIs. 
+
+Demonstrates CTA-level shared-memory tiling, dynamic shared-memory allocation, skew padding for bank-conflict avoidance, warp-level matrix fragments, and Tensor Core accelerated GEMM. 
+
+Includes variants using cuda::pipeline asynchronous copy and conventional shared-memory loading. 
+
+Optional CPU verification path controlled by CPU_DEBUG. 
+
+Requires Ampere (SM80) or newer hardware.
