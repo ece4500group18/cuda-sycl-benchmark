@@ -1,0 +1,17 @@
+id: templates-03
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/4_CUDA_Libraries/libcuxxRandom
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+Demonstrates CCCL/libcu++ random-number facilities. 
+
+Uses cuda::pcg64 and cuda::std::philox4x32 engines together with uniform, normal, poisson, and bernoulli distributions. 
+
+Host-side template statistics helpers compute empirical mean and variance and compare against theoretical expectations.
