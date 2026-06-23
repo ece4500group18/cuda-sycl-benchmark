@@ -1,0 +1,17 @@
+id: streams-05
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/2_Concepts_and_Techniques/streamOrderedAllocationIPC
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+Demonstrates CUDA Memory Pool IPC using cudaMallocAsync and cudaMemPool APIs across multiple processes and GPUs. 
+
+Requires IPC-capable devices, peer access support, shared-memory coordination, and helper_multiprocess infrastructure. 
+
+Child-process code must be retained for full validation.
