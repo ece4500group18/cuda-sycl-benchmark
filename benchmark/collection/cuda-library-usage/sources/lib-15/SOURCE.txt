@@ -6,7 +6,7 @@ path: cuFFT/lto_callback_window_1d/src
 
 license: Apache-2.0
 
-retrieved: 2026-06-20
+retrieved: 2026-06-28
 
 notes:     
 
