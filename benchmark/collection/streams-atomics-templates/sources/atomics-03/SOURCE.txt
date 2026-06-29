@@ -6,7 +6,7 @@ path: cpp/2_Concepts_and_Techniques/histogram
 
 license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
 
-retrieved: 2026-06-22
+retrieved: 2026-06-29
 
 notes:   
 
