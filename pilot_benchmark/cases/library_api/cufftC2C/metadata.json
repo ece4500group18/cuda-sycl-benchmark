@@ -42,13 +42,15 @@
     "manual_fixes_required": null
   },
   "status": {
-    "cuda_compile": "skipped_no_cuda_toolkit",
-    "cuda_run": "skipped_not_built",
-    "cuda_verify": "skipped_not_built",
+    "cuda_compile": "pass",
+    "cuda_run": "pass",
+    "cuda_verify": "pass",
     "syclomatic_migrate": "skipped_no_syclomatic",
     "sycl_compile": "skipped_no_sycl_compiler",
     "sycl_run": "skipped_not_built",
-    "sycl_verify": "skipped_not_built"
+    "sycl_verify": "skipped_not_built",
+    "cuda_performance": "pass",
+    "sycl_performance": "skipped_not_built"
   },
   "notes": "Forward C2C FFT; compare magnitude spectrum to numpy. sizes=[n]."
 }

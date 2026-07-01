@@ -1,0 +1,35 @@
+{
+  "case_name": "ggmlSoftcap",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 589.8453499998141,
+  "runtime_ms_median": 587.5080500009062,
+  "runtime_ms_std": 12.485578136401003,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:48:57.964276+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    595.8848000009311,
+    620.8404999997583,
+    581.847999994352,
+    589.2546000031871,
+    593.1436000028043,
+    585.2797999978065,
+    588.0656000008457,
+    586.9505000009667,
+    573.848200001521,
+    583.3378999959677
+  ],
+  "failures": []
+}

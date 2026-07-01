@@ -1,0 +1,1801 @@
+{
+  "timestamp": "2026-06-30T16:51:12.015849+00:00",
+  "mode": "strict-stage1",
+  "total_cases": 130,
+  "compat_valid_cases": 130,
+  "strict_stage1_valid_cases": 130,
+  "compat_failures": [],
+  "strict_stage1_failures": [],
+  "cases": [
+    {
+      "case_name": "daliBoundingBoxFlip",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliBoundingBoxFlip",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliBoundingBoxFlip/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliBoxEncoder",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliBoxEncoder",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliBoxEncoder/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliCast",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliCast",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliCast/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliColorSpaceConversion",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliColorSpaceConversion",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliColorSpaceConversion/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliColorTwist",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliColorTwist",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliColorTwist/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliCrop",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliCrop",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliCrop/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliCropMirrorNormalize",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliCropMirrorNormalize",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliCropMirrorNormalize/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliElementExtract",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliElementExtract",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliElementExtract/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliFlip",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliFlip",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliFlip/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliMakeContiguous",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliMakeContiguous",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliMakeContiguous/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliNormalizePermute",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliNormalizePermute",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliNormalizePermute/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliPaste",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliPaste",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliPaste/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliRandomResizedCrop",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliRandomResizedCrop",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliRandomResizedCrop/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliResizeBilinear",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliResizeBilinear",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliResizeBilinear/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliResizeCropMirror",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliResizeCropMirror",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliResizeCropMirror/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliRotate",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliRotate",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliRotate/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliSlice3d",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliSlice3d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliSlice3d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliTransposeHwcChw",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliTransposeHwcChw",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliTransposeHwcChw/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliWarpAffine",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliWarpAffine",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliWarpAffine/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "daliWaterWarp",
+      "relpath": "benchmark/collection/stencil-convolution/cases/daliWaterWarp",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/daliWaterWarp/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvBallQuery",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvBallQuery",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvBallQuery/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvBboxOverlaps",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvBboxOverlaps",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvBboxOverlaps/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvFurthestPointSample",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvFurthestPointSample",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvFurthestPointSample/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvGatherPoints",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvGatherPoints",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvGatherPoints/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvGroupPoints",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvGroupPoints",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvGroupPoints/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvKnn",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvKnn",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvKnn/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvNms",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvNms",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvNms/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvPointsInBoxes",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvPointsInBoxes",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvPointsInBoxes/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvRoiAlign",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvRoiAlign",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvRoiAlign/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvRoiPool",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvRoiPool",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvRoiPool/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvThreeInterpolate",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvThreeInterpolate",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvThreeInterpolate/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "mmcvThreeNN",
+      "relpath": "benchmark/collection/stencil-convolution/cases/mmcvThreeNN",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/mmcvThreeNN/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "pytorchMaxPool2d",
+      "relpath": "benchmark/collection/stencil-convolution/cases/pytorchMaxPool2d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/pytorchMaxPool2d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "pytorchUpsampleNearest2d",
+      "relpath": "benchmark/collection/stencil-convolution/cases/pytorchUpsampleNearest2d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/collection/stencil-convolution/cases/pytorchUpsampleNearest2d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "adamUpdate",
+      "relpath": "pilot_benchmark/cases/ai/adamUpdate",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/adamUpdate/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "attention",
+      "relpath": "pilot_benchmark/cases/ai/attention",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/attention/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "batchedGemm",
+      "relpath": "pilot_benchmark/cases/ai/batchedGemm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/batchedGemm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "biasAddRelu",
+      "relpath": "pilot_benchmark/cases/ai/biasAddRelu",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/biasAddRelu/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbAdam8bitMoments",
+      "relpath": "pilot_benchmark/cases/ai/bnbAdam8bitMoments",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbAdam8bitMoments/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbBlockwiseAbsmax",
+      "relpath": "pilot_benchmark/cases/ai/bnbBlockwiseAbsmax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbBlockwiseAbsmax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbDequantizeBlockwise",
+      "relpath": "pilot_benchmark/cases/ai/bnbDequantizeBlockwise",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbDequantizeBlockwise/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbInt8VectorQuant",
+      "relpath": "pilot_benchmark/cases/ai/bnbInt8VectorQuant",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbInt8VectorQuant/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbL2NormBlockReduce",
+      "relpath": "pilot_benchmark/cases/ai/bnbL2NormBlockReduce",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbL2NormBlockReduce/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bnbPercentileClipping",
+      "relpath": "pilot_benchmark/cases/ai/bnbPercentileClipping",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/bnbPercentileClipping/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "embedding",
+      "relpath": "pilot_benchmark/cases/ai/embedding",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/embedding/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "flashAttentionScoreValue",
+      "relpath": "pilot_benchmark/cases/ai/flashAttentionScoreValue",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/flashAttentionScoreValue/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "flashCausalMaskSoftmax",
+      "relpath": "pilot_benchmark/cases/ai/flashCausalMaskSoftmax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/flashCausalMaskSoftmax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "flashDropoutMaskApply",
+      "relpath": "pilot_benchmark/cases/ai/flashDropoutMaskApply",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/flashDropoutMaskApply/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "flashOnlineSoftmax",
+      "relpath": "pilot_benchmark/cases/ai/flashOnlineSoftmax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/flashOnlineSoftmax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "gelu",
+      "relpath": "pilot_benchmark/cases/ai/gelu",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/gelu/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "gemm",
+      "relpath": "pilot_benchmark/cases/ai/gemm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/gemm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlCausalSoftmax",
+      "relpath": "pilot_benchmark/cases/ai/ggmlCausalSoftmax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlCausalSoftmax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlConcatRows",
+      "relpath": "pilot_benchmark/cases/ai/ggmlConcatRows",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlConcatRows/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlMeanRows",
+      "relpath": "pilot_benchmark/cases/ai/ggmlMeanRows",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlMeanRows/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlPool2dAvg",
+      "relpath": "pilot_benchmark/cases/ai/ggmlPool2dAvg",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlPool2dAvg/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlQ4Dequant",
+      "relpath": "pilot_benchmark/cases/ai/ggmlQ4Dequant",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlQ4Dequant/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlQ8Dequant",
+      "relpath": "pilot_benchmark/cases/ai/ggmlQ8Dequant",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlQ8Dequant/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlQuantizeQ8",
+      "relpath": "pilot_benchmark/cases/ai/ggmlQuantizeQ8",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlQuantizeQ8/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlRmsNormBlock",
+      "relpath": "pilot_benchmark/cases/ai/ggmlRmsNormBlock",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlRmsNormBlock/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlRopeInterleaved",
+      "relpath": "pilot_benchmark/cases/ai/ggmlRopeInterleaved",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlRopeInterleaved/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "ggmlSoftcap",
+      "relpath": "pilot_benchmark/cases/ai/ggmlSoftcap",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/ggmlSoftcap/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "layernorm",
+      "relpath": "pilot_benchmark/cases/ai/layernorm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/layernorm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "reluActivation",
+      "relpath": "pilot_benchmark/cases/ai/reluActivation",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/reluActivation/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "residualScaleAdd",
+      "relpath": "pilot_benchmark/cases/ai/residualScaleAdd",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/residualScaleAdd/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "rmsnorm",
+      "relpath": "pilot_benchmark/cases/ai/rmsnorm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/rmsnorm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "rope",
+      "relpath": "pilot_benchmark/cases/ai/rope",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/rope/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "siluActivation",
+      "relpath": "pilot_benchmark/cases/ai/siluActivation",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/siluActivation/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "softmax",
+      "relpath": "pilot_benchmark/cases/ai/softmax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/softmax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "topk",
+      "relpath": "pilot_benchmark/cases/ai/topk",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/topk/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmFusedAddRmsNorm",
+      "relpath": "pilot_benchmark/cases/ai/vllmFusedAddRmsNorm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmFusedAddRmsNorm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmGeluTanhApprox",
+      "relpath": "pilot_benchmark/cases/ai/vllmGeluTanhApprox",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmGeluTanhApprox/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmKvCacheReshape",
+      "relpath": "pilot_benchmark/cases/ai/vllmKvCacheReshape",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmKvCacheReshape/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmLayernormResidual",
+      "relpath": "pilot_benchmark/cases/ai/vllmLayernormResidual",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmLayernormResidual/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmPagedAttentionScore",
+      "relpath": "pilot_benchmark/cases/ai/vllmPagedAttentionScore",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmPagedAttentionScore/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmPerTokenInt8Quant",
+      "relpath": "pilot_benchmark/cases/ai/vllmPerTokenInt8Quant",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmPerTokenInt8Quant/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmRotaryPaged",
+      "relpath": "pilot_benchmark/cases/ai/vllmRotaryPaged",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmRotaryPaged/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vllmSiluMul",
+      "relpath": "pilot_benchmark/cases/ai/vllmSiluMul",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/vllmSiluMul/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "xformersSparse24Mask",
+      "relpath": "pilot_benchmark/cases/ai/xformersSparse24Mask",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/xformersSparse24Mask/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "xformersSwiGLU",
+      "relpath": "pilot_benchmark/cases/ai/xformersSwiGLU",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/ai/xformersSwiGLU/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "affine",
+      "relpath": "pilot_benchmark/cases/easy/affine",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/affine/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "gridStride",
+      "relpath": "pilot_benchmark/cases/easy/gridStride",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/gridStride/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hadamard",
+      "relpath": "pilot_benchmark/cases/easy/hadamard",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/hadamard/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "matrixMul",
+      "relpath": "pilot_benchmark/cases/easy/matrixMul",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/matrixMul/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "reverseArray",
+      "relpath": "pilot_benchmark/cases/easy/reverseArray",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/reverseArray/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "saxpy",
+      "relpath": "pilot_benchmark/cases/easy/saxpy",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/saxpy/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "simpleTemplates",
+      "relpath": "pilot_benchmark/cases/easy/simpleTemplates",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/simpleTemplates/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "square",
+      "relpath": "pilot_benchmark/cases/easy/square",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/square/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "transpose",
+      "relpath": "pilot_benchmark/cases/easy/transpose",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/transpose/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "vectorAdd",
+      "relpath": "pilot_benchmark/cases/easy/vectorAdd",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/easy/vectorAdd/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bfs",
+      "relpath": "pilot_benchmark/cases/hpc/bfs",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/bfs/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "conjugateGradient",
+      "relpath": "pilot_benchmark/cases/hpc/conjugateGradient",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/conjugateGradient/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "finiteDiff1d",
+      "relpath": "pilot_benchmark/cases/hpc/finiteDiff1d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/finiteDiff1d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "heat2d",
+      "relpath": "pilot_benchmark/cases/hpc/heat2d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/heat2d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchBabelStreamTriad",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchBabelStreamTriad",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchBabelStreamTriad/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchBackpropForward",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchBackpropForward",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchBackpropForward/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchBfsFrontier",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchBfsFrontier",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchBfsFrontier/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchBitonicPass",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchBitonicPass",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchBitonicPass/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchConvolution3d",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchConvolution3d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchConvolution3d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchCsrSpmv",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchCsrSpmv",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchCsrSpmv/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchD2q9BgkStep",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchD2q9BgkStep",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchD2q9BgkStep/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchFdtd3dStep",
+      "relpath": "pilot_benchmark/cases/hpc/hecbenchFdtd3dStep",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/hecbenchFdtd3dStep/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "jacobi2d",
+      "relpath": "pilot_benchmark/cases/hpc/jacobi2d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/jacobi2d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "monteCarloPi",
+      "relpath": "pilot_benchmark/cases/hpc/monteCarloPi",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/monteCarloPi/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "particleUpdate",
+      "relpath": "pilot_benchmark/cases/hpc/particleUpdate",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/particleUpdate/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "spmv",
+      "relpath": "pilot_benchmark/cases/hpc/spmv",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/spmv/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "stencil1d",
+      "relpath": "pilot_benchmark/cases/hpc/stencil1d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/stencil1d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "stencil2d",
+      "relpath": "pilot_benchmark/cases/hpc/stencil2d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/stencil2d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "stencil3d",
+      "relpath": "pilot_benchmark/cases/hpc/stencil3d",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/stencil3d/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "tridiagResidual",
+      "relpath": "pilot_benchmark/cases/hpc/tridiagResidual",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/tridiagResidual/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "wave1dStep",
+      "relpath": "pilot_benchmark/cases/hpc/wave1dStep",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/hpc/wave1dStep/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cublasAxpy",
+      "relpath": "pilot_benchmark/cases/library_api/cublasAxpy",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cublasAxpy/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cublasGemm",
+      "relpath": "pilot_benchmark/cases/library_api/cublasGemm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cublasGemm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaEventTiming",
+      "relpath": "pilot_benchmark/cases/library_api/cudaEventTiming",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cudaEventTiming/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaGraph",
+      "relpath": "pilot_benchmark/cases/library_api/cudaGraph",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cudaGraph/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaMemcpyAsyncPinned",
+      "relpath": "pilot_benchmark/cases/library_api/cudaMemcpyAsyncPinned",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cudaMemcpyAsyncPinned/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaStream",
+      "relpath": "pilot_benchmark/cases/library_api/cudaStream",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cudaStream/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cufftC2C",
+      "relpath": "pilot_benchmark/cases/library_api/cufftC2C",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/cufftC2C/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "curandUniform",
+      "relpath": "pilot_benchmark/cases/library_api/curandUniform",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/curandUniform/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "thrustReduce",
+      "relpath": "pilot_benchmark/cases/library_api/thrustReduce",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/thrustReduce/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "thrustSort",
+      "relpath": "pilot_benchmark/cases/library_api/thrustSort",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/library_api/thrustSort/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bitonicSort",
+      "relpath": "pilot_benchmark/cases/medium/bitonicSort",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/bitonicSort/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "conv1dShared",
+      "relpath": "pilot_benchmark/cases/medium/conv1dShared",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/conv1dShared/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "dotProduct",
+      "relpath": "pilot_benchmark/cases/medium/dotProduct",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/dotProduct/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "histogram",
+      "relpath": "pilot_benchmark/cases/medium/histogram",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/histogram/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "nbodyTiled",
+      "relpath": "pilot_benchmark/cases/medium/nbodyTiled",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/nbodyTiled/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "reduceMax",
+      "relpath": "pilot_benchmark/cases/medium/reduceMax",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/reduceMax/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "reduceSum",
+      "relpath": "pilot_benchmark/cases/medium/reduceSum",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/reduceSum/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "scanBlock",
+      "relpath": "pilot_benchmark/cases/medium/scanBlock",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/scanBlock/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "tiledMatmul",
+      "relpath": "pilot_benchmark/cases/medium/tiledMatmul",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/tiledMatmul/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "transposeShared",
+      "relpath": "pilot_benchmark/cases/medium/transposeShared",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "pilot_benchmark/cases/medium/transposeShared/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [
+        "source.url"
+      ],
+      "schema_note": "legacy-compatible metadata"
+    }
+  ]
+}

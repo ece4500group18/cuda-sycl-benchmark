@@ -3,9 +3,11 @@
 set -u
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
+PYTHON="${PYTHON:-python3}"
 echo "### verify CUDA ###"
-python3 tools/verify_case.py --variant cuda "$@"
+"$PYTHON" tools/verify_case.py --variant cuda "$@"
 echo "### verify SYCL ###"
-python3 tools/verify_case.py --variant sycl "$@"
+"$PYTHON" tools/verify_case.py --variant sycl "$@"
 echo "### generate report ###"
-python3 tools/generate_report.py
+"$PYTHON" tools/generate_report.py
+"$PYTHON" tools/generate_performance_report.py

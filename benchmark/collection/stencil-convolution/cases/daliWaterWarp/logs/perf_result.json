@@ -1,0 +1,38 @@
+{
+  "case_name": "daliWaterWarp",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    24,
+    24,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 171.76526999974158,
+  "runtime_ms_median": 170.6206500002736,
+  "runtime_ms_std": 7.8666101847053564,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:50.626046+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    175.38229999991017,
+    187.11899999834714,
+    180.73879999974451,
+    168.86460000023362,
+    172.37670000031358,
+    160.5645999989065,
+    173.46999999972468,
+    167.84019999977318,
+    165.9775999996782,
+    165.3189000007842
+  ],
+  "failures": []
+}

@@ -1,0 +1,11 @@
+{
+  "case_name": "mmcvGatherPoints",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvGatherPoints",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.289265899999009,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:28.839260+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=0.0\n"
+}

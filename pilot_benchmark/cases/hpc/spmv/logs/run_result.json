@@ -1,0 +1,10 @@
+{
+  "case_name": "spmv",
+  "case_path": "pilot_benchmark/cases/hpc/spmv",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3110971999994945,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:30.683483+00:00"
+}

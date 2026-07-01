@@ -1,0 +1,11 @@
+{
+  "case_name": "flashAttentionScoreValue",
+  "case_path": "pilot_benchmark/cases/ai/flashAttentionScoreValue",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4129994999966584,
+  "message": "",
+  "timestamp": "2026-06-30T16:43:23.439154+00:00",
+  "verifier_output": "PASS max_abs_error=1.192e-07 tol=0.0002\n"
+}

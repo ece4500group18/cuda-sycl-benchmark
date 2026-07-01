@@ -1,0 +1,11 @@
+{
+  "case_name": "bitonicSort",
+  "case_path": "pilot_benchmark/cases/medium/bitonicSort",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.26613329999963753,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:46.308070+00:00",
+  "verifier_output": "PASS exact=0.000e+00 tol=0.0\n"
+}

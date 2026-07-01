@@ -1,0 +1,62 @@
+{
+  "id": "conjugateGradient",
+  "name": "Conjugate gradient (1D Laplacian)",
+  "domain": "hpc",
+  "category": "hpc",
+  "difficulty": "medium",
+  "source_project": "ece4500group18/cuda-sycl-benchmark",
+  "source_url": "https://github.com/ece4500group18/cuda-sycl-benchmark",
+  "license": "MIT",
+  "adaptation_type": "simplified",
+  "cuda_features": [
+    "__global__",
+    "reduction",
+    "iterative"
+  ],
+  "description": "SPD 1D Laplacian; verify ||Ax-b||/||b||. sizes=[N,iters].",
+  "input_description": "type=hashed; sizes=[1024, 200]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "invariant",
+    "rtol": 0.001,
+    "atol": 0.001,
+    "reference": "invariant",
+    "notes": "residual_norm"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      1024,
+      200
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "notes": "SPD 1D Laplacian; verify ||Ax-b||/||b||. sizes=[N,iters].",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "perf_ready"
+  }
+}

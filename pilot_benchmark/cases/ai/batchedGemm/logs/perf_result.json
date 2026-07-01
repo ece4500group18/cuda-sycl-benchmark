@@ -1,0 +1,36 @@
+{
+  "case_name": "batchedGemm",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    8,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 181.4484500006074,
+  "runtime_ms_median": 178.8791000008132,
+  "runtime_ms_std": 8.34593279061657,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:35:30.953961+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    184.49820000023465,
+    171.60320000039064,
+    181.5074000005552,
+    177.74570000074164,
+    174.8726000005263,
+    178.62530000093102,
+    194.59960000131105,
+    175.0664000010147,
+    179.13290000069537,
+    196.83319999967352
+  ],
+  "failures": []
+}

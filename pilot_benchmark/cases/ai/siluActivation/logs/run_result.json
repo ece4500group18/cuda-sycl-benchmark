@@ -1,0 +1,10 @@
+{
+  "case_name": "siluActivation",
+  "case_path": "pilot_benchmark/cases/ai/siluActivation",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7336851000000024,
+  "message": "",
+  "timestamp": "2026-06-30T07:42:27.790010+00:00"
+}

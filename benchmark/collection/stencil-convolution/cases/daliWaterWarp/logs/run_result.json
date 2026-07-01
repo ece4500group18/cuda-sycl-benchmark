@@ -1,0 +1,10 @@
+{
+  "case_name": "daliWaterWarp",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliWaterWarp",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.30443799999920884,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:13.796471+00:00"
+}

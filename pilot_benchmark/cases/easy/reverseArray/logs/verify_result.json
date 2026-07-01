@@ -1,0 +1,11 @@
+{
+  "case_name": "reverseArray",
+  "case_path": "pilot_benchmark/cases/easy/reverseArray",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2843778000005841,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:37.212022+00:00",
+  "verifier_output": "PASS exact=0.000e+00 tol=0.0\n"
+}

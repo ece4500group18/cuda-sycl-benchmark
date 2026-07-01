@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlMeanRows",
+  "case_path": "pilot_benchmark/cases/ai/ggmlMeanRows",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3053295000063372,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:25.627221+00:00"
+}

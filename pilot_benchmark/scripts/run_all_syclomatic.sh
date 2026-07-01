@@ -3,6 +3,9 @@
 set -u
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
+PYTHON="${PYTHON:-python3}"
 echo "### SYCLomatic migration ###"
-python3 tools/run_syclomatic.py "$@"
-echo "Done. Regenerate report with: python3 tools/generate_report.py"
+"$PYTHON" tools/run_syclomatic.py "$@"
+echo "### generate report ###"
+"$PYTHON" tools/generate_report.py
+echo "Done."

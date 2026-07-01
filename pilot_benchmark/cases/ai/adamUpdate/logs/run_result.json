@@ -1,0 +1,10 @@
+{
+  "case_name": "adamUpdate",
+  "case_path": "pilot_benchmark/cases/ai/adamUpdate",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4549845000001369,
+  "message": "",
+  "timestamp": "2026-06-30T07:43:28.534064+00:00"
+}

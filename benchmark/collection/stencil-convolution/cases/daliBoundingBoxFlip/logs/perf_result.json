@@ -1,0 +1,36 @@
+{
+  "case_name": "daliBoundingBoxFlip",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    16,
+    4
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 179.21250999988843,
+  "runtime_ms_median": 178.80929999864748,
+  "runtime_ms_std": 10.049144141411627,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:03.988036+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    179.9527000002854,
+    178.31899999873713,
+    179.63520000012068,
+    179.29959999855782,
+    201.14339999963704,
+    190.4524000001402,
+    167.81380000065838,
+    173.97820000041975,
+    170.77539999991131,
+    170.75540000041656
+  ],
+  "failures": []
+}

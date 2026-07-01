@@ -1,0 +1,35 @@
+{
+  "case_name": "bnbAdam8bitMoments",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 294.61194000105024,
+  "runtime_ms_median": 298.0516499992518,
+  "runtime_ms_std": 7.421367469598466,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:47:32.631204+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    298.73200000292854,
+    294.2884000003687,
+    297.6307999997516,
+    291.53450000012526,
+    300.59220000111964,
+    285.4395000031218,
+    278.7208000008832,
+    298.5177000009571,
+    298.472499998752,
+    302.19100000249455
+  ],
+  "failures": []
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "jacobi2d",
+  "case_path": "pilot_benchmark/cases/hpc/jacobi2d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.28194169999915175,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:29.935108+00:00"
+}

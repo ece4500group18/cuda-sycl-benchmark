@@ -1,0 +1,10 @@
+{
+  "case_name": "daliPaste",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliPaste",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3056997000003321,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:10.802606+00:00"
+}

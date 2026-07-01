@@ -1,0 +1,10 @@
+{
+  "case_name": "curandUniform",
+  "case_path": "pilot_benchmark/cases/library_api/curandUniform",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app -lcurand\"",
+  "returncode": 0,
+  "elapsed_sec": 11.48277489999964,
+  "message": "",
+  "timestamp": "2026-06-30T07:29:21.525266+00:00"
+}

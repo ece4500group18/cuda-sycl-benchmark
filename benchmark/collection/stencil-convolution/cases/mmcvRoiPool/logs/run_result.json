@@ -1,0 +1,10 @@
+{
+  "case_name": "mmcvRoiPool",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvRoiPool",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.31187450000106764,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:17.876804+00:00"
+}

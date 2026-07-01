@@ -47,8 +47,8 @@ def verify_one(case_dir, variant):
         print(f"[skip] {cid}: {variant} verify ({status.get(verify_key)})")
         return
 
-    command = (
-        f"python3 tests/verify.py --variant {variant} --output {out_file}"
+    command = C.python_command(
+        "tests/verify.py", "--variant", variant, "--output", out_file
     )
     rc, out = C.run_logged(command, case_dir, log, timeout=300)
     passed = (rc == 0) and ("PASS" in out)

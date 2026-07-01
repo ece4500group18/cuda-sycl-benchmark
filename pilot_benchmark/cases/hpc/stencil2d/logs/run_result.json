@@ -1,0 +1,10 @@
+{
+  "case_name": "stencil2d",
+  "case_path": "pilot_benchmark/cases/hpc/stencil2d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2962342000009812,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:31.422387+00:00"
+}

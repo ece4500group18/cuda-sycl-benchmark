@@ -1,0 +1,11 @@
+{
+  "case_name": "monteCarloPi",
+  "case_path": "pilot_benchmark/cases/hpc/monteCarloPi",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.26411449999977776,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:40.412845+00:00",
+  "verifier_output": "PASS abs_error_to_pi=3.144e-04 tol=0.03\n"
+}

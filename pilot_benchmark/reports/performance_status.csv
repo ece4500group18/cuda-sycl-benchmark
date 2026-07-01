@@ -1,0 +1,101 @@
+case_id,category,variant,status,metric,median_s,mean_s,min_s,max_s,stdev_s,repeat,warmup,reason
+affine,easy,cuda,pass,end_to_end_process_runtime,0.2108896999998251,0.2104506000002099,0.2087920000003578,0.21167010000044684,0.0014884460050249276,3,1,
+affine,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+gridStride,easy,cuda,pass,end_to_end_process_runtime,0.22192290000020876,0.2273686333334505,0.22064099999988684,0.23954200000025594,0.010561910760183188,3,1,
+gridStride,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+hadamard,easy,cuda,pass,end_to_end_process_runtime,0.19293290000041452,0.19470263333308443,0.19195189999936701,0.19922309999947174,0.003945447301885167,3,1,
+hadamard,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+matrixMul,easy,cuda,pass,end_to_end_process_runtime,0.1845932999995057,0.18326600000000326,0.17360550000012154,0.19159920000038255,0.009069983676465889,3,1,
+matrixMul,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+reverseArray,easy,cuda,pass,end_to_end_process_runtime,0.2012003999998342,0.2029222666666707,0.20044750000033673,0.20711889999984123,0.003653835396144607,3,1,
+reverseArray,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+saxpy,easy,cuda,pass,end_to_end_process_runtime,0.20366159999957745,0.20362446666634546,0.2015596999999616,0.2056520999994973,0.0020464526875492725,3,1,
+saxpy,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+simpleTemplates,easy,cuda,pass,end_to_end_process_runtime,0.19439169999986916,0.19485023333345453,0.18728079999982583,0.20287820000066858,0.007808803449317896,3,1,
+simpleTemplates,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+square,easy,cuda,pass,end_to_end_process_runtime,0.20334189999994123,0.20184569999977006,0.19774209999923187,0.20445310000013706,0.00359699055926222,3,1,
+square,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+transpose,easy,cuda,pass,end_to_end_process_runtime,0.19569659999979194,0.19574703333334278,0.19152800000028947,0.20001649999994697,0.004244474726264271,3,1,
+transpose,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+vectorAdd,easy,cuda,pass,end_to_end_process_runtime,0.22114049999981944,0.21923026666627266,0.21461969999927533,0.2219305999997232,0.004012363174686724,3,1,
+vectorAdd,easy,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+bitonicSort,medium,cuda,pass,end_to_end_process_runtime,0.17591510000056587,0.17772386666668658,0.1702144999999291,0.18704199999956472,0.008558324409531706,3,1,
+bitonicSort,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+conv1dShared,medium,cuda,pass,end_to_end_process_runtime,0.2134331999995993,0.21218806666638557,0.2049351999994542,0.2181958000001032,0.006717413628578561,3,1,
+conv1dShared,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+dotProduct,medium,cuda,pass,end_to_end_process_runtime,0.1780518999994456,0.18325049999990975,0.1765826000000743,0.19511700000020937,0.01030291596174943,3,1,
+dotProduct,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+histogram,medium,cuda,pass,end_to_end_process_runtime,0.17486670000016602,0.1800951666667364,0.17231510000056005,0.19310369999948307,0.011337729942161418,3,1,
+histogram,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+nbodyTiled,medium,cuda,pass,end_to_end_process_runtime,0.18656170000031125,0.1860292333334049,0.1743536000003587,0.19717239999954472,0.011418714853880784,3,1,
+nbodyTiled,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+reduceMax,medium,cuda,pass,end_to_end_process_runtime,0.18161330000020826,0.18000763333354067,0.17339110000011715,0.18501850000029663,0.005977686155560441,3,1,
+reduceMax,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+reduceSum,medium,cuda,pass,end_to_end_process_runtime,0.17203059999974357,0.17254633333323,0.17151939999985188,0.17408900000009453,0.0013602193550172389,3,1,
+reduceSum,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+scanBlock,medium,cuda,pass,end_to_end_process_runtime,0.18118059999960678,0.18284896666652153,0.1755340999998225,0.19183220000013534,0.008276146531236839,3,1,
+scanBlock,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+tiledMatmul,medium,cuda,pass,end_to_end_process_runtime,0.20806420000008075,0.20923226666642827,0.20769119999931718,0.21194139999988693,0.002353579149717502,3,1,
+tiledMatmul,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+transposeShared,medium,cuda,pass,end_to_end_process_runtime,0.1976295000004029,0.20066156666689494,0.19366559999980382,0.2106896000004781,0.008907817645657016,3,1,
+transposeShared,medium,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+bfs,hpc,cuda,pass,end_to_end_process_runtime,0.1767624000003707,0.17911733333342758,0.17281280000042898,0.18777679999948305,0.007754973065412885,3,1,
+bfs,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+conjugateGradient,hpc,cuda,pass,end_to_end_process_runtime,0.18950089999998454,0.18808940000023236,0.18004520000067714,0.19472210000003543,0.007439562996894783,3,1,
+conjugateGradient,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+finiteDiff1d,hpc,cuda,pass,end_to_end_process_runtime,0.2105079000002661,0.21124900000025568,0.20773120000012568,0.21550790000037523,0.003940962779697208,3,1,
+finiteDiff1d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+heat2d,hpc,cuda,pass,end_to_end_process_runtime,0.18627570000080595,0.18676906666678406,0.1777100999997856,0.19632139999976062,0.009315453822685789,3,1,
+heat2d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+jacobi2d,hpc,cuda,pass,end_to_end_process_runtime,0.17675809999946068,0.18265526666679457,0.17501540000012028,0.1961923000008028,0.011755751972394715,3,1,
+jacobi2d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+monteCarloPi,hpc,cuda,pass,end_to_end_process_runtime,0.17399879999993573,0.17451880000013867,0.17030200000044715,0.17925560000003316,0.004499393096663696,3,1,
+monteCarloPi,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+spmv,hpc,cuda,pass,end_to_end_process_runtime,0.21410430000014458,0.21343113333356692,0.20780090000062046,0.21838819999993575,0.0053256544517663595,3,1,
+spmv,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+stencil1d,hpc,cuda,pass,end_to_end_process_runtime,0.2107360999998491,0.2119385333332199,0.20780569999988074,0.2172737999999299,0.004847227438818368,3,1,
+stencil1d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+stencil2d,hpc,cuda,pass,end_to_end_process_runtime,0.19878549999975803,0.20007760000013755,0.1947808000004443,0.20666650000021036,0.0060472810360810425,3,1,
+stencil2d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+stencil3d,hpc,cuda,pass,end_to_end_process_runtime,0.2586734999995315,0.25927690000025905,0.25769840000066324,0.2614588000005824,0.001951466297558465,3,1,
+stencil3d,hpc,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+attention,ai,cuda,pass,end_to_end_process_runtime,0.18137860000024375,0.18406919999991564,0.18109419999927923,0.1897348000002239,0.004908613690519663,3,1,
+attention,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+batchedGemm,ai,cuda,pass,end_to_end_process_runtime,0.2019441000002189,0.19854336666655095,0.19132730000001175,0.20235869999942224,0.006252734353208094,3,1,
+batchedGemm,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+embedding,ai,cuda,pass,end_to_end_process_runtime,0.3697492000001148,0.36981056666657725,0.3482162000000244,0.3914662999995926,0.02162511530359958,3,1,
+embedding,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+gelu,ai,cuda,pass,end_to_end_process_runtime,0.571223299999474,0.5681469333330824,0.5607299999992392,0.572487500000534,0.006454279624379143,3,1,
+gelu,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+gemm,ai,cuda,pass,end_to_end_process_runtime,0.20585680000021966,0.20639516666687996,0.20448149999992893,0.20884720000049128,0.002232087167777219,3,1,
+gemm,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+layernorm,ai,cuda,pass,end_to_end_process_runtime,0.3660674000002473,0.3679871333333722,0.3651498999997784,0.37274410000009084,0.004145117665871426,3,1,
+layernorm,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+rmsnorm,ai,cuda,pass,end_to_end_process_runtime,0.37423320000016247,0.37520726666662085,0.36168650000035996,0.38970209999934013,0.014033177303402946,3,1,
+rmsnorm,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+rope,ai,cuda,pass,end_to_end_process_runtime,0.2002002999997785,0.19638659999964148,0.1879228999996485,0.2010365999994974,0.007341696853575009,3,1,
+rope,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+softmax,ai,cuda,pass,end_to_end_process_runtime,0.2924480000001495,0.28846923333336844,0.2696538000000146,0.3033058999999412,0.017175240805961955,3,1,
+softmax,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+topk,ai,cuda,pass,end_to_end_process_runtime,0.1978874000005817,0.19388550000015434,0.1813667999995232,0.20240230000035808,0.011074044779634331,3,1,
+topk,ai,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cublasAxpy,library_api,cuda,pass,end_to_end_process_runtime,0.6941635000002861,0.6833672666668159,0.6571866000003865,0.6987516999997752,0.022788887097285902,3,1,
+cublasAxpy,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cublasGemm,library_api,cuda,pass,end_to_end_process_runtime,0.3381751999995686,0.3387782999998308,0.33763180000005377,0.34052789999987,0.0015393654569240767,3,1,
+cublasGemm,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cudaEventTiming,library_api,cuda,pass,end_to_end_process_runtime,0.4955172999998467,0.4899395333331995,0.4635582999999315,0.5107429999998203,0.024081789577615448,3,1,
+cudaEventTiming,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cudaGraph,library_api,cuda,pass,end_to_end_process_runtime,0.46182760000010603,0.46522136666681035,0.45542590000059135,0.4784105999997337,0.011862223554362323,3,1,
+cudaGraph,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cudaMemcpyAsyncPinned,library_api,cuda,pass,end_to_end_process_runtime,0.48454080000010435,0.4976324666668006,0.47630890000073123,0.5320476999995662,0.030087327206175147,3,1,
+cudaMemcpyAsyncPinned,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cudaStream,library_api,cuda,pass,end_to_end_process_runtime,0.5208130000000892,0.5214303999997961,0.5075645999995686,0.5359135999997306,0.014184580970970752,3,1,
+cudaStream,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+cufftC2C,library_api,cuda,pass,end_to_end_process_runtime,0.2137719999991532,0.21245903333328897,0.19853730000068026,0.22506780000003346,0.013313893820110364,3,1,
+cufftC2C,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+curandUniform,library_api,cuda,pass,end_to_end_process_runtime,0.6057162999995853,0.6053064999996423,0.5846407999997609,0.6255623999995805,0.02046387765469374,3,1,
+curandUniform,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+thrustReduce,library_api,cuda,pass,end_to_end_process_runtime,0.22545770000033372,0.217143100000006,0.19575960000020132,0.23021199999948294,0.018670602462205456,3,1,
+thrustReduce,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler
+thrustSort,library_api,cuda,pass,end_to_end_process_runtime,0.5642815000001065,0.5578711666667004,0.5392616999997699,0.570070300000225,0.016374117948184014,3,1,
+thrustSort,library_api,sycl,skipped_not_built,,,,,,,,,sycl_compile is skipped_no_sycl_compiler

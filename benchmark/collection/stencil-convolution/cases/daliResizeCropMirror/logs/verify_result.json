@@ -1,0 +1,11 @@
+{
+  "case_name": "daliResizeCropMirror",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliResizeCropMirror",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.29307450000123936,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:26.223347+00:00",
+  "verifier_output": "PASS max_abs_error=1.192e-07 tol=0.0001\n"
+}

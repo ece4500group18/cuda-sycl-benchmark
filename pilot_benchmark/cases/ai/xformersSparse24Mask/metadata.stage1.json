@@ -1,0 +1,63 @@
+{
+  "id": "xformersSparse24Mask",
+  "name": "xFormers 2:4 sparse mask",
+  "domain": "modern_ml",
+  "category": "ai",
+  "difficulty": "hard",
+  "source_project": "facebookresearch/xformers",
+  "source_url": "https://github.com/facebookresearch/xformers/blob/main/xformers/csrc/sparse24/sparse24_largest_mask_2d.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "simplified",
+  "cuda_features": [
+    "__global__",
+    "structured_sparsity",
+    "top2",
+    "branching"
+  ],
+  "description": "Apply a 2:4 structured sparsity mask retaining the two largest magnitudes per group, adapted from xFormers sparse24 kernels.",
+  "input_description": "type=hashed; sizes=[65536, 4]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-06,
+    "atol": 1e-06,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      65536,
+      4
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "notes": "Standalone structured sparsity mask inspired by xformers/csrc/sparse24/sparse24_largest_mask_2d.cu.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "case_name": "daliPaste",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliPaste",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2739234000000579,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:25.323954+00:00",
+  "verifier_output": "PASS max_abs_error=5.960e-08 tol=1e-05\n"
+}

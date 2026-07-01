@@ -1,0 +1,38 @@
+{
+  "case_name": "daliRotate",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    24,
+    24,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 167.34326999994664,
+  "runtime_ms_median": 165.4388500001005,
+  "runtime_ms_std": 5.658112016613672,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:40.774973+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    169.98160000002827,
+    163.74270000051183,
+    175.51459999958752,
+    160.63319999921077,
+    162.2750000005908,
+    165.6820999996853,
+    171.72609999943234,
+    176.2748000001011,
+    165.1956000005157,
+    162.4069999998028
+  ],
+  "failures": []
+}

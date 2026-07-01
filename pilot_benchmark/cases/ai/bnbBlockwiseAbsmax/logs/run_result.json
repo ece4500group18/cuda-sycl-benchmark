@@ -1,0 +1,10 @@
+{
+  "case_name": "bnbBlockwiseAbsmax",
+  "case_path": "pilot_benchmark/cases/ai/bnbBlockwiseAbsmax",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.33863620000192896,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:11.854505+00:00"
+}

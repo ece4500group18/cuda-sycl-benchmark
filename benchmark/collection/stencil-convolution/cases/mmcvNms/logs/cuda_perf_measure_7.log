@@ -1,0 +1,8 @@
+# command: original\build\app.exe output/cuda_perf_measure_7.txt
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\mmcvNms
+# time:    2026-06-30T07:35:07.634991+00:00
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 0.169912

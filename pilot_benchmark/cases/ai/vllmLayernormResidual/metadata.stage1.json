@@ -1,0 +1,64 @@
+{
+  "id": "vllmLayernormResidual",
+  "name": "vLLM residual LayerNorm",
+  "domain": "modern_ml",
+  "category": "ai",
+  "difficulty": "hard",
+  "source_project": "vllm-project/vllm",
+  "source_url": "https://github.com/vllm-project/vllm/blob/main/csrc/libtorch_stable/layernorm_kernels.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "simplified",
+  "cuda_features": [
+    "__global__",
+    "__shared__",
+    "layernorm",
+    "mean_variance",
+    "residual"
+  ],
+  "description": "Residual add plus LayerNorm, adapted from vLLM layernorm CUDA kernels.",
+  "input_description": "type=hashed; sizes=[256, 512]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.0001,
+    "atol": 0.0001,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      256,
+      512
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "notes": "Standalone layernorm simplification from vLLM csrc/libtorch_stable/layernorm_kernels.cu.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

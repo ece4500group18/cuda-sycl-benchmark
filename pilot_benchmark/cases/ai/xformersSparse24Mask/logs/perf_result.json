@@ -1,0 +1,36 @@
+{
+  "case_name": "xformersSparse24Mask",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    65536,
+    4
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 254.27317999929073,
+  "runtime_ms_median": 252.73804999960703,
+  "runtime_ms_std": 12.67820785439632,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:50:20.534196+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    267.1212999994168,
+    276.1728999976185,
+    254.4925999973202,
+    250.98350000189384,
+    240.98729999968782,
+    236.86540000198875,
+    241.68859999917913,
+    263.3129999958328,
+    249.7150999988662,
+    261.39210000110324
+  ],
+  "failures": []
+}

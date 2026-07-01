@@ -1,0 +1,10 @@
+{
+  "case_name": "mmcvKnn",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvKnn",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.322374100000161,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:16.239639+00:00"
+}

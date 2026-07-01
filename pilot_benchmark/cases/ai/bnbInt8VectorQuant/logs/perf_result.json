@@ -1,0 +1,36 @@
+{
+  "case_name": "bnbInt8VectorQuant",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4096,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 278.0767600008403,
+  "runtime_ms_median": 273.1636000062281,
+  "runtime_ms_std": 12.114040519068938,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:47:45.989258+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    302.08529999799794,
+    297.492699995928,
+    272.5793000063277,
+    266.9215999994776,
+    272.138400003314,
+    278.6005000016303,
+    278.0521000022418,
+    272.20739999756915,
+    266.942399997788,
+    273.7479000061285
+  ],
+  "failures": []
+}

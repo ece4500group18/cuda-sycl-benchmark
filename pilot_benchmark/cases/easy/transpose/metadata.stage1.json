@@ -1,0 +1,65 @@
+{
+  "id": "transpose",
+  "name": "Matrix transpose (out = in^T)",
+  "domain": "cuda_primitive",
+  "category": "easy",
+  "difficulty": "easy",
+  "source_project": "ece4500group18/cuda-sycl-benchmark",
+  "source_url": "https://github.com/ece4500group18/cuda-sycl-benchmark",
+  "license": "MIT",
+  "adaptation_type": "simplified",
+  "cuda_features": [
+    "__global__",
+    "cudaMalloc",
+    "cudaMemcpy",
+    "cudaFree",
+    "dim3",
+    "2D_indexing"
+  ],
+  "description": "Pure data movement; exact match expected. sizes=[rows,cols].",
+  "input_description": "type=deterministic_formula; sizes=[192, 128]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.0,
+    "atol": 0.0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      192,
+      128
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "notes": "Pure data movement; exact match expected. sizes=[rows,cols].",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "perf_ready"
+  }
+}

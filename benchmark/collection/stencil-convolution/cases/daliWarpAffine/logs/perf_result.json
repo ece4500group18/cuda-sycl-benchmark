@@ -1,0 +1,38 @@
+{
+  "case_name": "daliWarpAffine",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    24,
+    28,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 173.23993000045448,
+  "runtime_ms_median": 171.55600000023696,
+  "runtime_ms_std": 10.772759918819803,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:48.151514+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    175.32799999935378,
+    177.83550000058312,
+    168.5176999999385,
+    167.06130000056874,
+    162.7334000004339,
+    183.72210000052291,
+    158.38870000152383,
+    169.61410000112664,
+    173.49789999934728,
+    195.70060000114609
+  ],
+  "failures": []
+}

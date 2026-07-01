@@ -1,0 +1,38 @@
+{
+  "case_name": "mmcvGatherPoints",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    2,
+    3,
+    12,
+    5
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 187.75811999985308,
+  "runtime_ms_median": 184.16954999975133,
+  "runtime_ms_std": 21.004370875703064,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:35:00.953529+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    163.8416000005236,
+    160.67429999930027,
+    206.63530000092578,
+    232.28080000080809,
+    194.9853999994957,
+    179.19780000011087,
+    185.25950000002922,
+    176.72239999956219,
+    194.90449999830162,
+    183.07959999947343
+  ],
+  "failures": []
+}

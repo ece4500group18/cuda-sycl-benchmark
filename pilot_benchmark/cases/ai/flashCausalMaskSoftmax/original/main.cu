@@ -1,0 +1,51 @@
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstdint>
+#include <cuda_runtime.h>
+
+#define CK(x) do { cudaError_t e = (x); if (e != cudaSuccess) { \
+  fprintf(stderr, "CUDA %s @%d\n", cudaGetErrorString(e), __LINE__); return 2; \
+} } while (0)
+
+__host__ __device__ static inline float h01(unsigned i, unsigned s) {
+  unsigned h = i * 2654435761u + s * 2246822519u;
+  h ^= h >> 15; h *= 2246822519u; h ^= h >> 13;
+  return (float)(h & 0xFFFFFFu) / (float)0x1000000u;
+}
+
+__host__ __device__ static inline float hs(unsigned i, unsigned s) {
+  return 2.0f * h01(i, s) - 1.0f;
+}
+
+static void write_vec(const char *path, const float *data, int n) {
+  FILE *f = fopen(path, "w");
+  if (!f) { fprintf(stderr, "open %s\n", path); exit(2); }
+  for (int i = 0; i < n; ++i) fprintf(f, "%.9g\n", data[i]);
+  fclose(f);
+}
+
+__global__ void flash_causal(const float *x, float *y, int rows, int cols) {
+  int row=blockIdx.x;
+  if(threadIdx.x==0){
+    int limit=(row*7)%cols;
+    float m=-3.402823e38f;
+    for(int c=0;c<=limit;++c) m=fmaxf(m,x[row*cols+c]);
+    float denom=0.0f;
+    for(int c=0;c<=limit;++c) denom += expf(x[row*cols+c]-m);
+    for(int c=0;c<cols;++c) y[row*cols+c]=(c<=limit)?expf(x[row*cols+c]-m)/denom:0.0f;
+  }
+}
+
+int main(int argc, char **argv) {
+  const int rows=512, cols=128, n=rows*cols; const char *out=(argc>1)?argv[1]:"output/output.txt";
+  float *hx=(float*)malloc((size_t)n*sizeof(float)), *hy=(float*)malloc((size_t)n*sizeof(float));
+  for(int i=0;i<n;++i) hx[i]=3.0f*hs(i,123);
+  float *dx,*dy; CK(cudaMalloc(&dx,(size_t)n*sizeof(float))); CK(cudaMalloc(&dy,(size_t)n*sizeof(float)));
+  CK(cudaMemcpy(dx,hx,(size_t)n*sizeof(float),cudaMemcpyHostToDevice));
+  flash_causal<<<rows,128>>>(dx,dy,rows,cols);
+  CK(cudaGetLastError()); CK(cudaDeviceSynchronize());
+  CK(cudaMemcpy(hy,dy,(size_t)n*sizeof(float),cudaMemcpyDeviceToHost)); write_vec(out,hy,n);
+  cudaFree(dx); cudaFree(dy); free(hx); free(hy); return 0;
+}

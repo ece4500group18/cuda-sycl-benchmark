@@ -1,0 +1,37 @@
+{
+  "case_name": "mmcvThreeInterpolate",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    3,
+    12,
+    8
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 176.47648000001936,
+  "runtime_ms_median": 175.89814999973896,
+  "runtime_ms_std": 6.875151264125591,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:35:18.411663+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    175.67309999867575,
+    185.62049999854935,
+    189.44120000014664,
+    177.15040000075533,
+    174.1306000003533,
+    167.39769999912824,
+    170.1418000011472,
+    178.84179999964545,
+    170.24450000099023,
+    176.12320000080217
+  ],
+  "failures": []
+}

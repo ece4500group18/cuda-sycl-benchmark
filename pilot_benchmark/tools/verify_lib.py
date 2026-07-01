@@ -32,6 +32,7 @@ import argparse
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 import numpy as np
 
@@ -104,6 +105,27 @@ def max_rel_error(got, ref):
     return float(np.max(np.abs(got - ref)) / denom) if got.size else 0.0
 
 
+def write_verify_result(case_dir, variant, output_path, passed, metric_name, value, tol):
+    path = os.path.join(case_dir, "logs", "verify_result.json")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(
+            {
+                "case_name": os.path.basename(case_dir),
+                "variant": variant,
+                "status": "pass" if passed else "fail",
+                "metric": metric_name,
+                "value": value,
+                "tolerance": tol,
+                "output": output_path,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            },
+            fh,
+            indent=2,
+        )
+        fh.write("\n")
+
+
 def finish(passed, metric_name, value, tol):
     verdict = "PASS" if passed else "FAIL"
     print(f"{verdict} {metric_name}={value:.3e} tol={tol}")
@@ -129,7 +151,7 @@ def run(reference):
     come from metadata.correctness (max_abs_error | max_rel_error | exact).
     """
     args = _parse()
-    meta, _ = load_metadata()
+    meta, case_dir = load_metadata()
     ref = np.asarray(reference(meta), dtype=F32).reshape(-1)
 
     if args.selftest:
@@ -143,6 +165,7 @@ def run(reference):
         err = max_rel_error(got, ref)
     else:  # max_abs_error or exact (exact uses tol == 0)
         err = max_abs_error(got, ref)
+    write_verify_result(case_dir, args.variant, args.output, err <= tol, metric, err, tol)
     finish(err <= tol, metric, err, tol)
 
 
@@ -153,6 +176,7 @@ def run_custom(check):
     tol). In selftest mode it should also write a known-good output first.
     """
     args = _parse()
-    meta, _ = load_metadata()
+    meta, case_dir = load_metadata()
     passed, name, value, tol = check(meta, args.output, args.selftest)
+    write_verify_result(case_dir, args.variant, args.output, passed, name, value, tol)
     finish(passed, name, value, tol)
