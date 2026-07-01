@@ -1,0 +1,40 @@
+{
+  "case_name": "daliCropMirrorNormalize",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    2,
+    32,
+    32,
+    3,
+    16,
+    16
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 168.7440499996228,
+  "runtime_ms_median": 166.2109999997483,
+  "runtime_ms_std": 7.1721717988295905,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:18.783421+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    180.20679999972344,
+    165.84549999970477,
+    177.01239999951213,
+    163.55449999900884,
+    164.49879999890982,
+    158.45509999962815,
+    166.57649999979185,
+    178.157000000283,
+    167.34189999988303,
+    165.791999999783
+  ],
+  "failures": []
+}

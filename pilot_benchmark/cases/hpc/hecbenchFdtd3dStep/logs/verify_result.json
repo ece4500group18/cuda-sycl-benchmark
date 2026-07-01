@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchFdtd3dStep",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchFdtd3dStep",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4365803999971831,
+  "message": "",
+  "timestamp": "2026-06-30T16:43:47.037513+00:00",
+  "verifier_output": "PASS max_abs_error=5.960e-08 tol=1e-05\n"
+}

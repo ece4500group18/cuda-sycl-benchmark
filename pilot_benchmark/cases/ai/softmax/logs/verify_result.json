@@ -1,0 +1,11 @@
+{
+  "case_name": "softmax",
+  "case_path": "pilot_benchmark/cases/ai/softmax",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.32833819999905245,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:35.414165+00:00",
+  "verifier_output": "PASS max_abs_error=3.958e-09 tol=1e-05\n"
+}

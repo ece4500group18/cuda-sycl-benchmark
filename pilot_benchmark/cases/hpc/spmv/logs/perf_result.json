@@ -1,0 +1,35 @@
+{
+  "case_name": "spmv",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    100000
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 206.81681000023673,
+  "runtime_ms_median": 204.99664999988454,
+  "runtime_ms_std": 8.886153625495533,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:56.189521+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    204.4490999996924,
+    197.12710000021616,
+    220.93859999949927,
+    217.27260000079696,
+    201.71139999911247,
+    193.48790000003646,
+    205.54420000007667,
+    203.9085000014893,
+    207.52440000069328,
+    216.2043000007543
+  ],
+  "failures": []
+}

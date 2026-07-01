@@ -4,10 +4,16 @@
 set -u
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
+PYTHON="${PYTHON:-python3}"
 echo "### build SYCL ###"
-python3 tools/build_sycl.py "$@"
+"$PYTHON" tools/build_sycl.py "$@"
 echo "### run SYCL ###"
-python3 tools/run_case.py --variant sycl "$@"
+"$PYTHON" tools/run_case.py --variant sycl "$@"
 echo "### verify SYCL ###"
-python3 tools/verify_case.py --variant sycl "$@"
-echo "Done. Regenerate report with: python3 tools/generate_report.py"
+"$PYTHON" tools/verify_case.py --variant sycl "$@"
+echo "### benchmark SYCL ###"
+"$PYTHON" tools/benchmark_case.py --variant sycl "$@"
+echo "### generate reports ###"
+"$PYTHON" tools/generate_report.py
+"$PYTHON" tools/generate_performance_report.py
+echo "Done."

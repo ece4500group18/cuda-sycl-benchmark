@@ -1,0 +1,10 @@
+{
+  "case_name": "stencil3d",
+  "case_path": "pilot_benchmark/cases/hpc/stencil3d",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 10.721966600000087,
+  "message": "",
+  "timestamp": "2026-06-30T07:27:51.294152+00:00"
+}

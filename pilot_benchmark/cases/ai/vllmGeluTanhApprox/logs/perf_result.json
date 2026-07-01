@@ -1,0 +1,35 @@
+{
+  "case_name": "vllmGeluTanhApprox",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 575.5804899992654,
+  "runtime_ms_median": 573.5447999977623,
+  "runtime_ms_std": 16.58260395293526,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:49:45.516839+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    578.1965999995009,
+    556.0418000022764,
+    561.5494999947259,
+    591.4626999947359,
+    559.1491000013775,
+    588.4027000065544,
+    561.1864999955287,
+    604.4143999970402,
+    586.5086000048905,
+    568.8929999960237
+  ],
+  "failures": []
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "curandUniform",
+  "case_path": "pilot_benchmark/cases/library_api/curandUniform",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 1.0348651999993308,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:44.716648+00:00"
+}

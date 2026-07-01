@@ -1,0 +1,35 @@
+{
+  "case_name": "cufftC2C",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4096
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 208.99640999978146,
+  "runtime_ms_median": 202.34049999908166,
+  "runtime_ms_std": 18.581556730323083,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:37:50.168904+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    199.57910000084667,
+    197.38630000028934,
+    205.9058000013465,
+    202.43459999983315,
+    211.43470000060915,
+    202.24639999833016,
+    197.26089999858232,
+    197.13989999945625,
+    218.46959999857063,
+    258.10679999995045
+  ],
+  "failures": []
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlQ4Dequant",
+  "case_path": "pilot_benchmark/cases/ai/ggmlQ4Dequant",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3425478999997722,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:27.910117+00:00"
+}

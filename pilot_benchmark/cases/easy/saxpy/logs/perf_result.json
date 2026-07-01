@@ -1,0 +1,35 @@
+{
+  "case_name": "saxpy",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    100000
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 211.76573999964603,
+  "runtime_ms_median": 210.6644999985292,
+  "runtime_ms_std": 10.702778689110028,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:25.767452+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    231.41389999909734,
+    208.2072999983211,
+    199.8223999999027,
+    201.7522000005556,
+    219.8263999998744,
+    223.31149999990885,
+    200.4272000012861,
+    215.06339999905322,
+    213.1216999987373,
+    204.71139999972365
+  ],
+  "failures": []
+}

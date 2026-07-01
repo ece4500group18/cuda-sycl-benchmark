@@ -1,0 +1,36 @@
+{
+  "case_name": "transpose",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    192,
+    128
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 189.5135200002187,
+  "runtime_ms_median": 194.05530000040017,
+  "runtime_ms_std": 10.968170080333502,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:34.491797+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    193.45960000100604,
+    202.2704999999405,
+    187.28630000077828,
+    173.36020000038843,
+    179.28199999914796,
+    172.19250000016473,
+    199.8773000013898,
+    194.6509999997943,
+    194.6805999996286,
+    198.07519999994838
+  ],
+  "failures": []
+}

@@ -3,6 +3,7 @@
 # This script never fails the pipeline; it only reports what is available.
 set -u
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PYTHON="${PYTHON:-python3}"
 echo "Repo root: $ROOT"
 echo
 
@@ -32,8 +33,8 @@ echo
 echo "=== build / scripting ==="
 check cmake cmake --version
 check make make --version
-check python3 python3 --version
-python3 -c "import numpy; print('  [present] numpy     ', numpy.__version__)" 2>/dev/null \
+check "$PYTHON" "$PYTHON" --version
+"$PYTHON" -c "import numpy; print('  [present] numpy     ', numpy.__version__)" 2>/dev/null \
   || echo "  [MISSING] numpy      (pip install numpy)"
 echo
 cat <<'EOF'

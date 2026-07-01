@@ -1,0 +1,10 @@
+{
+  "case_name": "particleUpdate",
+  "case_path": "pilot_benchmark/cases/hpc/particleUpdate",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 11.855111900000338,
+  "message": "",
+  "timestamp": "2026-06-30T07:43:47.071863+00:00"
+}

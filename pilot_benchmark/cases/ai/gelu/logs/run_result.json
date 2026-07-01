@@ -1,0 +1,10 @@
+{
+  "case_name": "gelu",
+  "case_path": "pilot_benchmark/cases/ai/gelu",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.6998880999999528,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:21.458187+00:00"
+}

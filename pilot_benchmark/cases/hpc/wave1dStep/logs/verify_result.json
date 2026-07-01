@@ -1,0 +1,11 @@
+{
+  "case_name": "wave1dStep",
+  "case_path": "pilot_benchmark/cases/hpc/wave1dStep",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.36029879999841796,
+  "message": "",
+  "timestamp": "2026-06-30T07:44:26.878512+00:00",
+  "verifier_output": "PASS max_abs_error=2.384e-07 tol=1e-06\n"
+}

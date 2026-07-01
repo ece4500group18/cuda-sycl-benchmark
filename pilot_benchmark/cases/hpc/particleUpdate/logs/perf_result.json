@@ -1,0 +1,35 @@
+{
+  "case_name": "particleUpdate",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 383.06902999993326,
+  "runtime_ms_median": 383.67544999982783,
+  "runtime_ms_std": 14.94297184939383,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:43:55.251529+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    392.1270999999251,
+    385.1556999998138,
+    368.7030999990384,
+    366.99360000056913,
+    384.5299000004161,
+    382.8209999992396,
+    366.2982000005286,
+    381.83609999941837,
+    384.95270000021264,
+    417.2729000001709
+  ],
+  "failures": []
+}

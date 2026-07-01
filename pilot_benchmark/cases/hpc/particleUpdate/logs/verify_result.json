@@ -1,0 +1,11 @@
+{
+  "case_name": "particleUpdate",
+  "case_path": "pilot_benchmark/cases/hpc/particleUpdate",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4340762000010727,
+  "message": "",
+  "timestamp": "2026-06-30T07:43:49.290449+00:00",
+  "verifier_output": "PASS max_abs_error=5.960e-08 tol=1e-06\n"
+}

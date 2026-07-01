@@ -1,0 +1,10 @@
+{
+  "case_name": "daliCast",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliCast",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.324972099999286,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:07.266763+00:00"
+}

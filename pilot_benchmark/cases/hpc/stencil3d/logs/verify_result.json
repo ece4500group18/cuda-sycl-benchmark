@@ -1,0 +1,11 @@
+{
+  "case_name": "stencil3d",
+  "case_path": "pilot_benchmark/cases/hpc/stencil3d",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.32316310000169324,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:41.623884+00:00",
+  "verifier_output": "PASS max_rel_error=0.000e+00 tol=0.001\n"
+}

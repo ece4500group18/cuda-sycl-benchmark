@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmKvCacheReshape",
+  "case_path": "pilot_benchmark/cases/ai/vllmKvCacheReshape",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.43237760000192793,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:48.163549+00:00"
+}

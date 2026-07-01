@@ -95,6 +95,21 @@ bash scripts/verify_all.sh
 Every tool accepts `--category <cat>` and `--case <case_id>` to target a
 subset, e.g. `python3 tools/build_cuda.py --category easy --case vectorAdd`.
 
+On Windows PowerShell, use the matching `.ps1` wrappers:
+
+```powershell
+.\scripts\setup_env.ps1
+.\scripts\run_all_cuda.ps1
+.\scripts\run_all_syclomatic.ps1
+.\scripts\run_all_sycl.ps1
+```
+
+`run_all_cuda.*` and `run_all_sycl.*` also collect a process-level
+performance smoke benchmark after correctness verification and write
+`reports/performance_status.{csv,md}`. The metric is end-to-end executable
+runtime, including program startup and output writing; it is intended as a
+repeatable baseline for CUDA-vs-SYCL comparisons, not a pure kernel timer.
+
 ## How verification works
 
 Inputs are **deterministic** — either fixed index formulas (`gen_a`/`gen_b`)

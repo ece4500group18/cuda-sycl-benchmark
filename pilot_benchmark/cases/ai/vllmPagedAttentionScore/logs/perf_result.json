@@ -1,0 +1,37 @@
+{
+  "case_name": "vllmPagedAttentionScore",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    128,
+    64,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 204.93657999904826,
+  "runtime_ms_median": 189.39079999836395,
+  "runtime_ms_std": 32.84316258555799,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:49:58.423841+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    186.23749999824213,
+    197.0694999981788,
+    255.00869999814313,
+    274.4103000004543,
+    208.54459999827668,
+    192.2019999983604,
+    184.51500000082888,
+    185.3685999958543,
+    179.4300000037765,
+    186.57959999836748
+  ],
+  "failures": []
+}

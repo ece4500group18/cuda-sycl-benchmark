@@ -1,0 +1,10 @@
+{
+  "case_name": "pytorchMaxPool2d",
+  "case_path": "benchmark/collection/stencil-convolution/cases/pytorchMaxPool2d",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 10.358878499999264,
+  "message": "",
+  "timestamp": "2026-06-30T07:22:13.454423+00:00"
+}

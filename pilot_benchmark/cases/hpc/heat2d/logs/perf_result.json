@@ -1,0 +1,37 @@
+{
+  "case_name": "heat2d",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    128,
+    128,
+    50
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 180.95236999961344,
+  "runtime_ms_median": 179.9649500007945,
+  "runtime_ms_std": 9.709516750573897,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:48.214801+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    171.92719999911787,
+    172.20829999860143,
+    188.78960000074585,
+    200.3205999990314,
+    183.6210999990726,
+    169.04759999852104,
+    176.79880000105186,
+    188.22680000084802,
+    175.45259999860718,
+    183.13110000053712
+  ],
+  "failures": []
+}

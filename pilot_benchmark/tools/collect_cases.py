@@ -26,9 +26,8 @@ REQUIRED_FILES = [
     "tests/verify.py",
 ]
 
-REQUIRED_DIRS = [
-    "original", "syclomatic", "manual_sycl", "input", "output", "logs", "tests",
-]
+REQUIRED_DIRS = ["original", "tests"]
+WORK_DIRS = ["syclomatic", "manual_sycl", "input", "output", "logs"]
 
 REQUIRED_META_TOP = [
     "case_id", "name", "category", "source", "cuda_features", "libraries",
@@ -38,9 +37,10 @@ REQUIRED_META_TOP = [
 import os
 
 
-def validate_case(case_dir):
+def validate_case(case_dir, strict_dirs=False):
     problems = []
-    for rel in REQUIRED_DIRS:
+    dirs = REQUIRED_DIRS + (WORK_DIRS if strict_dirs else [])
+    for rel in dirs:
         if not os.path.isdir(os.path.join(case_dir, rel)):
             problems.append(f"missing dir: {rel}/")
     for rel in REQUIRED_FILES:
@@ -69,6 +69,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--category")
     ap.add_argument("--case")
+    ap.add_argument(
+        "--strict-dirs",
+        action="store_true",
+        help="also require generated/optional work directories to exist",
+    )
+    ap.add_argument(
+        "--init-dirs",
+        action="store_true",
+        help="create generated/optional work directories before validation",
+    )
     args = ap.parse_args()
 
     cases = C.iter_cases(args.category, args.case)
@@ -80,10 +90,12 @@ def main():
     bad = 0
     per_cat = {}
     for case_dir in cases:
+        if args.init_dirs:
+            C.ensure_case_work_dirs(case_dir)
         cat = C.category_of(case_dir)
         per_cat.setdefault(cat, 0)
         per_cat[cat] += 1
-        problems = validate_case(case_dir)
+        problems = validate_case(case_dir, strict_dirs=args.strict_dirs)
         cid = C.case_id_of(case_dir)
         if problems:
             bad += 1

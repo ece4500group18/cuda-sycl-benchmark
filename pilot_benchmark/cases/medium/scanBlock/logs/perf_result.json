@@ -1,0 +1,35 @@
+{
+  "case_name": "scanBlock",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1024
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 176.16613000027428,
+  "runtime_ms_median": 174.72130000078323,
+  "runtime_ms_std": 6.841863770742234,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:38:32.071731+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    182.96050000026298,
+    172.98920000030193,
+    172.82410000007076,
+    165.5198999997083,
+    175.3937000012229,
+    174.04890000034356,
+    168.86890000023413,
+    187.0584999996936,
+    183.90140000155952,
+    178.09619999934512
+  ],
+  "failures": []
+}

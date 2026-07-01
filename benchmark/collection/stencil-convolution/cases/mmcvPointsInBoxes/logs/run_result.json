@@ -1,0 +1,10 @@
+{
+  "case_name": "mmcvPointsInBoxes",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvPointsInBoxes",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3393828999996913,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:17.055504+00:00"
+}

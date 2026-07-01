@@ -1,0 +1,10 @@
+{
+  "case_name": "matrixMul",
+  "case_path": "pilot_benchmark/cases/easy/matrixMul",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2925092000004952,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:25.775908+00:00"
+}

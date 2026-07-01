@@ -19,15 +19,17 @@ import _common as C
 
 COLUMNS = [
     "case_id", "category", "name", "cuda_features", "libraries",
-    "cuda_compile", "cuda_run", "cuda_verify", "syclomatic_migrate",
-    "sycl_compile", "sycl_run", "sycl_verify",
+    "cuda_compile", "cuda_run", "cuda_verify", "cuda_performance",
+    "syclomatic_migrate", "sycl_compile", "sycl_run", "sycl_verify",
+    "sycl_performance",
     "warnings_count", "manual_fixes_required", "notes",
 ]
 
 # Pipeline stages we summarise pass-counts for.
 STAGE_KEYS = [
-    "cuda_compile", "cuda_run", "cuda_verify", "syclomatic_migrate",
-    "sycl_compile", "sycl_run", "sycl_verify",
+    "cuda_compile", "cuda_run", "cuda_verify", "cuda_performance",
+    "syclomatic_migrate", "sycl_compile", "sycl_run", "sycl_verify",
+    "sycl_performance",
 ]
 
 
@@ -44,10 +46,12 @@ def row_for(case_dir):
         "cuda_compile": st.get("cuda_compile", "unknown"),
         "cuda_run": st.get("cuda_run", "unknown"),
         "cuda_verify": st.get("cuda_verify", "unknown"),
+        "cuda_performance": st.get("cuda_performance", "unknown"),
         "syclomatic_migrate": st.get("syclomatic_migrate", "unknown"),
         "sycl_compile": st.get("sycl_compile", "unknown"),
         "sycl_run": st.get("sycl_run", "unknown"),
         "sycl_verify": st.get("sycl_verify", "unknown"),
+        "sycl_performance": st.get("sycl_performance", "unknown"),
         "warnings_count": syc.get("warnings_count"),
         "manual_fixes_required": syc.get("manual_fixes_required"),
         "notes": meta.get("notes", ""),
@@ -56,7 +60,7 @@ def row_for(case_dir):
 
 def write_csv(rows, path):
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=COLUMNS)
+        writer = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
         writer.writeheader()
         for r in rows:
             writer.writerow(r)

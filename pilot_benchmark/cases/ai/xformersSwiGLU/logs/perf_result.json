@@ -1,0 +1,35 @@
+{
+  "case_name": "xformersSwiGLU",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 562.5359300007403,
+  "runtime_ms_median": 563.9508000022033,
+  "runtime_ms_std": 6.038438816765851,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:50:28.935126+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    565.8524000027683,
+    563.8512000004994,
+    559.5652999982121,
+    564.2174999957206,
+    566.551600000821,
+    549.6266999980435,
+    571.7775000011898,
+    563.0768000046373,
+    556.7899000016041,
+    564.0504000039073
+  ],
+  "failures": []
+}

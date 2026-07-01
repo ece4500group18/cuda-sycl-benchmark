@@ -1,0 +1,11 @@
+{
+  "case_name": "mmcvKnn",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvKnn",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3316895000007207,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:29.488596+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=1e-05\n"
+}

@@ -1,0 +1,9 @@
+# command: E:\Miniconda\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliPaste
+# time:    2026-06-30T07:33:25.049662+00:00
+----------------------------------------------------------------------
+PASS max_abs_error=5.960e-08 tol=1e-05
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 0.273923

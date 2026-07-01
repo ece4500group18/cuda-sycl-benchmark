@@ -1,0 +1,11 @@
+# command: cmd.exe /s /c ""D:\Tools\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app"
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\pilot_benchmark\cases\ai\vllmPerTokenInt8Quant
+# time:    2026-06-30T16:41:02.741639+00:00
+----------------------------------------------------------------------
+main.cu
+tmpxft_00009a70_00000000-10_main.cudafe1.cpp
+  姝ｅ湪鍒涘缓搴� original\build\app.lib 鍜屽�硅薄 original\build\app.exp
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 8.187768

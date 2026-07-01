@@ -1,0 +1,11 @@
+{
+  "case_name": "mmcvThreeNN",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvThreeNN",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.290555100000347,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:31.314668+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=1e-05\n"
+}

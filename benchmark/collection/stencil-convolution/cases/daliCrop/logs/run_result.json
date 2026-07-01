@@ -1,0 +1,10 @@
+{
+  "case_name": "daliCrop",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliCrop",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.30320300000130374,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:08.458894+00:00"
+}

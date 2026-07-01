@@ -1,0 +1,36 @@
+{
+  "case_name": "topk",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    256,
+    512
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 198.1053500003327,
+  "runtime_ms_median": 193.3161500001006,
+  "runtime_ms_std": 20.34600617990452,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:07.532535+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    187.33200000133365,
+    175.41809999966063,
+    191.02050000037707,
+    199.23449999987497,
+    185.1435999997193,
+    195.61179999982414,
+    182.37240000053134,
+    227.5113000014244,
+    240.01510000016424,
+    197.3942000004172
+  ],
+  "failures": []
+}

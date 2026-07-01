@@ -1,0 +1,11 @@
+{
+  "case_name": "daliWarpAffine",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliWarpAffine",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2819247000006726,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:27.362676+00:00",
+  "verifier_output": "PASS max_abs_error=1.788e-06 tol=0.0001\n"
+}

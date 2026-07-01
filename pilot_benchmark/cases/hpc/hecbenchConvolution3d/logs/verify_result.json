@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchConvolution3d",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchConvolution3d",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3773875000042608,
+  "message": "",
+  "timestamp": "2026-06-30T16:43:43.672243+00:00",
+  "verifier_output": "PASS max_abs_error=5.960e-08 tol=1e-05\n"
+}

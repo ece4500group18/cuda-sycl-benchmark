@@ -1,0 +1,10 @@
+{
+  "case_name": "bnbL2NormBlockReduce",
+  "case_path": "pilot_benchmark/cases/ai/bnbL2NormBlockReduce",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.316377699993609,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:15.645615+00:00"
+}

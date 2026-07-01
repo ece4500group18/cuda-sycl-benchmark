@@ -1,0 +1,37 @@
+{
+  "case_name": "mmcvBallQuery",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    10,
+    12,
+    4
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 192.12870999981533,
+  "runtime_ms_median": 188.7457999991966,
+  "runtime_ms_std": 17.802154767944874,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:53.310284+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    172.68139999941923,
+    183.2661000007647,
+    205.1361999983783,
+    184.99729999894043,
+    192.49429999945278,
+    233.69860000093468,
+    177.79580000023998,
+    178.05050000060874,
+    197.9883999993035,
+    195.17850000011094
+  ],
+  "failures": []
+}

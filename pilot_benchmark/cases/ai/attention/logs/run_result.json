@@ -1,0 +1,10 @@
+{
+  "case_name": "attention",
+  "case_path": "pilot_benchmark/cases/ai/attention",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2801199000004999,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:19.801947+00:00"
+}

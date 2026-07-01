@@ -1,0 +1,36 @@
+{
+  "case_name": "softmax",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    512
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 277.960979999807,
+  "runtime_ms_median": 280.1658499993209,
+  "runtime_ms_std": 12.672582080238309,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:04.804081+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    258.76610000159417,
+    263.6363999990863,
+    260.94449999982317,
+    277.40559999983816,
+    287.02739999971527,
+    292.13370000070427,
+    282.7832999992097,
+    290.2197999992495,
+    277.54839999943215,
+    289.14459999941755
+  ],
+  "failures": []
+}

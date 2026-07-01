@@ -1,0 +1,10 @@
+{
+  "case_name": "finiteDiff1d",
+  "case_path": "pilot_benchmark/cases/hpc/finiteDiff1d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3255838999994012,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:29.202912+00:00"
+}

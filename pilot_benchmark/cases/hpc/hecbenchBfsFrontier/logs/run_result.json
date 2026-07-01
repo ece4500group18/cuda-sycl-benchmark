@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchBfsFrontier",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchBfsFrontier",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3074138000010862,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:38.108641+00:00"
+}

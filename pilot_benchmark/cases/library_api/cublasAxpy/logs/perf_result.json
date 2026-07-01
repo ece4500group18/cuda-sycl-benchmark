@@ -1,0 +1,35 @@
+{
+  "case_name": "cublasAxpy",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 754.8369700001786,
+  "runtime_ms_median": 733.5452500001338,
+  "runtime_ms_std": 57.9464498083297,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:37:15.869070+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    709.720799999559,
+    713.3587999996962,
+    712.9170000007434,
+    690.1128000008612,
+    711.0905999998067,
+    846.7059000013251,
+    848.151099999086,
+    786.5696000008029,
+    753.7317000005714,
+    776.0113999993337
+  ],
+  "failures": []
+}
