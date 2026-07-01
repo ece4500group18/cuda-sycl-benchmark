@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesCoalescedCopy",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesCoalescedCopy",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.6679156999998668,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:56.696706+00:00"
+}

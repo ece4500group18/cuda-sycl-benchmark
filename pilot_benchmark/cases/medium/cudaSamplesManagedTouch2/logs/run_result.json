@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesManagedTouch2",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesManagedTouch2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 1.055924799999957,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:16.031562+00:00"
+}

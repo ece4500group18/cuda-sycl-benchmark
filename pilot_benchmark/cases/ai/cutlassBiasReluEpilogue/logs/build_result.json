@@ -1,0 +1,10 @@
+{
+  "case_name": "cutlassBiasReluEpilogue",
+  "case_path": "pilot_benchmark/cases/ai/cutlassBiasReluEpilogue",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 10.326384500000131,
+  "message": "",
+  "timestamp": "2026-07-01T03:34:39.990618+00:00"
+}

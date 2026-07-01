@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesAtomicMaxBuckets",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesAtomicMaxBuckets",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.35752099999990605,
+  "message": "",
+  "timestamp": "2026-07-01T04:14:01.545048+00:00"
+}

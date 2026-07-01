@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchLavaMdPairForce",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchLavaMdPairForce",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4139018000005308,
+  "message": "",
+  "timestamp": "2026-07-01T04:17:16.881863+00:00",
+  "verifier_output": "PASS max_abs_error=6.866e-05 tol=0.0001\n"
+}

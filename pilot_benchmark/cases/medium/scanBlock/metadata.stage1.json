@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Hillis-Steele inclusive scan over one block.",
   "notes": "Hillis-Steele inclusive scan over one block.",
   "legacy_metadata": {
     "file": "metadata.json",

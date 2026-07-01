@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Two-pass block reduction; sum order differs from CPU.",
   "notes": "Two-pass block reduction; sum order differs from CPU.",
   "legacy_metadata": {
     "file": "metadata.json",

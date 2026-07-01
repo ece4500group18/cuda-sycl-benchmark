@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone RGB-to-YCbCr color-space conversion using DALI-style per-pixel channel math.",
   "notes": "Standalone RGB-to-YCbCr color-space conversion using DALI-style per-pixel channel math.",
   "legacy_metadata": {
     "file": "metadata.json",

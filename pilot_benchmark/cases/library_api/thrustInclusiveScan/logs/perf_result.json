@@ -1,0 +1,35 @@
+{
+  "case_name": "thrustInclusiveScan",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 300.6220500001291,
+  "runtime_ms_median": 300.2520499999264,
+  "runtime_ms_std": 13.034798022911415,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:48:48.489265+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    278.7804000008691,
+    286.2866000004942,
+    296.4854000001651,
+    305.5027999998856,
+    305.6642000001375,
+    323.9247000001342,
+    303.01409999992757,
+    314.3098000000464,
+    297.4899999999252,
+    294.76249999970605
+  ],
+  "failures": []
+}

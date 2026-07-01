@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Explicit FTCS, K steps. sizes=[ny,nx,steps].",
   "notes": "Explicit FTCS, K steps. sizes=[ny,nx,steps].",
   "legacy_metadata": {
     "file": "metadata.json",

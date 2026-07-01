@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone simplification of llama.cpp/ggml rope.cu; host code fixes deterministic positions and tensor dimensions.",
   "notes": "Standalone simplification of llama.cpp/ggml rope.cu; host code fixes deterministic positions and tensor dimensions.",
   "legacy_metadata": {
     "file": "metadata.json",

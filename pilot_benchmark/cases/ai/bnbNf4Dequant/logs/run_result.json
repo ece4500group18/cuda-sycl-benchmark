@@ -1,0 +1,10 @@
+{
+  "case_name": "bnbNf4Dequant",
+  "case_path": "pilot_benchmark/cases/ai/bnbNf4Dequant",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.40642749999915395,
+  "message": "",
+  "timestamp": "2026-07-01T03:41:54.864050+00:00"
+}

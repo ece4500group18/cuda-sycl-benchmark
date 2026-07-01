@@ -1,0 +1,62 @@
+{
+  "id": "thrustSortByKey",
+  "name": "Thrust sort by key",
+  "domain": "library_api",
+  "category": "library_api",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTemplates/simpleTemplates.cu",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "inspired_by",
+  "cuda_features": [
+    "thrust::sort_by_key",
+    "device_vector"
+  ],
+  "description": "Sort key-value pairs by integer key and emit sorted values.",
+  "input_description": "type=hashed; sizes=[65536]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.0,
+    "atol": 0.0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      65536
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "inspired_by",
+  "extraction_notes": "Standalone Thrust sort_by_key API case.",
+  "notes": "Standalone Thrust sort_by_key API case.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

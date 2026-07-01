@@ -1,0 +1,63 @@
+{
+  "id": "cutlassBiasGeluEpilogue2",
+  "name": "CUTLASS bias GELU epilogue",
+  "domain": "modern_ml",
+  "category": "ai",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cutlass",
+  "source_url": "https://github.com/NVIDIA/cutlass/blob/main/examples/12_gemm_bias_relu/gemm_bias_relu.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "inspired_by",
+  "cuda_features": [
+    "__global__",
+    "epilogue",
+    "activation"
+  ],
+  "description": "Bias plus tanh-GELU epilogue for GEMM outputs.",
+  "input_description": "type=hashed; sizes=[524288]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-05,
+    "atol": 1e-05,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      524288
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "inspired_by",
+  "extraction_notes": "Standalone epilogue variant inspired by CUTLASS fused GEMM epilogue examples.",
+  "notes": "Standalone epilogue variant inspired by CUTLASS fused GEMM epilogue examples.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

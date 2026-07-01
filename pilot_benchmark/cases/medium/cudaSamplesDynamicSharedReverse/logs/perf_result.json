@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesDynamicSharedReverse",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 346.28695999981574,
+  "runtime_ms_median": 344.6052999997846,
+  "runtime_ms_std": 30.259738586041973,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:48:00.310634+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    304.99889999919105,
+    315.2916999997615,
+    326.1564000004,
+    338.7349999993603,
+    354.76610000023356,
+    405.0179999994725,
+    383.2091999993281,
+    351.4968999998018,
+    332.7218000003995,
+    350.47560000020894
+  ],
+  "failures": []
+}

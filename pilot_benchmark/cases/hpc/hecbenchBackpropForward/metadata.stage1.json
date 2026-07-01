@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone matrix-vector sigmoid layer inspired by ORNL/HeCBench src/backprop-cuda.",
   "notes": "Standalone matrix-vector sigmoid layer inspired by ORNL/HeCBench src/backprop-cuda.",
   "legacy_metadata": {
     "file": "metadata.json",

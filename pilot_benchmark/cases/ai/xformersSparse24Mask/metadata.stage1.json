@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone structured sparsity mask inspired by xformers/csrc/sparse24/sparse24_largest_mask_2d.cu.",
   "notes": "Standalone structured sparsity mask inspired by xformers/csrc/sparse24/sparse24_largest_mask_2d.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

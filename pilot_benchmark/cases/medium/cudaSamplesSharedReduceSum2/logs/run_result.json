@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesSharedReduceSum2",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesSharedReduceSum2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.36135770000055345,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:08.972613+00:00"
+}

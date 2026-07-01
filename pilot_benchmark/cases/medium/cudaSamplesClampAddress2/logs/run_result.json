@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesClampAddress2",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesClampAddress2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4089643999996042,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:20.742093+00:00"
+}

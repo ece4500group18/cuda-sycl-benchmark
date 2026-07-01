@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesGridStrideStrided",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 350.94144000004235,
+  "runtime_ms_median": 353.84644999976445,
+  "runtime_ms_std": 16.507573363172934,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:21:43.790600+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    309.52439999964554,
+    350.28109999984736,
+    349.6353000000454,
+    356.5661000002365,
+    356.8384000000151,
+    347.3933000004763,
+    354.16949999944336,
+    353.52340000008553,
+    355.72099999990314,
+    375.7619000007253
+  ],
+  "failures": []
+}

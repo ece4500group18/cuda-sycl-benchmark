@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Computes r = b - A*x for a 1D tridiagonal Laplacian operator.",
   "notes": "Computes r = b - A*x for a 1D tridiagonal Laplacian operator.",
   "legacy_metadata": {
     "file": "metadata.json",

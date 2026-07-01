@@ -1,0 +1,11 @@
+{
+  "case_name": "cudaSamplesClampAddress2",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesClampAddress2",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.33520450000014534,
+  "message": "",
+  "timestamp": "2026-07-01T04:41:51.695147+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=1e-06\n"
+}

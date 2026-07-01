@@ -51,6 +51,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Events time a vector add; correctness = the add result.",
   "notes": "Events time a vector add; correctness = the add result.",
   "legacy_metadata": {
     "file": "metadata.json",

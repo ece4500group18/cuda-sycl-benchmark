@@ -59,6 +59,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Naive (non-tiled) GEMM; tiled version belongs in medium.",
   "notes": "Naive (non-tiled) GEMM; tiled version belongs in medium.",
   "legacy_metadata": {
     "file": "metadata.json",

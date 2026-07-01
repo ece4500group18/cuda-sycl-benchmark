@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesConstantLookup2",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesConstantLookup2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7689730000001873,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:11.414198+00:00"
+}

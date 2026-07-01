@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesWarpPrefixLane",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    32768
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 237.11190999983955,
+  "runtime_ms_median": 238.02379999960976,
+  "runtime_ms_std": 18.243189222935452,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:21:32.491033+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    227.56200000003446,
+    214.8111999995308,
+    209.66849999967963,
+    222.7075999999215,
+    236.41739999948186,
+    239.63019999973767,
+    248.79690000034316,
+    264.66270000037184,
+    251.07289999959903,
+    255.78969999969559
+  ],
+  "failures": []
+}

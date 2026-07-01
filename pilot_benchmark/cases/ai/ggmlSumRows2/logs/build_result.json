@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlSumRows2",
+  "case_path": "pilot_benchmark/cases/ai/ggmlSumRows2",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 9.712672799999382,
+  "message": "",
+  "timestamp": "2026-07-01T04:06:42.795766+00:00"
+}

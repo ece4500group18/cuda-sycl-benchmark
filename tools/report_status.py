@@ -41,6 +41,7 @@ def extraction_summary(rows: list[dict]) -> list[dict]:
     summary: list[dict] = []
     for source, source_rows in sorted(by_source.items()):
         licenses = sorted({str(row.get("license") or "unknown") for row in source_rows})
+        fidelities = sorted({str(row.get("extraction_fidelity") or "unknown") for row in source_rows})
         methods = sorted({str(row.get("verification_type") or "unknown") for row in source_rows})
         notes = [
             str(row.get("extraction_notes") or "").strip()
@@ -53,6 +54,7 @@ def extraction_summary(rows: list[dict]) -> list[dict]:
                 "case_count": len(source_rows),
                 "representative_kernels": ", ".join(str(row["case_name"]) for row in source_rows[:8]),
                 "license": ", ".join(licenses),
+                "extraction_fidelity": ", ".join(fidelities),
                 "extraction_notes": notes[0] if notes else "standalone CUDA extraction/adaptation",
                 "verification_method": ", ".join(methods),
                 "benchmark_passed": "yes" if all(row.get("actual_perf_status") == "pass" for row in source_rows) else "no",
@@ -135,6 +137,7 @@ def write_markdown(rows: list[dict], path) -> None:
                     "case_count",
                     "representative_kernels",
                     "license",
+                    "extraction_fidelity",
                     "extraction_notes",
                     "verification_method",
                     "benchmark_passed",

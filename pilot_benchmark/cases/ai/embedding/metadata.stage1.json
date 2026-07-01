@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Gather rows from a table. sizes=[vocab,dim,num_ids].",
   "notes": "Gather rows from a table. sizes=[vocab,dim,num_ids].",
   "legacy_metadata": {
     "file": "metadata.json",

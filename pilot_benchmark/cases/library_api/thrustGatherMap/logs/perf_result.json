@@ -1,0 +1,35 @@
+{
+  "case_name": "thrustGatherMap",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 310.714889999781,
+  "runtime_ms_median": 309.43604999993113,
+  "runtime_ms_std": 13.896136162160458,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:48:59.136686+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    286.2976999995226,
+    307.48419999963517,
+    300.02779999995255,
+    307.8353999999308,
+    311.03669999993144,
+    325.2161000000342,
+    316.7628000001059,
+    303.8511999993716,
+    311.19239999952697,
+    337.4445999997988
+  ],
+  "failures": []
+}

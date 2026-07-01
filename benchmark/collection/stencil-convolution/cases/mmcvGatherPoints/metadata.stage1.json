@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone adaptation from open-mmlab/mmcv. Static structure and Python syntax checks are intended for this stage; CUDA/SYCL runtime status remains not_attempted.",
   "notes": "Standalone adaptation from open-mmlab/mmcv. Static structure and Python syntax checks are intended for this stage; CUDA/SYCL runtime status remains not_attempted.",
   "legacy_metadata": {
     "file": "metadata.json",

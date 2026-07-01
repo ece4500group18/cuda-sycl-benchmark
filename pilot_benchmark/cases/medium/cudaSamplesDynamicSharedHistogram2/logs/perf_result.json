@@ -1,0 +1,36 @@
+{
+  "case_name": "cudaSamplesDynamicSharedHistogram2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    65536,
+    16
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 219.6840599999632,
+  "runtime_ms_median": 220.08020000066608,
+  "runtime_ms_std": 6.671998255496069,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:46:24.218780+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    222.859099998459,
+    226.96910000013304,
+    217.47730000060983,
+    229.4612000005145,
+    222.68310000072233,
+    214.5193999986077,
+    212.71879999949306,
+    209.08680000138702,
+    216.11139999913576,
+    224.95440000056988
+  ],
+  "failures": []
+}

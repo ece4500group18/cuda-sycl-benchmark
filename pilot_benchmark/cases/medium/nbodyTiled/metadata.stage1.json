@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Per-body acceleration with softening; sizes=[N]; output 3*N.",
   "notes": "Per-body acceleration with softening; sizes=[N]; output 3*N.",
   "legacy_metadata": {
     "file": "metadata.json",

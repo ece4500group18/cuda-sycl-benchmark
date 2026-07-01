@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone 3D stencil inspired by ORNL/HeCBench src/fdtd3d-cuda/main.cu.",
   "notes": "Standalone 3D stencil inspired by ORNL/HeCBench src/fdtd3d-cuda/main.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

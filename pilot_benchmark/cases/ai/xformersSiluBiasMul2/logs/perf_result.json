@@ -1,0 +1,35 @@
+{
+  "case_name": "xformersSiluBiasMul2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 671.2926300001527,
+  "runtime_ms_median": 677.7870500000063,
+  "runtime_ms_std": 26.953110027427773,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:43:16.407073+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    628.6000000000058,
+    692.3308000004909,
+    653.6232999997083,
+    672.412599999916,
+    707.9222000002119,
+    631.7615999996633,
+    683.6443000001964,
+    683.1615000000966,
+    662.1410000007018,
+    697.3290000005363
+  ],
+  "failures": []
+}

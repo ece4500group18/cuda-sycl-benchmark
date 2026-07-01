@@ -52,6 +52,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Work split across 4 streams.",
   "notes": "Work split across 4 streams.",
   "legacy_metadata": {
     "file": "metadata.json",

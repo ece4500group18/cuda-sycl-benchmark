@@ -1,0 +1,10 @@
+{
+  "case_name": "thrustReduceByKeySegments",
+  "case_path": "pilot_benchmark/cases/library_api/thrustReduceByKeySegments",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7196420999998736,
+  "message": "",
+  "timestamp": "2026-07-01T04:14:12.188933+00:00"
+}

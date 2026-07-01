@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone HWC-to-CHW batched layout transform adapted from DALI Transpose.",
   "notes": "Standalone HWC-to-CHW batched layout transform adapted from DALI Transpose.",
   "legacy_metadata": {
     "file": "metadata.json",

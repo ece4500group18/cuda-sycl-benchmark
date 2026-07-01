@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Forward C2C FFT; compare magnitude spectrum to numpy. sizes=[n].",
   "notes": "Forward C2C FFT; compare magnitude spectrum to numpy. sizes=[n].",
   "legacy_metadata": {
     "file": "metadata.json",

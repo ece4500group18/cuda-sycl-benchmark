@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Fused row-major bias add and ReLU, a common neural-network epilogue.",
   "notes": "Fused row-major bias add and ReLU, a common neural-network epilogue.",
   "legacy_metadata": {
     "file": "metadata.json",

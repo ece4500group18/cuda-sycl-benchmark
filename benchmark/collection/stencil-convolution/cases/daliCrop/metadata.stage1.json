@@ -58,6 +58,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone batched crop with per-sample anchors, adapted from the indexing pattern of DALI Crop.",
   "notes": "Standalone batched crop with per-sample anchors, adapted from the indexing pattern of DALI Crop.",
   "legacy_metadata": {
     "file": "metadata.json",

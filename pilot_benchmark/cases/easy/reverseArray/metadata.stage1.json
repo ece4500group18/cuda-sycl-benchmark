@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Pure data movement.",
   "notes": "Pure data movement.",
   "legacy_metadata": {
     "file": "metadata.json",

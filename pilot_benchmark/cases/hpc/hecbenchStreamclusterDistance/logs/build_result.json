@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchStreamclusterDistance",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchStreamclusterDistance",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 10.59326990000045,
+  "message": "",
+  "timestamp": "2026-07-01T03:37:38.551878+00:00"
+}

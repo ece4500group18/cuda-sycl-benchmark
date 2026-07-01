@@ -1,0 +1,10 @@
+{
+  "case_name": "thrustGatherMap",
+  "case_path": "pilot_benchmark/cases/library_api/thrustGatherMap",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4625722000000678,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:49.765536+00:00"
+}

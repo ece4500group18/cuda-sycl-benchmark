@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone row mean reduction inspired by llama.cpp/ggml mean.cu.",
   "notes": "Standalone row mean reduction inspired by llama.cpp/ggml mean.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

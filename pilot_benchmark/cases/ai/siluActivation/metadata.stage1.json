@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Elementwise SiLU / swish activation.",
   "notes": "Elementwise SiLU / swish activation.",
   "legacy_metadata": {
     "file": "metadata.json",

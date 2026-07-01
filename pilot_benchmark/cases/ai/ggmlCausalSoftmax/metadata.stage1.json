@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone masked softmax inspired by llama.cpp/ggml softmax.cu.",
   "notes": "Standalone masked softmax inspired by llama.cpp/ggml softmax.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

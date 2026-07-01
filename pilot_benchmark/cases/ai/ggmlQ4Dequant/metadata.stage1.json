@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone q4-style nibble unpacking from llama.cpp/ggml dequantize.cuh.",
   "notes": "Standalone q4-style nibble unpacking from llama.cpp/ggml dequantize.cuh.",
   "legacy_metadata": {
     "file": "metadata.json",

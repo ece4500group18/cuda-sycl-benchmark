@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchNeedlemanDiagScore",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchNeedlemanDiagScore",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3164080999995349,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:46.481449+00:00"
+}

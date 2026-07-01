@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchBitonicCompare2",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchBitonicCompare2",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.36553139999978157,
+  "message": "",
+  "timestamp": "2026-07-01T04:41:26.950259+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=1e-06\n"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmSoftcapLogits",
+  "case_path": "pilot_benchmark/cases/ai/vllmSoftcapLogits",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7006916000000274,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:09.460828+00:00"
+}

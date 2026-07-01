@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmGeluTanhMul2",
+  "case_path": "pilot_benchmark/cases/ai/vllmGeluTanhMul2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7753428999994867,
+  "message": "",
+  "timestamp": "2026-07-01T04:39:11.969619+00:00"
+}

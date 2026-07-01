@@ -1,0 +1,36 @@
+{
+  "case_name": "hecbenchHeat2dBoundaryStep",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    256,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 239.20770000004268,
+  "runtime_ms_median": 239.0826000000743,
+  "runtime_ms_std": 16.14429089130669,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:20:32.110832+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    214.21490000011545,
+    231.6201000003275,
+    221.24990000065736,
+    239.7043000000849,
+    250.76999999964755,
+    229.79029999987688,
+    243.8204999998561,
+    269.1992999998547,
+    238.4609000000637,
+    253.2467999999426
+  ],
+  "failures": []
+}

@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "RMSNorm with gamma=1,eps=1e-6. sizes=[rows,cols].",
   "notes": "RMSNorm with gamma=1,eps=1e-6. sizes=[rows,cols].",
   "legacy_metadata": {
     "file": "metadata.json",

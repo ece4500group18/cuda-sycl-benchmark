@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone activation epilogue inspired by vLLM csrc/libtorch_stable/activation_kernels.cu.",
   "notes": "Standalone activation epilogue inspired by vLLM csrc/libtorch_stable/activation_kernels.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

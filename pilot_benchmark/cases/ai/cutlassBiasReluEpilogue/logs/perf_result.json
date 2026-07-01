@@ -1,0 +1,35 @@
+{
+  "case_name": "cutlassBiasReluEpilogue",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 296.98937000002843,
+  "runtime_ms_median": 294.40905000001294,
+  "runtime_ms_std": 11.118892098807267,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:20.986765+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    280.45139999994717,
+    289.0655000001061,
+    295.55770000024495,
+    288.63149999961024,
+    301.53920000066137,
+    318.69060000008176,
+    306.90950000007433,
+    290.8626999997068,
+    293.26039999978093,
+    304.9252000000706
+  ],
+  "failures": []
+}

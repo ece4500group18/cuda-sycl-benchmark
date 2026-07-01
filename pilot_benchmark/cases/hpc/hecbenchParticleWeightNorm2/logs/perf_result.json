@@ -1,0 +1,35 @@
+{
+  "case_name": "hecbenchParticleWeightNorm2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4096
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 202.3246199998539,
+  "runtime_ms_median": 203.25785000022734,
+  "runtime_ms_std": 5.154528200216394,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:44:39.220361+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    206.46139999917068,
+    205.86099999854923,
+    195.46900000023015,
+    203.97369999955117,
+    206.7415000001347,
+    195.85100000040256,
+    202.5420000009035,
+    196.3529999993625,
+    200.0785000000178,
+    209.91510000021663
+  ],
+  "failures": []
+}

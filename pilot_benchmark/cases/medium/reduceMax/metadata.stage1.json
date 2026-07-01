@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Max is order-independent; exact match expected.",
   "notes": "Max is order-independent; exact match expected.",
   "legacy_metadata": {
     "file": "metadata.json",

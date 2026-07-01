@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone graph frontier step inspired by ORNL/HeCBench src/bfs-cuda/bfs.cu.",
   "notes": "Standalone graph frontier step inspired by ORNL/HeCBench src/bfs-cuda/bfs.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

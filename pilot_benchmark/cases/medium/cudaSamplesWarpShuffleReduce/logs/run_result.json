@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesWarpShuffleReduce",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesWarpShuffleReduce",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.350712399999793,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:32.468409+00:00"
+}

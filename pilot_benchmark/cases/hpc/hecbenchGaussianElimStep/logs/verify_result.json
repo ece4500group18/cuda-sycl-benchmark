@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchGaussianElimStep",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchGaussianElimStep",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.31287350000002334,
+  "message": "",
+  "timestamp": "2026-07-01T03:43:35.865201+00:00",
+  "verifier_output": "PASS max_abs_error=7.451e-09 tol=1e-05\n"
+}

@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone compare-swap pass inspired by ORNL/HeCBench src/bitonic-sort-cuda/main.cu.",
   "notes": "Standalone compare-swap pass inspired by ORNL/HeCBench src/bitonic-sort-cuda/main.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

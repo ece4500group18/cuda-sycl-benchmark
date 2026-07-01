@@ -1,0 +1,36 @@
+{
+  "case_name": "hecbenchPathfinderStep",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 202.10643000000346,
+  "runtime_ms_median": 200.1046000000315,
+  "runtime_ms_std": 6.818974161565239,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:47:25.915252+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    197.9270000001634,
+    195.55300000047282,
+    198.70050000008632,
+    204.28029999948194,
+    219.34109999983775,
+    201.03970000036497,
+    197.3072000000684,
+    199.16949999969802,
+    205.55719999993016,
+    202.18879999993078
+  ],
+  "failures": []
+}

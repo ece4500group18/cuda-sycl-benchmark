@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "thrust::sort ascending.",
   "notes": "thrust::sort ascending.",
   "legacy_metadata": {
     "file": "metadata.json",

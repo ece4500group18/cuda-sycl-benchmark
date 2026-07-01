@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchParticleWeightNorm2",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchParticleWeightNorm2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4052612000004956,
+  "message": "",
+  "timestamp": "2026-07-01T04:39:48.804907+00:00"
+}

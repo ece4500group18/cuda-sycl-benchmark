@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Numerically stable softmax per row. sizes=[rows,cols].",
   "notes": "Numerically stable softmax per row. sizes=[rows,cols].",
   "legacy_metadata": {
     "file": "metadata.json",

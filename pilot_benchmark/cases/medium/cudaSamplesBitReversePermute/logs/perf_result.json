@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesBitReversePermute",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    65536
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 284.87957000006645,
+  "runtime_ms_median": 279.43009999989954,
+  "runtime_ms_std": 26.575948285105646,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:21:49.896258+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    316.41119999949296,
+    278.29019999990123,
+    280.56999999989785,
+    286.31959999984247,
+    260.3113000004669,
+    258.50360000004,
+    320.43760000033217,
+    325.0828000000183,
+    264.51129999986733,
+    258.3581000008053
+  ],
+  "failures": []
+}

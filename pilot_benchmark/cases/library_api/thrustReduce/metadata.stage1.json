@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "thrust::reduce sum.",
   "notes": "thrust::reduce sum.",
   "legacy_metadata": {
     "file": "metadata.json",

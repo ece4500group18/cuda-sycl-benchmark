@@ -1,0 +1,36 @@
+{
+  "case_name": "ggmlMulRowsBroadcast",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 262.5275699998383,
+  "runtime_ms_median": 262.894999999844,
+  "runtime_ms_std": 8.238935988442952,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:43:32.426149+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    262.4298999999155,
+    245.65570000049775,
+    276.4700999996421,
+    268.1804000003467,
+    262.1543000004749,
+    268.472899999324,
+    254.91890000012063,
+    260.26419999834616,
+    263.3600999997725,
+    263.3691999999428
+  ],
+  "failures": []
+}

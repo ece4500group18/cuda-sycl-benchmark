@@ -58,6 +58,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone half-pixel bilinear resize benchmark adapted from DALI Resize's image resampling workload.",
   "notes": "Standalone half-pixel bilinear resize benchmark adapted from DALI Resize's image resampling workload.",
   "legacy_metadata": {
     "file": "metadata.json",

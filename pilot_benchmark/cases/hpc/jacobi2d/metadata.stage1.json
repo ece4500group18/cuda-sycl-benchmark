@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Fixed boundaries, K iterations. sizes=[ny,nx,iters].",
   "notes": "Fixed boundaries, K iterations. sizes=[ny,nx,iters].",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -1,0 +1,11 @@
+{
+  "case_name": "vllmGeluTanhMul2",
+  "case_path": "pilot_benchmark/cases/ai/vllmGeluTanhMul2",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.6504890999995041,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:47.179785+00:00",
+  "verifier_output": "PASS max_abs_error=4.768e-07 tol=1e-05\n"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "cudaSamplesAtomicMaxBuckets",
+  "case_path": "pilot_benchmark/cases/medium/cudaSamplesAtomicMaxBuckets",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 10.755680600000233,
+  "message": "",
+  "timestamp": "2026-07-01T04:11:34.677980+00:00"
+}

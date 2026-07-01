@@ -1,0 +1,11 @@
+{
+  "case_name": "bnbStableEmbeddingGrad",
+  "case_path": "pilot_benchmark/cases/ai/bnbStableEmbeddingGrad",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.32505140000012034,
+  "message": "",
+  "timestamp": "2026-07-01T03:43:15.511356+00:00",
+  "verifier_output": "PASS max_abs_error=7.451e-09 tol=1e-05\n"
+}
