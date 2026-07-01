@@ -1,0 +1,17 @@
+# command: cmd.exe /s /c ""D:\Tools\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app"
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\pilot_benchmark\cases\ai\daliSliceFlipNormalizePad
+# time:    2026-07-01T03:35:38.552415+00:00
+----------------------------------------------------------------------
+D:\Documents\ECE450\cuda-sycl-benchmark\pilot_benchmark\cases\ai\daliSliceFlipNormalizePad\original\main.cu(14): warning #177-D: function "hs" was declared but never referenced
+  __declspec(__host__) __declspec(__device__) static inline float hs(unsigned i, unsigned s) {
+                                                                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+main.cu
+tmpxft_00001ae0_00000000-10_main.cudafe1.cpp
+  姝ｅ湪鍒涘缓搴� original\build\app.lib 鍜屽�硅薄 original\build\app.exp
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 9.859017

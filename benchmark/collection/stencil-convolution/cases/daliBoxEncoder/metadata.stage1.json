@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone anchor-to-ground-truth matcher and box encoder modeled after DALI BoxEncoder.",
   "notes": "Standalone anchor-to-ground-truth matcher and box encoder modeled after DALI BoxEncoder.",
   "legacy_metadata": {
     "file": "metadata.json",

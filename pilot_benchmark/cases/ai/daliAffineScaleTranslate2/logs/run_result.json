@@ -1,0 +1,10 @@
+{
+  "case_name": "daliAffineScaleTranslate2",
+  "case_path": "pilot_benchmark/cases/ai/daliAffineScaleTranslate2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3618980000001102,
+  "message": "",
+  "timestamp": "2026-07-01T04:40:05.216624+00:00"
+}

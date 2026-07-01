@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone online-softmax simplification inspired by Dao-AILab/flash-attention csrc/flash_attn/src/softmax.h.",
   "notes": "Standalone online-softmax simplification inspired by Dao-AILab/flash-attention csrc/flash_attn/src/softmax.h.",
   "legacy_metadata": {
     "file": "metadata.json",

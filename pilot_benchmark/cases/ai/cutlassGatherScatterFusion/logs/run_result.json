@@ -1,0 +1,10 @@
+{
+  "case_name": "cutlassGatherScatterFusion",
+  "case_path": "pilot_benchmark/cases/ai/cutlassGatherScatterFusion",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4722986000006131,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:05.970028+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "case_name": "xformersBlockSparseMaskApply",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    128
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 244.91782999966745,
+  "runtime_ms_median": 242.78404999995473,
+  "runtime_ms_std": 12.812815473179407,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:19:56.376596+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    224.0446999994674,
+    236.19630000030156,
+    237.93659999955707,
+    264.2662999996901,
+    241.4994000000661,
+    244.42779999935738,
+    267.1857999994245,
+    240.64649999945686,
+    248.90619999951014,
+    244.06869999984337
+  ],
+  "failures": []
+}

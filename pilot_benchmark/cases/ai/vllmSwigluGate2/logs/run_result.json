@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmSwigluGate2",
+  "case_path": "pilot_benchmark/cases/ai/vllmSwigluGate2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.7309844000001249,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:11.444566+00:00"
+}

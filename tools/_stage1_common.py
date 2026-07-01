@@ -504,7 +504,8 @@ def audit_case(case: CaseInfo) -> dict[str, Any]:
         "performance_log_path": log_relpath(case, "perf_result.json"),
         "failure_reason": failure_reason(case),
         "notes": " | ".join(notes),
-        "extraction_notes": str(case.metadata.get("notes", "")),
+        "extraction_fidelity": str(case.metadata.get("extraction_fidelity", case.metadata.get("adaptation_type", ""))),
+        "extraction_notes": str(case.metadata.get("extraction_notes", case.metadata.get("notes", ""))),
         "description": str(case.metadata.get("description") or case.metadata.get("name") or case.case_id),
         "missing_files": missing_files,
         "missing_dirs": missing_dirs,
@@ -638,6 +639,8 @@ def build_stage1_metadata(case: CaseInfo) -> dict[str, Any]:
         "hardware": stage1_hardware(case),
         "status": actual_status(case),
         "owner": "ece4500group18",
+        "extraction_fidelity": str(meta.get("extraction_fidelity", adaptation_type(meta))),
+        "extraction_notes": str(meta.get("extraction_notes", meta.get("notes", ""))),
         "notes": str(meta.get("notes", "")),
         "legacy_metadata": {
             "file": "metadata.json",

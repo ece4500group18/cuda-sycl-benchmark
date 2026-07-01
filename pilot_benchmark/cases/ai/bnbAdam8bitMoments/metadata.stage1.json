@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone optimizer-step simplification inspired by bitsandbytes csrc/ops.cu and csrc/kernels.cu.",
   "notes": "Standalone optimizer-step simplification inspired by bitsandbytes csrc/ops.cu and csrc/kernels.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

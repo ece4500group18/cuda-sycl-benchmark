@@ -52,6 +52,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Square GEMM + per-column bias. sizes=[N].",
   "notes": "Square GEMM + per-column bias. sizes=[N].",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchJacobi3d7pt",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchJacobi3d7pt",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3433334000001196,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:35.009899+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "case_name": "vllmKvCacheScatter",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    8,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 315.5652399997962,
+  "runtime_ms_median": 313.0020000003242,
+  "runtime_ms_std": 15.097395238855276,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:19:30.193886+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    286.3173999994615,
+    308.91479999991134,
+    325.03799999994953,
+    311.8858000007094,
+    323.9868999999089,
+    309.72059999930934,
+    314.11819999993895,
+    333.8166999992609,
+    304.3339999994714,
+    337.52000000004045
+  ],
+  "failures": []
+}

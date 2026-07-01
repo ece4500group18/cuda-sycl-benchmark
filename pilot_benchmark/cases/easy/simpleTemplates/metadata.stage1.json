@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "k=3.0f; exercises C++ template kernel instantiation.",
   "notes": "k=3.0f; exercises C++ template kernel instantiation.",
   "legacy_metadata": {
     "file": "metadata.json",

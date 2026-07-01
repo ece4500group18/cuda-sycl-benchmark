@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "16x16 tiled GEMM. sizes=[N].",
   "notes": "16x16 tiled GEMM. sizes=[N].",
   "legacy_metadata": {
     "file": "metadata.json",

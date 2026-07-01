@@ -52,6 +52,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Stream-captured graph runs a scale kernel; out = 2*a + 1.",
   "notes": "Stream-captured graph runs a scale kernel; out = 2*a + 1.",
   "legacy_metadata": {
     "file": "metadata.json",

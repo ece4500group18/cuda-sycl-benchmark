@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone center rotation with bilinear sampling, adapted from DALI displacement/rotate coordinate mapping.",
   "notes": "Standalone center rotation with bilinear sampling, adapted from DALI displacement/rotate coordinate mapping.",
   "legacy_metadata": {
     "file": "metadata.json",

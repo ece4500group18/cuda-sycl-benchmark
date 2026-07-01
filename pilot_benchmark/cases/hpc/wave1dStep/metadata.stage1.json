@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Single explicit update for a 1D wave equation with clamped endpoints.",
   "notes": "Single explicit update for a 1D wave equation with clamped endpoints.",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -52,6 +52,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "tanh approximation of GELU.",
   "notes": "tanh approximation of GELU.",
   "legacy_metadata": {
     "file": "metadata.json",

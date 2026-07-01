@@ -1,0 +1,36 @@
+{
+  "case_name": "flashAlibiBias",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    128
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 240.507339999931,
+  "runtime_ms_median": 239.25074999988283,
+  "runtime_ms_std": 12.547468389329534,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:06.226237+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    229.90529999970022,
+    217.8859999994529,
+    238.65010000008624,
+    239.85139999967942,
+    230.49410000021453,
+    238.635499999873,
+    257.567999999992,
+    243.46320000040578,
+    255.78459999996994,
+    252.83519999993587
+  ],
+  "failures": []
+}

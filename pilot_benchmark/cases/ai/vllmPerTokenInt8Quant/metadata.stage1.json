@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone per-row activation quantization inspired by vLLM csrc/libtorch_stable/quantization/activation_kernels.cu.",
   "notes": "Standalone per-row activation quantization inspired by vLLM csrc/libtorch_stable/quantization/activation_kernels.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -1,0 +1,36 @@
+{
+  "case_name": "bnbInt8RowDequant",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1024,
+    128
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 274.6938299998874,
+  "runtime_ms_median": 275.3069999998843,
+  "runtime_ms_std": 8.934231445502764,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:19:35.888981+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    269.78520000011486,
+    274.4537999997192,
+    291.1476999997831,
+    261.7636000004495,
+    276.16649999981746,
+    276.1602000000494,
+    284.8844000000099,
+    272.30469999994966,
+    263.03359999928944,
+    277.23859999969136
+  ],
+  "failures": []
+}

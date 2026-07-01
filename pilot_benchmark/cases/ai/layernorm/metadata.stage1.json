@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "LayerNorm with gamma=1,beta=0,eps=1e-5. sizes=[rows,cols].",
   "notes": "LayerNorm with gamma=1,beta=0,eps=1e-5. sizes=[rows,cols].",
   "legacy_metadata": {
     "file": "metadata.json",

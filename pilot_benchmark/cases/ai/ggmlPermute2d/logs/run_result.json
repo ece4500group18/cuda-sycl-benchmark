@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlPermute2d",
+  "case_path": "pilot_benchmark/cases/ai/ggmlPermute2d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.34481899999991583,
+  "message": "",
+  "timestamp": "2026-07-01T04:39:24.992687+00:00"
+}

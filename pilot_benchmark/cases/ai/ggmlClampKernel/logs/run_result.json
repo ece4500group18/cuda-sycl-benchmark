@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlClampKernel",
+  "case_path": "pilot_benchmark/cases/ai/ggmlClampKernel",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.8437104000004183,
+  "message": "",
+  "timestamp": "2026-07-01T03:41:43.298671+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "daliBrightnessContrast2",
+  "case_path": "pilot_benchmark/cases/ai/daliBrightnessContrast2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3604786999994758,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:48.090332+00:00"
+}

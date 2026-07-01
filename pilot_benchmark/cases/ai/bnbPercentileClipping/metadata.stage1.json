@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone percentile-style clipping simplification inspired by bitsandbytes csrc/kernels.cu.",
   "notes": "Standalone percentile-style clipping simplification inspired by bitsandbytes csrc/kernels.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

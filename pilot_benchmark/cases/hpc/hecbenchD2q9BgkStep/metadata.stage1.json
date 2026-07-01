@@ -56,6 +56,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone lattice update inspired by ORNL/HeCBench src/d2q9-bgk-cuda/main.cu.",
   "notes": "Standalone lattice update inspired by ORNL/HeCBench src/d2q9-bgk-cuda/main.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

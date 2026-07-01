@@ -1,0 +1,11 @@
+{
+  "case_name": "flashSoftmaxDenomStats",
+  "case_path": "pilot_benchmark/cases/ai/flashSoftmaxDenomStats",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.37694480000027397,
+  "message": "",
+  "timestamp": "2026-07-01T04:41:09.640169+00:00",
+  "verifier_output": "PASS max_abs_error=7.629e-06 tol=0.0001\n"
+}

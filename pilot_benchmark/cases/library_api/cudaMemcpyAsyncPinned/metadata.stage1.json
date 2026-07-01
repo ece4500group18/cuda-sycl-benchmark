@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "cudaHostAlloc pinned + async H2D/D2H; out = 3*a.",
   "notes": "cudaHostAlloc pinned + async H2D/D2H; out = 3*a.",
   "legacy_metadata": {
     "file": "metadata.json",

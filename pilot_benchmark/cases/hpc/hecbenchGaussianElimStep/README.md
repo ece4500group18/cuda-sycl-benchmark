@@ -1,0 +1,13 @@
+# HeCBench Gaussian elimination step
+
+One Gaussian elimination row update.
+
+Source project: ORNL/HeCBench
+
+Source URL: https://github.com/ORNL/HeCBench/blob/master/src/gaussian-cuda/gaussianElim.cu
+
+License: BSD-3-Clause
+
+Extraction fidelity: simplified
+
+Extraction notes: Standalone elimination step based on HeCBench gaussian-cuda.

@@ -59,6 +59,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone 3D tensor slicing benchmark adapted from DALI Slice's generic N-D indexing workload.",
   "notes": "Standalone 3D tensor slicing benchmark adapted from DALI Slice's generic N-D indexing workload.",
   "legacy_metadata": {
     "file": "metadata.json",

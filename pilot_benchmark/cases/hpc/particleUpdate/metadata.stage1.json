@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Euler update of particle position and velocity from acceleration.",
   "notes": "Euler update of particle position and velocity from acceleration.",
   "legacy_metadata": {
     "file": "metadata.json",

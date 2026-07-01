@@ -1,0 +1,38 @@
+{
+  "case_name": "daliBrightnessContrast2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4,
+    64,
+    64,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 238.48355999998603,
+  "runtime_ms_median": 238.77954999989015,
+  "runtime_ms_std": 12.936866603515925,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:20:52.518473+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    233.88379999960307,
+    225.84310000002006,
+    214.56169999964914,
+    238.9748999994481,
+    238.5842000003322,
+    248.75109999993583,
+    258.0070000003616,
+    242.84369999986666,
+    231.0483999999633,
+    252.33770000068034
+  ],
+  "failures": []
+}

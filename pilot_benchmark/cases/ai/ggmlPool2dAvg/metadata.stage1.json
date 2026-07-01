@@ -57,6 +57,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone avg-pool extraction inspired by llama.cpp/ggml pool2d.cu.",
   "notes": "Standalone avg-pool extraction inspired by llama.cpp/ggml pool2d.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

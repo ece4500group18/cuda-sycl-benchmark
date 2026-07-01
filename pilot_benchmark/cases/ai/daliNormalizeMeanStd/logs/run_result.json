@@ -1,0 +1,10 @@
+{
+  "case_name": "daliNormalizeMeanStd",
+  "case_path": "pilot_benchmark/cases/ai/daliNormalizeMeanStd",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3585914999994202,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:49.842156+00:00"
+}

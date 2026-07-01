@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "cublasSgemm; column-major handling. sizes=[N].",
   "notes": "cublasSgemm; column-major handling. sizes=[N].",
   "legacy_metadata": {
     "file": "metadata.json",

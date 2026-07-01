@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone dropout/mask helper inspired by csrc/flash_attn/src/dropout.h.",
   "notes": "Standalone dropout/mask helper inspired by csrc/flash_attn/src/dropout.h.",
   "legacy_metadata": {
     "file": "metadata.json",

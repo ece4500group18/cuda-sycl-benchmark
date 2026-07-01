@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Shared-memory tiled transpose. sizes=[rows,cols].",
   "notes": "Shared-memory tiled transpose. sizes=[rows,cols].",
   "legacy_metadata": {
     "file": "metadata.json",

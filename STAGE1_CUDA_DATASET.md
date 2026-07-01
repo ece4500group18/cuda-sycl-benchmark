@@ -17,32 +17,46 @@ build/run commands, verifier, and logs.
 
 Snapshot date: 2026-07-01 Asia/Shanghai.
 
-- Total cases: 130
-- Actual CUDA verification: 130/130 pass
-- NVIDIA performance baseline: 130/130 pass
-- Strict Stage 1 metadata validation: 130/130 pass
+- Total cases: 250
+- Actual CUDA build: 250/250 pass
+- Actual CUDA run: 250/250 pass
+- Actual CUDA verification: 250/250 pass
+- NVIDIA performance baseline: 250/250 pass
+- Strict Stage 1 metadata validation: 250/250 pass
 - Stage 2 status: not evaluated
 
-The latest expansion added 38 cases, all as real-project simplified
-extractions/adaptations:
+The expansion from the stable 130-case checkpoint added 120 cases in three
+verified Stage 1 batches:
 
-- ggml-org/llama.cpp: 10 cases
-- vllm-project/vllm: 8 cases
-- bitsandbytes-foundation/bitsandbytes: 6 cases
-- Dao-AILab/flash-attention: 4 cases
-- facebookresearch/xformers: 2 cases
-- ORNL/HeCBench: 8 cases
+- Batch 1: 41 cases, 41/41 build/run/verify/benchmark pass
+- Batch 2: 40 cases, 40/40 build/run/verify/benchmark pass
+- Batch 3: 39 cases, 39/39 build/run/verify/benchmark pass
 
 Overall source composition:
 
-- Real-project extracted/adapted cases: 72
+- External real-project or benchmark-suite sourced cases: 192
+- Real-project extracted/adapted cases reported by extraction summary: 132
 - Hand-written repository-authored cases: 58
 
 Current distributions:
 
-- Domain: cuda_primitive 20, hpc 21, image_processing 20, library_api 10, modern_ml 59
-- Difficulty: easy 12, medium 40, hard 78
-- License: MIT 74, Apache-2.0 40, BSD-3-Clause 14, BSD-style / BSD-3-like 2
+- Domain: cuda_primitive 40, hpc 51, image_processing 35, library_api 20, modern_ml 104
+- Difficulty: easy 18, medium 137, hard 95
+- License: MIT 94, Apache-2.0 65, BSD-3-Clause 59, BSD-3-Clause + CUDA EULA note 30, BSD-style / BSD-3-like 2
+
+Current external source distribution:
+
+- ORNL/HeCBench: 38 cases
+- NVIDIA/DALI: 35 cases
+- NVIDIA/cuda-samples: 30 cases
+- ggml-org/llama.cpp: 24 cases
+- vllm-project/vllm: 18 cases
+- bitsandbytes-foundation/bitsandbytes: 12 cases
+- open-mmlab/mmcv: 12 cases
+- Dao-AILab/flash-attention: 10 cases
+- NVIDIA/cutlass: 7 cases
+- facebookresearch/xformers: 4 cases
+- pytorch/pytorch: 2 cases
 
 ## Commands
 
@@ -101,8 +115,8 @@ The report distinguishes:
 Only actual log statuses count as verified or performance-ready.
 
 The Real Project Extraction Summary groups extracted/adapted cases by source
-project and records representative kernels, license, extraction notes,
-verification method, and whether benchmark logs passed.
+project and records representative kernels, license, extraction fidelity,
+extraction notes, verification method, and whether benchmark logs passed.
 
 ## Metadata Migration
 

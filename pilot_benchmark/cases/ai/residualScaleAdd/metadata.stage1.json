@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Transformer-style residual addition y = x + alpha*r.",
   "notes": "Transformer-style residual addition y = x + alpha*r.",
   "legacy_metadata": {
     "file": "metadata.json",

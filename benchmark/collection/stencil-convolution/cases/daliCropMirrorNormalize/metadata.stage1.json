@@ -58,6 +58,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone fused crop, optional mirror, per-channel normalize, and HWC-to-CHW layout conversion.",
   "notes": "Standalone fused crop, optional mirror, per-channel normalize, and HWC-to-CHW layout conversion.",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Tridiagonal CSR matrix; y = A*x. sizes=[N].",
   "notes": "Tridiagonal CSR matrix; y = A*x. sizes=[N].",
   "legacy_metadata": {
     "file": "metadata.json",

@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone simplification of llama.cpp/ggml norm.cu using deterministic row-major tensors and a CPU reference.",
   "notes": "Standalone simplification of llama.cpp/ggml norm.cu using deterministic row-major tensors and a CPU reference.",
   "legacy_metadata": {
     "file": "metadata.json",

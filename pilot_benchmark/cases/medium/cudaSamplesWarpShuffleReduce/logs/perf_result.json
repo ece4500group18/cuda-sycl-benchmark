@@ -1,0 +1,36 @@
+{
+  "case_name": "cudaSamplesWarpShuffleReduce",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    8192,
+    32
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 235.88789000004908,
+  "runtime_ms_median": 235.11180000014065,
+  "runtime_ms_std": 13.482910700963982,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:47:54.288444+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    220.59399999943707,
+    240.42830000053073,
+    228.20640000009007,
+    254.22770000022865,
+    249.69460000011168,
+    243.12450000070385,
+    251.37769999946613,
+    222.4120999999286,
+    229.79529999975057,
+    219.01830000024347
+  ],
+  "failures": []
+}

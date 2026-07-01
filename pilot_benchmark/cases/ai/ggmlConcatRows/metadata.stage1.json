@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone tensor layout transformation inspired by llama.cpp/ggml concat.cu.",
   "notes": "Standalone tensor layout transformation inspired by llama.cpp/ggml concat.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

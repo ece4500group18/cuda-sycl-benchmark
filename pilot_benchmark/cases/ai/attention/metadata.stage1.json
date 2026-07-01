@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Single head softmax(QK^T/sqrt(d))V. sizes=[seq,dim].",
   "notes": "Single head softmax(QK^T/sqrt(d))V. sizes=[seq,dim].",
   "legacy_metadata": {
     "file": "metadata.json",

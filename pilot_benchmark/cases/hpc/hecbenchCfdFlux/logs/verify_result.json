@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchCfdFlux",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchCfdFlux",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3786953999997422,
+  "message": "",
+  "timestamp": "2026-07-01T04:17:18.494567+00:00",
+  "verifier_output": "PASS max_abs_error=2.384e-07 tol=1e-05\n"
+}

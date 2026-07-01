@@ -55,6 +55,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone quantize/dequantize round trip inspired by llama.cpp/ggml quantize.cu.",
   "notes": "Standalone quantize/dequantize round trip inspired by llama.cpp/ggml quantize.cu.",
   "legacy_metadata": {
     "file": "metadata.json",

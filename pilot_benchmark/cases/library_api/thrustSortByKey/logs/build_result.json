@@ -1,0 +1,10 @@
+{
+  "case_name": "thrustSortByKey",
+  "case_path": "pilot_benchmark/cases/library_api/thrustSortByKey",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 24.96472520000043,
+  "message": "",
+  "timestamp": "2026-07-01T03:40:12.865092+00:00"
+}

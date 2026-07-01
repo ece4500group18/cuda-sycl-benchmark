@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "SPD 1D Laplacian; verify ||Ax-b||/||b||. sizes=[N,iters].",
   "notes": "SPD 1D Laplacian; verify ||Ax-b||/||b||. sizes=[N,iters].",
   "legacy_metadata": {
     "file": "metadata.json",

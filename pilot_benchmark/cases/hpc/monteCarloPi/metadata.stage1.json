@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Hash-based samples in unit square; |est - pi|. sizes=[samples].",
   "notes": "Hash-based samples in unit square; |est - pi|. sizes=[samples].",
   "legacy_metadata": {
     "file": "metadata.json",

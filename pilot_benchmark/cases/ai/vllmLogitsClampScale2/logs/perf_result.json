@@ -1,0 +1,35 @@
+{
+  "case_name": "vllmLogitsClampScale2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 626.6707499999939,
+  "runtime_ms_median": 615.685100000519,
+  "runtime_ms_std": 37.52301481023943,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:43:26.842808+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    601.1144000003696,
+    653.4980999995241,
+    644.2082000012306,
+    671.6440999989572,
+    694.2679000003409,
+    593.3678999990661,
+    584.2038999999204,
+    623.2357000008051,
+    593.0327999994915,
+    608.134500000233
+  ],
+  "failures": []
+}

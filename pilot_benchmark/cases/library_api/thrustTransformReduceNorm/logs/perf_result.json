@@ -1,0 +1,35 @@
+{
+  "case_name": "thrustTransformReduceNorm",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 212.93953000003967,
+  "runtime_ms_median": 211.6596000005302,
+  "runtime_ms_std": 13.991383168875583,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:48:43.034402+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    216.75000000050204,
+    212.85570000054577,
+    230.62899999968067,
+    208.01829999982147,
+    240.11979999977484,
+    215.63940000032744,
+    210.4635000005146,
+    200.56539999950473,
+    199.17110000005778,
+    195.18309999966732
+  ],
+  "failures": []
+}

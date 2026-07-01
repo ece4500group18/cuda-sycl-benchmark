@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "cublasSaxpy; y = alpha*x + y.",
   "notes": "cublasSaxpy; y = alpha*x + y.",
   "legacy_metadata": {
     "file": "metadata.json",

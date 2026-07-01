@@ -53,6 +53,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Integer bin counts; exact match. sizes=[n]; 256 bins.",
   "notes": "Integer bin counts; exact match. sizes=[n]; 256 bins.",
   "legacy_metadata": {
     "file": "metadata.json",

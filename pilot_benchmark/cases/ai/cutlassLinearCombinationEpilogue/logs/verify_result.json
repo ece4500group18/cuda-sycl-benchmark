@@ -1,0 +1,11 @@
+{
+  "case_name": "cutlassLinearCombinationEpilogue",
+  "case_path": "pilot_benchmark/cases/ai/cutlassLinearCombinationEpilogue",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.6196214999999938,
+  "message": "",
+  "timestamp": "2026-07-01T04:17:00.647736+00:00",
+  "verifier_output": "PASS max_abs_error=1.192e-07 tol=1e-06\n"
+}

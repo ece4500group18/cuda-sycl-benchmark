@@ -54,6 +54,8 @@
   },
   "status": "perf_ready",
   "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "One Adam optimizer step over parameter, moment, variance, and gradient arrays.",
   "notes": "One Adam optimizer step over parameter, moment, variance, and gradient arrays.",
   "legacy_metadata": {
     "file": "metadata.json",

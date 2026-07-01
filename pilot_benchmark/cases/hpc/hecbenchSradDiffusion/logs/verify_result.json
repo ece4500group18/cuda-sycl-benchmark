@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchSradDiffusion",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchSradDiffusion",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.36010320000059437,
+  "message": "",
+  "timestamp": "2026-07-01T03:43:41.586517+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=1e-05\n"
+}
