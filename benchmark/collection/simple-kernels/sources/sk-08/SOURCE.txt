@@ -1,0 +1,6 @@
+id:        sk-08
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/fp16ScalarProduct/fp16ScalarProduct.cu
+path:      benchmark/simple/fp16PackedScalarProduct (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): scalarProductKernel_native/_intrinsics and reduceInShared_native/_intrinsics reproduced verbatim from cuda-samples fp16ScalarProduct.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        sk-12
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/streamOrderedAllocation/streamOrderedAllocation.cu
+path:      benchmark/simple/streamOrderedAllocVectorAdd (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): vectorAddGPU reproduced verbatim from cuda-samples streamOrderedAllocation.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        sk-19
+upstream:  https://github.com/NVIDIA/cuda-samples (Samples/2_Concepts_and_Techniques/reduction/reduction_kernel.cu)
+path:      benchmark/simple/warpShuffleReduction (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): SharedMemory<T>/reduce2/warpReduceSum/reduce4 reproduced verbatim (instantiated for float, blockSize=256) from cuda-samples reduction_kernel.cu (also redistributed as CUDAMicroBench Shuffle/cuda_shuffle/reduction_kernel.cu); host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        sk-07
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/clock/clock.cu
+path:      benchmark/simple/dynamicSharedMinReduction (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): timedReduction adapted from cuda-samples clock.cu (timing instrumentation removed); naiveMinReduction plus host driver/reference.h/build files are new

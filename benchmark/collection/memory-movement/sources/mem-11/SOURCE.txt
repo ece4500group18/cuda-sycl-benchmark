@@ -1,0 +1,6 @@
+id:        mem-11
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/asyncAPI/asyncAPI.cu
+path:      benchmark/memory/pinnedAsyncIncrement (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): increment_kernel reproduced verbatim from cuda-samples asyncAPI.cu; host driver/reference.h/build files are new

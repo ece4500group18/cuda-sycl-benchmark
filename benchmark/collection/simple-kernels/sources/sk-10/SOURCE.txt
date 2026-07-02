@@ -1,0 +1,6 @@
+id:        sk-10
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleOccupancy/simpleOccupancy.cu
+path:      benchmark/simple/occupancyTunedLaunch (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): square kernel reproduced verbatim from cuda-samples simpleOccupancy.cu; host driver/reference.h/build files are new

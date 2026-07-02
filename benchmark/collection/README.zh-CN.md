@@ -92,8 +92,8 @@ build/run 验证需要 nvcc + SYCL 工具链。本机没有工具链的成员把
 
 | Slug | 类别 | 负责人 |
 |---|---|---|
-| `simple-kernels` | simple-but-not-trivial kernels | TBD |
-| `memory-movement` | memory movement & layout | TBD |
+| `simple-kernels` | simple-but-not-trivial kernels | yuepan |
+| `memory-movement` | memory movement & layout | yuepan |
 | `stencil-convolution` | stencil / convolution / image processing | Zijian |
 | `reductions-scans` | reductions and scans | Zijian |
 | `graph-irregular` | graph / irregular access | liqui |

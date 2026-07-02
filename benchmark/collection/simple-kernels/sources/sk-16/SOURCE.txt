@@ -1,0 +1,6 @@
+id:        sk-16
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleVoteIntrinsics/simpleVote_kernel.cuh
+path:      benchmark/simple/voteAnyAll (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): VoteAnyKernel1/VoteAllKernel2 reproduced verbatim from cuda-samples simpleVote_kernel.cuh; input pattern adapted from genVoteTestPattern; host driver/reference.h/build files are new

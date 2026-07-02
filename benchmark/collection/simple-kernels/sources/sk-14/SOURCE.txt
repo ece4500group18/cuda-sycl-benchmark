@@ -1,0 +1,6 @@
+id:        sk-14
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTemplates/simpleTemplates.cu
+path:      benchmark/simple/templatedSharedMemIdiom (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): SharedMemory<T> template and testKernel<T> reproduced verbatim from cuda-samples sharedmem.cuh/simpleTemplates.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        mem-17
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTexture/simpleTexture.cu
+path:      benchmark/memory/textureInterpolationGather (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): transformKernel reproduced verbatim from cuda-samples simpleTexture.cu; host driver/reference.h/build files are new

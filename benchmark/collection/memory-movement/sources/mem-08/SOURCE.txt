@@ -1,0 +1,6 @@
+id:        mem-08
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/histogram/histogram64.cu
+path:      benchmark/memory/histogramSharedPrivatization (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): histogram64Kernel/mergeHistogram64Kernel reproduced verbatim from cuda-samples histogram64.cu (plus histogram_common.h constants); host driver/reference.h/build files are new

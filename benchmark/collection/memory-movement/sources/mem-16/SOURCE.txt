@@ -1,0 +1,6 @@
+id:        mem-16
+upstream:  https://github.com/passlab/CUDAMicroBench (MiniTransfer_SpMV/SpMV_cudakernel.cu)
+path:      benchmark/memory/sparseDenseSpmvLayout (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): spmv_csr/spmv_dense_check_and_compute reproduced verbatim from CUDAMicroBench MiniTransfer_SpMV/SpMV_cudakernel.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        mem-05
+upstream:  https://github.com/passlab/CUDAMicroBench (ReadOnlyMem_2D_Texture/matadd_2D_cudakernel.cu)
+path:      benchmark/memory/constMemMatrixDims (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): both kernels reproduced verbatim from CUDAMicroBench ReadOnlyMem_2D_Texture/matadd_2D_cudakernel.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        mem-15
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/scan/scan.cu
+path:      benchmark/memory/sharedScanVsShuffleScan (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): scan1/4Inclusive/Exclusive helpers and scanExclusiveShared reproduced (unmodified bodies, THREADBLOCK_SIZE=64) from cuda-samples scan.cu; scanExclusiveShuffle plus host driver/reference.h/build files are new

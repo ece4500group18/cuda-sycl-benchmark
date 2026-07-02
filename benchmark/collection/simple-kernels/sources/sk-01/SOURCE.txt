@@ -1,0 +1,6 @@
+id:        sk-01
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleAtomicIntrinsics/simpleAtomicIntrinsics_kernel.cuh
+path:      benchmark/simple/atomicIntrinsics (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): testKernel reproduced verbatim from cuda-samples simpleAtomicIntrinsics_kernel.cuh; reference.h formulas ported from simpleAtomicIntrinsics_cpu.cpp; host driver/build files are new

@@ -1,0 +1,56 @@
+The device function `Comparator` and the two CUDA kernels
+`bitonicSortShared` and `oddEvenMergeSortShared` in main.cu are
+reproduced, unmodified, from:
+
+    NVIDIA/cuda-samples
+    Directory: cpp/2_Concepts_and_Techniques/sortingNetworks/
+    https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/sortingNetworks/
+    Copyright (c) 2022, NVIDIA CORPORATION. All rights reserved.
+    SPDX-License-Identifier: (BSD-3-Clause)
+
+    Specifically:
+      - `bitonicSortShared`      from sortingNetworks/bitonicSort.cu
+      - `oddEvenMergeSortShared` from sortingNetworks/oddEvenMergeSort.cu
+      - `Comparator`             from sortingNetworks/sortingNetworks_common.cuh
+
+The `typedef unsigned int uint;` and `#define SHARED_SIZE_LIMIT 1024U`
+definitions in main.cu are adapted (values only, not code) from the
+same project's cpp/2_Concepts_and_Techniques/sortingNetworks/
+sortingNetworks_common.h and sortingNetworks_common.cuh, under the
+same copyright and license above.
+
+----------------------------------------------------------------------
+BSD 3-Clause License
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------
+All other files in this directory (Makefile, CMakeLists.txt,
+reference.h, the host driver code in main.cu, and README.md) are
+original to this repository and released under the repository's main
+license (MIT).
