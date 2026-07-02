@@ -1,0 +1,6 @@
+id:        sk-05
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleCooperativeGroups/simpleCooperativeGroups.cu
+path:      benchmark/simple/cgThreadBlockRankSum (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): sumReduction reproduced verbatim, cgkernel adapted (writes to g_odata instead of printf) from cuda-samples simpleCooperativeGroups.cu; host driver/reference.h/build files are new

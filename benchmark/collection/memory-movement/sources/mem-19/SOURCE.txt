@@ -1,0 +1,6 @@
+id:        mem-19
+upstream:  https://github.com/passlab/CUDAMicroBench (UniMem/LowAccessDensityTest_cuda.cu)
+path:      benchmark/memory/unifiedMemoryAccess (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): LowAccessDensityTest_cudakernel reproduced verbatim from CUDAMicroBench UniMem/LowAccessDensityTest_cuda.cu; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        sk-06
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleAssert/simpleAssert.cu
+path:      benchmark/simple/deviceAssertGuard (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): testKernel reproduced verbatim from cuda-samples simpleAssert.cu; testKernelFlag (new) plus host driver/reference.h/build files are new

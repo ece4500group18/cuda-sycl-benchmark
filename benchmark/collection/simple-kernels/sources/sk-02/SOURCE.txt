@@ -1,0 +1,6 @@
+id:        sk-02
+upstream:  https://github.com/yuhc/gpu-rodinia/blob/master/cuda/backprop/backprop_cuda_kernel.cu
+path:      benchmark/simple/backpropTreeReduction (yuepan branch)
+license:   BSD-style permissive (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): bpnn_layerforward_CUDA reproduced verbatim from Rodinia backprop_cuda_kernel.cu; host driver/reference.h/build files are new

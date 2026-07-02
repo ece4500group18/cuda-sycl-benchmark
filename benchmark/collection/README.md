@@ -101,8 +101,8 @@ licenses, features, difficulty, oracle plan) needs no GPU and comes first.
 
 | Slug | Category | Owner |
 |---|---|---|
-| `simple-kernels` | simple-but-not-trivial kernels | TBD |
-| `memory-movement` | memory movement & layout | TBD |
+| `simple-kernels` | simple-but-not-trivial kernels | yuepan |
+| `memory-movement` | memory movement & layout | yuepan |
 | `stencil-convolution` | stencil / convolution / image processing | Zijian |
 | `reductions-scans` | reductions and scans | Zijian |
 | `graph-irregular` | graph / irregular access | liqui |

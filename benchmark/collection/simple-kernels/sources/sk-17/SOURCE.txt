@@ -1,0 +1,6 @@
+id:        sk-17
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/3_CUDA_Features/warpAggregatedAtomicsCG/warpAggregatedAtomicsCG.cu
+path:      benchmark/simple/warpAggregatedAtomicCompaction (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): atomicAggInc/filter_arr reproduced verbatim from cuda-samples warpAggregatedAtomicsCG.cu; filter_arr_naive plus host driver/reference.h/build files are new

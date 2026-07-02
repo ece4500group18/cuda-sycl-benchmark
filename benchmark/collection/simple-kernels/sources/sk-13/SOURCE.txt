@@ -1,0 +1,6 @@
+id:        sk-13
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/systemWideAtomics/systemWideAtomics.cu
+path:      benchmark/simple/systemScopeAtomicAdd (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): atomicKernel/atomicKernel_CPU reproduced verbatim from cuda-samples systemWideAtomics.cu; reference.h formulas ported; host driver/build files are new

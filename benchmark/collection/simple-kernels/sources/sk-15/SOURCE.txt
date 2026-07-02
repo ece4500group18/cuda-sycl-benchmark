@@ -1,0 +1,6 @@
+id:        sk-15
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/threadFenceReduction/threadFenceReduction_kernel.cuh
+path:      benchmark/simple/threadFenceSinglePassReduction (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): reduceBlock/reduceBlocks/reduceMultiPass/reduceSinglePass/retirementCount/setRetirementCount reproduced verbatim from cuda-samples threadFenceReduction_kernel.cuh; host driver/reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        mem-06
+upstream:  https://github.com/passlab/CUDAMicroBench (CoMem_SpMM/SpMM_cudakernel.cu)
+path:      benchmark/memory/csrScanOrderSpMM (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): both kernels reproduced verbatim from CUDAMicroBench CoMem_SpMM/SpMM_cudakernel.cu; host driver/reference.h/build files are new

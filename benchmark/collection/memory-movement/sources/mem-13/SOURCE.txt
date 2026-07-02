@@ -1,0 +1,6 @@
+id:        mem-13
+upstream:  https://github.com/yuhc/gpu-rodinia/blob/master/cuda/pathfinder/pathfinder.cu
+path:      benchmark/memory/pyramidTiledPathfinderDP (yuepan branch)
+license:   BSD-style permissive (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): dynproc_kernel reproduced verbatim from Rodinia pathfinder.cu; host driver reimplements calc_path()'s ping-pong loop, reference.h/build files are new

@@ -1,0 +1,6 @@
+id:        mem-14
+upstream:  https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/convolutionSeparable/convolutionSeparable.cu
+path:      benchmark/memory/separableConvHaloTiling (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): convolutionRowsKernel/convolutionColumnsKernel reproduced verbatim from cuda-samples convolutionSeparable.cu; host driver/reference.h/build files are new

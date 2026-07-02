@@ -1,0 +1,6 @@
+id:        mem-18
+upstream:  https://github.com/passlab/CUDAMicroBench (Shmem/mm_kernel.cu)
+path:      benchmark/memory/tiledMatmulShmem (yuepan branch)
+license:   BSD-3-Clause (full text: LICENSE in this directory)
+retrieved: 2026-07-02
+notes:     adapted (yuepan branch): global_block/shared_block reproduced verbatim from CUDAMicroBench Shmem/mm_kernel.cu; host driver/reference.h/build files are new
