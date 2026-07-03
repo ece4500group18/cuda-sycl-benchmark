@@ -1,0 +1,58 @@
+{
+  "case_id": "curandUniform",
+  "name": "cuRAND uniform generation",
+  "category": "cuda-library-usage",
+  "source": {
+    "type": "authored",
+    "url": "",
+    "license": "MIT",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "curand"
+  ],
+  "libraries": [
+    "curand"
+  ],
+  "input": {
+    "type": "statistical",
+    "sizes": [
+      1048576
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lcurand",
+    "sycl_build_command": "icpx -fsycl -qmkl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "statistical",
+    "metric": "mean_and_range",
+    "tolerance": 0.01,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "skipped_no_syclomatic",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "pass",
+    "cuda_run": "pass",
+    "cuda_verify": "pass",
+    "syclomatic_migrate": "skipped_no_syclomatic",
+    "sycl_compile": "skipped_no_sycl_compiler",
+    "sycl_run": "skipped_not_built",
+    "sycl_verify": "skipped_not_built",
+    "cuda_performance": "pass",
+    "sycl_performance": "skipped_not_built"
+  },
+  "notes": "Verify mean approx 0.5 and all values in [0,1).",
+  "domain": "library_api",
+  "difficulty": "hard"
+}

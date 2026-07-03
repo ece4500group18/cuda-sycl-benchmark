@@ -4,9 +4,9 @@ Owner: yuepan (migrated from the `yuepan` branch `benchmark/memory/` cases)
 
 See `../README.md` for the shared workflow, CSV columns, SOURCE.txt
 format, and snapshot rules. Fill in the coverage matrix below, then
-register candidates in `candidates.csv`. Adapted (runnable) cases, if
-any, go under `cases/<name>/` and use the shared
-`../tools/verify_lib.py`.
+register candidates in `candidates.csv`. Adapted (runnable) cases go to
+`benchmark/cases/<this category's slug>/<case>/` (not here) and use the
+shared `benchmark/tools/verify_lib.py`.
 
 Snapshots of every candidate below are in `sources/<id>/`; each pairs
 one or more upstream-derived CUDA kernels with a new, deterministic

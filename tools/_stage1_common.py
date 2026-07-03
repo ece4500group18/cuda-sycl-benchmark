@@ -160,7 +160,11 @@ def metadata_paths() -> list[Path]:
 
 def classify_case(case_dir: Path, metadata: dict[str, Any]) -> tuple[str, str | None, str]:
     rel_parts = case_dir.relative_to(REPO_ROOT).parts
+    if len(rel_parts) >= 4 and rel_parts[:2] == ("benchmark", "cases"):
+        # Unified layout: benchmark/cases/<collection-category>/<case>/
+        return "benchmark", rel_parts[2], rel_parts[2]
     if len(rel_parts) >= 4 and rel_parts[:2] == ("pilot_benchmark", "cases"):
+        # Legacy pilot layout (kept for compatibility with older checkouts).
         return "pilot_benchmark", None, rel_parts[2]
     if len(rel_parts) >= 5 and rel_parts[:2] == ("benchmark", "collection"):
         return "collection", rel_parts[2], str(metadata.get("category", rel_parts[2]))

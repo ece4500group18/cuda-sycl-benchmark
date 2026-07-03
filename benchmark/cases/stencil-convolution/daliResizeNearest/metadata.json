@@ -1,0 +1,66 @@
+{
+  "case_id": "daliResizeNearest",
+  "name": "DALI nearest resize",
+  "category": "stencil-convolution",
+  "domain": "image_processing",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/DALI",
+  "source_url": "https://github.com/NVIDIA/DALI/blob/main/dali/kernels/imgproc/resize/resize.cuh",
+  "license": "Apache-2.0",
+  "adaptation_type": "simplified",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone resize operation inspired by DALI GPU resize kernels.",
+  "description": "Resize a single-channel image with nearest-neighbor sampling.",
+  "source": {
+    "type": "simplified",
+    "url": "https://github.com/NVIDIA/DALI/blob/main/dali/kernels/imgproc/resize/resize.cuh",
+    "license": "Apache-2.0",
+    "original_path": "dali/kernels/imgproc/resize/resize.cuh"
+  },
+  "cuda_features": [
+    "__global__",
+    "resize",
+    "2D_indexing"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      32,
+      32,
+      64,
+      64
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 1e-06,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Standalone resize operation inspired by DALI GPU resize kernels."
+}

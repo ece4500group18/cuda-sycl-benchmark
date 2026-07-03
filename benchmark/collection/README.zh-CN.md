@@ -3,9 +3,11 @@
 # 采集工作区
 
 本目录是 CUDA→SYCL benchmark 的**采集阶段工作区**。我们在这里登记候选、
-保存 CUDA 源码快照，之后再把入选的案例适配成最终的 pilot 格式
-（`pilot_benchmark/` 布局：`original/main.cu` + `CMakeLists` + 确定性输入
-+ `tests/verify.py` + `metadata.json`）。
+保存 CUDA 源码快照，之后再把入选的案例适配成最终的案例单元格式
+（`original/main.cu` + `CMakeLists` + 确定性输入 + `tests/verify.py` +
+`metadata.json`）。适配好的可运行案例**不**放在这里：统一放到
+`benchmark/cases/<类别 slug>/<案例>/`，并使用共享的
+`benchmark/tools/verify_lib.py`。
 
 **一个类别一个文件夹，一个类别一个负责人。** 每人只在自己的类别文件夹里
 干活，登记表互不冲突。在 `candidates.csv` 里登记**不等于**该案例入选——
