@@ -32,8 +32,12 @@ metadata checks after the move).
 categories (kernels verbatim from HeCBench and NVIDIA/cuda-samples): six
 molecular-dynamics (snapshots md-03..md-08), four graph-irregular
 (snapshots graph-03/05/06/07: PageRank, ECL-MIS, ECL-CC, Jaccard) and two
-multi-kernel-pipelines (Rodinia LUD and k-means). Total is now 262. The
-twelve pass strict metadata validation and `verify.py --selftest`, but
+multi-kernel-pipelines (Rodinia LUD and k-means), plus a third batch of
+eight: five library-API cases (cuSOLVER getrf, cuTENSOR contraction /
+reduction / permute, nvCOMP batched CRC32; snapshots lib-02..lib-06), the
+Chai worklist SSSP (snapshot graph-02) and two more Rodinia pipelines
+(gaussian, backprop). Total is now 270. The
+twenty pass strict metadata validation and `verify.py --selftest`, but
 CUDA build/run/verify/perf on NVIDIA hardware is still pending for them
 (actual status `verify_ready`); the 250/250 figures below refer to the
 2026-07-01 snapshot.

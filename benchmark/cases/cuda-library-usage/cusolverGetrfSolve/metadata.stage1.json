@@ -1,0 +1,66 @@
+{
+  "id": "cusolverGetrfSolve",
+  "name": "cuSOLVER dense LU solve (getrf/getrs)",
+  "domain": "library_api",
+  "category": "cuda-library-usage",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/CUDALibrarySamples",
+  "source_url": "https://github.com/NVIDIA/CUDALibrarySamples/blob/master/cuSOLVER/getrf/cusolver_getrf_example.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "library_handle_api",
+    "stream_bound_handle",
+    "workspace_query",
+    "pivoting"
+  ],
+  "description": "Dense LU factorization with pivoting and linear solve via cusolverDn.",
+  "input_description": "type=hashed; sizes=[64]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-06,
+    "atol": 1e-06,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [
+      "cusolver"
+    ],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lcusolver"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      64
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "cusolverDn API sequence verbatim (handle+stream, getrf_bufferSize, Dgetrf with pivoting, Dgetrs); 3x3 example scaled to deterministic 64x64 system. Snapshot lib-02.",
+  "notes": "Real-extraction library case from collection snapshot lib-02. Maps to oneMKL LAPACK getrf/getrs in SYCL.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

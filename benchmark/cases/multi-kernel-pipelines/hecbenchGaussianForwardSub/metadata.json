@@ -1,0 +1,64 @@
+{
+  "case_id": "hecbenchGaussianForwardSub",
+  "name": "Rodinia Gaussian elimination (fan1/fan2 per-column pipeline)",
+  "category": "multi-kernel-pipelines",
+  "domain": "hpc",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/gaussian-cuda/gaussianElim.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "fan1/fan2 kernels + ForwardSub launch loop + BackSub verbatim; deterministic diagonally-dominant system (scheme has no pivoting). From the HeCBench raw clone, registered as mkp-03.",
+  "description": "Forward substitution via a per-pivot-column two-kernel pipeline (multiplier column + submatrix update), then host back-substitution.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/gaussian-cuda/gaussianElim.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "gaussian-cuda/gaussianElim.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "multi_kernel_pipeline",
+    "iterative_per_column_launch",
+    "2d_indexing"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      64
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "solve_residual",
+    "tolerance": 0.001,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Fills multi-kernel-pipelines; residual oracle is execution-order independent."
+}

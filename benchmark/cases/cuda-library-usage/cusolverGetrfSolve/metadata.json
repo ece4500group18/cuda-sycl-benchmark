@@ -1,0 +1,66 @@
+{
+  "case_id": "cusolverGetrfSolve",
+  "name": "cuSOLVER dense LU solve (getrf/getrs)",
+  "category": "cuda-library-usage",
+  "domain": "library_api",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/CUDALibrarySamples",
+  "source_url": "https://github.com/NVIDIA/CUDALibrarySamples/blob/master/cuSOLVER/getrf/cusolver_getrf_example.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "cusolverDn API sequence verbatim (handle+stream, getrf_bufferSize, Dgetrf with pivoting, Dgetrs); 3x3 example scaled to deterministic 64x64 system. Snapshot lib-02.",
+  "description": "Dense LU factorization with pivoting and linear solve via cusolverDn.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/CUDALibrarySamples/blob/master/cuSOLVER/getrf/cusolver_getrf_example.cu",
+    "license": "Apache-2.0",
+    "original_path": "cuSOLVER/getrf/cusolver_getrf_example.cu"
+  },
+  "cuda_features": [
+    "library_handle_api",
+    "stream_bound_handle",
+    "workspace_query",
+    "pivoting"
+  ],
+  "libraries": [
+    "cusolver"
+  ],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      64
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lcusolver",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 1e-06,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction library case from collection snapshot lib-02. Maps to oneMKL LAPACK getrf/getrs in SYCL."
+}

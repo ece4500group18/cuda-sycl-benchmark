@@ -82,10 +82,13 @@ verbatim and deterministic CSR-graph harnesses + CPU oracles added:
 - graph-07 → `hecbenchJaccardWeights` (nvGRAPH Jaccard: warp prefix sum,
   binary-search intersections, atomics)
 
-All four pass `verify.py --selftest`; GPU validation pending. graph-01
+- graph-02 → `chaiSsspWorklist` (Chai worklist SSSP: per-block
+  shared-memory queues, double-buffered global frontier — the dataset's
+  only worklist-pattern case)
+
+All five pass `verify.py --selftest`; GPU validation pending. graph-01
 (bfs) and graph-08 (floyd-warshall) were NOT re-adapted — the dataset
 already covers those patterns (bfs, hecbenchBfsFrontier/RelaxEdges,
-hecbenchFloydWarshallStep/MinPlus2). graph-02 (Chai worklist SSSP) is
-deferred: its double-buffered queue driver deserves a careful port.
-Galois-based candidates (graph-10..16) need runtime-library extraction and
-remain sources-only for now.
+hecbenchFloydWarshallStep/MinPlus2). Galois-based candidates
+(graph-10..16) need runtime-library extraction and remain sources-only
+for now.
