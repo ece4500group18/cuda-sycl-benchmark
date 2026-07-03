@@ -30,9 +30,17 @@ orthogonal axes kept in metadata, not in the directory tree.
 | linear-algebra | 14 |
 | cuda-library-usage | 14 |
 | streams-atomics-templates | 12 |
-| molecular-dynamics | 6 |
+| molecular-dynamics | 12 |
 | multi-kernel-pipelines | 2 |
-| **Total** | **250** |
+| **Total** | **256** |
+
+2026-07-03: six real-extraction MD cases were adapted from the
+molecular-dynamics collection snapshots (md-03..md-08): SHOC LJ force,
+HACC short-range force, Ising Metropolis, SPH pipeline, cuda-samples
+particles collision, motionsim random walk. Their kernels are upstream
+device code verbatim; each passes `verify.py --selftest`. CUDA
+build/run/perf validation on the team GPU machine is pending
+(status `verify_ready`, not `perf_ready`).
 
 ## Provenance
 

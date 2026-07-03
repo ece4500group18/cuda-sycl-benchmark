@@ -1,0 +1,63 @@
+{
+  "case_id": "hecbenchMotionsimRandomWalk",
+  "name": "Particle diffusion random walk (motionsim)",
+  "category": "molecular-dynamics",
+  "domain": "hpc",
+  "difficulty": "medium",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/particle-diffusion-cuda/motionsim.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "Simulation kernel verbatim; deterministic hash randoms replace host rand() (same scale-100 scheme). Snapshot md-08.",
+  "description": "2D random-walk particle diffusion with per-particle grid occupancy counters.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/particle-diffusion-cuda/motionsim.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "particle-diffusion-cuda/motionsim.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "random_walk",
+    "per_thread_loop",
+    "truncf_floorf_indexing",
+    "size_t_counters"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [512, 32, 16],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction MD/diffusion case from collection snapshot md-08."
+}

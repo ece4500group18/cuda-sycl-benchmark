@@ -1,0 +1,69 @@
+{
+  "id": "hecbenchSphFluidStep",
+  "name": "SPH fluid simulation step (four-kernel pipeline)",
+  "domain": "hpc",
+  "category": "molecular-dynamics",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/sph-cuda/fluid.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "multi_kernel_pipeline",
+    "double_precision",
+    "aos_struct_data",
+    "device_struct_params",
+    "n_body",
+    "pow"
+  ],
+  "description": "One SPH time step: density/pressure, fluid pair forces (pressure/viscosity/surface tension), boundary repulsion, leapfrog update.",
+  "input_description": "type=hashed; sizes=[512, 128, 2]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-05,
+    "atol": 1e-05,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      512,
+      128,
+      2
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verified",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "Four kernels + all device functions verbatim (incl. boundaryGamma quirk); new deterministic harness and designed CPU oracle. Snapshot md-06.",
+  "notes": "Real-extraction MD/simulation case from collection snapshot md-06; multi-kernel double-precision pipeline.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
