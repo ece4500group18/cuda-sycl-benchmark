@@ -1,0 +1,69 @@
+{
+  "case_id": "hecbenchEclConnectedComponents",
+  "name": "ECL-CC connected components (5-kernel)",
+  "category": "graph-irregular",
+  "domain": "hpc",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/cc-cuda/main.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "init/compute1/compute2/compute3/flatten + representative() verbatim incl. device worklist counters, atomicCAS hooking, warp shuffle and __launch_bounds__. Snapshot graph-06.",
+  "description": "Connected components via lock-free hooking and pointer jumping with degree-partitioned worklists.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/cc-cuda/main.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "cc-cuda/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "atomicCAS",
+    "atomicAdd",
+    "__shfl_sync",
+    "__launch_bounds__",
+    "device_globals",
+    "worklist",
+    "pointer_jumping"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      2000,
+      3
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "cc_label_mismatch",
+    "tolerance": 0.0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction graph case from collection snapshot graph-06. Final labels are component minima - deterministic."
+}

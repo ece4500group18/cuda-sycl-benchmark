@@ -1,0 +1,69 @@
+{
+  "id": "hecbenchJaccardWeights",
+  "name": "Jaccard edge weights over CSR (nvGRAPH)",
+  "domain": "hpc",
+  "category": "graph-irregular",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/jaccard-cuda/main.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "template_kernel",
+    "__shfl_sync",
+    "__shfl_up_sync",
+    "atomicAdd",
+    "binary_search",
+    "csr_traversal",
+    "3d_grid"
+  ],
+  "description": "Per-edge Jaccard weights: row volumes, sorted-neighbor-list intersections via binary search + atomicAdd, weight map.",
+  "input_description": "type=hashed; sizes=[2000, 3]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-06,
+    "atol": 1e-06,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      2000,
+      3
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "fill/jaccard_row_sum/jaccard_is/jaccard_jw + warp prefix sum verbatim, unweighted float instantiation (integer-valued atomics stay order-independent); upstream launch geometry. Snapshot graph-07.",
+  "notes": "Real-extraction graph case from collection snapshot graph-07.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
