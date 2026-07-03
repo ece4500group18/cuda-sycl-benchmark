@@ -1,0 +1,65 @@
+{
+  "case_id": "cudaSamplesParticlesCollide",
+  "name": "CUDA Samples particles DEM collision (uniform grid)",
+  "category": "molecular-dynamics",
+  "domain": "hpc",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/2_Concepts_and_Techniques/particles/particles_kernel_impl.cuh",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "collideD + grid/device helpers verbatim with __constant__ cudaParams; host counting-sort replaces thrust sort + reorder kernel (documented). Snapshot md-07.",
+  "description": "DEM sphere-sphere collision forces resolved via a spatially hashed uniform grid (cellStart/cellEnd traversal).",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/2_Concepts_and_Techniques/particles/particles_kernel_impl.cuh",
+    "license": "BSD-3-Clause + CUDA EULA note",
+    "original_path": "2_Concepts_and_Techniques/particles/particles_kernel_impl.cuh"
+  },
+  "cuda_features": [
+    "__global__",
+    "__constant__",
+    "uniform_grid_hashing",
+    "float4",
+    "umul24_intrinsics",
+    "indirect_indexing",
+    "particle_simulation"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [2048, 16],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 1e-05,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction MD/particle case from collection snapshot md-07."
+}

@@ -66,3 +66,26 @@ Same algorithm from multiple suites: include more than one variant only
 when they cover different matrix cells; otherwise prefer the smaller,
 cleaner source. (e.g. lavaMD exists in both Rodinia and HeCBench — keep
 one.)
+
+## Cases already adapted
+
+Six candidates are adapted into full case units under
+`benchmark/cases/molecular-dynamics/` (2026-07-03), with upstream kernels
+kept verbatim and deterministic harnesses + CPU oracles added:
+
+- md-03 → `hecbenchShocMdLjForce` (SHOC LJ force, neighbor list)
+- md-04 → `hecbenchHaccmkShortForce` (HACC short-range force)
+- md-05 → `hecbenchIsingMetropolis` (checkerboard Metropolis; host RNG
+  replaces curand)
+- md-06 → `hecbenchSphFluidStep` (four-kernel SPH pipeline, double
+  precision; oracle designed here since upstream ships no verifier)
+- md-07 → `cudaSamplesParticlesCollide` (DEM collision over hashed grid;
+  host counting-sort replaces thrust sort)
+- md-08 → `hecbenchMotionsimRandomWalk` (random-walk diffusion)
+
+All six pass `verify.py --selftest`; CUDA build/run/perf validation on the
+team GPU machine is pending. md-01 (nbody) and md-02 (lavaMD) were NOT
+re-adapted: the dataset already contains `nbodyTiled` and
+`hecbenchLavaMdPairForce`, and duplicating them would worsen the
+redundancy flagged in the 2026-07-03 duplication audit. md-09 (CoMD) is a
+follow-up (full mini-app; heavier extraction).

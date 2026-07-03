@@ -1,0 +1,66 @@
+{
+  "id": "hecbenchHaccmkShortForce",
+  "name": "HACC microkernel short-range force",
+  "domain": "hpc",
+  "category": "molecular-dynamics",
+  "difficulty": "medium",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/haccmk-cuda/haccmk.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "n_body",
+    "sqrtf",
+    "polynomial_evaluation",
+    "branchless_predication"
+  ],
+  "description": "HACC short-range gravitational force: O(n1*n2) pair loop with polynomial long-range correction.",
+  "input_description": "type=hashed; sizes=[2048, 2048]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.001,
+    "atol": 0.001,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      2048,
+      2048
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verified",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "haccmk_kernel verbatim (polynomial correction + branchless gating). New deterministic harness. Snapshot md-04.",
+  "notes": "Real-extraction MD case from collection snapshot md-04; fills the MD/simulation coverage gap.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
