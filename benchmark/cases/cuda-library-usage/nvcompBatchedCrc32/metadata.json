@@ -1,0 +1,67 @@
+{
+  "case_id": "nvcompBatchedCrc32",
+  "name": "nvCOMP batched CRC32 checksums",
+  "category": "cuda-library-usage",
+  "domain": "library_api",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/nvcomp",
+  "source_url": "https://github.com/NVIDIA/nvcomp/blob/main/examples/nvcomp_crc32.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "nvcompBatchedCRC32GetHeuristicConf + nvcompBatchedCRC32Async sequence and CPU reference helpers verbatim; deterministic hash chunks replace file input and BatchData helpers. Snapshot lib-06.",
+  "description": "PKZIP CRC32 checksums of batched data chunks computed on the GPU via nvCOMP.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/nvcomp/blob/main/examples/nvcomp_crc32.cu",
+    "license": "Apache-2.0",
+    "original_path": "examples/nvcomp_crc32.cu"
+  },
+  "cuda_features": [
+    "library_handle_api",
+    "batched_api",
+    "heuristic_kernel_config",
+    "checksum"
+  ],
+  "libraries": [
+    "nvcomp"
+  ],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      4096,
+      8
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lnvcomp",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction library case from collection snapshot lib-06. lib-07 (zstd) deferred: dual host-zstd + nvcomp dependency."
+}

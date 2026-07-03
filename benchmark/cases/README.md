@@ -25,14 +25,14 @@ orthogonal axes kept in metadata, not in the directory tree.
 | stencil-convolution | 73 |
 | simple-kernels | 56 |
 | reductions-scans | 34 |
-| graph-irregular | 22 |
+| graph-irregular | 23 |
 | memory-movement | 21 |
+| cuda-library-usage | 19 |
 | linear-algebra | 14 |
-| cuda-library-usage | 14 |
 | streams-atomics-templates | 12 |
 | molecular-dynamics | 12 |
-| multi-kernel-pipelines | 4 |
-| **Total** | **262** |
+| multi-kernel-pipelines | 6 |
+| **Total** | **270** |
 
 2026-07-03: twelve real-extraction cases were adapted to fill the thin
 categories, kernels kept verbatim from upstream:
@@ -45,9 +45,16 @@ categories, kernels kept verbatim from upstream:
 - two multi-kernel pipelines from the HeCBench Rodinia ports (blocked LUD
   3-kernel sweep, k-means device/host iteration).
 
-Each passes `verify.py --selftest`. CUDA build/run/perf validation on the
-team GPU machine is pending for these twelve (status `verify_ready`, not
-`perf_ready`).
+A third batch (same day) added eight more: five library-API cases from
+snapshots lib-02..lib-06 (cuSOLVER getrf/getrs, cuTENSOR contraction /
+reduction / permutation, nvCOMP batched CRC32 - these need the respective
+libraries installed to build), the Chai worklist SSSP (snapshot graph-02,
+the dataset's only worklist-pattern case) and two more Rodinia pipelines
+(gaussian fan1/fan2, backprop training step).
+
+Each of the twenty 2026-07-03 cases passes `verify.py --selftest`. CUDA
+build/run/perf validation on the team GPU machine is pending for them
+(status `verify_ready`, not `perf_ready`).
 
 ## Provenance
 

@@ -1,0 +1,67 @@
+{
+  "id": "nvcompBatchedCrc32",
+  "name": "nvCOMP batched CRC32 checksums",
+  "domain": "library_api",
+  "category": "cuda-library-usage",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/nvcomp",
+  "source_url": "https://github.com/NVIDIA/nvcomp/blob/main/examples/nvcomp_crc32.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "library_handle_api",
+    "batched_api",
+    "heuristic_kernel_config",
+    "checksum"
+  ],
+  "description": "PKZIP CRC32 checksums of batched data chunks computed on the GPU via nvCOMP.",
+  "input_description": "type=hashed; sizes=[4096, 8]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.0,
+    "atol": 0.0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [
+      "nvcomp"
+    ],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lnvcomp"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      4096,
+      8
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "nvcompBatchedCRC32GetHeuristicConf + nvcompBatchedCRC32Async sequence and CPU reference helpers verbatim; deterministic hash chunks replace file input and BatchData helpers. Snapshot lib-06.",
+  "notes": "Real-extraction library case from collection snapshot lib-06. lib-07 (zstd) deferred: dual host-zstd + nvcomp dependency.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

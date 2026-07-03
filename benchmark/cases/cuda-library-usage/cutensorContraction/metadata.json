@@ -1,0 +1,71 @@
+{
+  "case_id": "cutensorContraction",
+  "name": "cuTENSOR 4D tensor contraction",
+  "category": "cuda-library-usage",
+  "domain": "library_api",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/CUDALibrarySamples",
+  "source_url": "https://github.com/NVIDIA/CUDALibrarySamples/blob/master/cuTENSOR/contraction.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "cuTENSOR 2.x plan API verbatim (descriptors, CreateContraction, scalar-type query, plan preference, workspace estimate, plan, Contract); extents shrunk, hash inputs, single run. Snapshot lib-03.",
+  "description": "General tensor contraction C_munv = alpha*A_mhkn*B_ukvh via the cuTENSOR plan-based API.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/CUDALibrarySamples/blob/master/cuTENSOR/contraction.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "cuTENSOR/contraction.cu"
+  },
+  "cuda_features": [
+    "library_handle_api",
+    "plan_based_api",
+    "workspace_query",
+    "tensor_contraction"
+  ],
+  "libraries": [
+    "cutensor"
+  ],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      16,
+      16,
+      16,
+      8,
+      8,
+      8
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app -lcutensor",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.0001,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction library case from collection snapshot lib-03. No direct SYCL library equivalent - key migration challenge."
+}

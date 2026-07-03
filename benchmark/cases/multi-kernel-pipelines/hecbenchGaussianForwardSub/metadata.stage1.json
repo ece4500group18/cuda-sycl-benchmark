@@ -1,0 +1,64 @@
+{
+  "id": "hecbenchGaussianForwardSub",
+  "name": "Rodinia Gaussian elimination (fan1/fan2 per-column pipeline)",
+  "domain": "hpc",
+  "category": "multi-kernel-pipelines",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/gaussian-cuda/gaussianElim.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "multi_kernel_pipeline",
+    "iterative_per_column_launch",
+    "2d_indexing"
+  ],
+  "description": "Forward substitution via a per-pivot-column two-kernel pipeline (multiplier column + submatrix update), then host back-substitution.",
+  "input_description": "type=hashed; sizes=[64]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.001,
+    "atol": 0.001,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      64
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "fan1/fan2 kernels + ForwardSub launch loop + BackSub verbatim; deterministic diagonally-dominant system (scheme has no pivoting). From the HeCBench raw clone, registered as mkp-03.",
+  "notes": "Fills multi-kernel-pipelines; residual oracle is execution-order independent.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
