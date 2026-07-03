@@ -1,0 +1,58 @@
+{
+  "case_id": "topk",
+  "name": "Top-k per row",
+  "category": "reductions-scans",
+  "source": {
+    "type": "authored",
+    "url": "",
+    "license": "MIT",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "selection"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      256,
+      512
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0.0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "skipped_no_syclomatic",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "pass",
+    "cuda_run": "pass",
+    "cuda_verify": "pass",
+    "syclomatic_migrate": "skipped_no_syclomatic",
+    "sycl_compile": "skipped_no_sycl_compiler",
+    "sycl_run": "skipped_not_built",
+    "sycl_verify": "skipped_not_built",
+    "cuda_performance": "pass",
+    "sycl_performance": "skipped_not_built"
+  },
+  "notes": "Top-8 values per row, sorted desc. sizes=[rows,cols]; k=8.",
+  "domain": "modern_ml",
+  "difficulty": "hard"
+}

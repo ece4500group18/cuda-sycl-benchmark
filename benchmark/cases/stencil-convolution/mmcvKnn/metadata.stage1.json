@@ -1,0 +1,64 @@
+{
+  "id": "mmcvKnn",
+  "name": "MMCV KNN",
+  "domain": "modern_ml",
+  "category": "stencil-convolution",
+  "difficulty": "hard",
+  "source_project": "open-mmlab/mmcv",
+  "source_url": "https://github.com/open-mmlab/mmcv/blob/main/mmcv/ops/csrc/pytorch/cuda/knn_cuda.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "adapted",
+  "cuda_features": [
+    "nearest neighbor",
+    "top-k distance"
+  ],
+  "description": "Standalone adaptation from open-mmlab/mmcv. Static structure and Python syntax checks are intended for this stage; CUDA/SYCL runtime status remains not_attempted.",
+  "input_description": "type=hashed; sizes=[8, 12, 4]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-05,
+    "atol": 1e-05,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      8,
+      12,
+      4
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "adapted",
+  "extraction_notes": "Standalone adaptation from open-mmlab/mmcv. Static structure and Python syntax checks are intended for this stage; CUDA/SYCL runtime status remains not_attempted.",
+  "notes": "Standalone adaptation from open-mmlab/mmcv. Static structure and Python syntax checks are intended for this stage; CUDA/SYCL runtime status remains not_attempted.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

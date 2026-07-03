@@ -1,0 +1,64 @@
+{
+  "case_id": "xformersBlockSparseMaskApply",
+  "name": "xFormers block-sparse mask apply",
+  "category": "graph-irregular",
+  "domain": "modern_ml",
+  "difficulty": "medium",
+  "source_project": "facebookresearch/xformers",
+  "source_url": "https://github.com/facebookresearch/xformers/blob/main/xformers/csrc/sparse24/sparse24_largest_mask_2d.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "inspired_by",
+  "extraction_fidelity": "inspired_by",
+  "extraction_notes": "Standalone block mask application inspired by xFormers sparse CUDA masking kernels.",
+  "description": "Apply a deterministic block-sparse mask to an attention-like matrix.",
+  "source": {
+    "type": "inspired_by",
+    "url": "https://github.com/facebookresearch/xformers/blob/main/xformers/csrc/sparse24/sparse24_largest_mask_2d.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "xformers/csrc/sparse24/sparse24_largest_mask_2d.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "block_sparse",
+    "masking"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      512,
+      128
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 1e-06,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Standalone block mask application inspired by xFormers sparse CUDA masking kernels."
+}

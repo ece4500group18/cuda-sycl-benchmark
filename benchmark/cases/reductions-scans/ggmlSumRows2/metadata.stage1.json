@@ -1,0 +1,63 @@
+{
+  "id": "ggmlSumRows2",
+  "name": "ggml row sum reduction",
+  "domain": "modern_ml",
+  "category": "reductions-scans",
+  "difficulty": "medium",
+  "source_project": "ggml-org/llama.cpp",
+  "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-cuda/sumrows.cu",
+  "license": "MIT",
+  "adaptation_type": "simplified",
+  "cuda_features": [
+    "__global__",
+    "row_reduction"
+  ],
+  "description": "Compute row sums for a row-major matrix.",
+  "input_description": "type=hashed; sizes=[2048, 64]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-05,
+    "atol": 1e-05,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": true,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      2048,
+      64
+    ],
+    "notes": "Process-level elapsed time; kernel-level timers can be added per case."
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "cuda_version": "12.1",
+    "driver_version": "596.21"
+  },
+  "status": "perf_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "simplified",
+  "extraction_notes": "Standalone row reduction inspired by ggml CUDA sum rows operators.",
+  "notes": "Standalone row reduction inspired by ggml CUDA sum rows operators.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

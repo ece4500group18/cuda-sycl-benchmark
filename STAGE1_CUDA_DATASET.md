@@ -5,17 +5,28 @@ not evaluate SYCL migration, Intel GPU execution, or SYCLomatic as a baseline.
 
 ## Current Scope
 
-The root `tools/` commands discover both:
+All cases live in a single unified layout discovered by the root `tools/`
+commands:
 
-- `pilot_benchmark/cases/*/*`
-- `benchmark/collection/*/cases/*`
+- `benchmark/cases/<category>/<case>/`
+
+`<category>` is one of the ten collection category slugs defined in
+`benchmark/collection/README.md` (simple-kernels, memory-movement,
+stencil-convolution, reductions-scans, graph-irregular, molecular-dynamics,
+linear-algebra, multi-kernel-pipelines, cuda-library-usage,
+streams-atomics-templates). Domain and difficulty are metadata fields, not
+directory levels. The legacy `pilot_benchmark/cases/*/*` and
+`benchmark/collection/*/cases/*` layouts were consolidated into this tree
+on 2026-07-03 (git history preserves the renames).
 
 Each case is treated as an original CUDA benchmark with metadata, source,
 build/run commands, verifier, and logs.
 
 ## Current Snapshot
 
-Snapshot date: 2026-07-01 Asia/Shanghai.
+Snapshot date: 2026-07-01 Asia/Shanghai (contents unchanged by the
+2026-07-03 layout consolidation; all 250 cases re-validated with strict
+metadata checks after the move).
 
 - Total cases: 250
 - Actual CUDA build: 250/250 pass

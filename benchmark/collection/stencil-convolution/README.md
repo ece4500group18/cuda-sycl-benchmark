@@ -22,11 +22,11 @@ can decide on.
 
 ## Cases already adapted
 
-34 of these candidates are already built as full cases under `cases/`
-(same unit format as the pilot: `original/main.cu` + `CMakeLists` +
-deterministic inputs + `metadata.json` + `tests/verify.py`). All 34 pass
-`verify.py --selftest`. They run against the shared
-`benchmark/collection/tools/verify_lib.py`.
+34 of these candidates are already built as full cases, now living at
+`benchmark/cases/stencil-convolution/<case>/` (unit format:
+`original/main.cu` + `CMakeLists` + deterministic inputs +
+`metadata.json` + `tests/verify.py`). All 34 pass `verify.py --selftest`.
+They run against the shared `benchmark/tools/verify_lib.py`.
 
 - 20 DALI: dali{BoundingBoxFlip, BoxEncoder, Cast, ColorSpaceConversion,
   ColorTwist, Crop, CropMirrorNormalize, ElementExtract, Flip,

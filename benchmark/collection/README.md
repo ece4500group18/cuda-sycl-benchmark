@@ -4,9 +4,11 @@
 
 This is the **collection-phase working area** for the CUDA-to-SYCL
 benchmark. It holds the candidate registries and CUDA source snapshots we
-gather before adapting selected cases into the final pilot-style format
-(`pilot_benchmark/` layout: `original/main.cu` + `CMakeLists` +
-deterministic inputs + `tests/verify.py` + `metadata.json`).
+gather before adapting selected cases into the final case-unit format
+(`original/main.cu` + `CMakeLists` + deterministic inputs +
+`tests/verify.py` + `metadata.json`). Adapted (runnable) cases do **not**
+live here: they go to `benchmark/cases/<category-slug>/<case>/` and use
+the shared `benchmark/tools/verify_lib.py`.
 
 **One folder per category. One owner per category.** Each member works
 inside their own category folder, so registries never collide.

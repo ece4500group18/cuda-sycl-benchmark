@@ -1,0 +1,60 @@
+{
+  "case_id": "gridStride",
+  "name": "Grid-stride loop vector add",
+  "category": "simple-kernels",
+  "source": {
+    "type": "authored",
+    "url": "",
+    "license": "MIT",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "grid_stride_loop",
+    "cudaMalloc",
+    "cudaMemcpy",
+    "cudaFree"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "deterministic_formula",
+    "sizes": [
+      200000
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 1e-05,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "skipped_no_syclomatic",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "pass",
+    "cuda_run": "pass",
+    "cuda_verify": "pass",
+    "syclomatic_migrate": "skipped_no_syclomatic",
+    "sycl_compile": "skipped_no_sycl_compiler",
+    "sycl_run": "skipped_not_built",
+    "sycl_verify": "skipped_not_built",
+    "cuda_performance": "pass",
+    "sycl_performance": "skipped_not_built"
+  },
+  "notes": "Classic grid-stride loop pattern.",
+  "domain": "cuda_primitive",
+  "difficulty": "easy"
+}
