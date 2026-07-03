@@ -68,3 +68,24 @@ Lonestar): include at most two variants and only if they cover different
 matrix cells (e.g. graph-01 is topo+flag, graph-10 is
 wl+ballot+smem-queue — both stay). Otherwise prefer the smaller, cleaner
 source.
+
+## Cases already adapted
+
+Four candidates are adapted into full case units under
+`benchmark/cases/graph-irregular/` (2026-07-03), with upstream kernels kept
+verbatim and deterministic CSR-graph harnesses + CPU oracles added:
+
+- graph-03 → `hecbenchPagerankMapReduce` (map+reduce power iteration)
+- graph-05 → `hecbenchMisPriority` (ECL-MIS lock-free prioritized selection)
+- graph-06 → `hecbenchEclConnectedComponents` (ECL-CC 5-kernel hooking +
+  pointer jumping)
+- graph-07 → `hecbenchJaccardWeights` (nvGRAPH Jaccard: warp prefix sum,
+  binary-search intersections, atomics)
+
+All four pass `verify.py --selftest`; GPU validation pending. graph-01
+(bfs) and graph-08 (floyd-warshall) were NOT re-adapted — the dataset
+already covers those patterns (bfs, hecbenchBfsFrontier/RelaxEdges,
+hecbenchFloydWarshallStep/MinPlus2). graph-02 (Chai worklist SSSP) is
+deferred: its double-buffered queue driver deserves a careful port.
+Galois-based candidates (graph-10..16) need runtime-library extraction and
+remain sources-only for now.

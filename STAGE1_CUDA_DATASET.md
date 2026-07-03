@@ -28,11 +28,13 @@ Snapshot date: 2026-07-01 Asia/Shanghai (contents unchanged by the
 2026-07-03 layout consolidation; all 250 cases re-validated with strict
 metadata checks after the move).
 
-2026-07-03 addition: six real-extraction molecular-dynamics cases adapted
-from the collection snapshots (md-03..md-08; kernels verbatim from
-HeCBench and NVIDIA/cuda-samples). Total is now 256. The six pass strict
-metadata validation and `verify.py --selftest`, but CUDA
-build/run/verify/perf on NVIDIA hardware is still pending for them
+2026-07-03 addition: twelve real-extraction cases adapted to fill thin
+categories (kernels verbatim from HeCBench and NVIDIA/cuda-samples): six
+molecular-dynamics (snapshots md-03..md-08), four graph-irregular
+(snapshots graph-03/05/06/07: PageRank, ECL-MIS, ECL-CC, Jaccard) and two
+multi-kernel-pipelines (Rodinia LUD and k-means). Total is now 262. The
+twelve pass strict metadata validation and `verify.py --selftest`, but
+CUDA build/run/verify/perf on NVIDIA hardware is still pending for them
 (actual status `verify_ready`); the 250/250 figures below refer to the
 2026-07-01 snapshot.
 

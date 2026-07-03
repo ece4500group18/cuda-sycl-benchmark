@@ -25,22 +25,29 @@ orthogonal axes kept in metadata, not in the directory tree.
 | stencil-convolution | 73 |
 | simple-kernels | 56 |
 | reductions-scans | 34 |
+| graph-irregular | 22 |
 | memory-movement | 21 |
-| graph-irregular | 18 |
 | linear-algebra | 14 |
 | cuda-library-usage | 14 |
 | streams-atomics-templates | 12 |
 | molecular-dynamics | 12 |
-| multi-kernel-pipelines | 2 |
-| **Total** | **256** |
+| multi-kernel-pipelines | 4 |
+| **Total** | **262** |
 
-2026-07-03: six real-extraction MD cases were adapted from the
-molecular-dynamics collection snapshots (md-03..md-08): SHOC LJ force,
-HACC short-range force, Ising Metropolis, SPH pipeline, cuda-samples
-particles collision, motionsim random walk. Their kernels are upstream
-device code verbatim; each passes `verify.py --selftest`. CUDA
-build/run/perf validation on the team GPU machine is pending
-(status `verify_ready`, not `perf_ready`).
+2026-07-03: twelve real-extraction cases were adapted to fill the thin
+categories, kernels kept verbatim from upstream:
+
+- six MD cases from collection snapshots md-03..md-08 (SHOC LJ force,
+  HACC short-range force, Ising Metropolis, SPH pipeline, cuda-samples
+  particles collision, motionsim random walk);
+- four graph cases from snapshots graph-03/05/06/07 (PageRank map+reduce,
+  ECL-MIS, ECL-CC 5-kernel, nvGRAPH Jaccard weights);
+- two multi-kernel pipelines from the HeCBench Rodinia ports (blocked LUD
+  3-kernel sweep, k-means device/host iteration).
+
+Each passes `verify.py --selftest`. CUDA build/run/perf validation on the
+team GPU machine is pending for these twelve (status `verify_ready`, not
+`perf_ready`).
 
 ## Provenance
 
