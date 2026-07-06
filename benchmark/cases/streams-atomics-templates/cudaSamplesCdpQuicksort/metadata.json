@@ -1,0 +1,64 @@
+{
+  "case_id": "cudaSamplesCdpQuicksort",
+  "name": "Quicksort via CUDA Dynamic Parallelism",
+  "category": "streams-atomics-templates",
+  "domain": "cuda_primitive",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/3_CUDA_Features/cdpSimpleQuicksort/cdpSimpleQuicksort.cu",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "selection_sort, cdp_simple_quicksort and run_qsort verbatim; deterministic hash input replaces srand. Needs -rdc=true -lcudadevrt.",
+  "description": "Recursive quicksort where the kernel launches itself on sub-ranges through device-side streams, with a selection-sort base case.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/3_CUDA_Features/cdpSimpleQuicksort/cdpSimpleQuicksort.cu",
+    "license": "BSD-3-Clause + CUDA EULA note",
+    "original_path": "3_CUDA_Features/cdpSimpleQuicksort/cdpSimpleQuicksort.cu"
+  },
+  "cuda_features": [
+    "dynamic_parallelism",
+    "device_side_launch",
+    "device_streams",
+    "recursion"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      4096
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 -rdc=true original/main.cu -o original/build/app -lcudadevrt",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Dynamic parallelism previously uncovered; SYCL has no equivalent - deliberately hard migration case."
+}

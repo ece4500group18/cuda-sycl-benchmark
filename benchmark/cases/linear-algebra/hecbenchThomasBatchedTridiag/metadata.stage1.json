@@ -1,0 +1,66 @@
+{
+  "id": "hecbenchThomasBatchedTridiag",
+  "name": "cuThomasBatch batched tridiagonal solver",
+  "domain": "hpc",
+  "category": "linear-algebra",
+  "difficulty": "medium",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/thomas-cuda/cuThomasBatch.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "double_precision",
+    "interleaved_layout",
+    "per_thread_recurrence",
+    "batched_solver"
+  ],
+  "description": "Thomas algorithm over 1024 interleaved tridiagonal systems of size 64, one system per thread.",
+  "input_description": "type=hashed; sizes=[64, 1024]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 1e-05,
+    "atol": 1e-05,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      64,
+      1024
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "cuThomasBatch kernel verbatim (BSC cuThomasBatch, double precision, interleaved batched layout, one system per thread); deterministic diagonally-dominant systems. From the HeCBench raw clone.",
+  "notes": "Batched direct solver pattern new to linear-algebra.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

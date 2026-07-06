@@ -1,0 +1,67 @@
+{
+  "case_id": "hecbenchJacobiRelaxation",
+  "name": "Jacobi relaxation with shared-memory halos and warp-shuffle reduction",
+  "category": "linear-algebra",
+  "domain": "hpc",
+  "difficulty": "hard",
+  "source_project": "ORNL/HeCBench",
+  "source_url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/jacobi-cuda/main.cu",
+  "license": "Apache-2.0",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "jacobi_step kernel + initialize_data verbatim (N 2048->512); fixed 50 iterations replace the convergence loop; the atomicAdd error reduction stays exercised every step. From the HeCBench raw clone.",
+  "description": "Jacobi iteration for the 2D Laplace system: shared-memory halo tiles, warp __shfl_down_sync error reduction, atomicAdd accumulation.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/zjin-lcf/HeCBench/blob/master/src/jacobi-cuda/main.cu",
+    "license": "Apache-2.0",
+    "original_path": "jacobi-cuda/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "__shared__",
+    "halo_exchange_tile",
+    "__shfl_down_sync",
+    "atomicAdd",
+    "iterative_solver"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      512,
+      50
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.0001,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Iterative solver pattern new to linear-algebra."
+}
