@@ -1,0 +1,19 @@
+id: lib-24
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuFFTMp/samples/c2c
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot contains cufftmp_c2c.cu together with required common helper headers and iterator utilities. 
+
+Demonstrates distributed complex-to-complex FFT using cuFFTMp and MPI. 
+
+The example performs forward and inverse transforms, applies normalization on distributed GPU data, and validates correctness by comparing reconstructed data against the original input after a round-trip transform. 
+
+Requires MPI and cuFFTMp runtime support.

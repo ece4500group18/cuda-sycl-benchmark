@@ -1,0 +1,19 @@
+id: events-02
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/3_CUDA_Features/simpleCudaGraphs
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates CUDA Graph execution using both manual graph construction and stream capture APIs. 
+
+Includes cooperative_groups synchronization, shared-memory reductions, kernel dependency chains, graph instantiation, and repeated graph launches. 
+
+Built-in result verification is provided through reduction output checking. 
+
+No external datasets required.

@@ -1,0 +1,17 @@
+id: streams-03
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/simpleHyperQ
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates HyperQ concurrent kernel execution using multiple CUDA streams. 
+
+Includes kernel dependency chains, cooperative_groups synchronization primitives, shared-memory reduction, and concurrent kernel scheduling behavior. 
+
+No external datasets required.

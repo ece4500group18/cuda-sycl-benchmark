@@ -1,0 +1,15 @@
+id: lib-17
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLAS/Level-3/gemmStridedBatched
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot includes cublas_gemmStridedBatched_example.cu and required helper files (e.g., cublas_utils.h). 
+
+Demonstrates cublasDgemmStridedBatched with fixed-size matrices and built-in correctness verification.

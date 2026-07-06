@@ -1,0 +1,17 @@
+id: lib-22
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuSOLVER/potrfBatched
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot contains cusolver_potrfBatched_example.cu together with required helper files (cusolver_utils.h and related support code). 
+
+Demonstrates batched Cholesky factorization using cusolverDnDpotrfBatched on two matrices: one symmetric positive definite matrix and one intentionally invalid matrix. 
+
+Correctness is verified through factorization output and info status values returned by the solver.
