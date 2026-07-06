@@ -1,0 +1,66 @@
+{
+  "id": "binaryPartitionOddEvenReduce",
+  "name": "Binary-partition odd/even reduce",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/3_CUDA_Features/binaryPartitionCG/binaryPartitionCG.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "binary_partition",
+    "cg::reduce",
+    "tiled_partition",
+    "atomicAdd"
+  ],
+  "description": "cooperative_groups::binary_partition() splits each warp into odd/even sub-groups, each doing a cg::reduce() before a single atomicAdd per sub-group; counts odd elements and sums odd/even elements over a fixed int array.",
+  "input_description": "type=fixed; sizes=[65536]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      65536
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "oddEvenCountAndSumCG reproduced verbatim from NVIDIA/cuda-samples binaryPartitionCG.cu. The naive counterpart kernel, host driver, CMakeLists, and Python oracle are new; the deterministic gen() input replaces the sample's rand()%50. Snapshot sk-03.",
+  "notes": "Real-extraction cooperative-groups case from collection snapshot sk-03. gen(i)=(i*7+3)%50, size=65536. Output = 3 exact integers (odd count, odd sum, even sum) from the CG kernel.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

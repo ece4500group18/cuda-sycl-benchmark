@@ -1,0 +1,69 @@
+{
+  "id": "systemScopeAtomicAdd",
+  "name": "System-scope atomics",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/systemWideAtomics/systemWideAtomics.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "atomicAdd_system",
+    "atomicExch_system",
+    "atomicMax_system",
+    "atomicCAS_system",
+    "system_scope_atomics",
+    "cudaMallocManaged",
+    "unified_memory"
+  ],
+  "description": "System-scope (*_system), host-device-coherent atomics on managed memory (GPU kernel + host mirror both updating the same array) contrasted with ordinary device-scope atomics, over a 10-slot int array with LOOP_NUM=50 repeats.",
+  "input_description": "type=fixed; sizes=[32768, 50]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      32768,
+      50
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "atomicKernel and atomicKernel_CPU reproduced verbatim from NVIDIA/cuda-samples systemWideAtomics.cu. atomicKernel_device (device-scope twin), host driver, CMakeLists, and Python oracle are new; the oracle mirrors the sample's own verify() generalized to len/LOOP_NUM. Snapshot sk-13.",
+  "notes": "Real-extraction system-scope atomics case from collection snapshot sk-13. len=32768, LOOP_NUM=50. Eight slots exact, exch/cas range-checked. Requires unified memory + system-scope atomics.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

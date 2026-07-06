@@ -1,0 +1,65 @@
+{
+  "case_id": "templatedSharedMemIdiom",
+  "name": "Templated shared-memory idiom",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTemplates/simpleTemplates.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "SharedMemory<T> template (+ specializations) and testKernel<T> reproduced verbatim from NVIDIA/cuda-samples sharedmem.cuh and simpleTemplates.cu. Host driver, gen_idata, CMakeLists, and Python oracle are new. Snapshot sk-14.",
+  "description": "A C++ template kernel needing a dynamically-sized extern __shared__ array of its own type T, obtained via the SharedMemory<T> template-specialization workaround; instantiated for int and float, computing out[i]=in[i]*num_threads.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTemplates/simpleTemplates.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "templates",
+    "extern __shared__",
+    "template_specialization",
+    "__syncthreads"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      256
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction template/shared-memory case from collection snapshot sk-14. N=256; output = int block (i*256) then float block (i*256), same values twice. Exact oracle."
+}

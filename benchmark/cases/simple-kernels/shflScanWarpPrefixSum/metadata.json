@@ -1,0 +1,68 @@
+{
+  "case_id": "shflScanWarpPrefixSum",
+  "name": "Warp-shuffle prefix-sum scan",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/shfl_scan/shfl_scan.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "shfl_scan_test reproduced verbatim from NVIDIA/cuda-samples shfl_scan.cu, launched at two block sizes (32 and 256). Host driver, gen_in, CMakeLists, and Python oracle are new. Snapshot sk-11.",
+  "description": "A register-shuffle (__shfl_up_sync) inclusive prefix sum: an intra-warp shuffle scan followed, for multi-warp blocks, by a shared-memory cross-warp broadcast; launched at 32 (single-warp) and 256 (multi-warp) block sizes.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/shfl_scan/shfl_scan.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "__shfl_up_sync",
+    "warp_shuffle",
+    "__shared__",
+    "__syncthreads",
+    "prefix_sum",
+    "scan"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      262144,
+      256
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction warp-shuffle scan case from collection snapshot sk-11. n=262144, in[i]=(i%9)+1; output = 256-wide segmented inclusive scan. Exact oracle (segment sum <= 2304)."
+}

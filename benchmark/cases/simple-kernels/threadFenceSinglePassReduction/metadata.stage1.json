@@ -1,0 +1,67 @@
+{
+  "id": "threadFenceSinglePassReduction",
+  "name": "Thread-fence single-pass reduction",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/threadFenceReduction/threadFenceReduction_kernel.cuh",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "__threadfence",
+    "atomicInc",
+    "retirement_count",
+    "cg::thread_block_tile",
+    "__shared__",
+    "tree_reduction"
+  ],
+  "description": "A single-kernel-launch sum reduction using __threadfence() + a global atomic ticket counter (the last block to finish combines all partial sums itself) contrasted with the classic two-kernel-launch tree reduction.",
+  "input_description": "type=fixed; sizes=[131072]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      131072
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "reduceBlock/reduceBlocks/reduceMultiPass/reduceSinglePass/retirementCount/setRetirementCount reproduced verbatim from NVIDIA/cuda-samples threadFenceReduction_kernel.cuh. Host driver, gen_input, CMakeLists, and Python oracle are new. Snapshot sk-15.",
+  "notes": "Real-extraction thread-fence reduction case from collection snapshot sk-15. N=131072, input[i]=((i%29)-14)*0.25, exact total = -21.0 (both outputs). Every float32 add is exact -> exact oracle.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

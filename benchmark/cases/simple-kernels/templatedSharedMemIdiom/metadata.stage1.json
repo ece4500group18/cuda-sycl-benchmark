@@ -1,0 +1,65 @@
+{
+  "id": "templatedSharedMemIdiom",
+  "name": "Templated shared-memory idiom",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleTemplates/simpleTemplates.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "templates",
+    "extern __shared__",
+    "template_specialization",
+    "__syncthreads"
+  ],
+  "description": "A C++ template kernel needing a dynamically-sized extern __shared__ array of its own type T, obtained via the SharedMemory<T> template-specialization workaround; instantiated for int and float, computing out[i]=in[i]*num_threads.",
+  "input_description": "type=fixed; sizes=[256]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      256
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "SharedMemory<T> template (+ specializations) and testKernel<T> reproduced verbatim from NVIDIA/cuda-samples sharedmem.cuh and simpleTemplates.cu. Host driver, gen_idata, CMakeLists, and Python oracle are new. Snapshot sk-14.",
+  "notes": "Real-extraction template/shared-memory case from collection snapshot sk-14. N=256; output = int block (i*256) then float block (i*256), same values twice. Exact oracle.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
