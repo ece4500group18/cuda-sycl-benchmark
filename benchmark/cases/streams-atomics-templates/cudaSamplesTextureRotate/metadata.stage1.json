@@ -1,0 +1,67 @@
+{
+  "id": "cudaSamplesTextureRotate",
+  "name": "Texture-object image rotation (linear filter, wrap addressing)",
+  "domain": "cuda_primitive",
+  "category": "streams-atomics-templates",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/0_Introduction/simpleTexture/simpleTexture.cu",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "texture_object",
+    "tex2D",
+    "cudaArray",
+    "normalized_coords",
+    "linear_filtering",
+    "wrap_addressing"
+  ],
+  "description": "Rotate an image by sampling a texture object with normalized coordinates, bilinear filtering and wrap addressing.",
+  "input_description": "type=hashed; sizes=[128, 128]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.02,
+    "atol": 0.02,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      128,
+      128
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "transformKernel and the full texture-object setup (channel desc, cudaArray, resource/texture descriptors, cudaCreateTextureObject) verbatim; deterministic smooth image replaces the PGM input; tolerance covers the 9-bit interpolation-weight quantization.",
+  "notes": "Texture-object API previously uncovered; SYCL maps to images/samplers.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

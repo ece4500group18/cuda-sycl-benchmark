@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-07-03T09:55:34.818067+00:00",
+  "timestamp": "2026-07-06T07:35:55.263958+00:00",
   "mode": "strict-stage1",
-  "total_cases": 270,
-  "compat_valid_cases": 270,
-  "strict_stage1_valid_cases": 270,
+  "total_cases": 277,
+  "compat_valid_cases": 277,
+  "strict_stage1_valid_cases": 277,
   "compat_failures": [],
   "strict_stage1_failures": [],
   "cases": [
@@ -695,6 +695,19 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "hecbenchEigenvalueBisection",
+      "relpath": "benchmark/cases/linear-algebra/hecbenchEigenvalueBisection",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/linear-algebra/hecbenchEigenvalueBisection/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "hecbenchGaussianElimStep",
       "relpath": "benchmark/cases/linear-algebra/hecbenchGaussianElimStep",
       "compat_valid": true,
@@ -713,6 +726,32 @@
       "compat_valid": true,
       "strict_stage1_valid": true,
       "stage1_metadata_path": "benchmark/cases/linear-algebra/hecbenchGaussianRank1Update2/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchJacobiRelaxation",
+      "relpath": "benchmark/cases/linear-algebra/hecbenchJacobiRelaxation",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/linear-algebra/hecbenchJacobiRelaxation/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "hecbenchThomasBatchedTridiag",
+      "relpath": "benchmark/cases/linear-algebra/hecbenchThomasBatchedTridiag",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/linear-algebra/hecbenchThomasBatchedTridiag/metadata.stage1.json",
       "missing_compat_fields": [],
       "missing_stage1_fields": [],
       "problems": [],
@@ -3508,6 +3547,19 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "cudaSamplesCdpQuicksort",
+      "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesCdpQuicksort",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/streams-atomics-templates/cudaSamplesCdpQuicksort/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "cudaSamplesDynamicSharedHistogram2",
       "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesDynamicSharedHistogram2",
       "compat_valid": true,
@@ -3534,11 +3586,50 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "cudaSamplesImmaTensorCoreGemm",
+      "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesImmaTensorCoreGemm",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/streams-atomics-templates/cudaSamplesImmaTensorCoreGemm/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaSamplesReductionMultiBlockCG",
+      "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesReductionMultiBlockCG",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/streams-atomics-templates/cudaSamplesReductionMultiBlockCG/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "cudaSamplesStreamOverlapAdd",
       "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesStreamOverlapAdd",
       "compat_valid": true,
       "strict_stage1_valid": true,
       "stage1_metadata_path": "benchmark/cases/streams-atomics-templates/cudaSamplesStreamOverlapAdd/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "cudaSamplesTextureRotate",
+      "relpath": "benchmark/cases/streams-atomics-templates/cudaSamplesTextureRotate",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/streams-atomics-templates/cudaSamplesTextureRotate/metadata.stage1.json",
       "missing_compat_fields": [],
       "missing_stage1_fields": [],
       "problems": [],

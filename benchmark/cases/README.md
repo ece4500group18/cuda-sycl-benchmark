@@ -28,11 +28,11 @@ orthogonal axes kept in metadata, not in the directory tree.
 | graph-irregular | 23 |
 | memory-movement | 21 |
 | cuda-library-usage | 19 |
-| linear-algebra | 14 |
-| streams-atomics-templates | 12 |
+| linear-algebra | 17 |
+| streams-atomics-templates | 16 |
 | molecular-dynamics | 12 |
 | multi-kernel-pipelines | 6 |
-| **Total** | **270** |
+| **Total** | **277** |
 
 2026-07-03: twelve real-extraction cases were adapted to fill the thin
 categories, kernels kept verbatim from upstream:
@@ -52,9 +52,17 @@ libraries installed to build), the Chai worklist SSSP (snapshot graph-02,
 the dataset's only worklist-pattern case) and two more Rodinia pipelines
 (gaussian fan1/fan2, backprop training step).
 
-Each of the twenty 2026-07-03 cases passes `verify.py --selftest`. CUDA
-build/run/perf validation on the team GPU machine is pending for them
-(status `verify_ready`, not `perf_ready`).
+A fourth batch (2026-07-06) added seven: three linear-algebra solvers
+(HeCBench Jacobi relaxation, BSC cuThomasBatch batched tridiagonal, AMD
+eigenvalue bisection) and four advanced-CUDA-feature cases from
+cuda-samples (texture-object rotation, cooperative-groups grid-sync
+reduction, dynamic-parallelism quicksort with -rdc, int8 Tensor-Core WMMA
+GEMM with -arch=native) - features previously absent from the dataset and
+deliberately hard for CUDA->SYCL migration.
+
+Each of the twenty-seven 2026-07-03/06 cases passes `verify.py
+--selftest`. CUDA build/run/perf validation on the team GPU machine is
+pending for them (status `verify_ready`, not `perf_ready`).
 
 ## Provenance
 

@@ -36,8 +36,11 @@ multi-kernel-pipelines (Rodinia LUD and k-means), plus a third batch of
 eight: five library-API cases (cuSOLVER getrf, cuTENSOR contraction /
 reduction / permute, nvCOMP batched CRC32; snapshots lib-02..lib-06), the
 Chai worklist SSSP (snapshot graph-02) and two more Rodinia pipelines
-(gaussian, backprop). Total is now 270. The
-twenty pass strict metadata validation and `verify.py --selftest`, but
+(gaussian, backprop). A fourth batch (2026-07-06) added seven: three
+linear-algebra solvers (Jacobi, cuThomasBatch, eigenvalue bisection) and
+four advanced-feature cases (texture objects, cooperative groups,
+dynamic parallelism, int8 WMMA Tensor Cores). Total is now 277. The
+twenty-seven pass strict metadata validation and `verify.py --selftest`, but
 CUDA build/run/verify/perf on NVIDIA hardware is still pending for them
 (actual status `verify_ready`); the 250/250 figures below refer to the
 2026-07-01 snapshot.

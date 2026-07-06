@@ -1,0 +1,64 @@
+{
+  "id": "cudaSamplesCdpQuicksort",
+  "name": "Quicksort via CUDA Dynamic Parallelism",
+  "domain": "cuda_primitive",
+  "category": "streams-atomics-templates",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/3_CUDA_Features/cdpSimpleQuicksort/cdpSimpleQuicksort.cu",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "dynamic_parallelism",
+    "device_side_launch",
+    "device_streams",
+    "recursion"
+  ],
+  "description": "Recursive quicksort where the kernel launches itself on sub-ranges through device-side streams, with a selection-sort base case.",
+  "input_description": "type=hashed; sizes=[4096]; seed=123",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0.0,
+    "atol": 0.0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 -rdc=true original/main.cu -o original/build/app -lcudadevrt"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      4096
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "selection_sort, cdp_simple_quicksort and run_qsort verbatim; deterministic hash input replaces srand. Needs -rdc=true -lcudadevrt.",
+  "notes": "Dynamic parallelism previously uncovered; SYCL has no equivalent - deliberately hard migration case.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

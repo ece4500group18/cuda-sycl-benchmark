@@ -1,0 +1,67 @@
+{
+  "case_id": "cudaSamplesTextureRotate",
+  "name": "Texture-object image rotation (linear filter, wrap addressing)",
+  "category": "streams-atomics-templates",
+  "domain": "cuda_primitive",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/0_Introduction/simpleTexture/simpleTexture.cu",
+  "license": "BSD-3-Clause + CUDA EULA note",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "transformKernel and the full texture-object setup (channel desc, cudaArray, resource/texture descriptors, cudaCreateTextureObject) verbatim; deterministic smooth image replaces the PGM input; tolerance covers the 9-bit interpolation-weight quantization.",
+  "description": "Rotate an image by sampling a texture object with normalized coordinates, bilinear filtering and wrap addressing.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/Samples/0_Introduction/simpleTexture/simpleTexture.cu",
+    "license": "BSD-3-Clause + CUDA EULA note",
+    "original_path": "0_Introduction/simpleTexture/simpleTexture.cu"
+  },
+  "cuda_features": [
+    "texture_object",
+    "tex2D",
+    "cudaArray",
+    "normalized_coords",
+    "linear_filtering",
+    "wrap_addressing"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "hashed",
+    "sizes": [
+      128,
+      128
+    ],
+    "seed": 123
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_abs_error",
+    "tolerance": 0.02,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Texture-object API previously uncovered; SYCL maps to images/samplers."
+}
