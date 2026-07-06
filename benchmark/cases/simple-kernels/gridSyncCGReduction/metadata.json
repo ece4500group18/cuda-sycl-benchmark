@@ -1,0 +1,68 @@
+{
+  "case_id": "gridSyncCGReduction",
+  "name": "Grid-sync cooperative-groups reduction",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/reductionMultiBlockCG/reductionMultiBlockCG.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "reduceBlock reproduced verbatim and reduceSinglePassMultiBlockCG reproduced with a mechanical float->double type change, from NVIDIA/cuda-samples reductionMultiBlockCG.cu. reduceBlockPartial/reduceCombinePartials (two-launch counterpart), host driver, gen_val, CMakeLists, and Python oracle are new. Snapshot sk-09.",
+  "description": "A single-kernel cooperative-groups grid-wide sum reduction (cg::this_grid()+grid.sync() via cudaLaunchCooperativeKernel) contrasted with a two-kernel-launch tree reduction combining the same per-block partial sums.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/reductionMultiBlockCG/reductionMultiBlockCG.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "grid_group",
+    "cg::sync",
+    "cudaLaunchCooperativeKernel",
+    "cg::reduce",
+    "tiled_partition",
+    "extern __shared__"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      262144
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction grid-sync case from collection snapshot sk-09. n=262144, input[i]=((i%23)-11)*0.5, scalar sum = -32.5. Requires cooperative-launch-capable GPU; exact oracle."
+}

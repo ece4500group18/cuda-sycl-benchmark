@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-07-06T07:35:55.263958+00:00",
+  "timestamp": "2026-07-06T09:07:57.266008+00:00",
   "mode": "strict-stage1",
-  "total_cases": 277,
-  "compat_valid_cases": 277,
-  "strict_stage1_valid_cases": 277,
+  "total_cases": 292,
+  "compat_valid_cases": 292,
+  "strict_stage1_valid_cases": 292,
   "compat_failures": [],
   "strict_stage1_failures": [],
   "cases": [
@@ -1808,11 +1808,50 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "atomicIntrinsics",
+      "relpath": "benchmark/cases/simple-kernels/atomicIntrinsics",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/atomicIntrinsics/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "backpropTreeReduction",
+      "relpath": "benchmark/cases/simple-kernels/backpropTreeReduction",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/backpropTreeReduction/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "biasAddRelu",
       "relpath": "benchmark/cases/simple-kernels/biasAddRelu",
       "compat_valid": true,
       "strict_stage1_valid": true,
       "stage1_metadata_path": "benchmark/cases/simple-kernels/biasAddRelu/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "binaryPartitionOddEvenReduce",
+      "relpath": "benchmark/cases/simple-kernels/binaryPartitionOddEvenReduce",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/binaryPartitionOddEvenReduce/metadata.stage1.json",
       "missing_compat_fields": [],
       "missing_stage1_fields": [],
       "problems": [],
@@ -1833,6 +1872,19 @@
       "warnings": [
         "source.url"
       ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "bitonicVsOddEvenMergeSort",
+      "relpath": "benchmark/cases/simple-kernels/bitonicVsOddEvenMergeSort",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/bitonicVsOddEvenMergeSort/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
       "schema_note": "legacy-compatible metadata"
     },
     {
@@ -1914,6 +1966,45 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "cgThreadBlockRankSum",
+      "relpath": "benchmark/cases/simple-kernels/cgThreadBlockRankSum",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/cgThreadBlockRankSum/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "deviceAssertGuard",
+      "relpath": "benchmark/cases/simple-kernels/deviceAssertGuard",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/deviceAssertGuard/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "dynamicSharedMinReduction",
+      "relpath": "benchmark/cases/simple-kernels/dynamicSharedMinReduction",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/dynamicSharedMinReduction/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "flashAlibiBias",
       "relpath": "benchmark/cases/simple-kernels/flashAlibiBias",
       "compat_valid": true,
@@ -1971,6 +2062,19 @@
       "compat_valid": true,
       "strict_stage1_valid": true,
       "stage1_metadata_path": "benchmark/cases/simple-kernels/flashScaleMaskScores/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "fp16PackedScalarProduct",
+      "relpath": "benchmark/cases/simple-kernels/fp16PackedScalarProduct",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/fp16PackedScalarProduct/metadata.stage1.json",
       "missing_compat_fields": [],
       "missing_stage1_fields": [],
       "problems": [],
@@ -2178,6 +2282,19 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "gridSyncCGReduction",
+      "relpath": "benchmark/cases/simple-kernels/gridSyncCGReduction",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/gridSyncCGReduction/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "hadamard",
       "relpath": "benchmark/cases/simple-kernels/hadamard",
       "compat_valid": true,
@@ -2299,6 +2416,19 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "occupancyTunedLaunch",
+      "relpath": "benchmark/cases/simple-kernels/occupancyTunedLaunch",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/occupancyTunedLaunch/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "reluActivation",
       "relpath": "benchmark/cases/simple-kernels/reluActivation",
       "compat_valid": true,
@@ -2355,6 +2485,19 @@
       "schema_note": "legacy-compatible metadata"
     },
     {
+      "case_name": "shflScanWarpPrefixSum",
+      "relpath": "benchmark/cases/simple-kernels/shflScanWarpPrefixSum",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/shflScanWarpPrefixSum/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
       "case_name": "siluActivation",
       "relpath": "benchmark/cases/simple-kernels/siluActivation",
       "compat_valid": true,
@@ -2380,6 +2523,58 @@
       "warnings": [
         "source.url"
       ],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "streamOrderedAllocVectorAdd",
+      "relpath": "benchmark/cases/simple-kernels/streamOrderedAllocVectorAdd",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/streamOrderedAllocVectorAdd/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "systemScopeAtomicAdd",
+      "relpath": "benchmark/cases/simple-kernels/systemScopeAtomicAdd",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/systemScopeAtomicAdd/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "templatedSharedMemIdiom",
+      "relpath": "benchmark/cases/simple-kernels/templatedSharedMemIdiom",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/templatedSharedMemIdiom/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
+      "schema_note": "legacy-compatible metadata"
+    },
+    {
+      "case_name": "threadFenceSinglePassReduction",
+      "relpath": "benchmark/cases/simple-kernels/threadFenceSinglePassReduction",
+      "compat_valid": true,
+      "strict_stage1_valid": true,
+      "stage1_metadata_path": "benchmark/cases/simple-kernels/threadFenceSinglePassReduction/metadata.stage1.json",
+      "missing_compat_fields": [],
+      "missing_stage1_fields": [],
+      "problems": [],
+      "stage1_problems": [],
+      "warnings": [],
       "schema_note": "legacy-compatible metadata"
     },
     {

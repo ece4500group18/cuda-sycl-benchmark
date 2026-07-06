@@ -1,0 +1,68 @@
+{
+  "id": "cgThreadBlockRankSum",
+  "name": "Cooperative-groups thread-block rank sum",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleCooperativeGroups/simpleCooperativeGroups.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "this_thread_block",
+    "thread_group",
+    "g.sync",
+    "extern __shared__",
+    "tree_reduction"
+  ],
+  "description": "A whole-thread-block cooperative_groups partition drives a shared-memory tree reduction (sumReduction) of each thread's rank; every block sums ranks 0..255 to the triangular number 32640.",
+  "input_description": "type=fixed; sizes=[256, 16]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      256,
+      16
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "sumReduction reproduced verbatim from NVIDIA/cuda-samples simpleCooperativeGroups.cu. cgkernel is adapted to write g_odata[blockIdx.x] instead of printf and drops the tiled_partition<16> sub-reduction; host driver, CMakeLists, and Python oracle are new. Snapshot sk-05.",
+  "notes": "Real-extraction cooperative-groups reduction case from collection snapshot sk-05. blockDim=256, grid=16 -> 16 outputs, each 32640. Exact integer oracle.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

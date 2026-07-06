@@ -1,0 +1,68 @@
+{
+  "id": "gridSyncCGReduction",
+  "name": "Grid-sync cooperative-groups reduction",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/reductionMultiBlockCG/reductionMultiBlockCG.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "grid_group",
+    "cg::sync",
+    "cudaLaunchCooperativeKernel",
+    "cg::reduce",
+    "tiled_partition",
+    "extern __shared__"
+  ],
+  "description": "A single-kernel cooperative-groups grid-wide sum reduction (cg::this_grid()+grid.sync() via cudaLaunchCooperativeKernel) contrasted with a two-kernel-launch tree reduction combining the same per-block partial sums.",
+  "input_description": "type=fixed; sizes=[262144]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      262144
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "reduceBlock reproduced verbatim and reduceSinglePassMultiBlockCG reproduced with a mechanical float->double type change, from NVIDIA/cuda-samples reductionMultiBlockCG.cu. reduceBlockPartial/reduceCombinePartials (two-launch counterpart), host driver, gen_val, CMakeLists, and Python oracle are new. Snapshot sk-09.",
+  "notes": "Real-extraction grid-sync case from collection snapshot sk-09. n=262144, input[i]=((i%23)-11)*0.5, scalar sum = -32.5. Requires cooperative-launch-capable GPU; exact oracle.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}
