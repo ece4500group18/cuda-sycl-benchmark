@@ -1,0 +1,15 @@
+id: lib-09
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: MathDx/cuFFTDx/00_introduction_example/introduction_example.cu
+
+license: Apache-2.0
+
+retrieved: 2026-06-19
+
+notes:     
+
+Snapshot includes introduction_example.cu and required shared headers. 
+
+Demonstrates cuFFTDx block-level FFT execution using device-side FFT operators, shared memory, and workspace objects.

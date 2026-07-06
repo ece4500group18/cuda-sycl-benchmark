@@ -1,0 +1,17 @@
+id: lib-12
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLASLt/LtSgemm
+
+license: Apache-2.0
+
+retrieved: 2026-06-28
+
+notes:     
+
+Collected minimal source snapshot for ML-KEM-512 post-quantum cryptography example. 
+
+Includes key generation, encapsulation, and decapsulation kernels. 
+
+No functional modifications; stripped unrelated examples and build infrastructure.

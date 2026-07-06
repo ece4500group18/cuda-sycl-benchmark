@@ -1,0 +1,15 @@
+id: templates-02
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/0_Introduction/simpleTemplates
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:   
+
+Demonstrates templated CUDA kernels, host-side template programming, template specialization, and dynamically allocated shared memory through SharedMemory<T>. 
+
+Uses CPU recomputation as correctness oracle.

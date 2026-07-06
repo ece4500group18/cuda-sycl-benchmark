@@ -1,0 +1,17 @@
+id: lib-21
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuSOLVER/syevd
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot contains cusolver_syevd_example.cu together with required helper files (cusolver_utils.h and related support code). 
+
+Demonstrates symmetric eigenvalue decomposition using cusolverDnDsyevd. 
+
+Uses a fixed 3x3 symmetric matrix and validates computed eigenvalues against known reference values.
