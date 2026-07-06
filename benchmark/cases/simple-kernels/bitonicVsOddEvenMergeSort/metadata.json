@@ -1,0 +1,67 @@
+{
+  "case_id": "bitonicVsOddEvenMergeSort",
+  "name": "Bitonic vs odd-even merge sort networks",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/tree/master/cpp/2_Concepts_and_Techniques/sortingNetworks",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "Comparator, bitonicSortShared, and oddEvenMergeSortShared reproduced verbatim from NVIDIA/cuda-samples sortingNetworks (bitonicSort.cu, oddEvenMergeSort.cu, sortingNetworks_common.cuh). Host driver, gen_key/gen_val, CMakeLists, and Python oracle are new. Snapshot sk-04.",
+  "description": "Two in-shared-memory sorting networks (a bitonic sort and a Batcher odd-even merge sort) sort the same (key,value) array via different comparator-network topologies, producing the identical permutation.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/tree/master/cpp/2_Concepts_and_Techniques/sortingNetworks",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "__shared__",
+    "cooperative_groups",
+    "cg::sync",
+    "sorting_network",
+    "bitonic_sort",
+    "odd_even_merge_sort"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      1024
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction sorting-network case from collection snapshot sk-04. arrayLength=1024 (single shared-memory block), keys distinct. Output = bitonic kernel's sorted 'key val' pairs, 2048 interleaved integers."
+}

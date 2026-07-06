@@ -1,0 +1,68 @@
+{
+  "case_id": "cgThreadBlockRankSum",
+  "name": "Cooperative-groups thread-block rank sum",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleCooperativeGroups/simpleCooperativeGroups.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "sumReduction reproduced verbatim from NVIDIA/cuda-samples simpleCooperativeGroups.cu. cgkernel is adapted to write g_odata[blockIdx.x] instead of printf and drops the tiled_partition<16> sub-reduction; host driver, CMakeLists, and Python oracle are new. Snapshot sk-05.",
+  "description": "A whole-thread-block cooperative_groups partition drives a shared-memory tree reduction (sumReduction) of each thread's rank; every block sums ranks 0..255 to the triangular number 32640.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleCooperativeGroups/simpleCooperativeGroups.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "this_thread_block",
+    "thread_group",
+    "g.sync",
+    "extern __shared__",
+    "tree_reduction"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      256,
+      16
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction cooperative-groups reduction case from collection snapshot sk-05. blockDim=256, grid=16 -> 16 outputs, each 32640. Exact integer oracle."
+}

@@ -1,0 +1,70 @@
+{
+  "case_id": "fp16PackedScalarProduct",
+  "name": "Packed half2 scalar product",
+  "category": "simple-kernels",
+  "domain": "modern_ml",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/fp16ScalarProduct/fp16ScalarProduct.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "scalarProductKernel_native/_intrinsics and reduceInShared_native/_intrinsics reproduced verbatim from NVIDIA/cuda-samples fp16ScalarProduct.cu. Host driver, gen_a_lane/gen_b_lane, CMakeLists, and Python oracle are new. Inputs chosen so every fp16 intermediate is an exact integer. Snapshot sk-08.",
+  "description": "A packed half2 SIMD dot product computed via explicit __hfma2/__hadd2 intrinsics and via native half2 operator overloads, each with a grid-stride multiply-accumulate and a shared-memory tree reduction to one partial per block.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/fp16ScalarProduct/fp16ScalarProduct.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "half2",
+    "__hfma2",
+    "__hadd2",
+    "fp16",
+    "__shared__",
+    "__syncthreads",
+    "tree_reduction"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      262144,
+      128,
+      128
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction fp16 case from collection snapshot sk-08. size=262144, 128 blocks x 128 threads; every block partial totals 4096. Output = intrinsics kernel per-block partials, exact oracle."
+}

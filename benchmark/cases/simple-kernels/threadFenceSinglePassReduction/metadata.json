@@ -1,0 +1,67 @@
+{
+  "case_id": "threadFenceSinglePassReduction",
+  "name": "Thread-fence single-pass reduction",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/threadFenceReduction/threadFenceReduction_kernel.cuh",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "reduceBlock/reduceBlocks/reduceMultiPass/reduceSinglePass/retirementCount/setRetirementCount reproduced verbatim from NVIDIA/cuda-samples threadFenceReduction_kernel.cuh. Host driver, gen_input, CMakeLists, and Python oracle are new. Snapshot sk-15.",
+  "description": "A single-kernel-launch sum reduction using __threadfence() + a global atomic ticket counter (the last block to finish combines all partial sums itself) contrasted with the classic two-kernel-launch tree reduction.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/2_Concepts_and_Techniques/threadFenceReduction/threadFenceReduction_kernel.cuh",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "__threadfence",
+    "atomicInc",
+    "retirement_count",
+    "cg::thread_block_tile",
+    "__shared__",
+    "tree_reduction"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      131072
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "exact",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction thread-fence reduction case from collection snapshot sk-15. N=131072, input[i]=((i%29)-14)*0.25, exact total = -21.0 (both outputs). Every float32 add is exact -> exact oracle."
+}

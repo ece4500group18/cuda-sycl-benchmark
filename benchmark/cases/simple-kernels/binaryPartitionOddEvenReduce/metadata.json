@@ -1,0 +1,66 @@
+{
+  "case_id": "binaryPartitionOddEvenReduce",
+  "name": "Binary-partition odd/even reduce",
+  "category": "simple-kernels",
+  "domain": "cuda_primitive",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/3_CUDA_Features/binaryPartitionCG/binaryPartitionCG.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "oddEvenCountAndSumCG reproduced verbatim from NVIDIA/cuda-samples binaryPartitionCG.cu. The naive counterpart kernel, host driver, CMakeLists, and Python oracle are new; the deterministic gen() input replaces the sample's rand()%50. Snapshot sk-03.",
+  "description": "cooperative_groups::binary_partition() splits each warp into odd/even sub-groups, each doing a cg::reduce() before a single atomicAdd per sub-group; counts odd elements and sums odd/even elements over a fixed int array.",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/3_CUDA_Features/binaryPartitionCG/binaryPartitionCG.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "cooperative_groups",
+    "binary_partition",
+    "cg::reduce",
+    "tiled_partition",
+    "atomicAdd"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      65536
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "odd_even_mismatch",
+    "tolerance": 0,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction cooperative-groups case from collection snapshot sk-03. gen(i)=(i*7+3)%50, size=65536. Output = 3 exact integers (odd count, odd sum, even sum) from the CG kernel."
+}
