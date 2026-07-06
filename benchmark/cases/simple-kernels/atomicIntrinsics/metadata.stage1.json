@@ -1,0 +1,72 @@
+{
+  "id": "atomicIntrinsics",
+  "name": "Atomic intrinsics battery",
+  "domain": "cuda_primitive",
+  "category": "simple-kernels",
+  "difficulty": "medium",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/simpleAtomicIntrinsics/simpleAtomicIntrinsics_kernel.cuh",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "atomicAdd",
+    "atomicSub",
+    "atomicExch",
+    "atomicMax",
+    "atomicMin",
+    "atomicInc",
+    "atomicDec",
+    "atomicCAS",
+    "atomicAnd",
+    "atomicOr",
+    "atomicXor"
+  ],
+  "description": "Every one of 16384 threads calls the same eleven global-memory atomic RMW intrinsics on the same 11-element output array, with no coordination beyond the atomics.",
+  "input_description": "type=fixed; sizes=[16384]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      16384
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "testKernel reproduced verbatim from NVIDIA/cuda-samples simpleAtomicIntrinsics_kernel.cuh. The host driver, CMakeLists, and Python oracle (tests/verify.py) are new; the CPU reference formulas mirror the sample's own computeGold (simpleAtomicIntrinsics_cpu.cpp). Snapshot sk-01.",
+  "notes": "Real-extraction case from collection snapshot sk-01. len = numThreads*numBlocks = 16384. Nine order-independent slots (add/sub/max/min/inc/dec/and/or/xor) are checked exactly; atomicExch and atomicCAS are execution-order dependent and only range-checked to a valid thread id in [0, len).",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

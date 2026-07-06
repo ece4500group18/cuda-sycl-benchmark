@@ -1,0 +1,70 @@
+{
+  "id": "fp16PackedScalarProduct",
+  "name": "Packed half2 scalar product",
+  "domain": "modern_ml",
+  "category": "simple-kernels",
+  "difficulty": "hard",
+  "source_project": "NVIDIA/cuda-samples",
+  "source_url": "https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/fp16ScalarProduct/fp16ScalarProduct.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "cuda_features": [
+    "__global__",
+    "half2",
+    "__hfma2",
+    "__hadd2",
+    "fp16",
+    "__shared__",
+    "__syncthreads",
+    "tree_reduction"
+  ],
+  "description": "A packed half2 SIMD dot product computed via explicit __hfma2/__hadd2 intrinsics and via native half2 operator overloads, each with a grid-stride multiply-accumulate and a shared-memory tree reduction to one partial per block.",
+  "input_description": "type=fixed; sizes=[262144, 128, 128]; seed=None",
+  "output_description": "CUDA executable writes numeric output to output/cuda_output.txt.",
+  "verification": {
+    "type": "cpu_reference",
+    "rtol": 0,
+    "atol": 0,
+    "reference": "cpu",
+    "notes": "cpu_reference"
+  },
+  "build": {
+    "system": "custom_nvcc",
+    "requires_gpu": true,
+    "requires_external_libs": [],
+    "command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app"
+  },
+  "run": {
+    "command": "original/build/app output/cuda_output.txt",
+    "output_files": [
+      "output/cuda_output.txt"
+    ],
+    "expected_runtime_sec": ""
+  },
+  "performance": {
+    "nvidia_baseline_required": true,
+    "timing_available": false,
+    "metric_type": "runtime",
+    "primary_metric": "ms",
+    "problem_size": [
+      262144,
+      128,
+      128
+    ],
+    "notes": "Runtime logs are written by tools/benchmark_case.py."
+  },
+  "hardware": {
+    "gpu_model": null,
+    "cuda_version": null,
+    "driver_version": null
+  },
+  "status": "verify_ready",
+  "owner": "ece4500group18",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "scalarProductKernel_native/_intrinsics and reduceInShared_native/_intrinsics reproduced verbatim from NVIDIA/cuda-samples fp16ScalarProduct.cu. Host driver, gen_a_lane/gen_b_lane, CMakeLists, and Python oracle are new. Inputs chosen so every fp16 intermediate is an exact integer. Snapshot sk-08.",
+  "notes": "Real-extraction fp16 case from collection snapshot sk-08. size=262144, 128 blocks x 128 threads; every block partial totals 4096. Output = intrinsics kernel per-block partials, exact oracle.",
+  "legacy_metadata": {
+    "file": "metadata.json",
+    "declared_status": "raw"
+  }
+}

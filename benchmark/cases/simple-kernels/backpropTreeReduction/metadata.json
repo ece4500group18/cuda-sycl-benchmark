@@ -1,0 +1,66 @@
+{
+  "case_id": "backpropTreeReduction",
+  "name": "Backprop layer-forward tree reduction",
+  "category": "simple-kernels",
+  "domain": "modern_ml",
+  "difficulty": "medium",
+  "source_project": "yuhc/gpu-rodinia",
+  "source_url": "https://github.com/yuhc/gpu-rodinia/blob/master/cuda/backprop/backprop_cuda_kernel.cu",
+  "license": "BSD-3-Clause",
+  "adaptation_type": "extracted",
+  "extraction_fidelity": "extracted",
+  "extraction_notes": "bpnn_layerforward_CUDA reproduced verbatim from Rodinia backprop_cuda_kernel.cu. The host driver, CMakeLists, and Python oracle are new; deterministic gen_input/gen_weight are inlined into the host. Snapshot sk-02.",
+  "description": "Shared-memory power-of-two-stride tree reduction computing a weighted partial sum per hidden node, from a backpropagation network's input-to-hidden layer-forward pass (HEIGHT=WIDTH=16, in=8192).",
+  "source": {
+    "type": "extracted",
+    "url": "https://github.com/yuhc/gpu-rodinia/blob/master/cuda/backprop/backprop_cuda_kernel.cu",
+    "license": "BSD-3-Clause",
+    "original_path": "original/main.cu"
+  },
+  "cuda_features": [
+    "__global__",
+    "__shared__",
+    "__syncthreads",
+    "tree_reduction",
+    "__log2f",
+    "__powf"
+  ],
+  "libraries": [],
+  "input": {
+    "type": "fixed",
+    "sizes": [
+      8192
+    ],
+    "seed": null
+  },
+  "build": {
+    "cuda_build_command": "nvcc -O2 -std=c++17 original/main.cu -o original/build/app",
+    "sycl_build_command": "icpx -fsycl -O2 -std=c++17 syclomatic/main.dp.cpp -o build_sycl/app"
+  },
+  "run": {
+    "cuda_run_command": "original/build/app output/cuda_output.txt",
+    "sycl_run_command": "build_sycl/app output/sycl_output.txt"
+  },
+  "correctness": {
+    "method": "cpu_reference",
+    "metric": "max_rel_error",
+    "tolerance": 0.0001,
+    "expected_pass_string": "PASS"
+  },
+  "syclomatic": {
+    "status": "not_attempted",
+    "command": "",
+    "warnings_count": null,
+    "manual_fixes_required": null
+  },
+  "status": {
+    "cuda_compile": "not_attempted",
+    "cuda_run": "not_attempted",
+    "cuda_verify": "not_attempted",
+    "syclomatic_migrate": "not_attempted",
+    "sycl_compile": "not_attempted",
+    "sycl_run": "not_attempted",
+    "sycl_verify": "not_attempted"
+  },
+  "notes": "Real-extraction tree-reduction case from collection snapshot sk-02. in=8192, hid=16, num_blocks=512 -> 8192 output floats. CPU reference replicates the exact float32 tree-reduction add order."
+}
