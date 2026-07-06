@@ -1,0 +1,15 @@
+id: templates-04
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/4_CUDA_Libraries/libcuxxMdspan
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-23
+
+notes:  
+
+Demonstrates CCCL 3.3 mdspan features including DLPack interoperability, cuda::device_mdspan, cuda::shared_memory_mdspan, tiled transpose, and templated mdspan kernels. 
+
+Correctness validated through host-side scale and transpose reference checks.

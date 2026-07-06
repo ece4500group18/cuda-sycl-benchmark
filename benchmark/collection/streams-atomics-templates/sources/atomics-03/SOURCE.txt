@@ -1,0 +1,19 @@
+id: atomics-03
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/2_Concepts_and_Techniques/histogram
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-29
+
+notes:   
+
+Full histogram module including histogram256.cu, histogram64.cu, histogram_common.h, and histogram_gold.cpp. 
+
+Implements warp-level shared memory histograms using atomicAdd, followed by merge reduction. 
+
+CPU reference implementations used for correctness validation. 
+
+Requires multi-file build context to compile correctly.

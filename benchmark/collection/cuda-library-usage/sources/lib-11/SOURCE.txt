@@ -1,0 +1,17 @@
+id: lib-11
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuPQC/example_ml_kem.cu
+
+license: Apache-2.0
+
+retrieved: 2026-06-19
+
+notes:     
+
+Collected minimal source snapshot for ML-KEM-512 post-quantum cryptography example. 
+
+Includes key generation, encapsulation, and decapsulation kernels. 
+
+No functional modifications; stripped unrelated examples and build infrastructure.

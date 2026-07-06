@@ -1,0 +1,15 @@
+id: lib-16
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuBLAS/Level-3/gemmBatched
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot includes cublas_gemmBatched_example.cu and required helper files (e.g., cublas_utils.h). 
+
+Demonstrates batched dense matrix multiplication using cublasDgemmBatched with fixed sample matrices and built-in result verification.

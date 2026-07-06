@@ -1,0 +1,17 @@
+id: lib-14
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuFFT/lto_callback_window_1d/src
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:     
+
+Snapshot of cuFFT legacy callback windowing example. 
+
+Retained r2c_c2r_legacy_callback_example.cu together with callback_params.h, common.{h,cpp}, and r2c_c2r_reference.{h,cu}. 
+
+Excluded LTO/NVRTC callback variants and build files.

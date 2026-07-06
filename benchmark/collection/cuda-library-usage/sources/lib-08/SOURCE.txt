@@ -1,0 +1,9 @@
+id:        lib-08
+upstream:  https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+path:      MathDx/cuRANDDx/01_introduction
+license:   Apache-2.0
+retrieved: 2026-06-19
+notes:     
+Snapshot includes philox_thread_api.cu and common.hpp. 
+Demonstrates cuRANDDx Philox thread-level RNG generation with log-normal distribution. 
+Requires MathDx/cuRANDDx package.

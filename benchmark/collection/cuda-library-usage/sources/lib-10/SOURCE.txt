@@ -1,0 +1,17 @@
+id: lib-10
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cuPQC
+
+license: Apache-2.0
+
+retrieved: 2026-06-19
+
+notes:     
+
+Snapshot includes example_sha2.cu. 
+
+Demonstrates GPU-side SHA2-256 hashing using the cuPQC cryptography library. 
+
+Input is a fixed test string and output is a deterministic digest.

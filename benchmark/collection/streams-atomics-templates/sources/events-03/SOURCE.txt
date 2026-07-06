@@ -1,0 +1,17 @@
+id: events-03
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/6_Performance/cudaGraphsPerfScaling
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+CUDA Graph performance-scaling benchmark evaluating graph capture and launch overhead across varying graph widths and lengths. 
+
+Uses CUDA streams, CUDA events, NVTX instrumentation macros, and graph execution APIs. 
+
+Includes built-in pass/fail validation and no external datasets.
