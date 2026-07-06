@@ -1,0 +1,17 @@
+id: templates-01
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/2_Concepts_and_Techniques/reduction
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Contains multiple templated reduction kernels (reduce0–reduce4), shared memory abstraction via template struct, warp shuffle optimization, and specialization for double/int. 
+
+Uses cooperative_groups and requires no external dataset. 
+
+Reduction correctness typically validated via CPU reference sum.

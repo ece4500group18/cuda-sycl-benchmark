@@ -1,0 +1,19 @@
+id: streams-02
+
+upstream: https://github.com/NVIDIA/cuda-samples @ 241afd3
+
+path: cpp/3_CUDA_Features/StreamPriorities
+
+license: NVIDIA (full text: https://github.com/NVIDIA/cuda-samples/blob/master/LICENSE)
+
+retrieved: 2026-06-21
+
+notes:   
+
+Demonstrates overlapping host-device memory transfers and kernel execution using multiple CUDA streams. 
+
+Includes pinned host memory allocation via cudaMallocHost and cudaHostRegister, event-based timing, asynchronous memcpy operations, and stream concurrency. 
+
+Correctness is verified using the built-in correct_data() routine. 
+
+No external datasets required.

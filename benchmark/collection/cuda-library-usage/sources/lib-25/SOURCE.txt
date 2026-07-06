@@ -1,0 +1,19 @@
+id: lib-25
+
+upstream: https://github.com/NVIDIA/CUDALibrarySamples @ 241afd3
+
+path: cutensorMp
+
+license: Apache-2.0
+
+retrieved: 2026-06-20
+
+notes:   
+
+Snapshot contains cutensorMp_contraction.cu. 
+
+Demonstrates distributed tensor contraction using cuTensorMp together with MPI and NCCL communication. 
+
+The example creates distributed tensor descriptors, executes multi-GPU tensor contraction, manages workspace and communication resources, and validates results against a reference contraction. 
+
+Requires MPI, NCCL, CUDA-aware communication support, and a multi-process execution environment.
