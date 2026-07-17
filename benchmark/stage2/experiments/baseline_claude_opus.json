@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "experiment_id": "baseline-claude-opus-pilot-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {
+      "slug": "claude-code",
+      "adapter": "claude_code",
+      "display_name": "Claude Code",
+      "command": "claude",
+      "permission_mode": "acceptEdits",
+      "allowed_tools": [
+        "Read", "Write", "Edit", "Glob", "Grep",
+        "Bash(./sycl_build.sh:*)", "Bash(./sycl_run.sh:*)"
+      ],
+      "disallowed_tools": ["WebFetch", "WebSearch"]
+    }
+  ],
+  "models": [
+    {
+      "slug": "opus-4x",
+      "provider": "anthropic",
+      "model_id": "opus",
+      "model_id_env": "CLAUDE_BASELINE_MODEL",
+      "require_immutable_model_id": true
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {"include": [{"harness": "claude-code", "model": "opus-4x"}]},
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 500000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}

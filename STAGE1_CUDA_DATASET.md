@@ -39,11 +39,11 @@ Chai worklist SSSP (snapshot graph-02) and two more Rodinia pipelines
 (gaussian, backprop). A fourth batch (2026-07-06) added seven: three
 linear-algebra solvers (Jacobi, cuThomasBatch, eigenvalue bisection) and
 four advanced-feature cases (texture objects, cooperative groups,
-dynamic parallelism, int8 WMMA Tensor Cores). Total is now 277. The
-twenty-seven pass strict metadata validation and `verify.py --selftest`, but
-CUDA build/run/verify/perf on NVIDIA hardware is still pending for them
-(actual status `verify_ready`); the 250/250 figures below refer to the
-2026-07-01 snapshot.
+dynamic parallelism, int8 WMMA Tensor Cores). Subsequent collection brought the
+repository total to 292. The 42 post-snapshot cases pass collection-side checks,
+but CUDA build/run/verify/perf on NVIDIA hardware is still pending for them.
+They are excluded from the frozen Stage 2 manifest; the 250/250 figures below
+refer to the 2026-07-01 NVIDIA-validated snapshot.
 
 - Total cases: 250
 - Actual CUDA build: 250/250 pass
@@ -51,7 +51,8 @@ CUDA build/run/verify/perf on NVIDIA hardware is still pending for them
 - Actual CUDA verification: 250/250 pass
 - NVIDIA performance baseline: 250/250 pass
 - Strict Stage 1 metadata validation: 250/250 pass
-- Stage 2 status: not evaluated
+- Stage 2 eligibility: these 250 cases are frozen in
+  `benchmark/stage2/datasets/cuda_verified_250.json`
 
 The expansion from the stable 130-case checkpoint added 120 cases in three
 verified Stage 1 batches:
@@ -160,6 +161,7 @@ The migration writes `metadata.stage1.json` sidecars and leaves legacy
 
 ## Stage 2 Boundary
 
-Stage 2 is intentionally out of scope here. Later work can add migrated-code
-metadata for agent name, compile success, correctness, runtime, CUDA-vs-SYCL
-performance ratio, token use, repair attempts, and migration time.
+The Stage 2 harness and its frozen dataset manifests are documented in
+`benchmark/stage2/README.md`. Stage 2 results remain separate from Stage 1
+metadata and logs. The preflight gate rechecks the four committed NVIDIA log
+statuses and fingerprints before any scored migration.

@@ -1,0 +1,1 @@
+Work only in the current directory and do not inspect any parent or external path. Read TASK.md and main.cu, then migrate the CUDA program to SYCL. Create main.sycl.cpp. Test repairs by running `bash ./sycl_build.sh` and `bash ./sycl_run.sh`; these evaluator-owned wrappers compile and execute on the configured Intel GPU.

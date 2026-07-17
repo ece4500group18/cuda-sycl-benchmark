@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ece4500group18.example/schemas/stage2-migration-result-v2.json",
+  "title": "Stage 2 migration result",
+  "type": "object",
+  "required": [
+    "schema_version", "experiment_id", "run_id", "repeat", "dataset_id",
+    "dataset_commit", "case_id", "case_path", "case_fingerprint", "harness",
+    "adapter", "model", "requested_model_id", "skill_condition", "prompt_version",
+    "reference_mode", "synthetic", "eligible_for_scoring", "funnel",
+    "migration_success", "e2e_elapsed_s", "session", "build", "run", "verify",
+    "environment", "timestamp"
+  ],
+  "properties": {
+    "schema_version": {"const": 2}, "experiment_id": {"type": "string"},
+    "run_id": {"type": "string"}, "repeat": {"type": "integer", "minimum": 0},
+    "dataset_id": {"type": "string"}, "dataset_commit": {"type": "string"},
+    "case_id": {"type": "string"}, "case_path": {"type": "string"},
+    "case_fingerprint": {"type": "string"}, "category": {"type": "string"},
+    "difficulty": {"type": "string"}, "harness": {"type": "string"},
+    "adapter": {"type": "string"}, "model": {"type": "string"},
+    "model_provider": {"type": ["string", "null"]},
+    "requested_model_id": {"type": "string"}, "reported_model_id": {"type": ["string", "null"]},
+    "skill_condition": {"type": "string"}, "skill_version": {"type": ["string", "null"]},
+    "prompt_version": {"type": "string"}, "reference_mode": {"enum": ["none", "cuda_output"]},
+    "synthetic": {"type": "boolean"}, "eligible_for_scoring": {"type": "boolean"},
+    "funnel": {"enum": ["missing", "compile_error", "run_error", "wrong_output", "pass", "synthetic"]},
+    "migration_success": {"type": ["boolean", "null"]},
+    "e2e_elapsed_s": {"type": "number", "minimum": 0},
+    "session": {"type": "object"}, "build": {"type": "object"},
+    "run": {"type": "object"}, "verify": {"type": "object"},
+    "environment": {"type": "object"}, "timestamp": {"type": "string"}
+  }, "additionalProperties": true
+}

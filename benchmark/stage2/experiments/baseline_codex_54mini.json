@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "experiment_id": "baseline-codex-gpt54mini-chatgpt-pilot-v3",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {
+      "slug": "codex-cli",
+      "adapter": "codex",
+      "display_name": "Codex CLI",
+      "command": "codex",
+      "reasoning_effort": "low",
+      "sandbox_network_access": true,
+      "externally_isolated_bypass": true
+    }
+  ],
+  "models": [
+    {
+      "slug": "gpt-5.4-mini",
+      "provider": "openai",
+      "model_id": "gpt-5.4-mini",
+      "require_immutable_model_id": false,
+      "identity_note": "Codex ChatGPT account route does not accept the dated API snapshot; record alias, Codex CLI version, and run timestamp.",
+      "pricing_usd_per_million_tokens": {
+        "input": 0.75,
+        "cached_input": 0.075,
+        "output": 4.5,
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "as_of": "2026-07-17"
+      }
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {"harness": "codex-cli", "model": "gpt-5.4-mini"}
+    ]
+  },
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 150000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}

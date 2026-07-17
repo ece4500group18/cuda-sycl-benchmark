@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ece4500group18.example/schemas/stage2-experiment-v2.json",
+  "title": "Stage 2 harness x model x skill experiment",
+  "type": "object",
+  "required": [
+    "schema_version", "experiment_id", "dataset_manifest", "case_ids",
+    "harnesses", "models", "skill_conditions", "repeats", "budget",
+    "executor", "reference_mode", "prompt_version"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "experiment_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+    "dataset_manifest": {"type": "string"},
+    "case_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "harnesses": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["slug", "adapter"],
+        "properties": {
+          "slug": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+          "adapter": {"enum": ["mock", "claude_code", "codex", "external_command"]},
+          "display_name": {"type": "string"}, "command": {"type": "string"},
+          "argv": {"type": "array", "items": {"type": "string"}},
+          "allowed_tools": {"type": "array", "items": {"type": "string"}},
+          "disallowed_tools": {"type": "array", "items": {"type": "string"}},
+          "reasoning_effort": {"enum": ["none", "low", "medium", "high", "xhigh"]},
+          "sandbox_network_access": {"type": "boolean"},
+          "externally_isolated_bypass": {"type": "boolean"},
+          "enabled": {"type": "boolean"}
+        }, "additionalProperties": true
+      }
+    },
+    "models": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["slug", "provider"],
+        "anyOf": [{"required": ["model_id"]}, {"required": ["model_id_env"]}],
+        "properties": {
+          "slug": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+          "provider": {"type": "string"}, "model_id": {"type": "string"},
+          "model_id_env": {"type": "string"}, "enabled": {"type": "boolean"},
+          "require_immutable_model_id": {"type": "boolean"},
+          "pricing_usd_per_million_tokens": {
+            "type": "object",
+            "properties": {
+              "input": {"type": "number"},
+              "cached_input": {"type": "number"},
+              "output": {"type": "number"},
+              "source": {"type": "string"},
+              "as_of": {"type": "string"}
+            },
+            "required": ["input", "output"], "additionalProperties": false
+          }
+        }, "additionalProperties": true
+      }
+    },
+    "skill_conditions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["slug"],
+        "properties": {
+          "slug": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+          "skill": {"type": ["string", "null"]}, "version": {"type": ["string", "null"]},
+          "enabled": {"type": "boolean"}
+        }, "additionalProperties": false
+      }
+    },
+    "matrix": {
+      "type": "object",
+      "properties": {
+        "include": {"type": "array", "items": {"type": "object", "required": ["harness", "model"]}}
+      }, "additionalProperties": false
+    },
+    "repeats": {"type": "integer", "minimum": 1},
+    "budget": {
+      "type": "object", "required": ["max_iterations", "max_tokens", "wall_clock_s"],
+      "properties": {
+        "max_iterations": {"type": "integer", "minimum": 1},
+        "max_tokens": {"type": "integer", "minimum": 1},
+        "wall_clock_s": {"type": "number", "exclusiveMinimum": 0}
+      }, "additionalProperties": false
+    },
+    "executor": {
+      "type": "object", "required": ["kind", "device_selector", "gpu_slots"],
+      "properties": {
+        "kind": {"enum": ["local", "ssh"]}, "device_selector": {"type": "string"},
+        "gpu_slots": {"const": 1},
+        "target": {"type": "string"},
+        "target_env": {"type": "string"},
+        "remote_root": {"type": "string"},
+        "setup_command": {"type": "string"},
+        "compiler": {"type": "string"},
+        "remote_timeout_s": {"type": "number", "exclusiveMinimum": 0},
+        "ssh_command": {"type": "string"},
+        "scp_command": {"type": "string"},
+        "ssh_options": {"type": "array", "items": {"type": "string"}},
+        "scp_options": {"type": "array", "items": {"type": "string"}},
+        "extra_sycl_flags": {"type": "array", "items": {"type": "string"}},
+        "case_extra_sycl_flags": {
+          "type": "object",
+          "additionalProperties": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "ssh"}}},
+          "then": {"anyOf": [{"required": ["target"]}, {"required": ["target_env"]}]}
+        }
+      ],
+      "additionalProperties": false
+    },
+    "reference_mode": {"enum": ["none", "cuda_output"]},
+    "prompt_version": {"type": "string"}
+  }, "additionalProperties": false
+}
