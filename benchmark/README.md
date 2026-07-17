@@ -25,3 +25,7 @@ ten collection categories defined in `collection/README.md`; `domain` and
 Stage 1 tooling (build / run / verify / benchmark / report) lives in the
 repository-root `tools/` and discovers cases under `benchmark/cases/`.
 See `STAGE1_CUDA_DATASET.md` at the repository root.
+
+Stage 2 experiment manifests, schemas, and the migration-harness runbook live
+under `benchmark/stage2/`. Generated Stage 2 session artifacts do not modify
+the Stage 1 case logs.

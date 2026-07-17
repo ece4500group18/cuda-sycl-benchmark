@@ -1,0 +1,4 @@
+interface:
+  display_name: "CUDA to SYCL Migration"
+  short_description: "Migrate CUDA cases into portable SYCL 2020"
+  default_prompt: "Use $cuda-to-sycl-migration to translate main.cu into a correct main.sycl.cpp."

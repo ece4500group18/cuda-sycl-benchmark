@@ -105,9 +105,11 @@ def max_rel_error(got, ref):
     return float(np.max(np.abs(got - ref)) / denom) if got.size else 0.0
 
 
-def write_verify_result(case_dir, variant, output_path, passed, metric_name, value, tol):
-    path = os.path.join(case_dir, "logs", "verify_result.json")
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+def write_verify_result(case_dir, variant, output_path, passed, metric_name, value, tol, result_path=None):
+    path = result_path or os.path.join(case_dir, "logs", "verify_result.json")
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(
             {
@@ -141,6 +143,10 @@ def _parse():
     # --selftest writes the reference into --output and then verifies it; used
     # to smoke-test the verifier on machines with no CUDA/SYCL toolchain.
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument(
+        "--result-json",
+        help="write the verifier result here instead of logs/verify_result.json",
+    )
     return ap.parse_args()
 
 
@@ -165,7 +171,9 @@ def run(reference):
         err = max_rel_error(got, ref)
     else:  # max_abs_error or exact (exact uses tol == 0)
         err = max_abs_error(got, ref)
-    write_verify_result(case_dir, args.variant, args.output, err <= tol, metric, err, tol)
+    write_verify_result(
+        case_dir, args.variant, args.output, err <= tol, metric, err, tol, args.result_json
+    )
     finish(err <= tol, metric, err, tol)
 
 
@@ -178,5 +186,7 @@ def run_custom(check):
     args = _parse()
     meta, case_dir = load_metadata()
     passed, name, value, tol = check(meta, args.output, args.selftest)
-    write_verify_result(case_dir, args.variant, args.output, passed, name, value, tol)
+    write_verify_result(
+        case_dir, args.variant, args.output, passed, name, value, tol, args.result_json
+    )
     finish(passed, name, value, tol)
