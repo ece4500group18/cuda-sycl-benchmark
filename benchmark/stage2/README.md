@@ -105,7 +105,7 @@ python3 -m unittest discover -s tools/stage2/tests -v
 ## Artifacts and reports
 
 ```text
-artifacts/stage2/<experiment>/<case>/<harness>/<model>/<skill>/repeat-<n>/
+artifacts/stage2/<experiment>/<case>/<harness>__<model>__<skill>__r<n>/
   session.json
   harness_stdout.jsonl (or .log)
   harness_stderr.log

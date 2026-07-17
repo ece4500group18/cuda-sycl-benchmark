@@ -29,13 +29,17 @@ export ONEAPI_DEVICE_SELECTOR
 
 REMOTE_SYCL_BUILD_WRAPPER = """#!/usr/bin/env bash
 set -euo pipefail
-: "${STAGE2_PYTHON:=python}"
+if [[ -z "${STAGE2_PYTHON:-}" ]]; then
+  if command -v python3 >/dev/null 2>&1; then STAGE2_PYTHON=python3; else STAGE2_PYTHON=python; fi
+fi
 "$STAGE2_PYTHON" remote_exec.py build
 """
 
 REMOTE_SYCL_RUN_WRAPPER = """#!/usr/bin/env bash
 set -euo pipefail
-: "${STAGE2_PYTHON:=python}"
+if [[ -z "${STAGE2_PYTHON:-}" ]]; then
+  if command -v python3 >/dev/null 2>&1; then STAGE2_PYTHON=python3; else STAGE2_PYTHON=python; fi
+fi
 "$STAGE2_PYTHON" remote_exec.py run "${1:-output/sycl.txt}"
 """
 

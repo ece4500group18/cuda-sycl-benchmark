@@ -42,7 +42,7 @@ def collect_results(experiment_id: str, artifact_root: Path = DEFAULT_ARTIFACT_R
     if not root.is_dir():
         return []
     rows: list[dict[str, Any]] = []
-    for path in sorted(root.glob("*/*/*/*/repeat-*/migration.json")):
+    for path in sorted(root.glob("*/*/migration.json")):
         result = read_json(path)
         session = result.get("session", {})
         rows.append(
