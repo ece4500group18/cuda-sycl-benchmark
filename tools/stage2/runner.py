@@ -304,16 +304,25 @@ def _finalize_cost(session: dict[str, Any], model: dict[str, Any]) -> None:
     }
 
 
+def _run_leaf(planned: PlannedRun) -> str:
+    """One directory name identifying a run within its case: harness__model__skill__r<n>."""
+    return "__".join(
+        [
+            safe_component(str(planned.harness["slug"]), "harness slug"),
+            safe_component(str(planned.model["slug"]), "model slug"),
+            safe_component(str(planned.skill_condition["slug"]), "skill condition slug"),
+            f"r{planned.repeat}",
+        ]
+    )
+
+
 def _run_path(
     artifact_root: Path, experiment_id: str, planned: PlannedRun
 ) -> Path:
     parts = [
         experiment_id,
         safe_component(str(planned.case["case_id"]), "case_id"),
-        safe_component(str(planned.harness["slug"]), "harness slug"),
-        safe_component(str(planned.model["slug"]), "model slug"),
-        safe_component(str(planned.skill_condition["slug"]), "skill condition slug"),
-        f"repeat-{planned.repeat}",
+        _run_leaf(planned),
     ]
     return artifact_root.joinpath(*parts)
 
@@ -331,14 +340,7 @@ def _remote_config(
     )
     return build_remote_config(
         executor,
-        (
-            str(experiment["experiment_id"]),
-            case_id,
-            str(planned.harness["slug"]),
-            str(planned.model["slug"]),
-            str(planned.skill_condition["slug"]),
-            f"repeat-{planned.repeat}",
-        ),
+        (str(experiment["experiment_id"]), case_id, _run_leaf(planned)),
         extra_flags,
     )
 

@@ -155,7 +155,7 @@ class Stage2HarnessTests(unittest.TestCase):
                 "remote_root": "/tmp/stage2",
                 "device_selector": "level_zero:gpu",
             },
-            ("experiment", "vectorAdd", "harness", "model", "oob", "repeat-0"),
+            ("experiment", "vectorAdd", "harness__model__oob__r0"),
             [],
         )
         with tempfile.TemporaryDirectory(prefix="stage2-test-") as tmp:

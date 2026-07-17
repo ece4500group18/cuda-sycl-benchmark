@@ -177,7 +177,7 @@ If only evaluator infrastructure was broken after a model already produced
 ```powershell
 python tools/stage2/cli.py reevaluate `
   --experiment benchmark/stage2/experiments/<harness>_<model>.json `
-  --result artifacts/stage2/<experiment>/<case>/<harness>/<model>/<skill>/repeat-0/migration.json
+  --result artifacts/stage2/<experiment>/<case>/<harness>__<model>__<skill>__r0/migration.json
 ```
 
 ## 6. Expand only after calibration
