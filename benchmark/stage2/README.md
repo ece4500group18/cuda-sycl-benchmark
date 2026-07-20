@@ -128,6 +128,34 @@ If only evaluator infrastructure was repaired after a model session, use
 build/run/verification without spending model tokens. The result records
 `model_reinvoked: false`.
 
+There is one report per `experiment_id`, rebuilt from the whole artifact
+directory after every `run`. The files are overwritten each time but their
+content is cumulative, so a campaign split across many sessions needs no
+special handling at report time. The aggregator globs artifacts and never reads
+the config, so cells left over from an earlier case list still enter the pass
+rate.
+
+## Checking how a result was produced
+
+Scoring says whether the SYCL passed, not how it was obtained.
+`tools/stage2/audit_conduct.py --experiment-id <id>` re-reads existing artifacts
+at no quota cost and flags tool arguments outside the session sandbox, shell
+commands that fetch from the network, and markers in `main.sycl.cpp` that a
+translation of `main.cu` cannot produce, such as the `dpct::` namespace of
+SYCLomatic output. It also counts web, skill, and subagent tool use, which is
+not misconduct but does change what a cell measures.
+
+This distinguishes an agent that looked something up from one that did not. It
+cannot detect a translation reproduced from training data, which leaves no tool
+call and copies no text; that would need similarity scoring against published
+translations, which is not implemented here.
+
+When a harness dies mid-campaign, the runner still writes `migration.json` with
+`funnel: "missing"`, so the outage is counted as a failed migration and the cell
+is skipped on resume. `tools/stage2/triage_cells.py --experiment <config>`
+separates infrastructure failures from real ones and `--purge` deletes only the
+former so the next run redoes them.
+
 ## Adding another harness or model
 
 Add harnesses and models independently in a schema-v2 experiment. Use a native
@@ -139,6 +167,14 @@ placeholders include `{agent_prompt_file}`, `{prompt}`, `{prompt_file}`,
 `main.sycl.cpp`; it may write a configured telemetry JSON containing
 `tokens_in`, `tokens_out`, `tokens_total`, `cost_usd`, `iterations`,
 `session_id`, and `model`.
+
+The template carries a single smoke case. Fill the real case list from the
+frozen manifest with `tools/stage2/set_case_ids.py --experiment <config> --all`,
+then confirm `plan` reports `runs=500 cases=250`. Keep one config per
+harness/model pair for the whole campaign and run subsets out of it with
+repeated `--case` filters; a second config for a subset uses a different
+`experiment_id`, writes to a different artifact directory, and pays for shared
+cases twice.
 
 Do not label a candidate model with a marketing family name only. Pin the exact
 provider model ID and record the harness version before scored repeats. Compare

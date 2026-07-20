@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "experiment_id": "codebuddy-minimax-m3-pilot-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {
+      "slug": "codebuddy",
+      "adapter": "claude_code",
+      "display_name": "CodeBuddy Code (cbc) 2.124.0",
+      "command": "codebuddy",
+      "permission_mode": "bypassPermissions"
+    }
+  ],
+  "models": [
+    {
+      "slug": "minimax-m3",
+      "provider": "minimax",
+      "model_id": "minimax-m3",
+      "require_immutable_model_id": false,
+      "identity_note": "CodeBuddy routes the alias 'minimax-m3' (from `codebuddy --model` supported list), not a dated immutable snapshot. Record `codebuddy --version` and the run timestamp alongside results."
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {"harness": "codebuddy", "model": "minimax-m3"}
+    ]
+  },
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 150000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "canonical-agent-prompt-v1"
+}
