@@ -1,0 +1,11 @@
+# Batch 1: the 10 hard cases (subset of cuda_verified_250)
+attention
+batchedGemm
+bnbAdam8bitMoments
+bnbInt8VectorQuant
+bnbStableEmbeddingGrad
+cutlassBasicGemmTile
+cutlassBatchedGemmSmall
+daliColorSpaceConversion
+daliColorTwist
+daliCropMirrorNormalize
