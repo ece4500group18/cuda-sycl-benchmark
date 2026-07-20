@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "experiment_id": "baseline-codex-gpt54mini-chatgpt-pilot-v3",
+  "generated_at": "2026-07-17T11:50:17.276691+00:00",
+  "total_results": 2,
+  "scored_results": 2,
+  "synthetic_results": 0,
+  "funnel_counts": {
+    "pass": 2
+  },
+  "scored_successes": 2,
+  "overall_pass_rate": 1.0,
+  "total_tokens": 305633,
+  "cost_usd_by_source": {
+    "api_price_estimate": 0.0785997
+  },
+  "kpis_by_harness_model_skill": [
+    {
+      "harness": "codex-cli",
+      "model": "gpt-5.4-mini",
+      "skill_condition": "oob",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 229.5376811999995,
+      "median_e2e_s": 229.5376811999995,
+      "mean_tokens": 154413.0,
+      "total_tokens": 154413,
+      "total_cached_input_tokens": 136320,
+      "total_reasoning_output_tokens": 527,
+      "mean_iterations": 15.0,
+      "total_cost_usd": 0.0345675,
+      "cost_sources": [
+        "api_price_estimate"
+      ],
+      "funnel_counts": {
+        "pass": 1
+      }
+    },
+    {
+      "harness": "codex-cli",
+      "model": "gpt-5.4-mini",
+      "skill_condition": "with-sycl-skill",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 258.78042060000007,
+      "median_e2e_s": 258.78042060000007,
+      "mean_tokens": 151220.0,
+      "total_tokens": 151220,
+      "total_cached_input_tokens": 128256,
+      "total_reasoning_output_tokens": 1993,
+      "mean_iterations": 15.0,
+      "total_cost_usd": 0.0440322,
+      "cost_sources": [
+        "api_price_estimate"
+      ],
+      "funnel_counts": {
+        "pass": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "experiment_id": "baseline-codex-gpt54mini-chatgpt-pilot-v3",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "codex-cli",
+      "adapter": "codex",
+      "model": "gpt-5.4-mini",
+      "requested_model_id": "gpt-5.4-mini",
+      "reported_model_id": null,
+      "skill_condition": "oob",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "pass",
+      "migration_success": true,
+      "tokens_in": 151540,
+      "tokens_out": 2873,
+      "cached_input_tokens": 136320,
+      "reasoning_output_tokens": 527,
+      "tokens_total": 154413,
+      "cost_usd": 0.0345675,
+      "cost_source": "api_price_estimate",
+      "migration_wall_clock_s": 212.62469710000005,
+      "e2e_elapsed_s": 229.5376811999995,
+      "iterations": 15,
+      "token_budget": 150000,
+      "token_budget_exceeded": true,
+      "session_id": "019f6fbe-1ae1-7f43-b5a2-4d003dac0f00",
+      "result_path": "artifacts/stage2/baseline-codex-gpt54mini-chatgpt-pilot-v3/vectorAdd/codex-cli/gpt-5.4-mini/oob/repeat-0/migration.json"
+    },
+    {
+      "experiment_id": "baseline-codex-gpt54mini-chatgpt-pilot-v3",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "codex-cli",
+      "adapter": "codex",
+      "model": "gpt-5.4-mini",
+      "requested_model_id": "gpt-5.4-mini",
+      "reported_model_id": null,
+      "skill_condition": "with-sycl-skill",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "pass",
+      "migration_success": true,
+      "tokens_in": 146636,
+      "tokens_out": 4584,
+      "cached_input_tokens": 128256,
+      "reasoning_output_tokens": 1993,
+      "tokens_total": 151220,
+      "cost_usd": 0.0440322,
+      "cost_source": "api_price_estimate",
+      "migration_wall_clock_s": 246.06945880000058,
+      "e2e_elapsed_s": 258.78042060000007,
+      "iterations": 15,
+      "token_budget": 150000,
+      "token_budget_exceeded": true,
+      "session_id": "019f6fc6-7f5b-73a3-92f0-27c8e741333f",
+      "result_path": "artifacts/stage2/baseline-codex-gpt54mini-chatgpt-pilot-v3/vectorAdd/codex-cli/gpt-5.4-mini/with-sycl-skill/repeat-0/migration.json"
+    }
+  ]
+}
