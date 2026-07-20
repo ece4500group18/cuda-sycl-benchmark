@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "experiment_id": "codebuddy-minimax-m3-pilot-v1",
+  "generated_at": "2026-07-17T17:24:12.180795+00:00",
+  "total_results": 1,
+  "scored_results": 1,
+  "synthetic_results": 0,
+  "funnel_counts": {
+    "pass": 1
+  },
+  "scored_successes": 1,
+  "overall_pass_rate": 1.0,
+  "total_tokens": 456586,
+  "cost_usd_by_source": {
+    "provider_reported": 0.0
+  },
+  "kpis_by_harness_model_skill": [
+    {
+      "harness": "codebuddy",
+      "model": "minimax-m3",
+      "skill_condition": "oob",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 62.128590199994505,
+      "median_e2e_s": 62.128590199994505,
+      "mean_tokens": 456586.0,
+      "total_tokens": 456586,
+      "total_cached_input_tokens": null,
+      "total_reasoning_output_tokens": null,
+      "mean_iterations": 34.0,
+      "total_cost_usd": 0.0,
+      "cost_sources": [
+        "provider_reported"
+      ],
+      "funnel_counts": {
+        "pass": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "experiment_id": "codebuddy-minimax-m3-pilot-v1",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "codebuddy",
+      "adapter": "claude_code",
+      "model": "minimax-m3",
+      "requested_model_id": "minimax-m3",
+      "reported_model_id": "minimax-m3",
+      "skill_condition": "oob",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "pass",
+      "migration_success": true,
+      "tokens_in": 454636,
+      "tokens_out": 1950,
+      "cached_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "tokens_total": 456586,
+      "cost_usd": 0.0,
+      "cost_source": "provider_reported",
+      "migration_wall_clock_s": 48.66193600000406,
+      "e2e_elapsed_s": 62.128590199994505,
+      "iterations": 34,
+      "token_budget": 150000,
+      "token_budget_exceeded": true,
+      "session_id": "b5ea9657-fcab-4a76-b9e3-e3fbf3970699",
+      "result_path": "artifacts/stage2/codebuddy-minimax-m3-pilot-v1/vectorAdd/codebuddy__minimax-m3__oob__r0/migration.json"
+    }
+  ]
+}

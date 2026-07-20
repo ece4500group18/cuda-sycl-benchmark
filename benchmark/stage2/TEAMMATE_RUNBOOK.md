@@ -149,6 +149,42 @@ If the CLI cannot be expressed by an argv template or its native JSONL needs
 special parsing, add a native adapter under `tools/stage2/adapters/`, register it
 in `runner.create_adapter`, add it to the experiment schema, and add unit tests.
 
+### Fill in the case list
+
+The template ships `"case_ids": ["vectorAdd"]`. That is a smoke case, not the
+matrix. A config copied from the template runs one case in two conditions until
+you widen it, and nothing warns you that the other 249 are missing.
+
+Set the list from the manifest rather than typing ids, so a typo cannot silently
+shrink the run:
+
+```powershell
+# the full scored matrix
+python tools/stage2/set_case_ids.py `
+  --experiment benchmark/stage2/experiments/<harness>_<model>.json --all
+
+# or a cheaper calibration subset first
+python tools/stage2/set_case_ids.py `
+  --experiment benchmark/stage2/experiments/<harness>_<model>.json `
+  --difficulty hard --dry-run
+```
+
+Then confirm the shape before spending anything:
+
+```powershell
+python tools/stage2/cli.py plan `
+  --experiment benchmark/stage2/experiments/<harness>_<model>.json
+```
+
+`plan` prints `runs=<cells> cases=<n>` and the category distribution. With 250
+cases, two skill conditions, and one repeat, expect `runs=500 cases=250`.
+
+Keep **one** config per harness/model pair, holding the full case list, for the
+whole campaign. Do not create a second config for a subset: a different
+`experiment_id` writes to a different artifact directory, so shared cases are
+migrated again from scratch and paid for twice. Section 6 explains how to run a
+subset out of the full config instead.
+
 ## 5. Run the gate and one-case calibration
 
 Never use `--skip-preflight` for scored work.
@@ -193,10 +229,129 @@ python tools/stage2/cli.py run `
   --case transposeShared
 ```
 
-Omit `--case` only after the projected total cost is accepted. Completed cells
-are skipped automatically unless `--overwrite` is explicitly requested.
+Omit `--case` only after the projected total cost is accepted.
 
-## 7. Return these results
+### Running the full matrix across several sessions
+
+A 500-cell campaign will not fit in one sitting, and no config change is needed
+to split it. `--case` is repeatable and filters the configured matrix, so every
+batch runs out of the same config and lands in the same artifact directory.
+
+Put the ids for one batch in a file under `benchmark/stage2/batches/`, one per
+line, and run it:
+
+```powershell
+.\tools\stage2\run_batch.ps1 `
+  -Experiment benchmark\stage2\experiments\<harness>_<model>.json `
+  -CaseFile benchmark\stage2\batches\<batch>.txt
+```
+
+Interrupting with Ctrl+C is safe. `migration.json` is written last, so a cell cut
+off mid-flight has no `migration.json`, and the next run redoes it from a clean
+sandbox.
+
+What makes batching work is that skipping is per cell, keyed only on whether
+`migration.json` exists:
+
+- a case listed in two batches is migrated once; the second batch prints
+  `[skipped_existing]` and calls no model, so overlapping batch files cost
+  nothing;
+- duplicate `--case` values inside one batch collapse, so batch files need no
+  deduplication;
+- the granularity is (case, harness, model, skill, repeat), so a batch run with
+  `--skill oob` still leaves `with-sycl-skill` to run later for the same case;
+- `--overwrite` re-executes every selected cell and re-spends the tokens. Never
+  pass it to a batch as a matter of routine.
+
+You do not need a final full pass, but one is harmless: running with no `--case`
+at the end skips everything finished and picks up only what is missing.
+
+### How the report accumulates
+
+There is one report per `experiment_id`, not one per run. After every `run` the
+aggregator rebuilds it by globbing the whole artifact directory, so
+`summary.{json,csv,md}` is overwritten each time while its **content is
+cumulative** across every batch, including cells finished days earlier. Batching
+needs no special handling at report time.
+
+Two consequences worth knowing before you read a summary:
+
+- the aggregator never consults the config, so cells left over from an earlier
+  case list still enter the pass rate. Narrowing `case_ids` does not retract
+  results already on disk;
+- changing budgets or the skill version under an unchanged `experiment_id` mixes
+  old and new cells in one report. Bump the `experiment_id` when the conditions
+  change.
+
+## 7. Check the run for conduct problems
+
+The scoring pipeline answers whether the SYCL passed, not whether it was
+produced the intended way. Audit the transcripts after each batch:
+
+```powershell
+python tools/stage2/audit_conduct.py `
+  --experiment-id <experiment_id> --quiet --json audit.json
+```
+
+It reads artifacts that already exist, so it costs no quota and works on data
+collected earlier. It reports:
+
+- `path_escape` — a tool argument outside the session sandbox, which is how an
+  agent reading the repository or another case would show up;
+- `network` — a shell command that fetches from the network;
+- `provenance` — markers in `main.sycl.cpp` that a translation of `main.cu`
+  cannot produce, such as the `dpct::` namespace of SYCLomatic output, or a
+  licence header or URL absent from the CUDA input;
+- `notable_tool` — use of web, skill, or subagent tools. Not misconduct by
+  itself; it is a number the report should carry, since it changes what a cell
+  measures.
+
+Only the first three set the exit code. Investigate flagged cells individually
+before including them in a scored comparison.
+
+State the limit plainly in any writeup: this shows an agent did not *look
+something up*, not that it had no prior knowledge. A model reproducing a
+translation memorised in training emits no tool call and copies no text, so
+neither pass can see it. Ruling that out needs similarity scoring against
+published translations, which this repository does not implement.
+
+## 8. Recover from a failed batch
+
+A harness that dies mid-batch — exhausted quota, dropped VPN, expired auth —
+does not leave an obvious hole. The runner still writes `migration.json` with
+`funnel: "missing"` and `eligible_for_scoring: true`, so the cell is **counted
+as a failed migration** and, because `migration.json` now exists, is **skipped**
+by the next run. Left alone, an outage silently depresses the pass rate.
+
+Sort the two causes apart before rerunning:
+
+```powershell
+python tools/stage2/triage_cells.py --experiment <config.json>
+```
+
+A cell is infrastructure-suspect when the session did not report `completed`,
+returned a non-zero code, reported no token telemetry, or finished implausibly
+fast. Those are the ones an outage produces. A cell where the agent genuinely
+ran and produced nothing is left alone, because that is a real result.
+
+Delete the suspect cells so the next run redoes them:
+
+```powershell
+python tools/stage2/triage_cells.py --experiment <config.json> --purge
+.\tools\stage2\run_batch.ps1 -Experiment <config.json> -CaseFile <batch>.txt
+```
+
+Passing `--experiment` also cross-checks the artifacts against the configured
+matrix and lists which cells are still pending, which is the reliable way to see
+campaign progress. Cells that failed with `compile_error`, `run_error`, or
+`wrong_output` are never purged — those are valid results and rerunning them
+would bias the comparison toward whichever model got retried.
+
+If the model already produced `main.sycl.cpp` and only the evaluator broke, use
+`cli.py reevaluate` from section 5 instead; it repeats build, run, and
+verification without spending another session.
+
+## 9. Return these results
 
 Commit the experiment JSON and generated report:
 
