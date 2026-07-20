@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "experiment_id": "pilot-v2-offline",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {"slug": "mock-harness", "adapter": "mock", "display_name": "Offline harness mock"}
+  ],
+  "models": [
+    {"slug": "mock-model", "provider": "synthetic", "model_id": "mock"}
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null}
+  ],
+  "matrix": {"include": [{"harness": "mock-harness", "model": "mock-model"}]},
+  "repeats": 1,
+  "budget": {"max_iterations": 10, "max_tokens": 200000, "wall_clock_s": 600},
+  "executor": {"kind": "local", "device_selector": "level_zero:gpu", "gpu_slots": 1, "extra_sycl_flags": []},
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}

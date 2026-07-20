@@ -1,0 +1,2018 @@
+{
+  "schema_version": 1,
+  "dataset_id": "cuda-verified-250-v1",
+  "dataset_commit": "5189cbc589636eecb99e011b9a56789fe723d682",
+  "generated_at": "2026-07-14T09:09:00.650801+00:00",
+  "eligibility": {
+    "layout": "benchmark/cases/<category>/<case>",
+    "required_log_status": {
+      "build_result.json": "pass",
+      "run_result.json": "pass",
+      "verify_result.json": "pass",
+      "perf_result.json": "pass"
+    }
+  },
+  "case_count": 250,
+  "cases": [
+    {
+      "case_id": "cublasAxpy",
+      "path": "benchmark/cases/cuda-library-usage/cublasAxpy",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d9f0d91442af2870a1be7918220f204b5c4ac52bcfaefbd263dd609bf7ab2bc9"
+    },
+    {
+      "case_id": "cublasGemm",
+      "path": "benchmark/cases/cuda-library-usage/cublasGemm",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:7a3aedc122b65dca962dc41d886406e9d6d109c8bc585118f756a2c3c7baaa02"
+    },
+    {
+      "case_id": "cufftC2C",
+      "path": "benchmark/cases/cuda-library-usage/cufftC2C",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:2449f26ce47e8b45f9223242677e2a85669206ed0063486c5022bb06f47f2558"
+    },
+    {
+      "case_id": "curandUniform",
+      "path": "benchmark/cases/cuda-library-usage/curandUniform",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:b96a9ef4eb6369d4deced92f7d316a380a92f418548f0f13ba300e0c5d15b483"
+    },
+    {
+      "case_id": "thrustAdjacentDifference2",
+      "path": "benchmark/cases/cuda-library-usage/thrustAdjacentDifference2",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7512e277f2ca99b503265be8c536b1e686e1933abafecf58a790754d6e7a3e66"
+    },
+    {
+      "case_id": "thrustCountIfThreshold",
+      "path": "benchmark/cases/cuda-library-usage/thrustCountIfThreshold",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:03571b4225b889404ea81e8bfb82416b60efed288102b2210d5f18cb0b02611e"
+    },
+    {
+      "case_id": "thrustGatherMap",
+      "path": "benchmark/cases/cuda-library-usage/thrustGatherMap",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:417cb17aaa96f9df1976e04bd375612574c40debd8fd682045261a5d54aa6d32"
+    },
+    {
+      "case_id": "thrustInclusiveScan",
+      "path": "benchmark/cases/cuda-library-usage/thrustInclusiveScan",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7e954f45897412671af7139c9115194b0afe7fada2242ef3576cf828f651e5ce"
+    },
+    {
+      "case_id": "thrustReduce",
+      "path": "benchmark/cases/cuda-library-usage/thrustReduce",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:67ad2f751acd3df722a1b00bbdfc11d26a38b2dcc81b71e8bf4d18bd7c060ef0"
+    },
+    {
+      "case_id": "thrustReduceByKeySegments",
+      "path": "benchmark/cases/cuda-library-usage/thrustReduceByKeySegments",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:050c3657d7b2e7d7455e160bf3537e774c7ca25b5a75f5ee6b6bb278d07e33cd"
+    },
+    {
+      "case_id": "thrustSort",
+      "path": "benchmark/cases/cuda-library-usage/thrustSort",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:dae7c588e61e15c4a141bba47dbc8f0a91fd9dc419dcc51a7b553c341007c370"
+    },
+    {
+      "case_id": "thrustSortByKey",
+      "path": "benchmark/cases/cuda-library-usage/thrustSortByKey",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f99c45f9e4e66d57ff4e7bf1cefd6d828dec3c8c4bc3f02e1fc37f93a82945c6"
+    },
+    {
+      "case_id": "thrustTransformReduceNorm",
+      "path": "benchmark/cases/cuda-library-usage/thrustTransformReduceNorm",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:113c08589028bef0aff06f919534f445804d240173e8ff84f602e7775d1b3225"
+    },
+    {
+      "case_id": "thrustZipTransform2",
+      "path": "benchmark/cases/cuda-library-usage/thrustZipTransform2",
+      "category": "cuda-library-usage",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:63f698d0e7d27597bedeeee3486e0ea356f87383fc3887122051fab6ff53dbab"
+    },
+    {
+      "case_id": "bfs",
+      "path": "benchmark/cases/graph-irregular/bfs",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:0ebd4949850c41e6897f00a4f27c9c3a572a6d5af628b95a49b4c33aee46c4b3"
+    },
+    {
+      "case_id": "bnbStableEmbeddingGrad",
+      "path": "benchmark/cases/graph-irregular/bnbStableEmbeddingGrad",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:bd99a7fc051b57a804009a70a91e06256bd94289cd3ce2b4929b79eb8b682289"
+    },
+    {
+      "case_id": "cutlassGatherScatterFusion",
+      "path": "benchmark/cases/graph-irregular/cutlassGatherScatterFusion",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:cca8bfc681bf78859fc17ba06e2f97a17171867ed562e70c18cdcba77d1eb7ea"
+    },
+    {
+      "case_id": "embedding",
+      "path": "benchmark/cases/graph-irregular/embedding",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:58f51dbb2e9a56a68d115c7fe35ee9f78366bd73a8cb6061e21c596343686185"
+    },
+    {
+      "case_id": "hecbenchBfsFrontier",
+      "path": "benchmark/cases/graph-irregular/hecbenchBfsFrontier",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:10caed6b2e6d0c683cf18dbd0b2501ad1b1b033de33a8b00413e92012c495677"
+    },
+    {
+      "case_id": "hecbenchBfsRelaxEdges",
+      "path": "benchmark/cases/graph-irregular/hecbenchBfsRelaxEdges",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7b0df202bbfa4f724aedfc21e0dd331eb1f8e831f0c5a352ceba24a950db27c0"
+    },
+    {
+      "case_id": "hecbenchCsrRowSum2",
+      "path": "benchmark/cases/graph-irregular/hecbenchCsrRowSum2",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:093661fcfa35a9e4bce3015731beec7ef90a1ef1a68d937ce4589ea9cb3bd935"
+    },
+    {
+      "case_id": "hecbenchCsrSpmv",
+      "path": "benchmark/cases/graph-irregular/hecbenchCsrSpmv",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:296d4c65cc660d7354aaf1a3ef22d93973d15ced3391830e035771263a17fc31"
+    },
+    {
+      "case_id": "hecbenchEllpackSpmv",
+      "path": "benchmark/cases/graph-irregular/hecbenchEllpackSpmv",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:867d91bb15a9490254f7a264d6ce1aa3e30191d0b2656b44b4d379fca18d7676"
+    },
+    {
+      "case_id": "hecbenchFloydMinPlus2",
+      "path": "benchmark/cases/graph-irregular/hecbenchFloydMinPlus2",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:75701713775dbc416e8d5fd733e8a2b8b34021d3755494950c91422fb8b1b4b2"
+    },
+    {
+      "case_id": "hecbenchFloydWarshallStep",
+      "path": "benchmark/cases/graph-irregular/hecbenchFloydWarshallStep",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:40f145ed865d8cecbaadc4bacfa42a3eca0fb15a8ab649c62465b95be25182aa"
+    },
+    {
+      "case_id": "spmv",
+      "path": "benchmark/cases/graph-irregular/spmv",
+      "category": "graph-irregular",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:e95ded2197945b33a6b3163d291a25c0fd591cf9339bd83685fe31b9af439782"
+    },
+    {
+      "case_id": "vllmKvCacheScatter",
+      "path": "benchmark/cases/graph-irregular/vllmKvCacheScatter",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7848a79ef46b56e0a7494da5c921b0ee822f39baf5be61a5fa82f9e335cae19b"
+    },
+    {
+      "case_id": "vllmPagedAttentionScore",
+      "path": "benchmark/cases/graph-irregular/vllmPagedAttentionScore",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:c04148af7b8d9f65f3e9e50ae5a8958a1ed74caed4ab1c00b52b31797ea7609d"
+    },
+    {
+      "case_id": "vllmPagedBlockCopy2",
+      "path": "benchmark/cases/graph-irregular/vllmPagedBlockCopy2",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:241d4db19142194f431eefc7c8c3b95d7de8b33339a40cdb5291105a681a8b2b"
+    },
+    {
+      "case_id": "vllmPagedKvGather",
+      "path": "benchmark/cases/graph-irregular/vllmPagedKvGather",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:5972949b7952b26f5abdabdd0338b95b61ac7053e77cd4630ca44c9751e2d32c"
+    },
+    {
+      "case_id": "vllmRotaryPaged",
+      "path": "benchmark/cases/graph-irregular/vllmRotaryPaged",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:8a0a35794bebdf69ae84701f06832ce9930c76bd06124f4a448b752e9e085aa1"
+    },
+    {
+      "case_id": "xformersBlockSparseMaskApply",
+      "path": "benchmark/cases/graph-irregular/xformersBlockSparseMaskApply",
+      "category": "graph-irregular",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f4c3245044b748d627e8ea0d9bcd657868ba64ecb1d827b94a6a5ceaf0da1fc0"
+    },
+    {
+      "case_id": "batchedGemm",
+      "path": "benchmark/cases/linear-algebra/batchedGemm",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:9a25ebcb868c9d1217c01dcad8f4e8990c98fb02a97d055f0eac8b12ecbad5be"
+    },
+    {
+      "case_id": "conjugateGradient",
+      "path": "benchmark/cases/linear-algebra/conjugateGradient",
+      "category": "linear-algebra",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:b6ac21950c4c97083fb428e4bc44f87e3eb301db6ee1db6a6ab3956c9d9de00d"
+    },
+    {
+      "case_id": "cutlassBasicGemmTile",
+      "path": "benchmark/cases/linear-algebra/cutlassBasicGemmTile",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:ed638d755f16f569b1a85244a5cb3472cd67e60605bdf6826b69d19e9cb5ea81"
+    },
+    {
+      "case_id": "cutlassBatchedGemmSmall",
+      "path": "benchmark/cases/linear-algebra/cutlassBatchedGemmSmall",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:b9ee3770be59d0f7605748f318616c5359d895bf7e5e36eb567f43e827eb4c97"
+    },
+    {
+      "case_id": "cutlassBiasGeluEpilogue2",
+      "path": "benchmark/cases/linear-algebra/cutlassBiasGeluEpilogue2",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:dbab80bbbb7307f9a636061b492740d3a249de5923b32390da7cb39f11cc3b3c"
+    },
+    {
+      "case_id": "cutlassBiasReluEpilogue",
+      "path": "benchmark/cases/linear-algebra/cutlassBiasReluEpilogue",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:9e98b9d4c4236d649b6e7f8bc9f87374723e295cd0591ccb4da5a84fff748a87"
+    },
+    {
+      "case_id": "cutlassLinearCombinationEpilogue",
+      "path": "benchmark/cases/linear-algebra/cutlassLinearCombinationEpilogue",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:d75f432e0f4747e679bb0dcd11865b3fcb87a94f87cf5884526489a83aaa8201"
+    },
+    {
+      "case_id": "gemm",
+      "path": "benchmark/cases/linear-algebra/gemm",
+      "category": "linear-algebra",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d942dca23b32716e768fbf321acfcfd3aa8740417c769f34780403037a6184b6"
+    },
+    {
+      "case_id": "hecbenchBackpropForward",
+      "path": "benchmark/cases/linear-algebra/hecbenchBackpropForward",
+      "category": "linear-algebra",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:84a7b14a260830cc175973216b3fb0016cd1892b59bea873c04ca861f8dce685"
+    },
+    {
+      "case_id": "hecbenchGaussianElimStep",
+      "path": "benchmark/cases/linear-algebra/hecbenchGaussianElimStep",
+      "category": "linear-algebra",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:97dbb6327b91d7ecd4f829d3df98aa262fba4554d5a0ace21a687aec04d72648"
+    },
+    {
+      "case_id": "hecbenchGaussianRank1Update2",
+      "path": "benchmark/cases/linear-algebra/hecbenchGaussianRank1Update2",
+      "category": "linear-algebra",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:b3044b066aa260365e6ba6fe5d2d14a9ace5aac1d7918eaa5994d8c1312c7b87"
+    },
+    {
+      "case_id": "matrixMul",
+      "path": "benchmark/cases/linear-algebra/matrixMul",
+      "category": "linear-algebra",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:4c8550d8403ffe852b8b4956ef98a154274dc88a9d84499bf4f0b489088dca0e"
+    },
+    {
+      "case_id": "tiledMatmul",
+      "path": "benchmark/cases/linear-algebra/tiledMatmul",
+      "category": "linear-algebra",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:9981851112ca12e5f4ef9450ae25396ad31b28e48ac4fa02bc5915a5e8dd8b25"
+    },
+    {
+      "case_id": "tridiagResidual",
+      "path": "benchmark/cases/linear-algebra/tridiagResidual",
+      "category": "linear-algebra",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:afe8878eeb50f55774dd63815e7ebca51190633a26c280d6b34e1a806aaf098d"
+    },
+    {
+      "case_id": "cudaMemcpyAsyncPinned",
+      "path": "benchmark/cases/memory-movement/cudaMemcpyAsyncPinned",
+      "category": "memory-movement",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:a0ff9338a9d72626478d415f29226d03ef2b53db30feae8de99fa9e71647bfff"
+    },
+    {
+      "case_id": "cudaSamplesBitReversePermute",
+      "path": "benchmark/cases/memory-movement/cudaSamplesBitReversePermute",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:eb8b83f8135c74adc30c2cbdcf1f5bf1370a9066eb2b16ee7817a915bdd316dc"
+    },
+    {
+      "case_id": "cudaSamplesClampAddress2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesClampAddress2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6ae5763fe5d2b5589f7746b31f9f029c21796f9009faf3a30689c24b5d4f382c"
+    },
+    {
+      "case_id": "cudaSamplesCoalescedCopy",
+      "path": "benchmark/cases/memory-movement/cudaSamplesCoalescedCopy",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:fb9b6762c9c4686efb72894f38b5bd0fc885a18bd8148452796863a05137beeb"
+    },
+    {
+      "case_id": "cudaSamplesConstantLookup2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesConstantLookup2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:efcbdf1e82737c4bc93fe06d6773c94acffa46aada9e5413cf7253a24fbbe437"
+    },
+    {
+      "case_id": "cudaSamplesConstantMemoryScale",
+      "path": "benchmark/cases/memory-movement/cudaSamplesConstantMemoryScale",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:3189e524506d38f938e85d71969f99f6d63ca0f8674fe68b977ff9555e600503"
+    },
+    {
+      "case_id": "cudaSamplesGridStrideStrided",
+      "path": "benchmark/cases/memory-movement/cudaSamplesGridStrideStrided",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:75812ac47a745ed57e2830eb8a4402bdedeb0244d8665e90c0dcb944cfe26988"
+    },
+    {
+      "case_id": "cudaSamplesManagedTouch2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesManagedTouch2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:c91b23ec5daabf2d8ad44f164c763404dcf69bf27362110f12b869d1a4f23532"
+    },
+    {
+      "case_id": "cudaSamplesPinnedChunkAdd2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesPinnedChunkAdd2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d39c32fd561a3f34a28be9796f4e0c532a2199eea68942f31384209b6d098726"
+    },
+    {
+      "case_id": "cudaSamplesSharedTileTranspose2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesSharedTileTranspose2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:774e3d954911967fea2524c1c43aa73b9a79dc979d6618fd23ca20e6b749c66e"
+    },
+    {
+      "case_id": "cudaSamplesUnifiedMemoryScale",
+      "path": "benchmark/cases/memory-movement/cudaSamplesUnifiedMemoryScale",
+      "category": "memory-movement",
+      "domain": "library_api",
+      "difficulty": "medium",
+      "fingerprint": "sha256:df286eea680abbab6b8b5a6af35daf6d7daa650b19e83defe76b358cca7944bb"
+    },
+    {
+      "case_id": "cudaSamplesVectorizedFloat4Scale2",
+      "path": "benchmark/cases/memory-movement/cudaSamplesVectorizedFloat4Scale2",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:26ea65757e560e94ec0cc31dac00dbe52432e5f00b795523cd2eb66233766ced"
+    },
+    {
+      "case_id": "cutlassColumnMajorToRowMajor",
+      "path": "benchmark/cases/memory-movement/cutlassColumnMajorToRowMajor",
+      "category": "memory-movement",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:211c73807e4bf2fa8e5c37af5927fb9a708c38e2a4f5e6e5679fdf7b745988b3"
+    },
+    {
+      "case_id": "ggmlConcatRows",
+      "path": "benchmark/cases/memory-movement/ggmlConcatRows",
+      "category": "memory-movement",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f1d6b020cbc9111199751b48c23662020e625b4cfa9390d60e5d0b0a1ef6c86b"
+    },
+    {
+      "case_id": "ggmlPermute2d",
+      "path": "benchmark/cases/memory-movement/ggmlPermute2d",
+      "category": "memory-movement",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:85f1c766fb6aecba508e7294e3ccb899ab1aae0f723a8193a669c6d1f650a013"
+    },
+    {
+      "case_id": "ggmlRepeatRows",
+      "path": "benchmark/cases/memory-movement/ggmlRepeatRows",
+      "category": "memory-movement",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:88f4522606e0ffb94f6ebdbc20ef66fa4c0193f136486fb462512f80d48692c0"
+    },
+    {
+      "case_id": "hecbenchBabelStreamTriad",
+      "path": "benchmark/cases/memory-movement/hecbenchBabelStreamTriad",
+      "category": "memory-movement",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:4a92710466cc9568376e0f84e9516288c2c01f2f93ee2e73994b2f735f11770b"
+    },
+    {
+      "case_id": "reverseArray",
+      "path": "benchmark/cases/memory-movement/reverseArray",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:44ae8e566ea444cea1c6ee7482e113ab765807448ada3d727011ffabdf12d8d6"
+    },
+    {
+      "case_id": "transpose",
+      "path": "benchmark/cases/memory-movement/transpose",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:2430096bed55f8a50ca6a44a52919485d2268d1dc996dd6d86fab876fd5808d4"
+    },
+    {
+      "case_id": "transposeShared",
+      "path": "benchmark/cases/memory-movement/transposeShared",
+      "category": "memory-movement",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:04abccbe15cda916cebe8ffaf7ac89bcd6fbfa91a62fd93239a7347db5c94c32"
+    },
+    {
+      "case_id": "vllmKvCacheReshape",
+      "path": "benchmark/cases/memory-movement/vllmKvCacheReshape",
+      "category": "memory-movement",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6634138376764a958dac6b6344e60d27ffbe4f537f156a4bd29a017e0a3c3fd4"
+    },
+    {
+      "case_id": "hecbenchCfdFlux",
+      "path": "benchmark/cases/molecular-dynamics/hecbenchCfdFlux",
+      "category": "molecular-dynamics",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7c19e9ce6354ec7617ebcd6f5b346825cca8f25d04301e5f24fbd12b4abed335"
+    },
+    {
+      "case_id": "hecbenchLavaMdPairForce",
+      "path": "benchmark/cases/molecular-dynamics/hecbenchLavaMdPairForce",
+      "category": "molecular-dynamics",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:e2d95a9d3504249b45bff932f87b5c298cf321e5cccc72ec965b179d5eef2fc2"
+    },
+    {
+      "case_id": "hecbenchParticleLikelihood",
+      "path": "benchmark/cases/molecular-dynamics/hecbenchParticleLikelihood",
+      "category": "molecular-dynamics",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:45588c747716f6bd01671b9216235273f65765c9dde40a29d4aecace85888dac"
+    },
+    {
+      "case_id": "hecbenchParticleWeightNorm2",
+      "path": "benchmark/cases/molecular-dynamics/hecbenchParticleWeightNorm2",
+      "category": "molecular-dynamics",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:bee55945ec6db5c1451e20919cfccbbec3634bd7f48002c494ce282f61799613"
+    },
+    {
+      "case_id": "nbodyTiled",
+      "path": "benchmark/cases/molecular-dynamics/nbodyTiled",
+      "category": "molecular-dynamics",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7a305dcded9c3b94ec247c8a7ed2ee05a85761b9f25fba4fca8919fa2674e39a"
+    },
+    {
+      "case_id": "particleUpdate",
+      "path": "benchmark/cases/molecular-dynamics/particleUpdate",
+      "category": "molecular-dynamics",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8b976fb5bfb0fb55ee895fc61e9094909bbeb586e9c1516eca85621b85daf965"
+    },
+    {
+      "case_id": "attention",
+      "path": "benchmark/cases/multi-kernel-pipelines/attention",
+      "category": "multi-kernel-pipelines",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:cede6b07a4c4c34526dd1701de02865ea8fee9faa484d611d4dba838480738f2"
+    },
+    {
+      "case_id": "flashAttentionScoreValue",
+      "path": "benchmark/cases/multi-kernel-pipelines/flashAttentionScoreValue",
+      "category": "multi-kernel-pipelines",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:be9beadca5b528d7caed40e03fbdba88dd72fe427cb0de27ecbfdb8c9b6cd946"
+    },
+    {
+      "case_id": "bnbBlockScaleQuant2",
+      "path": "benchmark/cases/reductions-scans/bnbBlockScaleQuant2",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:c86bff271ac7d440e66471abafd8e870334e2a008e36d517bdf745de21e4b483"
+    },
+    {
+      "case_id": "bnbBlockwiseAbsmax",
+      "path": "benchmark/cases/reductions-scans/bnbBlockwiseAbsmax",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:dace4c66afb767b8e69c47d6cf5c45765d6d95c7a0db4453e3a7c15a6d663111"
+    },
+    {
+      "case_id": "bnbInt8VectorQuant",
+      "path": "benchmark/cases/reductions-scans/bnbInt8VectorQuant",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:3ca5bb61c12c41634c8f777c4f2074a8403ef4eb7d4ffc26fe8eaedc545041a9"
+    },
+    {
+      "case_id": "bnbL2NormBlockReduce",
+      "path": "benchmark/cases/reductions-scans/bnbL2NormBlockReduce",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:261e1c1938a4aef6c758bf2280bfe67e0b49fded2bef9af3b660d385e5ba9bfd"
+    },
+    {
+      "case_id": "bnbPercentileClipping",
+      "path": "benchmark/cases/reductions-scans/bnbPercentileClipping",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:af15ef4c2fe28d16e008b50a14f5f49d541c4fb99051c6b4b0527a9d73a090f7"
+    },
+    {
+      "case_id": "cudaSamplesSharedReduceSum2",
+      "path": "benchmark/cases/reductions-scans/cudaSamplesSharedReduceSum2",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:a5b99ea5b9402a9a7b0f71c711121e3205c3b3aa2a9be6430d6594531b8e70a0"
+    },
+    {
+      "case_id": "cudaSamplesWarpPrefixLane",
+      "path": "benchmark/cases/reductions-scans/cudaSamplesWarpPrefixLane",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:414662a2b25a1ff2720dbc821d4c14083638eda935d60071edf11ae61da4ca6e"
+    },
+    {
+      "case_id": "cudaSamplesWarpShuffleReduce",
+      "path": "benchmark/cases/reductions-scans/cudaSamplesWarpShuffleReduce",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "hard",
+      "fingerprint": "sha256:0076f812473298140cf50ad4b7ca42278b98db8dd177cd689e4e32539df86b34"
+    },
+    {
+      "case_id": "dotProduct",
+      "path": "benchmark/cases/reductions-scans/dotProduct",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:4c67784841f5677155f7e8db0182865a4ec14c1592744c61e7b4e8f2462fe590"
+    },
+    {
+      "case_id": "flashCausalMaskSoftmax",
+      "path": "benchmark/cases/reductions-scans/flashCausalMaskSoftmax",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:86d3d31d51c49017f5a7675142388a5ffd88078c0ac2b03d257ca959d752bd7a"
+    },
+    {
+      "case_id": "flashOnlineSoftmax",
+      "path": "benchmark/cases/reductions-scans/flashOnlineSoftmax",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:8fa60c5fc8aeff8fc29b4c6f3d8a805bb3bb2e29cc679245dae6fa78f8f4af8c"
+    },
+    {
+      "case_id": "flashRowMaxStats",
+      "path": "benchmark/cases/reductions-scans/flashRowMaxStats",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:ce19b9d5793efa96ee4cf5e4cd15b09a7dc4ab89b7421b2338031ce7efff66cd"
+    },
+    {
+      "case_id": "flashSoftmaxDenomStats",
+      "path": "benchmark/cases/reductions-scans/flashSoftmaxDenomStats",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2249030334576be081229e561e1c39e346c84239d98ee6a598a36cd3a80c65c8"
+    },
+    {
+      "case_id": "ggmlArgmaxRows",
+      "path": "benchmark/cases/reductions-scans/ggmlArgmaxRows",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:535ee34118db034c5f23eb44780f00ad28adae78b012605804a8bd58d5760f6c"
+    },
+    {
+      "case_id": "ggmlCausalSoftmax",
+      "path": "benchmark/cases/reductions-scans/ggmlCausalSoftmax",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d0eb81dc453555c44f319f641da2b06c674b920ac18b5f2354f4c44648da5b09"
+    },
+    {
+      "case_id": "ggmlCumsumRows",
+      "path": "benchmark/cases/reductions-scans/ggmlCumsumRows",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:280b40c8a5d3514c4e99c4126a3a8cf45d31becbb2cb737ac047d1e08cb97039"
+    },
+    {
+      "case_id": "ggmlMeanRows",
+      "path": "benchmark/cases/reductions-scans/ggmlMeanRows",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:55b870552653722b92647f1cd55d25bda8bac95301a05fbb952b258a286cd030"
+    },
+    {
+      "case_id": "ggmlQuantizeQ8",
+      "path": "benchmark/cases/reductions-scans/ggmlQuantizeQ8",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:3867cf51354d709284b726de330488ff9303fa42b6c3888ee67d3e6c6f8e55c8"
+    },
+    {
+      "case_id": "ggmlRmsNormBlock",
+      "path": "benchmark/cases/reductions-scans/ggmlRmsNormBlock",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:be45c2332b932259c742cacd2d517fa269a53d1ca3fe559457d6ac8e6974dfc7"
+    },
+    {
+      "case_id": "ggmlSumRows2",
+      "path": "benchmark/cases/reductions-scans/ggmlSumRows2",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:cffbe81df348d254092ada9534e73ac51d41957ece40a783654b39e6f5f413a3"
+    },
+    {
+      "case_id": "hecbenchPrefixScanHill",
+      "path": "benchmark/cases/reductions-scans/hecbenchPrefixScanHill",
+      "category": "reductions-scans",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8e0b468ea5db9cfadaa8410c9d7f8781aaeeaa7be9b0c65800de8833017427b5"
+    },
+    {
+      "case_id": "hecbenchReductionMinMax",
+      "path": "benchmark/cases/reductions-scans/hecbenchReductionMinMax",
+      "category": "reductions-scans",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:515c821b5b81965d2d93340299b3e60c81f914df6190e60afc3ddcade7ab9d19"
+    },
+    {
+      "case_id": "layernorm",
+      "path": "benchmark/cases/reductions-scans/layernorm",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:5457bde380e34c151854f3e64bd678711ab8c43dd7bfbfe4e7fb464092a67188"
+    },
+    {
+      "case_id": "reduceMax",
+      "path": "benchmark/cases/reductions-scans/reduceMax",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:070ca079f51e69797fa47c7ccc543d9a95849efcc5934909e032713474dc1250"
+    },
+    {
+      "case_id": "reduceSum",
+      "path": "benchmark/cases/reductions-scans/reduceSum",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:423e8be91b24afbfd24e9809b67b2f5eb278ac59d176c4a890615746c1dc959f"
+    },
+    {
+      "case_id": "rmsnorm",
+      "path": "benchmark/cases/reductions-scans/rmsnorm",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:fa9b395ef1b99a52eeff1460efd7ee70d65c2098452c81aae6451cbb0ce8a736"
+    },
+    {
+      "case_id": "scanBlock",
+      "path": "benchmark/cases/reductions-scans/scanBlock",
+      "category": "reductions-scans",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:9f440f1c82508e4c81f52533efdecda70d582447428392fcab78ef8fcc62f36a"
+    },
+    {
+      "case_id": "softmax",
+      "path": "benchmark/cases/reductions-scans/softmax",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:0ef0f69afec344cdb4c1163eccdeccc8bc7b9a2a8cd359824acfb224ed56de5f"
+    },
+    {
+      "case_id": "topk",
+      "path": "benchmark/cases/reductions-scans/topk",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:94375e3ecd28dd738241f33fb341a2eee6befa44393445550c76a9ccb50087cd"
+    },
+    {
+      "case_id": "vllmFusedAddRmsNorm",
+      "path": "benchmark/cases/reductions-scans/vllmFusedAddRmsNorm",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:78b9fea802e50c78a83b519c6a72c5e69ec8e2b9d026d9d8e91f7bfb8862a785"
+    },
+    {
+      "case_id": "vllmLayernormResidual",
+      "path": "benchmark/cases/reductions-scans/vllmLayernormResidual",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:9045b8365078a5e55b74dd3d95e1e907ffc0e7b2ad2088955106b99db306e81f"
+    },
+    {
+      "case_id": "vllmPerTokenInt8Quant",
+      "path": "benchmark/cases/reductions-scans/vllmPerTokenInt8Quant",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:7c322cdcdea109b24e89c780ec45462bd654b17743119e8cf390b4334618445b"
+    },
+    {
+      "case_id": "vllmRmsNormEps2",
+      "path": "benchmark/cases/reductions-scans/vllmRmsNormEps2",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:cc2d65da64c19eb51af805bc7f3506ffccfb9985b4e6783d801d003ed69b057b"
+    },
+    {
+      "case_id": "vllmTop1MoEGate",
+      "path": "benchmark/cases/reductions-scans/vllmTop1MoEGate",
+      "category": "reductions-scans",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:409cfbd37385ff9614d591ab37a3fa8f86cd24a0080165d23170ce4f250fa43f"
+    },
+    {
+      "case_id": "adamUpdate",
+      "path": "benchmark/cases/simple-kernels/adamUpdate",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f551948919fb3c63db215a6115589caaf12ab7179a2a630a76c29e14df1a9d64"
+    },
+    {
+      "case_id": "affine",
+      "path": "benchmark/cases/simple-kernels/affine",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:a8f2ae6a5d1bd801147358c60709f15ee75677b1c767d8d2f8cd8bf8717bffe6"
+    },
+    {
+      "case_id": "biasAddRelu",
+      "path": "benchmark/cases/simple-kernels/biasAddRelu",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2242c4a42fbf923c391425fcd5a6b10f4973ccf1ecbc34a4dd41076eaa171e97"
+    },
+    {
+      "case_id": "bitonicSort",
+      "path": "benchmark/cases/simple-kernels/bitonicSort",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:704b313f33405b7bd635d6c28e223c2f52a581d3fc48ad4f6f80763e626bc0ab"
+    },
+    {
+      "case_id": "bnbAdam8bitMoments",
+      "path": "benchmark/cases/simple-kernels/bnbAdam8bitMoments",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:059401333e3b587f4efdcdd5675ddc8c9c9180cfa3d25b314ace704b335b52bc"
+    },
+    {
+      "case_id": "bnbAdamWDecayStep",
+      "path": "benchmark/cases/simple-kernels/bnbAdamWDecayStep",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:fec670de44826f5bce190a73c6a7a8c2bf451d7b25ac47b93a77de809bbcde01"
+    },
+    {
+      "case_id": "bnbDequantizeBlockwise",
+      "path": "benchmark/cases/simple-kernels/bnbDequantizeBlockwise",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8f6aca81f040ff9ebc12249bb3eba9e77ea19bfa5fa6f2ed069409dda574c114"
+    },
+    {
+      "case_id": "bnbInt8RowDequant",
+      "path": "benchmark/cases/simple-kernels/bnbInt8RowDequant",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:d6790d2f52bc1074b026efdf8aee5b74c6d62e07741446d35ffb8431896046ed"
+    },
+    {
+      "case_id": "bnbMomentUpdate2",
+      "path": "benchmark/cases/simple-kernels/bnbMomentUpdate2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:119181e5b691cdcdc0f92b27c78ed919051dba2b32aa01606d5471efabf51691"
+    },
+    {
+      "case_id": "bnbNf4Dequant",
+      "path": "benchmark/cases/simple-kernels/bnbNf4Dequant",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:da9d952e05c12db74fe9195c66276766dc77fc725921862fe9268029088eaa4a"
+    },
+    {
+      "case_id": "flashAlibiBias",
+      "path": "benchmark/cases/simple-kernels/flashAlibiBias",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:b143164083185d196eb4ad548dd1ee336bd15dd44c5d5a05d88f4087d23c7078"
+    },
+    {
+      "case_id": "flashCausalDropoutMask2",
+      "path": "benchmark/cases/simple-kernels/flashCausalDropoutMask2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:1ccecfa44843c64a81b7f1281ebbe63b70d874a8bd5fb8f7c52761a07c4cb4eb"
+    },
+    {
+      "case_id": "flashDropoutMaskApply",
+      "path": "benchmark/cases/simple-kernels/flashDropoutMaskApply",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f32a23008b8d7f22fe7d9bf88c2e5c9fd942f70dc02f68237859d5c1f36b5666"
+    },
+    {
+      "case_id": "flashRotaryHalf2Pair",
+      "path": "benchmark/cases/simple-kernels/flashRotaryHalf2Pair",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:65a6d57df843f366a47ebb12752a4f7901002dbbb68cb80de08f05da5a0ce602"
+    },
+    {
+      "case_id": "flashScaleMaskScores",
+      "path": "benchmark/cases/simple-kernels/flashScaleMaskScores",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:4d6d9a9602fed6c74f453694869293dcb0971204ea08fce6f53651472eff9e4d"
+    },
+    {
+      "case_id": "gelu",
+      "path": "benchmark/cases/simple-kernels/gelu",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:5e160d961ff69ce4831a501d1a90578cea713e30fcd3e0ba4e91fcbafdd17c50"
+    },
+    {
+      "case_id": "ggmlAbsKernel2",
+      "path": "benchmark/cases/simple-kernels/ggmlAbsKernel2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "easy",
+      "fingerprint": "sha256:9d15c4e5cc96a418cb28cb011d36ce176496ecafbb737a4ec9ab0416c47fca05"
+    },
+    {
+      "case_id": "ggmlAddRowsBroadcast",
+      "path": "benchmark/cases/simple-kernels/ggmlAddRowsBroadcast",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:dce2af59ac77e5e89e882c6e54e76a8ac71d11ca79da59760c51026a1dcd2246"
+    },
+    {
+      "case_id": "ggmlClampKernel",
+      "path": "benchmark/cases/simple-kernels/ggmlClampKernel",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:70c639a18de905819a14c70ec063040712fbdf3f9d2fad897e643f276eba2703"
+    },
+    {
+      "case_id": "ggmlDiagMask",
+      "path": "benchmark/cases/simple-kernels/ggmlDiagMask",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7e5ede86f30db4889fd764140cf1c7b4ad4f342da1fc7f04f943cf67f84fb615"
+    },
+    {
+      "case_id": "ggmlEluKernel",
+      "path": "benchmark/cases/simple-kernels/ggmlEluKernel",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:d2735084cf686b0484e36d6081bf64aaeebb0718efd9b713b00f76f52227bce7"
+    },
+    {
+      "case_id": "ggmlMulRowsBroadcast",
+      "path": "benchmark/cases/simple-kernels/ggmlMulRowsBroadcast",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:331398324b3f79a91366eea44285c56ffc1ccb4db41ef395884425d26662d7b9"
+    },
+    {
+      "case_id": "ggmlNegKernel",
+      "path": "benchmark/cases/simple-kernels/ggmlNegKernel",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "easy",
+      "fingerprint": "sha256:ed9cf77a62e7cef818e85ffe71e86f5d69ceae8ca61204c1a1666fdc7f5fdf45"
+    },
+    {
+      "case_id": "ggmlQ4Dequant",
+      "path": "benchmark/cases/simple-kernels/ggmlQ4Dequant",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:03a2871c97846e49392dc31eb01636e82ed5e5bacafb50d23c7b6fad684d1665"
+    },
+    {
+      "case_id": "ggmlQ8Dequant",
+      "path": "benchmark/cases/simple-kernels/ggmlQ8Dequant",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:5ccc06bf51cf2c5c1b4b170e12f74afea5361530e227865f261431777368017d"
+    },
+    {
+      "case_id": "ggmlRopeInterleaved",
+      "path": "benchmark/cases/simple-kernels/ggmlRopeInterleaved",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:95706740391829feb8e015552af86e9e1f6cd5518d1acfbc98f9af4796eefa77"
+    },
+    {
+      "case_id": "ggmlSoftcap",
+      "path": "benchmark/cases/simple-kernels/ggmlSoftcap",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:d4d3cf94752fc863f40036ceb3679bd2a3786a7ce07fa8632404216bab72eb7b"
+    },
+    {
+      "case_id": "ggmlSqrKernel",
+      "path": "benchmark/cases/simple-kernels/ggmlSqrKernel",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "easy",
+      "fingerprint": "sha256:95674350658cdeab6ce59b52d931c0387e3424be2e232b86eacdfb7e5540a1ce"
+    },
+    {
+      "case_id": "ggmlTanhKernel",
+      "path": "benchmark/cases/simple-kernels/ggmlTanhKernel",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:aed5aeb8109a245a07cf9567622f9f90206af54efa120e554a001bcc4071ffe4"
+    },
+    {
+      "case_id": "gridStride",
+      "path": "benchmark/cases/simple-kernels/gridStride",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:19313707d7fb99ec728ec46033781fccfa27ba75d0fc3b543986ca0b6367b4f2"
+    },
+    {
+      "case_id": "hadamard",
+      "path": "benchmark/cases/simple-kernels/hadamard",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:1ebbf54d97338fc6815bacb8887f913d49d7e77df95d3a4dfc039e6b9a86861d"
+    },
+    {
+      "case_id": "hecbenchBitonicCompare2",
+      "path": "benchmark/cases/simple-kernels/hecbenchBitonicCompare2",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:e69097f110b6fc93b4126bb756a794665a6b3698cbf9cdf5ecb7527939afe88d"
+    },
+    {
+      "case_id": "hecbenchBitonicPass",
+      "path": "benchmark/cases/simple-kernels/hecbenchBitonicPass",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8c3f96686e0bd9a2b73dbdfc3ce3cc35327bede2024882bb171e629f75035022"
+    },
+    {
+      "case_id": "hecbenchBlackScholes",
+      "path": "benchmark/cases/simple-kernels/hecbenchBlackScholes",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:ed961458faa3ded6768f602a6ec286176d37ff7dcdbe378e847448c4da95d6d5"
+    },
+    {
+      "case_id": "hecbenchKmeansAssign",
+      "path": "benchmark/cases/simple-kernels/hecbenchKmeansAssign",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:69a80fbe9fd647685dcb1c9efbe009f7d556b64baa8d4fb15487189b11e18fe8"
+    },
+    {
+      "case_id": "hecbenchMandelbrotIter",
+      "path": "benchmark/cases/simple-kernels/hecbenchMandelbrotIter",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:934418fd6a87e90eda8d9adcc7aab4832c2adb396452135ecef26558956c7b15"
+    },
+    {
+      "case_id": "hecbenchMonteCarloAsian",
+      "path": "benchmark/cases/simple-kernels/hecbenchMonteCarloAsian",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:d1011b2800dbda247382a67afb3d47dadf992819118767425902c5d646aeb13f"
+    },
+    {
+      "case_id": "hecbenchStreamclusterDistance",
+      "path": "benchmark/cases/simple-kernels/hecbenchStreamclusterDistance",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2a8e7e0f573eb73d923415eedf4ba47cfbb8b6134c525c801ebf32f1c735d683"
+    },
+    {
+      "case_id": "monteCarloPi",
+      "path": "benchmark/cases/simple-kernels/monteCarloPi",
+      "category": "simple-kernels",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:223af0dd3cda3cb48e3c004e51f0dc5dd1bd7ef4aaa47085515eb7f22aa6ffda"
+    },
+    {
+      "case_id": "reluActivation",
+      "path": "benchmark/cases/simple-kernels/reluActivation",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "easy",
+      "fingerprint": "sha256:444bdd7bfbf736e469484933b0db9785bf0992e8a0659393fbd3978d106ce549"
+    },
+    {
+      "case_id": "residualScaleAdd",
+      "path": "benchmark/cases/simple-kernels/residualScaleAdd",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "easy",
+      "fingerprint": "sha256:02caa6b798d7435e2ed9ff585e684fd3a0ec6cda9f40da9553fae1f332739a8d"
+    },
+    {
+      "case_id": "rope",
+      "path": "benchmark/cases/simple-kernels/rope",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:b0f50605a4c44a2066ad3cd3951d62b81ac5781f9be38f3f0b2661a64299a25e"
+    },
+    {
+      "case_id": "saxpy",
+      "path": "benchmark/cases/simple-kernels/saxpy",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:b04601ad9d725d340e99d0a60ac9fa19e4f0f87d43758b161374504bdfe552b8"
+    },
+    {
+      "case_id": "siluActivation",
+      "path": "benchmark/cases/simple-kernels/siluActivation",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:4559b0737d5704095329a0992c72a864f91a5fd58d2d4c822e418b7c2633dcf5"
+    },
+    {
+      "case_id": "square",
+      "path": "benchmark/cases/simple-kernels/square",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:c0afddb5590aa7b39813068e1bf64f25d030f1093e6322e8c5e61c26b0d1740e"
+    },
+    {
+      "case_id": "vectorAdd",
+      "path": "benchmark/cases/simple-kernels/vectorAdd",
+      "category": "simple-kernels",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:9130930f9408caf5ed560a3e0c6ae69d52d953c012e94a2407a0e073f9b6377c"
+    },
+    {
+      "case_id": "vllmGeluMul",
+      "path": "benchmark/cases/simple-kernels/vllmGeluMul",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:905e0c8960a62e8be8d6ce0476a399d925070cb2dbca4337b99ae860078aa5ae"
+    },
+    {
+      "case_id": "vllmGeluTanhApprox",
+      "path": "benchmark/cases/simple-kernels/vllmGeluTanhApprox",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2d8e442a16f99d9111116a1c9d543ec7b2b91a7136e79ceb960e18b5db8e90f2"
+    },
+    {
+      "case_id": "vllmGeluTanhMul2",
+      "path": "benchmark/cases/simple-kernels/vllmGeluTanhMul2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:fd296d2fc3924127f76e1e2e32dca8e3fd7cffbc06f6ce8c3cdd80669db67c98"
+    },
+    {
+      "case_id": "vllmLogitsClampScale2",
+      "path": "benchmark/cases/simple-kernels/vllmLogitsClampScale2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:cfec26fbf18b49c647bb4c7023b433059498a78b67ef5a3e334b622dab263f20"
+    },
+    {
+      "case_id": "vllmSiluMul",
+      "path": "benchmark/cases/simple-kernels/vllmSiluMul",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:cf5ff2d372df9f66e56a3a4b0fea9f56350715a9982dc47b91cabccfa20655cc"
+    },
+    {
+      "case_id": "vllmSoftcapLogits",
+      "path": "benchmark/cases/simple-kernels/vllmSoftcapLogits",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2e347f95eb3071c20a031bbf17a3fc75b2506878741645afe6fcf8ebe87efb69"
+    },
+    {
+      "case_id": "vllmSwigluGate2",
+      "path": "benchmark/cases/simple-kernels/vllmSwigluGate2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:054c1cba704c39ef72ee149b378b24adead461b5eb8aace4e8b41b0f7cd3fd32"
+    },
+    {
+      "case_id": "xformersSiluBiasMul2",
+      "path": "benchmark/cases/simple-kernels/xformersSiluBiasMul2",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8f51b3c3ec965b28f6d6639d2ef89433cb9e8cfaca4a1c58ca5bbfa1dcebf035"
+    },
+    {
+      "case_id": "xformersSparse24Mask",
+      "path": "benchmark/cases/simple-kernels/xformersSparse24Mask",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:e3e0d85b16828e5e44edcef302867f77cbadc89e560cf25cd311897dfcc2ae5d"
+    },
+    {
+      "case_id": "xformersSwiGLU",
+      "path": "benchmark/cases/simple-kernels/xformersSwiGLU",
+      "category": "simple-kernels",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:21ea3bc790439fd0de2d1c99f1c8d9977cd4b767360fb724e4841b86499139a8"
+    },
+    {
+      "case_id": "conv1dShared",
+      "path": "benchmark/cases/stencil-convolution/conv1dShared",
+      "category": "stencil-convolution",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6c7b803e806d321858924a864464a1e300f8e8dfa31cb609677465cfeea1b893"
+    },
+    {
+      "case_id": "cudaSamplesSharedStencilHalo",
+      "path": "benchmark/cases/stencil-convolution/cudaSamplesSharedStencilHalo",
+      "category": "stencil-convolution",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:7c4f344244aaa1a3fb8e66302cabb930d08dc49565f2389ddd308c6a2e9879ae"
+    },
+    {
+      "case_id": "cudaSamplesTextureLikeBilinear",
+      "path": "benchmark/cases/stencil-convolution/cudaSamplesTextureLikeBilinear",
+      "category": "stencil-convolution",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:aaecb9e2167629c21696b76eb2668262d49f2665869e0389e9af43392162ae1f"
+    },
+    {
+      "case_id": "daliAffineScaleTranslate2",
+      "path": "benchmark/cases/stencil-convolution/daliAffineScaleTranslate2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:2a78f7d869a14a772714d8029fb7ae381edb4ab3dac54e64bfb2607d25f5cf31"
+    },
+    {
+      "case_id": "daliBoundingBoxFlip",
+      "path": "benchmark/cases/stencil-convolution/daliBoundingBoxFlip",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:565ce91a65b329ed745883bf5daae9dd5b31fb9d808ee848155d3b4d6ffc0c2a"
+    },
+    {
+      "case_id": "daliBoxEncode2",
+      "path": "benchmark/cases/stencil-convolution/daliBoxEncode2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:11c876ceefa523b8c2607a9a36bb8ab6ebbb2f7919b5b41755db556c60801fb6"
+    },
+    {
+      "case_id": "daliBoxEncoder",
+      "path": "benchmark/cases/stencil-convolution/daliBoxEncoder",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d7ad531e4d1c97f26e5ec621d7d4a2a245866ae93b76a8cb8aedcdfebe50b3af"
+    },
+    {
+      "case_id": "daliBrightnessContrast2",
+      "path": "benchmark/cases/stencil-convolution/daliBrightnessContrast2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:fb2a62909332c65f51d8635b0639b3ab3b32ad99c1eddbd56fc3331bab144dc3"
+    },
+    {
+      "case_id": "daliCast",
+      "path": "benchmark/cases/stencil-convolution/daliCast",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:a80b027eb35efa6c6098280f84afb81b87de71515ebfa985cb658c80bc75b51b"
+    },
+    {
+      "case_id": "daliChannelSwap",
+      "path": "benchmark/cases/stencil-convolution/daliChannelSwap",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "easy",
+      "fingerprint": "sha256:c313b4233d6fedb5181c2ea7b1f6e6230eaa2ce90c062c0456fedf6d475f8c65"
+    },
+    {
+      "case_id": "daliColorSpaceConversion",
+      "path": "benchmark/cases/stencil-convolution/daliColorSpaceConversion",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:42aba389bcbb832e4bc4bd97a7222f2d671c6d75ec95ba1e18007a3030033cbd"
+    },
+    {
+      "case_id": "daliColorTwist",
+      "path": "benchmark/cases/stencil-convolution/daliColorTwist",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:3fa672233bb9ee9bc1db150e3866250ae05da403620bbb2c912773881360f1fd"
+    },
+    {
+      "case_id": "daliColorTwist2",
+      "path": "benchmark/cases/stencil-convolution/daliColorTwist2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:924bc2c83ccf402726ecfacc0a2884109e68d6f60599bc6b5c1db06ca2dca798"
+    },
+    {
+      "case_id": "daliCrop",
+      "path": "benchmark/cases/stencil-convolution/daliCrop",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:c059d3cf5db2d0e9afb02a86c848c502611680a02347f76c0bd39c356f6e59ca"
+    },
+    {
+      "case_id": "daliCropMirrorNormalize",
+      "path": "benchmark/cases/stencil-convolution/daliCropMirrorNormalize",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:90fbfefcbe326fa2167eb8bb86babeaa41b37c522f7cbd9435bc71eee8108a56"
+    },
+    {
+      "case_id": "daliCropMirrorPad2",
+      "path": "benchmark/cases/stencil-convolution/daliCropMirrorPad2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:06655b75320d621a667a21c1ef8a9a310494ee2f9390d5c448241e94773fc6d9"
+    },
+    {
+      "case_id": "daliDct8x8",
+      "path": "benchmark/cases/stencil-convolution/daliDct8x8",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:97e199e5902aa198ba1bfade2109a229fd94fb0018cb14b9df052334d39e0c64"
+    },
+    {
+      "case_id": "daliElementExtract",
+      "path": "benchmark/cases/stencil-convolution/daliElementExtract",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:e219d3b25b337be8f6185435db3717e09656f622d10b46e3a78ea824e59c08a8"
+    },
+    {
+      "case_id": "daliEqualizeLut",
+      "path": "benchmark/cases/stencil-convolution/daliEqualizeLut",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:17fd48f2667946bf41437adfac53a478732d042f6caffa9ea0f2acf0baa28ee0"
+    },
+    {
+      "case_id": "daliEraseRect",
+      "path": "benchmark/cases/stencil-convolution/daliEraseRect",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:ea03136dfa4712ad31ba8090ba7025d63700d3ad07a68c518e858671e742577e"
+    },
+    {
+      "case_id": "daliFlip",
+      "path": "benchmark/cases/stencil-convolution/daliFlip",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:413334dcbc9b2c199dea275bcd47f689c17e300cd0e8d71442f0cfacc00bcc6b"
+    },
+    {
+      "case_id": "daliHorizontalFlip2",
+      "path": "benchmark/cases/stencil-convolution/daliHorizontalFlip2",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "easy",
+      "fingerprint": "sha256:29dd53103b57b34bc8c57f899c931a1dc59bce048b80eb5a71193ebdd99a260b"
+    },
+    {
+      "case_id": "daliHsvToRgb",
+      "path": "benchmark/cases/stencil-convolution/daliHsvToRgb",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:929bc43be95333af644236fff0d51876bcd0e84d0f7881f9e2c7215ffe0ddfa8"
+    },
+    {
+      "case_id": "daliMakeContiguous",
+      "path": "benchmark/cases/stencil-convolution/daliMakeContiguous",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:104c129584252a593a3309ccf1ed93f2cd63fc37f2fb52e62e45a66f075dfecf"
+    },
+    {
+      "case_id": "daliNormalizeMeanStd",
+      "path": "benchmark/cases/stencil-convolution/daliNormalizeMeanStd",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:379b8889941d089db983c804d89ab64d45b51e01f1474294586d5422a47a024a"
+    },
+    {
+      "case_id": "daliNormalizePermute",
+      "path": "benchmark/cases/stencil-convolution/daliNormalizePermute",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:e46717b2729e4456dfd12c477d5395c18e348b8932ad1b19bf2a7caa4db99083"
+    },
+    {
+      "case_id": "daliPaste",
+      "path": "benchmark/cases/stencil-convolution/daliPaste",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:362fa0d9b626fa36394bbd044b85b86b796986162dea3a23f43d52fe2904ea2a"
+    },
+    {
+      "case_id": "daliRandomResizedCrop",
+      "path": "benchmark/cases/stencil-convolution/daliRandomResizedCrop",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:c0ab466aa1011db8e5976c28174958b6759def131096d0fd56ece8b2fc54ae26"
+    },
+    {
+      "case_id": "daliResizeBilinear",
+      "path": "benchmark/cases/stencil-convolution/daliResizeBilinear",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:504690de5991dcab82e06c85c7cdbe49402add2a0712f51e3e95f5944377d440"
+    },
+    {
+      "case_id": "daliResizeCropMirror",
+      "path": "benchmark/cases/stencil-convolution/daliResizeCropMirror",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:8686934e5286bb0fe2bac579b43cf1509f4cea6c624174bcb935af0bb71696c4"
+    },
+    {
+      "case_id": "daliResizeNearest",
+      "path": "benchmark/cases/stencil-convolution/daliResizeNearest",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:1844074e0ac59f18af14d49804609de5de03ee3875570cf88e2880642606f08f"
+    },
+    {
+      "case_id": "daliRgbToGray",
+      "path": "benchmark/cases/stencil-convolution/daliRgbToGray",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "medium",
+      "fingerprint": "sha256:e9e77b4562cafef27f975ca7c17fecd41b27df08e6fa43910e9ccda07c2945a9"
+    },
+    {
+      "case_id": "daliRotate",
+      "path": "benchmark/cases/stencil-convolution/daliRotate",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:49dff6c9c8bffd8e4e5bc1a64f7b18e2239b995fa66473133a466f9b8aaba3b4"
+    },
+    {
+      "case_id": "daliSlice3d",
+      "path": "benchmark/cases/stencil-convolution/daliSlice3d",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:3d458ef6736381dab34f7083e572cd0798ec25186c19a54e643b675c0cdbedf7"
+    },
+    {
+      "case_id": "daliSliceFlipNormalizePad",
+      "path": "benchmark/cases/stencil-convolution/daliSliceFlipNormalizePad",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:3b9bd2b1726da8697c316843d380bf3355ce43d1453a62f4e83cde00dcda4465"
+    },
+    {
+      "case_id": "daliTransposeHwcChw",
+      "path": "benchmark/cases/stencil-convolution/daliTransposeHwcChw",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:38bc74691ee2720a251c4e8cc1d76bee0d869b6eccc196681b9506e5923ef9cd"
+    },
+    {
+      "case_id": "daliWarpAffine",
+      "path": "benchmark/cases/stencil-convolution/daliWarpAffine",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:cd79605bcb78a65773ea0012f31c36f1bf7a4a3ced1bc0871f297dadaea23204"
+    },
+    {
+      "case_id": "daliWaterWarp",
+      "path": "benchmark/cases/stencil-convolution/daliWaterWarp",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:a1062cacf9bd990816cdab329d4fee94fa26be30a17548286acd55d41b8adf51"
+    },
+    {
+      "case_id": "finiteDiff1d",
+      "path": "benchmark/cases/stencil-convolution/finiteDiff1d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:722c16a6d58e5b0ea22fdad61de05b81ee248c76c8051c14757c177443e2723d"
+    },
+    {
+      "case_id": "ggmlPool2dAvg",
+      "path": "benchmark/cases/stencil-convolution/ggmlPool2dAvg",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "medium",
+      "fingerprint": "sha256:91391e9ed4fb9af9673e43d4d00057b500daf5cfba5921ff56ab84bec84ac211"
+    },
+    {
+      "case_id": "heat2d",
+      "path": "benchmark/cases/stencil-convolution/heat2d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6e7abb19195537206b249b2b08e73bda277039a80bc379b029d63a0d5a5a9b27"
+    },
+    {
+      "case_id": "hecbenchConvolution3d",
+      "path": "benchmark/cases/stencil-convolution/hecbenchConvolution3d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:0c232679dd68e9b1716d9ebe3f9b9e22cb36a422c89628313535f103e5c0dd4c"
+    },
+    {
+      "case_id": "hecbenchConvolution5pt2",
+      "path": "benchmark/cases/stencil-convolution/hecbenchConvolution5pt2",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:b15e8fa843ff00bfe9104c6e8fef0a860f6c8dce38f941d158e522a173ee7e3b"
+    },
+    {
+      "case_id": "hecbenchD2q9BgkStep",
+      "path": "benchmark/cases/stencil-convolution/hecbenchD2q9BgkStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:f1480b81eb2fa398a8f6b07e6fcf5d5ed810060da97d349242cf2dbe8070e4e6"
+    },
+    {
+      "case_id": "hecbenchFdtd3dStep",
+      "path": "benchmark/cases/stencil-convolution/hecbenchFdtd3dStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:d6b76aa7c03d531486f02d38a82e3307a392ed810826ac81a3c070e034b0597e"
+    },
+    {
+      "case_id": "hecbenchHeat2dBoundaryStep",
+      "path": "benchmark/cases/stencil-convolution/hecbenchHeat2dBoundaryStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:3057ceec25494ed293f76ddd6dac6c143aced68f457f904bdbf7ef32ecd2b9e7"
+    },
+    {
+      "case_id": "hecbenchHotspotStep",
+      "path": "benchmark/cases/stencil-convolution/hecbenchHotspotStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:5e999d5d1eacb008a399e6ae3f13fb14477c64393a28f7dd6deaa12b1701f79c"
+    },
+    {
+      "case_id": "hecbenchJacobi3d7pt",
+      "path": "benchmark/cases/stencil-convolution/hecbenchJacobi3d7pt",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:5ce6cd41b91e369bbf5c8820ba46075d1fac5e83a89bca8d7c5a5f0c5a7524ff"
+    },
+    {
+      "case_id": "hecbenchNeedlemanDiagScore",
+      "path": "benchmark/cases/stencil-convolution/hecbenchNeedlemanDiagScore",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f176022354577ff323ba586e6ffa3f95a9a99095a690c40b4318852142a24d15"
+    },
+    {
+      "case_id": "hecbenchNeedlemanWunsch",
+      "path": "benchmark/cases/stencil-convolution/hecbenchNeedlemanWunsch",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:c12c5b10d8f12988abeec369362d7c525c88697bbaf80c8b8080912732ff0d66"
+    },
+    {
+      "case_id": "hecbenchPathfinderMin3Step2",
+      "path": "benchmark/cases/stencil-convolution/hecbenchPathfinderMin3Step2",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:37f9232eb6c317d62f3581cadb3a51e8305bb86a868532e6fdf5cba629226256"
+    },
+    {
+      "case_id": "hecbenchPathfinderStep",
+      "path": "benchmark/cases/stencil-convolution/hecbenchPathfinderStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f21bf6c6793035203abe2eb7aa598c53130682661c16fd2c813c3fbb69c60121"
+    },
+    {
+      "case_id": "hecbenchSradCoeff2",
+      "path": "benchmark/cases/stencil-convolution/hecbenchSradCoeff2",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:bce35ef4f8441de537f159a89e36c780237a3bcfa94263ef2762cca8f7175b8d"
+    },
+    {
+      "case_id": "hecbenchSradDiffusion",
+      "path": "benchmark/cases/stencil-convolution/hecbenchSradDiffusion",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "hard",
+      "fingerprint": "sha256:88a361df649c9853702103e0f4b3827c6f81216e1009b8d6d90d31becdc21075"
+    },
+    {
+      "case_id": "jacobi2d",
+      "path": "benchmark/cases/stencil-convolution/jacobi2d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8975cd9772a4315d99c4002a8a43f0960d4f1f34d8d3f3cacc9d0cebbc5af45c"
+    },
+    {
+      "case_id": "mmcvBallQuery",
+      "path": "benchmark/cases/stencil-convolution/mmcvBallQuery",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:059996df7ec415c377e48238f07ec504a52a021394df98ed3feb3592ae8286e1"
+    },
+    {
+      "case_id": "mmcvBboxOverlaps",
+      "path": "benchmark/cases/stencil-convolution/mmcvBboxOverlaps",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:1bb8961e08c6fc531b65b26d699aca353ddd555a1a5cf0fd99fe6205c333af60"
+    },
+    {
+      "case_id": "mmcvFurthestPointSample",
+      "path": "benchmark/cases/stencil-convolution/mmcvFurthestPointSample",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:56e2e335151781c0ef320aafbd94c597b61fa1c380fc7ab54707b6aa5dcb9ff6"
+    },
+    {
+      "case_id": "mmcvGatherPoints",
+      "path": "benchmark/cases/stencil-convolution/mmcvGatherPoints",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:358a845a6bc095f5125f89a335238f3357b0ab6f6369143fd7f8875d9f9fbc4a"
+    },
+    {
+      "case_id": "mmcvGroupPoints",
+      "path": "benchmark/cases/stencil-convolution/mmcvGroupPoints",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:9a0140bcc5ec4fc0348c201a33f44881d070c1583eea3327abceff51f7b06361"
+    },
+    {
+      "case_id": "mmcvKnn",
+      "path": "benchmark/cases/stencil-convolution/mmcvKnn",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:95b762bf5116922cffa11666a339ec481ce756524d6e447ea8f5821f38503988"
+    },
+    {
+      "case_id": "mmcvNms",
+      "path": "benchmark/cases/stencil-convolution/mmcvNms",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:701b65c353cf56ec379118a118069184c3bc8ac79e1a3cbbaff76f9101feb15d"
+    },
+    {
+      "case_id": "mmcvPointsInBoxes",
+      "path": "benchmark/cases/stencil-convolution/mmcvPointsInBoxes",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:51c1444890ca388620806c47699a6d2bc50be5a7fd0411dd492501af16b8d610"
+    },
+    {
+      "case_id": "mmcvRoiAlign",
+      "path": "benchmark/cases/stencil-convolution/mmcvRoiAlign",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:9e3e3c7521dabb5485dfac876b578bf4403cae1f5e238d5d1a96dd51cf231065"
+    },
+    {
+      "case_id": "mmcvRoiPool",
+      "path": "benchmark/cases/stencil-convolution/mmcvRoiPool",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:27f337d90caf5b7a478496c4f97fd1c71ce9636c65e39f2fbe0fbd3104e92aa2"
+    },
+    {
+      "case_id": "mmcvThreeInterpolate",
+      "path": "benchmark/cases/stencil-convolution/mmcvThreeInterpolate",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:c2d92d2ebd4182e2a46fb0f92332c7f9ec54884c10c486611be35813cbe02fc6"
+    },
+    {
+      "case_id": "mmcvThreeNN",
+      "path": "benchmark/cases/stencil-convolution/mmcvThreeNN",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:5402b6c3bb96575645f87e3a007da4172454af104c10f9bbd31d54c751d28677"
+    },
+    {
+      "case_id": "pytorchMaxPool2d",
+      "path": "benchmark/cases/stencil-convolution/pytorchMaxPool2d",
+      "category": "stencil-convolution",
+      "domain": "image_processing",
+      "difficulty": "hard",
+      "fingerprint": "sha256:1243cc394be5376a0fbdd7a409985649dfca22da081f095296c3e5e4d8e9c6ef"
+    },
+    {
+      "case_id": "pytorchUpsampleNearest2d",
+      "path": "benchmark/cases/stencil-convolution/pytorchUpsampleNearest2d",
+      "category": "stencil-convolution",
+      "domain": "modern_ml",
+      "difficulty": "hard",
+      "fingerprint": "sha256:f5b656ba1d1175c4207eb9caa8da5c3ee905e4490bc83bed441cd7f7c7218b36"
+    },
+    {
+      "case_id": "stencil1d",
+      "path": "benchmark/cases/stencil-convolution/stencil1d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:f78c177ec590eeaf396570c24bbbed105c0784533be16ffb1a37f4b09c5e9caa"
+    },
+    {
+      "case_id": "stencil2d",
+      "path": "benchmark/cases/stencil-convolution/stencil2d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6b87a12a78c3471bb4e65dd35b05fb7dd11f8ce1e397f19f5a37d322e6b446f5"
+    },
+    {
+      "case_id": "stencil3d",
+      "path": "benchmark/cases/stencil-convolution/stencil3d",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:c7d906f2a4fc685326d06440b755b0ed01a504ff6f67c7ceab5f658ef811e493"
+    },
+    {
+      "case_id": "wave1dStep",
+      "path": "benchmark/cases/stencil-convolution/wave1dStep",
+      "category": "stencil-convolution",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:bae172fac97a4042f20900f5ba358b6af59a421d898dd116b056a5944955b460"
+    },
+    {
+      "case_id": "cudaEventTiming",
+      "path": "benchmark/cases/streams-atomics-templates/cudaEventTiming",
+      "category": "streams-atomics-templates",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:5480176330f17b07242aa0a470a9622299e54f7ea24d089522e82ad804bad1db"
+    },
+    {
+      "case_id": "cudaGraph",
+      "path": "benchmark/cases/streams-atomics-templates/cudaGraph",
+      "category": "streams-atomics-templates",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:1998d45868b9e09ca2e49947cd9a474b8f5a5a81da8a6759e5f16e47800a6685"
+    },
+    {
+      "case_id": "cudaSamplesAtomicHistogram",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesAtomicHistogram",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "hard",
+      "fingerprint": "sha256:0fdd1623380cdc08ca50c2a7fc9d454de15eb7c75f543986502b789855d4db39"
+    },
+    {
+      "case_id": "cudaSamplesAtomicMaxBuckets",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesAtomicMaxBuckets",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:ef5cbadcbac0ef45455fb4ba8529dc3a60c876970bacc8740949cebb7f2c34e6"
+    },
+    {
+      "case_id": "cudaSamplesDynamicSharedHistogram2",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesDynamicSharedHistogram2",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "hard",
+      "fingerprint": "sha256:586578ecd6c1a4cfbf9437fd5264a5c1d261da098fd32b409d5a630e25b2e087"
+    },
+    {
+      "case_id": "cudaSamplesDynamicSharedReverse",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesDynamicSharedReverse",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:8969b427538e1a0d78292ee5ed7c32fde2502bb5bd7f7d9c6f0447844710696f"
+    },
+    {
+      "case_id": "cudaSamplesStreamOverlapAdd",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesStreamOverlapAdd",
+      "category": "streams-atomics-templates",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:26542da21f3d9ce72b1f15b85deb7083ee5649bfed2dd5e01bb9f69b904f96dd"
+    },
+    {
+      "case_id": "cudaSamplesWarpBroadcast2",
+      "path": "benchmark/cases/streams-atomics-templates/cudaSamplesWarpBroadcast2",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "medium",
+      "fingerprint": "sha256:6797b28a43531b95b735b3f76a9e3c11240d46be32e107518f1bc27fa5e64788"
+    },
+    {
+      "case_id": "cudaStream",
+      "path": "benchmark/cases/streams-atomics-templates/cudaStream",
+      "category": "streams-atomics-templates",
+      "domain": "library_api",
+      "difficulty": "hard",
+      "fingerprint": "sha256:e1e777babc69045c0fe0b0680ff714979ef65137698d827740226d59e10cdc86"
+    },
+    {
+      "case_id": "hecbenchHistogramBuckets2",
+      "path": "benchmark/cases/streams-atomics-templates/hecbenchHistogramBuckets2",
+      "category": "streams-atomics-templates",
+      "domain": "hpc",
+      "difficulty": "medium",
+      "fingerprint": "sha256:126d2cf521f2d59c79ddd2b8f8f28935a44548c611095f73d43ef4234287def7"
+    },
+    {
+      "case_id": "histogram",
+      "path": "benchmark/cases/streams-atomics-templates/histogram",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "hard",
+      "fingerprint": "sha256:966aaf1007cfbdc3377a7b6705c6980352d7ad37779eaaa0513b8f2d496c1a88"
+    },
+    {
+      "case_id": "simpleTemplates",
+      "path": "benchmark/cases/streams-atomics-templates/simpleTemplates",
+      "category": "streams-atomics-templates",
+      "domain": "cuda_primitive",
+      "difficulty": "easy",
+      "fingerprint": "sha256:73c973741e6ee1175946c3f725486d7e70d2d8ed74b95b0914ac1991c6a59b68"
+    }
+  ]
+}

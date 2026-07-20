@@ -1,0 +1,1 @@
+Before editing, read skill/SKILL.md and follow that migration skill.

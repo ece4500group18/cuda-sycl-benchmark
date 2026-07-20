@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "experiment_id": "replace-harness-replace-model-smoke-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": ["vectorAdd"],
+  "harnesses": [
+    {
+      "slug": "replace-harness",
+      "adapter": "external_command",
+      "display_name": "Replace with harness name and version",
+      "argv": [
+        "REPLACE_WITH_HARNESS_EXECUTABLE",
+        "REPLACE_WITH_VERIFIED_HEADLESS_ARGUMENTS",
+        "{model_id}",
+        "{sandbox}",
+        "{agent_prompt_file}",
+        "{skill_file}"
+      ],
+      "telemetry_file": "stage2_telemetry.json"
+    }
+  ],
+  "models": [
+    {
+      "slug": "replace-exact-model-id",
+      "provider": "replace-provider",
+      "model_id": "REPLACE_WITH_EXACT_PROVIDER_MODEL_ID",
+      "require_immutable_model_id": true
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {"harness": "replace-harness", "model": "replace-exact-model-id"}
+    ]
+  },
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 150000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "canonical-agent-prompt-v1"
+}
