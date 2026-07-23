@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "experiment_id": "trae-opus-pilot-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {
+      "slug": "trae",
+      "adapter": "external_command",
+      "display_name": "TRAE (headless CLI placeholder)",
+      "argv": [
+        "REPLACE_WITH_TRAE_EXECUTABLE",
+        "REPLACE_WITH_VERIFIED_HEADLESS_ARGUMENTS",
+        "{model_id}",
+        "{sandbox}",
+        "{agent_prompt_file}",
+        "{skill_file}"
+      ],
+      "telemetry_file": "stage2_telemetry.json"
+    }
+  ],
+  "models": [
+    {
+      "slug": "opus",
+      "provider": "anthropic",
+      "model_id": "opus",
+      "require_immutable_model_id": false,
+      "identity_note": "The label 'opus' is treated as a TRAE route alias rather than a pinned immutable Anthropic snapshot. Before scored comparisons, record the exact visible backend/model name, TRAE version/build, and run timestamp, or replace this alias with a narrower exact route if available."
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {"harness": "trae", "model": "opus"}
+    ]
+  },
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 150000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}

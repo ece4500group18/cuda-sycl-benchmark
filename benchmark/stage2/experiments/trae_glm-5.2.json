@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "experiment_id": "trae-glm-5.2-pilot-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
+    "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
+  ],
+  "harnesses": [
+    {
+      "slug": "trae",
+      "adapter": "external_command",
+      "display_name": "TRAE (headless CLI placeholder)",
+      "argv": [
+        "REPLACE_WITH_TRAE_EXECUTABLE",
+        "REPLACE_WITH_VERIFIED_HEADLESS_ARGUMENTS",
+        "{model_id}",
+        "{sandbox}",
+        "{agent_prompt_file}",
+        "{skill_file}"
+      ],
+      "telemetry_file": "stage2_telemetry.json"
+    }
+  ],
+  "models": [
+    {
+      "slug": "glm-5.2",
+      "provider": "zhipu",
+      "model_id": "glm-5.2",
+      "require_immutable_model_id": false,
+      "identity_note": "TRAE model routing for GLM should be treated as an alias unless the UI or CLI exposes an immutable provider model ID. Record the visible label, TRAE version/build, routed backend if visible, and run timestamp."
+    }
+  ],
+  "skill_conditions": [
+    {"slug": "oob", "skill": null, "version": null},
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {"harness": "trae", "model": "glm-5.2"}
+    ]
+  },
+  "repeats": 1,
+  "budget": {"max_iterations": 30, "max_tokens": 150000, "wall_clock_s": 3600},
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}
