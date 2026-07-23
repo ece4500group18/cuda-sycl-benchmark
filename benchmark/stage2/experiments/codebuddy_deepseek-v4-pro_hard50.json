@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "experiment_id": "codebuddy-deepseek-v4-pro-hard50-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "attention",
+    "batchedGemm",
+    "bnbAdam8bitMoments",
+    "bnbInt8VectorQuant",
+    "bnbStableEmbeddingGrad",
+    "cutlassBasicGemmTile",
+    "cutlassBatchedGemmSmall",
+    "daliColorSpaceConversion",
+    "daliColorTwist",
+    "daliCropMirrorNormalize",
+    "daliDct8x8",
+    "daliNormalizePermute",
+    "daliRandomResizedCrop",
+    "daliResizeBilinear",
+    "daliResizeCropMirror",
+    "daliRotate",
+    "daliTransposeHwcChw",
+    "daliWarpAffine",
+    "flashAttentionScoreValue",
+    "flashCausalMaskSoftmax",
+    "flashOnlineSoftmax",
+    "gemm",
+    "ggmlArgmaxRows",
+    "ggmlCausalSoftmax",
+    "ggmlQ4Dequant",
+    "ggmlQuantizeQ8",
+    "ggmlRmsNormBlock",
+    "ggmlRopeInterleaved",
+    "layernorm",
+    "mmcvBallQuery",
+    "mmcvBboxOverlaps",
+    "mmcvFurthestPointSample",
+    "mmcvGatherPoints",
+    "mmcvGroupPoints",
+    "mmcvKnn",
+    "mmcvNms",
+    "mmcvPointsInBoxes",
+    "mmcvRoiAlign",
+    "mmcvRoiPool",
+    "pytorchMaxPool2d",
+    "pytorchUpsampleNearest2d",
+    "rmsnorm",
+    "softmax",
+    "vllmFusedAddRmsNorm",
+    "vllmLayernormResidual",
+    "vllmPagedAttentionScore",
+    "vllmPerTokenInt8Quant",
+    "vllmRotaryPaged",
+    "vllmTop1MoEGate",
+    "xformersSparse24Mask"
+  ],
+  "harnesses": [
+    {
+      "slug": "codebuddy",
+      "adapter": "claude_code",
+      "display_name": "CodeBuddy Code (cbc) 2.124.0",
+      "command": "codebuddy",
+      "permission_mode": "bypassPermissions"
+    }
+  ],
+  "models": [
+    {
+      "slug": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "model_id": "deepseek-v4-pro",
+      "require_immutable_model_id": false,
+      "identity_note": "CodeBuddy routes the alias 'deepseek-v4-pro' (from `codebuddy --model` supported list). Record `codebuddy --version` and the run timestamp alongside results."
+    }
+  ],
+  "skill_conditions": [
+    {
+      "slug": "oob",
+      "skill": null,
+      "version": null
+    },
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {
+        "harness": "codebuddy",
+        "model": "deepseek-v4-pro"
+      }
+    ]
+  },
+  "repeats": 1,
+  "budget": {
+    "max_iterations": 30,
+    "max_tokens": 500000,
+    "wall_clock_s": 1800
+  },
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "canonical-agent-prompt-v1"
+}

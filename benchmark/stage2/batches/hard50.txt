@@ -1,4 +1,4 @@
-# Batch 2: the 40 hard cases (subset of cuda_verified_250)
+# Batch 2: the rest 40 hard cases (subset of cuda_verified_250)
 attention
 batchedGemm
 bnbAdam8bitMoments
@@ -9,6 +9,7 @@ cutlassBatchedGemmSmall
 daliColorSpaceConversion
 daliColorTwist
 daliCropMirrorNormalize
+
 daliDct8x8
 daliNormalizePermute
 daliRandomResizedCrop

@@ -76,7 +76,16 @@ function Remove-PoisonedCells {
     if ($code -eq 1) {
         Write-Host "  network failure recorded for $Case; deleting its cells" -ForegroundColor Yellow
         & python (Join-Path $repoRoot 'tools/stage2/purge_network_cells.py') `
-            --experiment $Experiment --case $Case --purge --no-archive
+            --experiment $Experiment --case $Case --purge
+        $archiveDir = Join-Path (Split-Path $repoRoot -Parent) 'artifacts/stage2_purged'
+        if (Test-Path $archiveDir) {
+            $latest = Get-ChildItem -Directory $archiveDir |
+                Sort-Object LastWriteTime -Descending |
+                Select-Object -First 1
+            if ($latest) {
+                Write-Host ("  archived to: {0}" -f $latest.FullName) -ForegroundColor DarkGray
+            }
+        }
         return $true
     }
     return $false
@@ -159,9 +168,12 @@ foreach ($case in $cases) {
     & python (Join-Path $repoRoot 'tools/stage2/case_status.py') `
         --experiment $Experiment --case $case --totals
 
+    # cli.py run returns nonzero for a verification failure (wrong_output,
+    # compile_error, etc.). That's a scored result for the cell, not a batch
+    # problem -- the pre-case Test-Worker / mid-case Remove-PoisonedCells
+    # guards above are what actually guard the link. Keep going.
     if ($runExit -ne 0) {
-        Write-Host "cli.py run exited $runExit on $case; stopping the batch." -ForegroundColor Red
-        exit $runExit
+        Write-Host "cli.py run exited $runExit on $case; recorded as a failure, continuing the batch." -ForegroundColor Yellow
     }
 }
 

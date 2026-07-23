@@ -40,3 +40,6 @@ pilot_benchmark/cases/**/logs/*_perf_*.log
 .idea/
 .DS_Store
 *.swp
+
+# Local driver / state for unattended batch runs (not source-controlled)
+.run_state/
