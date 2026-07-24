@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "experiment_id": "qoder-lite-smoke-v1",
+  "generated_at": "2026-07-22T15:17:28.215139+00:00",
+  "total_results": 1,
+  "scored_results": 1,
+  "synthetic_results": 0,
+  "funnel_counts": {
+    "pass": 1
+  },
+  "scored_successes": 1,
+  "overall_pass_rate": 1.0,
+  "total_tokens": 0,
+  "cost_usd_by_source": {},
+  "kpis_by_harness_model_skill": [
+    {
+      "harness": "qoder",
+      "model": "lite",
+      "skill_condition": "oob",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 60.71897612900011,
+      "median_e2e_s": 60.71897612900011,
+      "mean_tokens": null,
+      "total_tokens": null,
+      "total_cached_input_tokens": null,
+      "total_reasoning_output_tokens": null,
+      "mean_iterations": 0.0,
+      "total_cost_usd": null,
+      "cost_sources": [
+        "unavailable"
+      ],
+      "funnel_counts": {
+        "pass": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "experiment_id": "qoder-lite-smoke-v1",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "qoder",
+      "adapter": "external_command",
+      "model": "lite",
+      "requested_model_id": "lite",
+      "reported_model_id": null,
+      "skill_condition": "oob",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "pass",
+      "migration_success": true,
+      "tokens_in": null,
+      "tokens_out": null,
+      "cached_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "tokens_total": null,
+      "cost_usd": null,
+      "cost_source": "unavailable",
+      "migration_wall_clock_s": 50.90654527300012,
+      "e2e_elapsed_s": 60.71897612900011,
+      "iterations": 0,
+      "token_budget": 150000,
+      "token_budget_exceeded": false,
+      "session_id": null,
+      "result_path": "artifacts/stage2/qoder-lite-smoke-v1/vectorAdd/qoder__lite__oob__r0/migration.json"
+    }
+  ]
+}
