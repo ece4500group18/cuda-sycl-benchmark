@@ -10,25 +10,33 @@
     {
       "slug": "trae",
       "adapter": "external_command",
-      "display_name": "TRAE (headless CLI placeholder)",
+      "display_name": "TRAE CLI via OpenRouter",
       "argv": [
-        "REPLACE_WITH_TRAE_EXECUTABLE",
-        "REPLACE_WITH_VERIFIED_HEADLESS_ARGUMENTS",
+        "E:\\SJTU Courses\\Senior Summer\\capstone\\trae-agent\\.venv\\Scripts\\trae-cli.exe",
+        "run",
+        "--config-file",
+        "E:\\SJTU Courses\\Senior Summer\\capstone\\cuda-sycl-benchmark\\.local\\trae_config.openrouter.yaml",
+        "--provider",
+        "openrouter",
+        "--model",
         "{model_id}",
+        "--working-dir",
         "{sandbox}",
+        "--file",
         "{agent_prompt_file}",
-        "{skill_file}"
+        "--max-steps",
+        "30"
       ],
       "telemetry_file": "stage2_telemetry.json"
     }
   ],
   "models": [
     {
-      "slug": "kimi-v3",
+      "slug": "kimi-k3",
       "provider": "moonshot",
-      "model_id": "kimi-v3",
+      "model_id": "moonshotai/kimi-k3",
       "require_immutable_model_id": false,
-      "identity_note": "TRAE model routing for Kimi should be treated as an alias unless an immutable provider model ID is visible. Record the displayed model label, TRAE version/build, routed backend if visible, and run timestamp."
+      "identity_note": "Pinned to the exact OpenRouter route `moonshotai/kimi-k3`. This differs from the original filename label `kimi-v3`; record the reported model, Trae CLI version, and run timestamp alongside results."
     }
   ],
   "skill_conditions": [
@@ -41,7 +49,7 @@
   ],
   "matrix": {
     "include": [
-      {"harness": "trae", "model": "kimi-v3"}
+      {"harness": "trae", "model": "kimi-k3"}
     ]
   },
   "repeats": 1,

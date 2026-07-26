@@ -10,14 +10,22 @@
     {
       "slug": "trae",
       "adapter": "external_command",
-      "display_name": "TRAE (headless CLI placeholder)",
+      "display_name": "TRAE CLI via OpenRouter",
       "argv": [
-        "REPLACE_WITH_TRAE_EXECUTABLE",
-        "REPLACE_WITH_VERIFIED_HEADLESS_ARGUMENTS",
+        "E:\\SJTU Courses\\Senior Summer\\capstone\\trae-agent\\.venv\\Scripts\\trae-cli.exe",
+        "run",
+        "--config-file",
+        "E:\\SJTU Courses\\Senior Summer\\capstone\\cuda-sycl-benchmark\\.local\\trae_config.openrouter.yaml",
+        "--provider",
+        "openrouter",
+        "--model",
         "{model_id}",
+        "--working-dir",
         "{sandbox}",
+        "--file",
         "{agent_prompt_file}",
-        "{skill_file}"
+        "--max-steps",
+        "30"
       ],
       "telemetry_file": "stage2_telemetry.json"
     }
@@ -26,9 +34,9 @@
     {
       "slug": "minimax-m3",
       "provider": "minimax",
-      "model_id": "minimax-m3",
+      "model_id": "minimax/minimax-m3",
       "require_immutable_model_id": false,
-      "identity_note": "TRAE may route the alias 'minimax-m3' rather than a dated immutable snapshot. Record the displayed alias, TRAE version/build, actual routed backend if visible, and run timestamp alongside results."
+      "identity_note": "Pinned to the exact OpenRouter route `minimax/minimax-m3`. Record the reported model, Trae CLI version, and run timestamp alongside results."
     }
   ],
   "skill_conditions": [

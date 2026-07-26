@@ -7,21 +7,23 @@ These experiment files mirror the repository's existing Stage 2 pilot format:
 - two skill conditions: `oob` and `with-sycl-skill`;
 - the same SSH Intel GPU executor used by the current baselines.
 
-Current limitation:
+Current status:
 
 - this repository has no native `trae` adapter under `tools/stage2/adapters/`;
-- no `trae` executable was discoverable on this machine during setup;
-- the new TRAE configs therefore use the `external_command` adapter with
-  explicit placeholders for the verified headless CLI invocation.
+- the experiment configs now use the verified external command:
+  `E:\SJTU Courses\Senior Summer\capstone\trae-agent\.venv\Scripts\trae-cli.exe`;
+- the command points at the local git-ignored OpenRouter config:
+  `.local/trae_config.openrouter.yaml`;
+- exact OpenRouter routes are currently pinned for:
+  `deepseek/deepseek-v4-pro`, `minimax/minimax-m3`,
+  `z-ai/glm-5.2`, and `moonshotai/kimi-k3`;
+- `gpt` and `opus` still need exact route names before scored runs.
 
-Before a TRAE config can pass `preflight`, replace the harness `argv` template
-with the real non-interactive command that:
+Current limitation:
 
-1. runs inside `{sandbox}`;
-2. accepts the selected `{model_id}`;
-3. reads the canonical `{agent_prompt_file}`;
-4. writes `{sandbox}/main.sycl.cpp`; and
-5. preferably writes `stage2_telemetry.json`.
+- the current external command path does not emit `stage2_telemetry.json`, so
+  Stage 2 can run, but token and cost fields from the harness side may remain
+  empty until a custom adapter or telemetry bridge is added.
 
 Suggested next commands after filling the real CLI syntax:
 
