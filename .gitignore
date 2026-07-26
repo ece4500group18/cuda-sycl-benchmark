@@ -8,6 +8,7 @@ __pycache__/
 .venv/
 venv/
 .env
+.local/
 
 # Build artifacts
 *.o
