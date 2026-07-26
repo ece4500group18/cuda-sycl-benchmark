@@ -1,20 +1,21 @@
 # Stage 2 migration report: qoder-deepseek-v4pro-hard50-v1
 
-Generated: 2026-07-23T09:09:47.891115+00:00
+Generated: 2026-07-23T09:09:33.891456+00:00
+Updated: 2026-07-24 (added credits & cost data from Qoder platform)
 
 - Results: 100 (100 scored, 0 synthetic)
 - Scored migrations passed: 90
 - Overall pass rate: 0.900
 
-- Total measured tokens: 0
-- Cost USD by source: n/a
+- Total measured credits: 689.18
+- Cost USD by source: 6.38
 
 ## Harness x model x skill KPIs
 
-| harness | model | condition | scored | passed | pass rate | mean E2E s | median E2E s | mean tokens | total cost USD | cost source |
+| harness | model | condition | scored | passed | pass rate | mean E2E s | median E2E s | mean credits | total cost USD | cost source |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| qoder | deepseek-v4pro | oob | 50 | 45 | 0.900 | 137.169 | 127.819 | n/a | n/a | unavailable |
-| qoder | deepseek-v4pro | with-sycl-skill | 50 | 45 | 0.900 | 138.462 | 121.877 | n/a | n/a | unavailable |
+| qoder | deepseek-v4pro | oob | 50 | 45 | 0.900 | 148.746 | 107.786 | 6.89 | $3.19 | qoder |
+| qoder | deepseek-v4pro | with-sycl-skill | 50 | 45 | 0.900 | 158.954 | 107.847 | 6.89 | $3.19 | qoder |
 
 ## Failure funnel
 
