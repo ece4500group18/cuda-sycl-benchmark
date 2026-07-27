@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "experiment_id": "trae-minimax-m3-pilot-v1",
+  "generated_at": "2026-07-27T09:02:46.241427+00:00",
+  "total_results": 2,
+  "scored_results": 2,
+  "synthetic_results": 0,
+  "funnel_counts": {
+    "compile_error": 1,
+    "wrong_output": 1
+  },
+  "scored_successes": 0,
+  "overall_pass_rate": 0.0,
+  "total_tokens": 1276756,
+  "cost_usd_by_source": {},
+  "kpis_by_harness_model_skill": [
+    {
+      "harness": "trae",
+      "model": "minimax-m3",
+      "skill_condition": "oob",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "mean_e2e_s": 551.4304191998672,
+      "median_e2e_s": 551.4304191998672,
+      "mean_tokens": 495208.0,
+      "total_tokens": 495208,
+      "total_cached_input_tokens": null,
+      "total_reasoning_output_tokens": null,
+      "mean_iterations": 30.0,
+      "total_cost_usd": null,
+      "cost_sources": [
+        "unavailable"
+      ],
+      "funnel_counts": {
+        "wrong_output": 1
+      }
+    },
+    {
+      "harness": "trae",
+      "model": "minimax-m3",
+      "skill_condition": "with-sycl-skill",
+      "attempts": 1,
+      "scored_attempts": 1,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "mean_e2e_s": 437.1740564999636,
+      "median_e2e_s": 437.1740564999636,
+      "mean_tokens": 781548.0,
+      "total_tokens": 781548,
+      "total_cached_input_tokens": null,
+      "total_reasoning_output_tokens": null,
+      "mean_iterations": 30.0,
+      "total_cost_usd": null,
+      "cost_sources": [
+        "unavailable"
+      ],
+      "funnel_counts": {
+        "compile_error": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "experiment_id": "trae-minimax-m3-pilot-v1",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "trae",
+      "adapter": "external_command",
+      "model": "minimax-m3",
+      "requested_model_id": "minimax/minimax-m3",
+      "reported_model_id": "minimax/minimax-m3",
+      "skill_condition": "oob",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "wrong_output",
+      "migration_success": false,
+      "tokens_in": 482920,
+      "tokens_out": 12288,
+      "cached_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "tokens_total": 495208,
+      "cost_usd": null,
+      "cost_source": "unavailable",
+      "migration_wall_clock_s": 527.0084823998623,
+      "e2e_elapsed_s": 551.4304191998672,
+      "iterations": 30,
+      "token_budget": 150000,
+      "token_budget_exceeded": true,
+      "session_id": null,
+      "result_path": "artifacts/stage2/trae-minimax-m3-pilot-v1/vectorAdd/trae__minimax-m3__oob__r0/migration.json"
+    },
+    {
+      "experiment_id": "trae-minimax-m3-pilot-v1",
+      "case_id": "vectorAdd",
+      "category": "simple-kernels",
+      "difficulty": "easy",
+      "harness": "trae",
+      "adapter": "external_command",
+      "model": "minimax-m3",
+      "requested_model_id": "minimax/minimax-m3",
+      "reported_model_id": "minimax/minimax-m3",
+      "skill_condition": "with-sycl-skill",
+      "repeat": 0,
+      "synthetic": false,
+      "eligible_for_scoring": true,
+      "funnel": "compile_error",
+      "migration_success": false,
+      "tokens_in": 772147,
+      "tokens_out": 9401,
+      "cached_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "tokens_total": 781548,
+      "cost_usd": null,
+      "cost_source": "unavailable",
+      "migration_wall_clock_s": 436.7060579000972,
+      "e2e_elapsed_s": 437.1740564999636,
+      "iterations": 30,
+      "token_budget": 150000,
+      "token_budget_exceeded": true,
+      "session_id": null,
+      "result_path": "artifacts/stage2/trae-minimax-m3-pilot-v1/vectorAdd/trae__minimax-m3__with-sycl-skill__r0/migration.json"
+    }
+  ]
+}

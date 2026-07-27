@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "experiment_id": "trae-opus-pilot-v1",
-  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250_trae_local.json",
   "case_ids": [
     "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
     "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
