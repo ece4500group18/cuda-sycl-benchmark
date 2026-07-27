@@ -4,6 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
+import os
 from pathlib import Path
 from typing import Any
 
@@ -67,12 +68,16 @@ def main() -> int:
     parser.add_argument("--max-steps", type=int, default=30)
     parser.add_argument("--telemetry-file", default="stage2_telemetry.json")
     parser.add_argument("--trajectory-file", default="stage2_trajectory.json")
+    parser.add_argument("--stdout-log", default="trae_cli_stdout.log")
+    parser.add_argument("--stderr-log", default="trae_cli_stderr.log")
     args = parser.parse_args()
 
     working_dir = Path(args.working_dir).resolve()
     working_dir.mkdir(parents=True, exist_ok=True)
     telemetry_path = working_dir / args.telemetry_file
     trajectory_path = working_dir / args.trajectory_file
+    stdout_log_path = working_dir / args.stdout_log
+    stderr_log_path = working_dir / args.stderr_log
 
     command = [
         str(Path(args.trae_exe).resolve()),
@@ -93,7 +98,22 @@ def main() -> int:
         str(trajectory_path),
     ]
 
-    completed = subprocess.run(command, cwd=str(working_dir), check=False)
+    env = dict(os.environ)
+    env["PYTHONUTF8"] = "1"
+    env["PYTHONIOENCODING"] = "utf-8"
+    env["TERM"] = env.get("TERM", "dumb")
+    completed = subprocess.run(
+        command,
+        cwd=str(working_dir),
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        env=env,
+    )
+    stdout_log_path.write_text(completed.stdout or "", encoding="utf-8")
+    stderr_log_path.write_text(completed.stderr or "", encoding="utf-8")
 
     telemetry: dict[str, Any]
     if trajectory_path.is_file():
@@ -127,7 +147,20 @@ def main() -> int:
             "message": "Trae CLI did not produce a trajectory file",
         }
 
+    if completed.returncode != 0:
+        tail = (completed.stderr or completed.stdout or "").strip()
+        if tail:
+            telemetry["message"] = tail[-1000:]
+
     telemetry_path.write_text(json.dumps(telemetry, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary = {
+        "returncode": completed.returncode,
+        "stdout_log": str(stdout_log_path),
+        "stderr_log": str(stderr_log_path),
+        "trajectory_file": str(trajectory_path),
+        "telemetry_file": str(telemetry_path),
+    }
+    sys.stdout.write(json.dumps(summary, ensure_ascii=False) + "\n")
     return completed.returncode
 
 
