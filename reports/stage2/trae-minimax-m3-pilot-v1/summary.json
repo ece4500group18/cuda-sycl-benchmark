@@ -1,16 +1,15 @@
 {
   "schema_version": 2,
   "experiment_id": "trae-minimax-m3-pilot-v1",
-  "generated_at": "2026-07-27T09:02:46.241427+00:00",
+  "generated_at": "2026-07-27T11:44:17.754896+00:00",
   "total_results": 2,
   "scored_results": 2,
   "synthetic_results": 0,
   "funnel_counts": {
-    "compile_error": 1,
-    "wrong_output": 1
+    "pass": 2
   },
-  "scored_successes": 0,
-  "overall_pass_rate": 0.0,
+  "scored_successes": 2,
+  "overall_pass_rate": 1.0,
   "total_tokens": 1276756,
   "cost_usd_by_source": {},
   "kpis_by_harness_model_skill": [
@@ -20,10 +19,10 @@
       "skill_condition": "oob",
       "attempts": 1,
       "scored_attempts": 1,
-      "successes": 0,
-      "pass_rate": 0.0,
-      "mean_e2e_s": 551.4304191998672,
-      "median_e2e_s": 551.4304191998672,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 566.8555003998335,
+      "median_e2e_s": 566.8555003998335,
       "mean_tokens": 495208.0,
       "total_tokens": 495208,
       "total_cached_input_tokens": null,
@@ -34,7 +33,7 @@
         "unavailable"
       ],
       "funnel_counts": {
-        "wrong_output": 1
+        "pass": 1
       }
     },
     {
@@ -43,10 +42,10 @@
       "skill_condition": "with-sycl-skill",
       "attempts": 1,
       "scored_attempts": 1,
-      "successes": 0,
-      "pass_rate": 0.0,
-      "mean_e2e_s": 437.1740564999636,
-      "median_e2e_s": 437.1740564999636,
+      "successes": 1,
+      "pass_rate": 1.0,
+      "mean_e2e_s": 467.8005876999814,
+      "median_e2e_s": 467.8005876999814,
       "mean_tokens": 781548.0,
       "total_tokens": 781548,
       "total_cached_input_tokens": null,
@@ -57,7 +56,7 @@
         "unavailable"
       ],
       "funnel_counts": {
-        "compile_error": 1
+        "pass": 1
       }
     }
   ],
@@ -76,8 +75,8 @@
       "repeat": 0,
       "synthetic": false,
       "eligible_for_scoring": true,
-      "funnel": "wrong_output",
-      "migration_success": false,
+      "funnel": "pass",
+      "migration_success": true,
       "tokens_in": 482920,
       "tokens_out": 12288,
       "cached_input_tokens": null,
@@ -86,7 +85,7 @@
       "cost_usd": null,
       "cost_source": "unavailable",
       "migration_wall_clock_s": 527.0084823998623,
-      "e2e_elapsed_s": 551.4304191998672,
+      "e2e_elapsed_s": 566.8555003998335,
       "iterations": 30,
       "token_budget": 150000,
       "token_budget_exceeded": true,
@@ -107,8 +106,8 @@
       "repeat": 0,
       "synthetic": false,
       "eligible_for_scoring": true,
-      "funnel": "compile_error",
-      "migration_success": false,
+      "funnel": "pass",
+      "migration_success": true,
       "tokens_in": 772147,
       "tokens_out": 9401,
       "cached_input_tokens": null,
@@ -117,7 +116,7 @@
       "cost_usd": null,
       "cost_source": "unavailable",
       "migration_wall_clock_s": 436.7060579000972,
-      "e2e_elapsed_s": 437.1740564999636,
+      "e2e_elapsed_s": 467.8005876999814,
       "iterations": 30,
       "token_budget": 150000,
       "token_budget_exceeded": true,
