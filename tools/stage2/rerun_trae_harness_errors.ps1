@@ -26,7 +26,7 @@ $Cli = 'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\tools\stage2\
 $experimentById = @{}
 foreach ($experimentFile in $ExperimentFiles) {
     if (-not (Test-Path $experimentFile)) {
-        Write-Warning "跳过不存在的 experiment 文件：$experimentFile"
+        Write-Warning "Skipping missing experiment file: $experimentFile"
         continue
     }
     $experiment = Get-Content $experimentFile -Raw | ConvertFrom-Json
@@ -35,7 +35,7 @@ foreach ($experimentFile in $ExperimentFiles) {
 
 $errorFiles = Get-ChildItem $ArtifactRoot -Recurse -Filter harness_error.json -ErrorAction SilentlyContinue
 if (-not $errorFiles) {
-    Write-Host '没有发现需要补跑的 harness_error.json。' -ForegroundColor Green
+    Write-Host 'No harness_error.json files found to rerun.' -ForegroundColor Green
     exit 0
 }
 
@@ -45,7 +45,7 @@ foreach ($file in $errorFiles) {
     if (-not $experimentById.ContainsKey($record.experiment_id)) {
         continue
     }
-    $key = '{0}|{1}|{2}' -f $record.experiment_id, $record.model, $record.skill_condition
+    $key = "$($record.experiment_id)||$($record.model)||$($record.skill_condition)"
     if (-not $groups.ContainsKey($key)) {
         $groups[$key] = [PSCustomObject]@{
             experiment_id = [string]$record.experiment_id
@@ -61,14 +61,14 @@ foreach ($file in $errorFiles) {
 }
 
 if ($groups.Count -eq 0) {
-    Write-Host '发现的 harness_error 不属于当前这四个 TRAE experiment，无需补跑。' -ForegroundColor Yellow
+    Write-Host 'Found harness_error files, but none belong to the configured TRAE experiments.' -ForegroundColor Yellow
     exit 0
 }
 
 foreach ($group in ($groups.Values | Sort-Object experiment_id, skill, model)) {
     $caseList = $group.cases | Sort-Object
     Write-Host ''
-    Write-Host ('=== 补跑 {0} / {1} / {2} ===' -f $group.experiment_id, $group.model, $group.skill) -ForegroundColor Cyan
+    Write-Host ("=== Rerun {0} / {1} / {2} ===" -f $group.experiment_id, $group.model, $group.skill) -ForegroundColor Cyan
     Write-Host ('cases: ' + ($caseList -join ', '))
 
     $args = @(
@@ -89,6 +89,6 @@ foreach ($group in ($groups.Values | Sort-Object experiment_id, skill, model)) {
 
     Invoke-RepoPython @args
     if ($LASTEXITCODE -ne 0) {
-        Write-Warning ('补跑未完全成功：{0} / {1} / {2}' -f $group.experiment_id, $group.model, $group.skill)
+        Write-Warning ("Rerun did not fully succeed: {0} / {1} / {2}" -f $group.experiment_id, $group.model, $group.skill)
     }
 }
