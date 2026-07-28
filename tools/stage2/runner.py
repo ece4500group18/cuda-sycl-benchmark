@@ -33,6 +33,13 @@ from remote import build_remote_config
 from sandbox import create_sandbox, restore_fixed_wrappers
 from verify import verify_case_output
 
+RETRYABLE_FILE_LOCK_MARKERS = (
+    "WinError 32",
+    "being used by another process",
+    "cannot access the file because it is being used by another process",
+)
+RETRYABLE_HARNESS_DELAYS_S = (2.0, 5.0, 10.0)
+
 
 @dataclass(frozen=True)
 class PlannedRun:
@@ -327,6 +334,11 @@ def _run_path(
     return artifact_root.joinpath(*parts)
 
 
+def _is_retryable_harness_exception(exc: Exception) -> bool:
+    message = str(exc)
+    return any(marker in message for marker in RETRYABLE_FILE_LOCK_MARKERS)
+
+
 def _remote_config(
     experiment: dict[str, Any], planned: PlannedRun, case_id: str
 ) -> dict[str, Any] | None:
@@ -547,27 +559,48 @@ def run_experiment(
     results: list[tuple[str, Path]] = []
     experiment_id = safe_component(str(experiment["experiment_id"]), "experiment_id")
     for planned in runs:
-        try:
-            results.append(execute_run(experiment, manifest, planned, artifact_root, overwrite))
-        except Exception as exc:  # Keep independent cells running after harness-level faults.
-            error_path = _run_path(artifact_root, experiment_id, planned) / "harness_error.json"
-            write_json(
-                error_path,
-                {
-                    "schema_version": 2,
-                    "experiment_id": experiment_id,
-                    "run_id": planned.run_id,
-                    "case_id": planned.case["case_id"],
-                    "harness": planned.harness["slug"],
-                    "model": planned.model["slug"],
-                    "skill_condition": planned.skill_condition["slug"],
-                    "status": "harness_error",
-                    "error_type": type(exc).__name__,
-                    "message": str(exc),
-                    "timestamp": utc_now(),
-                },
-            )
-            results.append(("harness_error", error_path))
+        attempts = 0
+        while True:
+            try:
+                results.append(
+                    execute_run(
+                        experiment,
+                        manifest,
+                        planned,
+                        artifact_root,
+                        overwrite or attempts > 0,
+                    )
+                )
+                break
+            except Exception as exc:  # Keep independent cells running after harness-level faults.
+                if _is_retryable_harness_exception(exc) and attempts < len(RETRYABLE_HARNESS_DELAYS_S):
+                    run_path = _run_path(artifact_root, experiment_id, planned)
+                    if run_path.exists():
+                        shutil.rmtree(run_path, ignore_errors=True)
+                    time.sleep(RETRYABLE_HARNESS_DELAYS_S[attempts])
+                    attempts += 1
+                    continue
+                error_path = _run_path(artifact_root, experiment_id, planned) / "harness_error.json"
+                write_json(
+                    error_path,
+                    {
+                        "schema_version": 2,
+                        "experiment_id": experiment_id,
+                        "run_id": planned.run_id,
+                        "case_id": planned.case["case_id"],
+                        "harness": planned.harness["slug"],
+                        "model": planned.model["slug"],
+                        "skill_condition": planned.skill_condition["slug"],
+                        "status": "harness_error",
+                        "error_type": type(exc).__name__,
+                        "message": str(exc),
+                        "retryable": _is_retryable_harness_exception(exc),
+                        "attempts": attempts + 1,
+                        "timestamp": utc_now(),
+                    },
+                )
+                results.append(("harness_error", error_path))
+                break
     return results
 
 
