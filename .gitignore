@@ -38,3 +38,6 @@ pilot_benchmark/cases/**/logs/*_perf_*.log
 .idea/
 .DS_Store
 *.swp
+
+# Paperwork
+thesis/
