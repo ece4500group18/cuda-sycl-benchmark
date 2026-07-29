@@ -81,6 +81,10 @@ def restore_fixed_wrappers(
     if include_cuda_tools:
         _write_executable(destination / "cuda_build.sh", CUDA_BUILD_WRAPPER)
         _write_executable(destination / "cuda_run.sh", CUDA_RUN_WRAPPER)
+    # Optional evaluator-owned wrapper used by the TRAE external_command harness.
+    trae_wrapper = Path(__file__).with_name("trae_openrouter_wrapper.py")
+    if trae_wrapper.is_file():
+        shutil.copy2(trae_wrapper, destination / "trae_openrouter_wrapper.py")
 
 
 def create_sandbox(

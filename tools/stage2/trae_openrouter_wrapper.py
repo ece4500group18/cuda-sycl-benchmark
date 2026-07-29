@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 import os
@@ -59,9 +60,21 @@ def _trajectory_to_telemetry(trajectory: dict[str, Any], fallback_model: str) ->
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--trae-exe", required=True)
-    parser.add_argument("--config-file", required=True)
-    parser.add_argument("--provider", required=True)
+    parser.add_argument(
+        "--trae-exe",
+        default=os.environ.get("TRAE_EXE", "trae-cli"),
+        help="Path to trae-cli executable. Defaults to env TRAE_EXE or 'trae-cli' (from PATH).",
+    )
+    parser.add_argument(
+        "--config-file",
+        default=os.environ.get("TRAE_CONFIG_FILE", ""),
+        help="TRAE config file path. Defaults to env TRAE_CONFIG_FILE.",
+    )
+    parser.add_argument(
+        "--provider",
+        default=os.environ.get("TRAE_PROVIDER", "openrouter"),
+        help="Model provider name passed to TRAE CLI. Defaults to env TRAE_PROVIDER or 'openrouter'.",
+    )
     parser.add_argument("--model", required=True)
     parser.add_argument("--working-dir", required=True)
     parser.add_argument("--prompt-file", required=True)
@@ -79,11 +92,29 @@ def main() -> int:
     stdout_log_path = working_dir / args.stdout_log
     stderr_log_path = working_dir / args.stderr_log
 
+    trae_exe = args.trae_exe
+    if Path(trae_exe).suffix.lower() == ".exe" or Path(trae_exe).is_absolute():
+        trae_exe_path = Path(trae_exe)
+    else:
+        resolved = shutil.which(trae_exe)
+        if not resolved:
+            raise FileNotFoundError(
+                f"Unable to locate '{trae_exe}'. Set --trae-exe or TRAE_EXE, or add it to PATH."
+            )
+        trae_exe_path = Path(resolved)
+
+    config_file = args.config_file.strip()
+    if not config_file:
+        raise ValueError("Missing config file. Provide --config-file or set TRAE_CONFIG_FILE.")
+    config_path = Path(config_file).expanduser().resolve()
+    if not config_path.is_file():
+        raise FileNotFoundError(f"Config file not found: {config_path}")
+
     command = [
-        str(Path(args.trae_exe).resolve()),
+        str(trae_exe_path.resolve()),
         "run",
         "--config-file",
-        str(Path(args.config_file).resolve()),
+        str(config_path),
         "--provider",
         args.provider,
         "--model",

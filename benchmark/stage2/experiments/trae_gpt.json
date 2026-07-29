@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "experiment_id": "trae-gpt-pilot-v1",
-  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250_trae_local.json",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
   "case_ids": [
     "vectorAdd", "transposeShared", "conv1dShared", "reduceSum", "bfs",
     "nbodyTiled", "tiledMatmul", "attention", "thrustSort", "histogram"
@@ -12,14 +12,9 @@
       "adapter": "external_command",
       "display_name": "TRAE CLI via OpenRouter",
       "argv": [
-        "E:\\SJTU Courses\\Senior Summer\\capstone\\trae-agent\\.venv\\Scripts\\python.exe",
-        "E:\\SJTU Courses\\Senior Summer\\capstone\\cuda-sycl-benchmark\\tools\\stage2\\trae_openrouter_wrapper.py",
-        "--trae-exe",
-        "E:\\SJTU Courses\\Senior Summer\\capstone\\trae-agent\\.venv\\Scripts\\trae-cli.exe",
-        "--config-file",
-        "E:\\SJTU Courses\\Senior Summer\\capstone\\cuda-sycl-benchmark\\.local\\trae_config.openrouter.yaml",
-        "--provider",
-        "openrouter",
+        "py",
+        "-3",
+        "{sandbox}\\trae_openrouter_wrapper.py",
         "--model",
         "{model_id}",
         "--working-dir",

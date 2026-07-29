@@ -10,13 +10,14 @@ These experiment files mirror the repository's existing Stage 2 pilot format:
 Current status:
 
 - this repository has no native `trae` adapter under `tools/stage2/adapters/`;
-- the experiment configs now use the verified external command:
-  `E:\SJTU Courses\Senior Summer\capstone\trae-agent\.venv\Scripts\python.exe`
-  plus `tools/stage2/trae_openrouter_wrapper.py`, which calls
-  `trae-cli.exe`, writes `stage2_trajectory.json`, and synthesizes
-  `stage2_telemetry.json`;
-- the command points at the local git-ignored OpenRouter config:
-  `.local/trae_config.openrouter.yaml`;
+- the experiment configs use the `external_command` adapter and invoke:
+  `py -3 {sandbox}/trae_openrouter_wrapper.py`;
+- `trae_openrouter_wrapper.py` is copied into each sandbox by the Stage 2
+  evaluator wrapper restoration step;
+- the wrapper calls `trae-cli` (looked up from `PATH` by default), writes
+  `stage2_trajectory.json`, and synthesizes `stage2_telemetry.json`;
+- users must provide their own TRAE config file (do not commit secrets):
+  set `TRAE_CONFIG_FILE` to a local YAML file path before running Stage 2.
 - exact OpenRouter routes are currently pinned for:
   `deepseek/deepseek-v4-pro`, `minimax/minimax-m3`,
   `z-ai/glm-5.2`, and `moonshotai/kimi-k3`;
@@ -34,6 +35,8 @@ Current limitation:
 Suggested next commands after filling the real CLI syntax:
 
 ```powershell
+setx TRAE_CONFIG_FILE "C:\path\to\trae_config.yaml"
+
 python tools/stage2/cli.py plan `
   --experiment benchmark/stage2/experiments/trae_<model>.json
 

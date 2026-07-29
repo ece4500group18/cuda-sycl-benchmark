@@ -1,0 +1,37 @@
+## Example TRAE CLI config for Stage 2 (OpenRouter)
+##
+## 1) Copy this file somewhere local (do not commit secrets), e.g.:
+##    E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\.local\trae_config.openrouter.yaml
+## 2) Set the environment variable before running Stage 2:
+##    setx TRAE_CONFIG_FILE "E:\...\trae_config.openrouter.yaml"
+## 3) Fill in your OpenRouter API key below.
+
+agents:
+  trae_agent:
+    enable_lakeview: false
+    model: trae_agent_model
+    max_steps: 200
+    tools:
+      - bash
+      - str_replace_based_edit_tool
+      - sequentialthinking
+      - task_done
+
+model_providers:
+  openrouter:
+    api_key: YOUR_OPENROUTER_API_KEY
+    provider: openai
+    base_url: https://openrouter.ai/api/v1
+
+models:
+  trae_agent_model:
+    model_provider: openrouter
+    # This is the "controller" model for the TRAE agent itself. Stage 2 overrides
+    # the actual target model via `--model <route>` at runtime.
+    model: openai/gpt-4o-mini
+    max_tokens: 4096
+    temperature: 0.5
+    top_p: 1
+    top_k: 0
+    max_retries: 10
+    parallel_tool_calls: true

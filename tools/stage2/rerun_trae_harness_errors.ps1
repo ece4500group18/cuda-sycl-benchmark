@@ -1,11 +1,6 @@
 param(
-    [string[]]$ExperimentFiles = @(
-        'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\benchmark\stage2\experiments\trae_deepseek-v4pro.json',
-        'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\benchmark\stage2\experiments\trae_glm-5.2.json',
-        'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\benchmark\stage2\experiments\trae_kimi-v3.json',
-        'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\benchmark\stage2\experiments\trae_minimax-m3.json'
-    ),
-    [string]$ArtifactRoot = 'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\artifacts\stage2',
+    [string[]]$ExperimentFiles = @(),
+    [string]$ArtifactRoot = '',
     [switch]$DryRun
 )
 
@@ -21,7 +16,21 @@ function Invoke-RepoPython {
     return $LASTEXITCODE
 }
 
-$Cli = 'E:\SJTU Courses\Senior Summer\capstone\cuda-sycl-benchmark\tools\stage2\cli.py'
+$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+$Cli = Join-Path $RepoRoot 'tools\stage2\cli.py'
+
+if (-not $ArtifactRoot) {
+    $ArtifactRoot = Join-Path $RepoRoot 'artifacts\stage2'
+}
+
+if (-not $ExperimentFiles -or $ExperimentFiles.Count -eq 0) {
+    $ExperimentFiles = @(
+        (Join-Path $RepoRoot 'benchmark\stage2\experiments\trae_deepseek-v4pro.json'),
+        (Join-Path $RepoRoot 'benchmark\stage2\experiments\trae_glm-5.2.json'),
+        (Join-Path $RepoRoot 'benchmark\stage2\experiments\trae_kimi-v3.json'),
+        (Join-Path $RepoRoot 'benchmark\stage2\experiments\trae_minimax-m3.json')
+    )
+}
 
 $experimentById = @{}
 foreach ($experimentFile in $ExperimentFiles) {
