@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchStreamclusterDistance",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchStreamclusterDistance",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3462901000002603,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:27.937244+00:00"
+}

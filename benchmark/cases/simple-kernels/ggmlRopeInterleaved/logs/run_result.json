@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlRopeInterleaved",
+  "case_path": "pilot_benchmark/cases/ai/ggmlRopeInterleaved",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.29598949999490287,
+  "message": "",
+  "timestamp": "2026-06-30T16:47:09.591715+00:00"
+}

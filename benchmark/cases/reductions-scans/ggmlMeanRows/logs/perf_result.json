@@ -1,0 +1,36 @@
+{
+  "case_name": "ggmlMeanRows",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 174.7467700006382,
+  "runtime_ms_median": 174.63909999787575,
+  "runtime_ms_std": 4.116555642380009,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:48:25.016993+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    169.95690000476316,
+    171.12559999804944,
+    175.34539999905974,
+    170.63580000103684,
+    180.60440000408562,
+    172.55200000363402,
+    182.4209999977029,
+    174.13330000272254,
+    175.54840000229888,
+    175.14489999302896
+  ],
+  "failures": []
+}

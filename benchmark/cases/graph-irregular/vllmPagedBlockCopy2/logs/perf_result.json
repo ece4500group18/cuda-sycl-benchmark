@@ -1,0 +1,37 @@
+{
+  "case_name": "vllmPagedBlockCopy2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    256,
+    16,
+    32
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 267.1354000003703,
+  "runtime_ms_median": 265.0204000001395,
+  "runtime_ms_std": 8.131193769978157,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:43:48.655230+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    280.97300000081304,
+    261.822000000393,
+    272.7116999994905,
+    256.9877000005363,
+    265.8946999999898,
+    272.50500000081956,
+    264.12879999952565,
+    275.8583000013459,
+    256.32670000049984,
+    264.14610000028915
+  ],
+  "failures": []
+}

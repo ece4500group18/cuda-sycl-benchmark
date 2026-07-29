@@ -1,0 +1,38 @@
+{
+  "case_name": "daliFlip",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    2,
+    16,
+    18,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 173.14411000006658,
+  "runtime_ms_median": 171.5836000003037,
+  "runtime_ms_std": 12.218441562185612,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:23.747650+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    181.63350000031642,
+    203.690700000152,
+    166.6590000004362,
+    162.6058000001649,
+    165.61790000014298,
+    162.01879999971425,
+    171.50310000033642,
+    173.08649999904446,
+    172.96170000008715,
+    171.664100000271
+  ],
+  "failures": []
+}

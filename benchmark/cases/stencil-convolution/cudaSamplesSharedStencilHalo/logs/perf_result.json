@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesSharedStencilHalo",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 378.49256000017704,
+  "runtime_ms_median": 377.6792500002557,
+  "runtime_ms_std": 17.142234643382913,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:21:57.080582+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    390.8891000000949,
+    385.10219999989204,
+    377.3241999997481,
+    373.8228000001982,
+    373.2064000005266,
+    412.3951000001398,
+    378.0343000007633,
+    370.81730000045354,
+    379.2957000005117,
+    344.03849999944214
+  ],
+  "failures": []
+}

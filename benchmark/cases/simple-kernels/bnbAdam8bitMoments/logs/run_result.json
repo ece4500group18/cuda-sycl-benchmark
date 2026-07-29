@@ -1,0 +1,10 @@
+{
+  "case_name": "bnbAdam8bitMoments",
+  "case_path": "pilot_benchmark/cases/ai/bnbAdam8bitMoments",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 2.5835871000017505,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:10.657691+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchBlackScholes",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchBlackScholes",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4462872999993124,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:20.071561+00:00"
+}

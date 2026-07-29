@@ -1,0 +1,36 @@
+{
+  "case_name": "ggmlRmsNormBlock",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    256,
+    512
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 243.32961999971303,
+  "runtime_ms_median": 240.00830000295537,
+  "runtime_ms_std": 22.340872329457493,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:48:45.293474+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    240.35270000604214,
+    221.22490000037942,
+    241.5527999983169,
+    296.20799999975134,
+    251.79799999750685,
+    239.6638999998686,
+    260.4401999997208,
+    228.03539999586064,
+    232.04919999989215,
+    221.97109999979148
+  ],
+  "failures": []
+}

@@ -1,0 +1,36 @@
+{
+  "case_name": "daliDct8x8",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1024,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 215.37490999999136,
+  "runtime_ms_median": 210.41589999958887,
+  "runtime_ms_std": 16.592043346053856,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:46.268467+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    217.87250000033964,
+    232.6466000004075,
+    249.32499999977153,
+    210.51579999948444,
+    224.81859999970766,
+    210.3159999996933,
+    206.41079999950307,
+    199.489700000413,
+    209.72880000044825,
+    192.62530000014522
+  ],
+  "failures": []
+}

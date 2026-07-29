@@ -1,0 +1,35 @@
+{
+  "case_name": "reduceMax",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 170.17823999995016,
+  "runtime_ms_median": 167.9791499991552,
+  "runtime_ms_std": 6.71400687571161,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:38:27.072266+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    176.6141999996762,
+    165.71379999913916,
+    165.7054999996035,
+    163.64900000007765,
+    167.89139999855252,
+    168.06689999975788,
+    179.7590999995009,
+    170.24029999993218,
+    181.3733000017237,
+    162.768900001538
+  ],
+  "failures": []
+}

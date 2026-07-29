@@ -1,0 +1,11 @@
+{
+  "case_name": "vllmLayernormResidual",
+  "case_path": "pilot_benchmark/cases/ai/vllmLayernormResidual",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3271840999950655,
+  "message": "",
+  "timestamp": "2026-06-30T16:43:51.666317+00:00",
+  "verifier_output": "PASS max_abs_error=4.768e-07 tol=0.0001\n"
+}

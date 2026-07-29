@@ -1,0 +1,36 @@
+{
+  "case_name": "bnbDequantizeBlockwise",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4096,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 286.97223999988637,
+  "runtime_ms_median": 287.61685000063153,
+  "runtime_ms_std": 10.27105796991571,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:47:41.130771+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    276.38699999806704,
+    272.01489999424666,
+    282.68889999890234,
+    287.7227999997558,
+    287.51090000150725,
+    280.2369999990333,
+    295.09430000325665,
+    289.23890000442043,
+    308.5905999978422,
+    290.237100001832
+  ],
+  "failures": []
+}

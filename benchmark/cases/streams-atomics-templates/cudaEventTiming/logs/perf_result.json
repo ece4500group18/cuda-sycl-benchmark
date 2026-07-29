@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaEventTiming",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 497.47787000051176,
+  "runtime_ms_median": 499.5133000011265,
+  "runtime_ms_std": 32.49676318328177,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:37:27.481327+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    509.3138000011095,
+    528.6438000002818,
+    484.0007000002515,
+    489.7128000011435,
+    530.9080000006361,
+    537.9185999991023,
+    475.158500001271,
+    444.91410000046017,
+    456.10690000103205,
+    518.1014999998297
+  ],
+  "failures": []
+}

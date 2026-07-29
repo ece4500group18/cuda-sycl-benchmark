@@ -1,0 +1,11 @@
+{
+  "case_name": "daliSlice3d",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliSlice3d",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2660883999997168,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:26.782720+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=0.0\n"
+}

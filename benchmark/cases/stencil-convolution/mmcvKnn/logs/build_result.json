@@ -1,0 +1,10 @@
+{
+  "case_name": "mmcvKnn",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvKnn",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 11.178158300001087,
+  "message": "",
+  "timestamp": "2026-06-30T07:20:54.156087+00:00"
+}

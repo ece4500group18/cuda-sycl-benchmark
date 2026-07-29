@@ -1,0 +1,36 @@
+{
+  "case_name": "ggmlQ8Dequant",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4096,
+    32
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 237.91195000012522,
+  "runtime_ms_median": 237.6409499993315,
+  "runtime_ms_std": 4.653819261258403,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:48:36.642814+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    242.07360000582412,
+    236.19239999970887,
+    240.61880000226665,
+    234.93149999558227,
+    232.4947000015527,
+    237.6345999946352,
+    237.64730000402778,
+    242.86859999847366,
+    230.12849999940954,
+    244.52949999977136
+  ],
+  "failures": []
+}

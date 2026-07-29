@@ -1,0 +1,38 @@
+{
+  "case_name": "daliEraseRect",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4,
+    64,
+    64,
+    3
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 242.69430999993347,
+  "runtime_ms_median": 244.78330000010828,
+  "runtime_ms_std": 10.860134258618224,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:36.211422+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    266.10509999954957,
+    244.75369999981922,
+    247.78740000056132,
+    230.41579999971873,
+    244.81290000039735,
+    228.1647999998313,
+    235.36700000022392,
+    246.59989999963727,
+    246.20799999956944,
+    236.72850000002654
+  ],
+  "failures": []
+}

@@ -1,0 +1,36 @@
+{
+  "case_name": "rope",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    128,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 209.91493000001356,
+  "runtime_ms_median": 201.59490000060032,
+  "runtime_ms_std": 33.46039519841475,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:00.950138+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    226.74670000014885,
+    209.93950000047334,
+    193.2503000007273,
+    181.68949999926554,
+    191.1563000012393,
+    264.3681000008655,
+    264.1782000009698,
+    213.7628999989829,
+    188.84759999855305,
+    165.21019999890996
+  ],
+  "failures": []
+}

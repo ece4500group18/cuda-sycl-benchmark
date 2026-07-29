@@ -1,0 +1,10 @@
+{
+  "case_name": "thrustTransformReduceNorm",
+  "case_path": "pilot_benchmark/cases/library_api/thrustTransformReduceNorm",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.48960319999969215,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:43.263660+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchCsrSpmv",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchCsrSpmv",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.337999099996523,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:41.731479+00:00"
+}

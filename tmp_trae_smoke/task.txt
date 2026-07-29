@@ -1,0 +1,1 @@
+Create a file named hello.txt in the working directory with exactly one line: ok

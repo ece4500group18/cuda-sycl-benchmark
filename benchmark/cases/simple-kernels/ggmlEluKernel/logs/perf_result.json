@@ -1,0 +1,35 @@
+{
+  "case_name": "ggmlEluKernel",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 615.4874100000598,
+  "runtime_ms_median": 617.3757500000647,
+  "runtime_ms_std": 14.956377483765825,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:42:36.451539+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    615.5989999997473,
+    618.1307999995624,
+    588.8026000002355,
+    628.3092000003307,
+    596.5713000005053,
+    605.370799999946,
+    632.8711999994994,
+    617.2822999997152,
+    634.4677000006413,
+    617.4692000004143
+  ],
+  "failures": []
+}

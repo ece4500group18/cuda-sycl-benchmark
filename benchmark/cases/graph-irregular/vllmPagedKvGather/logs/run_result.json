@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmPagedKvGather",
+  "case_path": "pilot_benchmark/cases/ai/vllmPagedKvGather",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4194145000001299,
+  "message": "",
+  "timestamp": "2026-07-01T03:41:53.224931+00:00"
+}

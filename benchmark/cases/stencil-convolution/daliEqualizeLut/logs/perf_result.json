@@ -1,0 +1,35 @@
+{
+  "case_name": "daliEqualizeLut",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    262144
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 296.6600099999596,
+  "runtime_ms_median": 298.12219999985246,
+  "runtime_ms_std": 11.976991016516049,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:55.966469+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    272.04359999996086,
+    288.0976999995255,
+    312.2049000003244,
+    301.7320999997537,
+    303.9424999997209,
+    287.8866000000926,
+    294.5122999999512,
+    302.68530000012106,
+    309.5480000001771,
+    293.9470999999685
+  ],
+  "failures": []
+}

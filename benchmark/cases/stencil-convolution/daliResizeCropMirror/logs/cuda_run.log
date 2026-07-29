@@ -1,0 +1,8 @@
+# command: original\build\app.exe output/cuda_output.txt
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliResizeCropMirror
+# time:    2026-06-30T07:32:11.549651+00:00
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 0.322567

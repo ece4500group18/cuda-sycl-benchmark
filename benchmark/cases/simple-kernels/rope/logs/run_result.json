@@ -1,0 +1,10 @@
+{
+  "case_name": "rope",
+  "case_path": "pilot_benchmark/cases/ai/rope",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.27017739999973855,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:23.286736+00:00"
+}

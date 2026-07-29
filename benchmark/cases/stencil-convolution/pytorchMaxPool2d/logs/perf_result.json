@@ -1,0 +1,38 @@
+{
+  "case_name": "pytorchMaxPool2d",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    2,
+    8,
+    8
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 173.79329000013968,
+  "runtime_ms_median": 172.76645000129065,
+  "runtime_ms_std": 10.362634047041617,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:35:23.404916+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    181.4183000005869,
+    180.91199999980745,
+    189.47579999985464,
+    160.3728999998566,
+    163.4844999989582,
+    165.44319999957224,
+    170.57180000119843,
+    174.96110000138287,
+    186.53210000047693,
+    164.7611999997025
+  ],
+  "failures": []
+}

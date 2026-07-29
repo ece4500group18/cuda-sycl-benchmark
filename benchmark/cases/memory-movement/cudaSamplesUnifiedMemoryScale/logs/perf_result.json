@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesUnifiedMemoryScale",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 861.8885500000033,
+  "runtime_ms_median": 857.9973999999311,
+  "runtime_ms_std": 34.57560476293778,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:48:13.381827+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    939.1152999996848,
+    859.0951000005589,
+    856.8996999993033,
+    823.0913000006694,
+    874.8018000005686,
+    852.939399999741,
+    860.0234999994427,
+    837.6000999996904,
+    892.1657999999297,
+    823.1535000004442
+  ],
+  "failures": []
+}

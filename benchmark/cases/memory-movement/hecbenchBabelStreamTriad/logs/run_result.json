@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchBabelStreamTriad",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchBabelStreamTriad",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.6768347999968682,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:35.747993+00:00"
+}

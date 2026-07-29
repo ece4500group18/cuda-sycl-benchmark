@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchD2q9BgkStep",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchD2q9BgkStep",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.34367040000506677,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:42.894078+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "case_name": "hecbenchMandelbrotIter",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchMandelbrotIter",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.34591069999987667,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:38.297124+00:00"
+}

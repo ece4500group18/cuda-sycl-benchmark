@@ -1,0 +1,11 @@
+{
+  "case_name": "hecbenchParticleLikelihood",
+  "case_path": "pilot_benchmark/cases/hpc/hecbenchParticleLikelihood",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.418546900000365,
+  "message": "",
+  "timestamp": "2026-07-01T03:43:45.845301+00:00",
+  "verifier_output": "PASS max_abs_error=1.788e-07 tol=1e-05\n"
+}

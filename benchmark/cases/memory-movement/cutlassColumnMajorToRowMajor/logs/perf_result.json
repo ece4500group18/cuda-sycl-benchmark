@@ -1,0 +1,36 @@
+{
+  "case_name": "cutlassColumnMajorToRowMajor",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    256,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 250.67812000006597,
+  "runtime_ms_median": 257.70230000034644,
+  "runtime_ms_std": 20.70556164593082,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:19:51.145606+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    223.86159999950905,
+    212.1183999997811,
+    277.9686000003494,
+    258.443100000477,
+    261.3604000007399,
+    233.36440000002767,
+    267.8869000001214,
+    259.325699999863,
+    255.49059999957535,
+    256.9615000002159
+  ],
+  "failures": []
+}

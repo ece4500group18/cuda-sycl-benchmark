@@ -1,0 +1,11 @@
+{
+  "case_name": "mmcvBallQuery",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvBallQuery",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.2663442000011855,
+  "message": "",
+  "timestamp": "2026-06-30T07:33:27.935724+00:00",
+  "verifier_output": "PASS max_abs_error=0.000e+00 tol=0.0\n"
+}

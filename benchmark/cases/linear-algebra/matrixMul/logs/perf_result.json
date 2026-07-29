@@ -1,0 +1,35 @@
+{
+  "case_name": "matrixMul",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    128
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 186.5838600000643,
+  "runtime_ms_median": 189.11520000074233,
+  "runtime_ms_std": 13.079636374150688,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:36:19.464986+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    169.30709999905957,
+    175.54439999912574,
+    176.48539999936474,
+    189.81490000078338,
+    171.40119999930903,
+    188.4155000007013,
+    207.51770000060787,
+    190.91590000061842,
+    193.45700000121724,
+    202.97949999985576
+  ],
+  "failures": []
+}

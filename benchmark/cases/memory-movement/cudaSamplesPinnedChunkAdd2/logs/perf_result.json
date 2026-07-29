@@ -1,0 +1,35 @@
+{
+  "case_name": "cudaSamplesPinnedChunkAdd2",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    524288
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 478.1562000001941,
+  "runtime_ms_median": 475.09154999988823,
+  "runtime_ms_std": 20.151288888856666,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:46:13.306340+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    518.7012999995204,
+    468.58419999989565,
+    499.14540000099805,
+    484.5279000001028,
+    478.2727999991039,
+    451.10250000107044,
+    485.7331000002887,
+    467.87919999951555,
+    455.7053000007727,
+    471.9103000006726
+  ],
+  "failures": []
+}

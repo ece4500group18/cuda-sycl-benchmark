@@ -1,0 +1,10 @@
+{
+  "case_name": "tiledMatmul",
+  "case_path": "pilot_benchmark/cases/medium/tiledMatmul",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.30495369999880495,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:49.198255+00:00"
+}

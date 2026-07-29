@@ -1,0 +1,10 @@
+{
+  "case_name": "layernorm",
+  "case_path": "pilot_benchmark/cases/ai/layernorm",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4768664999992325,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:22.397617+00:00"
+}

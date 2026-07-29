@@ -1,0 +1,10 @@
+{
+  "case_name": "mmcvBallQuery",
+  "case_path": "benchmark/collection/stencil-convolution/cases/mmcvBallQuery",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3222836000004463,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:14.200370+00:00"
+}

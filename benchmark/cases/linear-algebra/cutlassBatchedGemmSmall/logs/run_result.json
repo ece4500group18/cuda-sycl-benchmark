@@ -1,0 +1,10 @@
+{
+  "case_name": "cutlassBatchedGemmSmall",
+  "case_path": "pilot_benchmark/cases/ai/cutlassBatchedGemmSmall",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.37381229999937204,
+  "message": "",
+  "timestamp": "2026-07-01T03:42:04.355253+00:00"
+}

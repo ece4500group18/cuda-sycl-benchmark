@@ -1,0 +1,10 @@
+{
+  "case_name": "daliColorTwist",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliColorTwist",
+  "status": "pass",
+  "command": "cmd.exe /s /c \"\"D:\\Tools\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && nvcc -allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -O2 -std=c++17 original/main.cu -o original/build/app\"",
+  "returncode": 0,
+  "elapsed_sec": 11.528661599999396,
+  "message": "",
+  "timestamp": "2026-06-30T07:17:01.729015+00:00"
+}

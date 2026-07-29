@@ -1,0 +1,38 @@
+{
+  "case_name": "ggmlPool2dAvg",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    4,
+    3,
+    64,
+    64
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 184.0750899995328,
+  "runtime_ms_median": 182.41925000256742,
+  "runtime_ms_std": 3.902148316263557,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T16:48:28.544207+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    182.82970000291243,
+    180.64420000155224,
+    187.96799999836367,
+    184.4617999959155,
+    180.59319999883883,
+    182.00880000222242,
+    189.82300000061514,
+    190.3676000001724,
+    180.39119999593822,
+    181.6633999987971
+  ],
+  "failures": []
+}

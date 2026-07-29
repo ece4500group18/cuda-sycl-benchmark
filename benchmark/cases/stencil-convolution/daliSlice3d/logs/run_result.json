@@ -1,0 +1,10 @@
+{
+  "case_name": "daliSlice3d",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliSlice3d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3303842999994231,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:12.660074+00:00"
+}

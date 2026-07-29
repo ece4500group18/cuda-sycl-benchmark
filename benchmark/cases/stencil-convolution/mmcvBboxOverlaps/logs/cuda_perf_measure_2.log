@@ -1,0 +1,8 @@
+# command: original\build\app.exe output/cuda_perf_measure_2.txt
+# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\mmcvBboxOverlaps
+# time:    2026-06-30T07:34:54.065696+00:00
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+# exit code: 0
+# elapsed_sec: 0.166664

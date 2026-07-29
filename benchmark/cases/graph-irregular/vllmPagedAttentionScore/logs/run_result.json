@@ -1,0 +1,10 @@
+{
+  "case_name": "vllmPagedAttentionScore",
+  "case_path": "pilot_benchmark/cases/ai/vllmPagedAttentionScore",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3374483999941731,
+  "message": "",
+  "timestamp": "2026-06-30T16:42:50.583762+00:00"
+}

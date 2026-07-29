@@ -1,0 +1,40 @@
+{
+  "case_name": "daliResizeCropMirror",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    20,
+    20,
+    3,
+    12,
+    12
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 166.71738999975787,
+  "runtime_ms_median": 165.51244999936898,
+  "runtime_ms_std": 4.869755229469932,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:38.359281+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    161.16870000041672,
+    161.03039999870816,
+    170.02620000130264,
+    165.74129999935394,
+    165.28359999938402,
+    176.35780000091472,
+    166.8917999995756,
+    163.36499999852094,
+    172.1639999996114,
+    165.14509999979055
+  ],
+  "failures": []
+}

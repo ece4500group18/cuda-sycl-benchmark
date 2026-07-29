@@ -1,0 +1,36 @@
+{
+  "case_name": "biasAddRelu",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    512,
+    256
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 220.97401000009995,
+  "runtime_ms_median": 216.01370000007591,
+  "runtime_ms_std": 10.89313430037002,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:42:53.008407+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    212.03260000038426,
+    225.34950000044773,
+    242.00459999883606,
+    230.43009999855713,
+    214.54720000110683,
+    217.27029999965453,
+    212.58130000023812,
+    214.7571000004973,
+    208.71450000049663,
+    232.05290000078094
+  ],
+  "failures": []
+}

@@ -1,0 +1,11 @@
+{
+  "case_name": "daliDct8x8",
+  "case_path": "pilot_benchmark/cases/ai/daliDct8x8",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3682791000001089,
+  "message": "",
+  "timestamp": "2026-07-01T03:43:28.751398+00:00",
+  "verifier_output": "PASS max_abs_error=1.907e-06 tol=0.0001\n"
+}

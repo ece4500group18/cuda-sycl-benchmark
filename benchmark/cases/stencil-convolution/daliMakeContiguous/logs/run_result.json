@@ -1,0 +1,10 @@
+{
+  "case_name": "daliMakeContiguous",
+  "case_path": "benchmark/collection/stencil-convolution/cases/daliMakeContiguous",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.3061730000008538,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:09.999736+00:00"
+}

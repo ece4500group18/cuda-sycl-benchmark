@@ -1,0 +1,40 @@
+{
+  "case_name": "pytorchUpsampleNearest2d",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1,
+    2,
+    8,
+    8,
+    16,
+    16
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 172.08230999985972,
+  "runtime_ms_median": 169.50720000022557,
+  "runtime_ms_std": 9.540520731721038,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:35:25.866566+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    178.7927999994281,
+    178.78960000052757,
+    188.9729000013176,
+    171.8358000016451,
+    160.15749999860418,
+    166.7983000006643,
+    167.17859999880602,
+    165.7132999989699,
+    161.0979999986739,
+    181.48629999996047
+  ],
+  "failures": []
+}

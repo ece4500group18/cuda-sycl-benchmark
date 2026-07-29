@@ -1,0 +1,10 @@
+{
+  "case_name": "ggmlNegKernel",
+  "case_path": "pilot_benchmark/cases/ai/ggmlNegKernel",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.8108380000003308,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:05.419245+00:00"
+}

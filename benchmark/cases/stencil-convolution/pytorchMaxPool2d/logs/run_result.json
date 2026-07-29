@@ -1,0 +1,10 @@
+{
+  "case_name": "pytorchMaxPool2d",
+  "case_path": "benchmark/collection/stencil-convolution/cases/pytorchMaxPool2d",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.29013969999869005,
+  "message": "",
+  "timestamp": "2026-06-30T07:32:19.057533+00:00"
+}

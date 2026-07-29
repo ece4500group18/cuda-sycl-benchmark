@@ -1,0 +1,36 @@
+{
+  "case_name": "daliBoxEncoder",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    64,
+    5
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 169.36794000048394,
+  "runtime_ms_median": 165.96080000090296,
+  "runtime_ms_std": 8.995129366074611,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:34:06.419299+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    163.41760000068462,
+    162.1806999992259,
+    183.3319000015763,
+    181.88980000013544,
+    180.68370000037248,
+    166.81960000096296,
+    159.91939999912574,
+    165.10200000084296,
+    167.6225000010163,
+    162.7122000008967
+  ],
+  "failures": []
+}

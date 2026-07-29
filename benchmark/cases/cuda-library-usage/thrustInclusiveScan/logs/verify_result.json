@@ -1,0 +1,11 @@
+{
+  "case_name": "thrustInclusiveScan",
+  "case_path": "pilot_benchmark/cases/library_api/thrustInclusiveScan",
+  "status": "pass",
+  "command": "E:\\Miniconda\\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.39946790000067267,
+  "message": "",
+  "timestamp": "2026-07-01T03:44:00.034593+00:00",
+  "verifier_output": "PASS max_abs_error=3.189e-06 tol=1e-05\n"
+}

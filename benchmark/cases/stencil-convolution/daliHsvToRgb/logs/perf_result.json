@@ -1,0 +1,35 @@
+{
+  "case_name": "daliHsvToRgb",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    65536
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 281.8866099999468,
+  "runtime_ms_median": 280.89349999982005,
+  "runtime_ms_std": 7.142321383597659,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T03:46:41.687595+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    281.56940000008035,
+    286.2555000001521,
+    280.21759999955975,
+    289.1749999998865,
+    270.56009999978414,
+    274.7641999994812,
+    294.33479999988776,
+    286.1424000002444,
+    277.41299999979674,
+    278.4341000005952
+  ],
+  "failures": []
+}

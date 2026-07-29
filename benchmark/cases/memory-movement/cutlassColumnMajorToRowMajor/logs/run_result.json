@@ -1,0 +1,10 @@
+{
+  "case_name": "cutlassColumnMajorToRowMajor",
+  "case_path": "pilot_benchmark/cases/ai/cutlassColumnMajorToRowMajor",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.34940629999982775,
+  "message": "",
+  "timestamp": "2026-07-01T04:13:28.444786+00:00"
+}

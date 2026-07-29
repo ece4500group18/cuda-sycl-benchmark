@@ -1,0 +1,35 @@
+{
+  "case_name": "siluActivation",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 580.7482199998049,
+  "runtime_ms_median": 586.7804999998043,
+  "runtime_ms_std": 24.879051586511906,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-06-30T07:42:37.679513+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    588.6153999999806,
+    593.5374000000593,
+    596.4454999993904,
+    619.876299999305,
+    583.5565999987011,
+    537.0016000015312,
+    594.673799998418,
+    549.5279000006121,
+    559.3021000004228,
+    584.945599999628
+  ],
+  "failures": []
+}

@@ -1,0 +1,35 @@
+{
+  "case_name": "ggmlTanhKernel",
+  "status": "pass",
+  "gpu_model": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "cuda_version": "12.1",
+  "driver_version": "596.21",
+  "compiler": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin\\nvcc.EXE",
+  "problem_size": [
+    1048576
+  ],
+  "warmup_iterations": 3,
+  "measure_iterations": 10,
+  "runtime_ms_mean": 603.4254500001225,
+  "runtime_ms_median": 601.585249999971,
+  "runtime_ms_std": 19.575456989508282,
+  "metric_type": "runtime",
+  "bandwidth_GBps": null,
+  "throughput_items_per_sec": null,
+  "gflops": null,
+  "timestamp": "2026-07-01T04:42:26.429449+00:00",
+  "notes": "Process-level elapsed time; kernel-level timers can be added per case.",
+  "runs_ms": [
+    601.1464000002888,
+    584.9773999998433,
+    631.315600000562,
+    574.233300000742,
+    604.5850000000428,
+    592.1887000004062,
+    634.7379999997429,
+    602.0240999996531,
+    591.0923999999795,
+    617.9535999999644
+  ],
+  "failures": []
+}

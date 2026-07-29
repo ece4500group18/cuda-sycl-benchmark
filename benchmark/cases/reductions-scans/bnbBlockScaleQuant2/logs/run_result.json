@@ -1,0 +1,10 @@
+{
+  "case_name": "bnbBlockScaleQuant2",
+  "case_path": "pilot_benchmark/cases/ai/bnbBlockScaleQuant2",
+  "status": "pass",
+  "command": "original\\build\\app.exe output/cuda_output.txt",
+  "returncode": 0,
+  "elapsed_sec": 0.4771997999996529,
+  "message": "",
+  "timestamp": "2026-07-01T04:39:31.446307+00:00"
+}
