@@ -4,6 +4,8 @@
 
 This note summarizes the 10-case pilot results for four models evaluated under the TRAE framework:
 
+The original 10 pilot cases were: `vectorAdd`, `transposeShared`, `conv1dShared`, `reduceSum`, `bfs`, `nbodyTiled`, `tiledMatmul`, `attention`, `thrustSort`, and `histogram`.
+
 - `DeepSeek V4 Pro`
 - `Kimi K3`
 - `GLM 5.2`
