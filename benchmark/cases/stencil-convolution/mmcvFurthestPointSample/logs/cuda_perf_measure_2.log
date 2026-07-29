@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_measure_2.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\mmcvFurthestPointSample
-# time:    2026-06-30T07:34:56.583058+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.159267

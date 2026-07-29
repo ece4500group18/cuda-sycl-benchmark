@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_warmup_1.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliResizeBilinear
-# time:    2026-06-30T07:34:33.630543+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.176551

@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_warmup_1.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliColorTwist
-# time:    2026-06-30T07:34:11.479398+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.194884

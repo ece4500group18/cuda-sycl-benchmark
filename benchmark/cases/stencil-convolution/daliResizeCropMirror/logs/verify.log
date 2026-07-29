@@ -1,9 +1,0 @@
-# command: E:\Miniconda\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliResizeCropMirror
-# time:    2026-06-30T07:33:25.929287+00:00
-----------------------------------------------------------------------
-PASS max_abs_error=1.192e-07 tol=0.0001
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.293075

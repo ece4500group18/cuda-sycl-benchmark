@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_measure_1.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\mmcvRoiPool
-# time:    2026-06-30T07:35:14.094766+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.161591

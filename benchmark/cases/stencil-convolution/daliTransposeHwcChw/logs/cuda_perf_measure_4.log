@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_measure_4.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliTransposeHwcChw
-# time:    2026-06-30T07:34:44.340972+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.165081

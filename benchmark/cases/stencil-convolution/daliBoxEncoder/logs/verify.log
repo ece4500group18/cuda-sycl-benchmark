@@ -1,9 +1,0 @@
-# command: E:\Miniconda\python.exe tests/verify.py --variant cuda --output output/cuda_output.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\daliBoxEncoder
-# time:    2026-06-30T07:33:22.162004+00:00
-----------------------------------------------------------------------
-PASS max_abs_error=1.311e-06 tol=0.0001
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.276963

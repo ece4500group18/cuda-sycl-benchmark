@@ -1,8 +1,0 @@
-# command: original\build\app.exe output/cuda_perf_warmup_3.txt
-# cwd:     D:\Documents\ECE450\cuda-sycl-benchmark\benchmark\collection\stencil-convolution\cases\mmcvGroupPoints
-# time:    2026-06-30T07:35:01.398408+00:00
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-# exit code: 0
-# elapsed_sec: 0.171176
