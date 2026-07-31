@@ -1,17 +1,16 @@
 {
   "schema_version": 2,
   "experiment_id": "qoder-minimax-m3-hard50-v1",
-  "generated_at": "2026-07-22T20:53:43.757425+00:00",
+  "generated_at": "2026-07-31T14:10:00.047330+00:00",
   "total_results": 100,
   "scored_results": 100,
   "synthetic_results": 0,
   "funnel_counts": {
-    "missing": 1,
-    "pass": 88,
+    "pass": 89,
     "wrong_output": 11
   },
-  "scored_successes": 88,
-  "overall_pass_rate": 0.88,
+  "scored_successes": 89,
+  "overall_pass_rate": 0.89,
   "total_tokens": 0,
   "cost_usd_by_source": {},
   "kpis_by_harness_model_skill": [
@@ -21,10 +20,10 @@
       "skill_condition": "oob",
       "attempts": 50,
       "scored_attempts": 50,
-      "successes": 44,
-      "pass_rate": 0.88,
-      "mean_e2e_s": 175.19570970008004,
-      "median_e2e_s": 90.44704578799883,
+      "successes": 45,
+      "pass_rate": 0.9,
+      "mean_e2e_s": 104.57176153221982,
+      "median_e2e_s": 88.5618774274999,
       "mean_tokens": null,
       "total_tokens": null,
       "total_cached_input_tokens": null,
@@ -35,8 +34,7 @@
         "unavailable"
       ],
       "funnel_counts": {
-        "missing": 1,
-        "pass": 44,
+        "pass": 45,
         "wrong_output": 5
       }
     },
@@ -1134,8 +1132,8 @@
       "repeat": 0,
       "synthetic": false,
       "eligible_for_scoring": true,
-      "funnel": "missing",
-      "migration_success": false,
+      "funnel": "pass",
+      "migration_success": true,
       "tokens_in": null,
       "tokens_out": null,
       "cached_input_tokens": null,
@@ -1143,8 +1141,8 @@
       "tokens_total": null,
       "cost_usd": null,
       "cost_source": "unavailable",
-      "migration_wall_clock_s": 3600.1337604869987,
-      "e2e_elapsed_s": 3600.170633463,
+      "migration_wall_clock_s": 59.00615047098836,
+      "e2e_elapsed_s": 68.97322506998898,
       "iterations": 0,
       "token_budget": 150000,
       "token_budget_exceeded": false,
