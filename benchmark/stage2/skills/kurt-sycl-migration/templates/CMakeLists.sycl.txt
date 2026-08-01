@@ -1,0 +1,43 @@
+# SYCL build flags for migrated kernels + tests.
+# PREFERRED USE: a *source of icpx/SYCL flags* to fold into the project's existing build (add a SYCL
+# rule beside the nvcc/CMake one) so SYCL is a backend that mirrors the CUDA structure — not a
+# standalone fork. Use this file as a self-contained CMake project ONLY as a fallback, when the CUDA
+# structure genuinely cannot be mirrored (e.g. a pure-Python Triton project with no C/C++ host).
+# Fallback build with icpx:
+#   cmake -S sycl -B sycl/build -DCMAKE_CXX_COMPILER=icpx
+#   cmake --build sycl/build -j && ctest --test-dir sycl/build
+cmake_minimum_required(VERSION 3.20)
+project(sycl_migration LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# SYCL via Intel oneAPI DPC++/C++ compiler (icpx).
+add_compile_options(-fsycl -O3)
+add_link_options(-fsycl)
+
+# Optional AOT (faster first run, catches codegen issues early). Use the token for target.aot_device
+# from .sycl/config.json — `bmg-g21` for Xe2 Arc Pro B60; `bmg-g31` for Xe2 Arc Pro B70; `cri` for Xe3P CRI:
+#   add_compile_options(-fsycl-targets=spir64_gen -Xs "-device bmg-g31")
+#   add_link_options(-fsycl-targets=spir64_gen -Xs "-device bmg-g31")
+#
+# IMPORTANT for optimization/profiling: build the profiling target JIT (leave AOT OFF above), because
+# IGC compiles an AOT build at BUILD time so the runtime shader dump used by stall→asm annotation is
+# empty (see sycl-profiler §4). If you must ship AOT, capture the dump at build time instead:
+#   set(IGC_DUMP $ENV{IGC_SHADER_DUMP_DIR})   # or a fixed path
+#   # build with:  IGC_ShaderDumpEnable=1 IGC_DumpToCustomDir=<dir> cmake --build ...
+# then feed it to profile_metrics.sh with SHADER_DUMP=prebuilt SHADER_DUMP_DIR=<dir>.
+
+enable_testing()
+
+# --- Per-kernel library + test target (repeat per kernel) ---
+# add_library(k_<id> src/<id>.cpp)
+# add_executable(test_<id> tests/test_<id>.cpp)
+# target_link_libraries(test_<id> PRIVATE k_<id>)
+# add_test(NAME <id> COMMAND test_<id>)
+
+# --- Per-kernel standalone benchmark target (the optimization measure + profile target) ---
+# Single-kernel driver over representative shapes (model configs / general / edge). Keep it JIT so it
+# can be the unitrace stall + IGC shader-dump target during optimization. See templates/kernel_bench.cpp.
+# add_executable(bench_<id> bench/kernel_bench_<id>.cpp)
+# target_link_libraries(bench_<id> PRIVATE k_<id>)

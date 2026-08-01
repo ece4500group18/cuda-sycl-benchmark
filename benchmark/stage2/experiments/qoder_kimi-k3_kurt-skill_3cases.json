@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "experiment_id": "qoder-kimi-k3-kurt-skill-3cases-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "bnbAdam8bitMoments",
+    "ggmlRopeInterleaved",
+    "vllmRotaryPaged"
+  ],
+  "harnesses": [
+    {
+      "slug": "qoder",
+      "adapter": "external_command",
+      "display_name": "Qoder CLI 1.1.4",
+      "argv": [
+        "/home/terry/.local/bin/qodercli",
+        "-p",
+        "--permission-mode",
+        "bypass_permissions",
+        "-m",
+        "{model_id}",
+        "-w",
+        "{sandbox}",
+        "--output-format",
+        "json",
+        "{prompt}"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "slug": "kimi-k3",
+      "provider": "moonshot",
+      "model_id": "Kimi-K3",
+      "require_immutable_model_id": false,
+      "identity_note": "Qoder Kimi-K3 via qodercli v1.1.4"
+    }
+  ],
+  "skill_conditions": [
+    {
+      "slug": "with-kurt-skill",
+      "skill": "benchmark/stage2/skills/kurt-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {
+        "harness": "qoder",
+        "model": "kimi-k3"
+      }
+    ]
+  },
+  "repeats": 1,
+  "budget": {
+    "max_iterations": 30,
+    "max_tokens": 150000,
+    "wall_clock_s": 3600
+  },
+  "executor": {
+    "kind": "ssh",
+    "target_env": "STAGE2_SSH_TARGET",
+    "remote_root": "/tmp/cuda-sycl-benchmark-stage2",
+    "setup_command": "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1",
+    "device_selector": "level_zero:gpu",
+    "gpu_slots": 1,
+    "remote_timeout_s": 3600,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "canonical-agent-prompt-v1"
+}
