@@ -11,6 +11,16 @@ At the time of writing, the repository contains completed hard50 summaries for:
 
 Hard50 summaries for `Kimi` and `Minimax` are not present under `reports/stage2/` yet, so this document only reports DeepSeek and GLM.
 
+## Observed TRAE shell fragility for Kimi and Minimax
+
+Although hard50 summaries for `Kimi` and `Minimax` are not complete yet, the available trajectories already show a recurring issue specific to the **TRAE + Kimi** and **TRAE + Minimax** combinations: **significant shell interaction fragility** under the current Windows-hosted local agent environment.
+
+The important distinction is that evaluator-side build and run still happen through the normal Stage 2 flow and ultimately target the remote Ubuntu server. However, before the evaluator reaches that stage, the agent often tries to inspect files and self-validate by issuing local shell commands such as `ls`, `pwd`, `head`, `tail`, `bash ./sycl_build.sh`, and `bash ./sycl_run.sh`. In the observed Kimi and Minimax trajectories, these commands frequently interact poorly with the Windows host shell and path conventions, leading to repeated failed attempts, causing the whole workflow to get stuck in the local phase.
+
+This pattern was much less visible in the earlier 10-case pilot and is therefore likely amplified by the harder case mix in hard50 rather than by any change in the prompt or evaluation policy. Because the prompt is held constant across models, this should be interpreted as a **model-harness interaction effect** rather than a prompt-design difference.
+
+Based on the inspections, a reasonable working hypothesis is that these two model+harness combinations do **not adapt well when they see bash-oriented commands in a local environment that is not a clean native Unix shell**. This is still a hypothesis rather than a formally isolated causal result, but it is strongly consistent with the repeated local-shell failures, repeated `.sh` execution attempts, and the visible Windows-side `.sh` application popup reported during runs.
+
 ## Overall results (hard50)
 
 | Model | Experiment | Total | Pass | Wrong output | Compile error | Missing | Pass rate | Total tokens | Avg tokens / cell |
