@@ -1,0 +1,122 @@
+{
+  "schema_version": 2,
+  "experiment_id": "baseline-claude-opus47-local-v1",
+  "dataset_manifest": "benchmark/stage2/datasets/cuda_verified_250.json",
+  "case_ids": [
+    "attention",
+    "batchedGemm",
+    "bnbAdam8bitMoments",
+    "bnbInt8VectorQuant",
+    "bnbStableEmbeddingGrad",
+    "cutlassBasicGemmTile",
+    "cutlassBatchedGemmSmall",
+    "daliColorSpaceConversion",
+    "daliColorTwist",
+    "daliCropMirrorNormalize",
+    "daliDct8x8",
+    "daliNormalizePermute",
+    "daliRandomResizedCrop",
+    "daliResizeBilinear",
+    "daliResizeCropMirror",
+    "daliRotate",
+    "daliTransposeHwcChw",
+    "daliWarpAffine",
+    "flashAttentionScoreValue",
+    "flashCausalMaskSoftmax",
+    "flashOnlineSoftmax",
+    "gemm",
+    "ggmlArgmaxRows",
+    "ggmlCausalSoftmax",
+    "ggmlQ4Dequant",
+    "ggmlQuantizeQ8",
+    "ggmlRmsNormBlock",
+    "ggmlRopeInterleaved",
+    "layernorm",
+    "mmcvBallQuery",
+    "mmcvBboxOverlaps",
+    "mmcvFurthestPointSample",
+    "mmcvGatherPoints",
+    "mmcvGroupPoints",
+    "mmcvKnn",
+    "mmcvNms",
+    "mmcvPointsInBoxes",
+    "mmcvRoiAlign",
+    "mmcvRoiPool",
+    "pytorchMaxPool2d",
+    "pytorchUpsampleNearest2d",
+    "rmsnorm",
+    "softmax",
+    "vllmFusedAddRmsNorm",
+    "vllmLayernormResidual",
+    "vllmPagedAttentionScore",
+    "vllmPerTokenInt8Quant",
+    "vllmRotaryPaged",
+    "vllmTop1MoEGate",
+    "xformersSparse24Mask"
+  ],
+  "harnesses": [
+    {
+      "slug": "claude-code",
+      "adapter": "claude_code",
+      "display_name": "Claude Code",
+      "command": "claude",
+      "permission_mode": "acceptEdits",
+      "allowed_tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash(./sycl_build.sh:*)",
+        "Bash(./sycl_run.sh:*)"
+      ],
+      "disallowed_tools": [
+        "WebFetch",
+        "WebSearch"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "slug": "opus-4-7",
+      "provider": "anthropic",
+      "model_id": "claude-opus-4-7",
+      "model_id_env": "CLAUDE_BASELINE_MODEL",
+      "require_immutable_model_id": true
+    }
+  ],
+  "skill_conditions": [
+    {
+      "slug": "oob",
+      "skill": null,
+      "version": null
+    },
+    {
+      "slug": "with-sycl-skill",
+      "skill": "benchmark/stage2/skills/cuda-to-sycl-migration",
+      "version": "v1"
+    }
+  ],
+  "matrix": {
+    "include": [
+      {
+        "harness": "claude-code",
+        "model": "opus-4-7"
+      }
+    ]
+  },
+  "repeats": 1,
+  "budget": {
+    "max_iterations": 30,
+    "max_tokens": 500000,
+    "wall_clock_s": 3600
+  },
+  "executor": {
+    "kind": "local",
+    "device_selector": "opencl:gpu",
+    "gpu_slots": 1,
+    "extra_sycl_flags": []
+  },
+  "reference_mode": "none",
+  "prompt_version": "translation-task-v2"
+}
