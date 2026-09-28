@@ -894,8 +894,31 @@ def add_windows_nvcc_flags(command: str) -> str:
     return shell_command(parts)
 
 
+def add_nvcc_arch_flag(command: str) -> str:
+    """Inject -arch=<CUDA_STAGE1_ARCH> for local GPUs when the toolkit is newer
+    than the installed driver (e.g. CUDA 13.3 nvcc on a driver capped at 13.0),
+    which otherwise emits binaries the driver rejects with "the provided PTX was
+    compiled with an unsupported toolchain". No-op unless CUDA_STAGE1_ARCH is set
+    and the command is nvcc without an explicit -arch/-gencode/-code target.
+    This is an environment override; it does not alter case metadata."""
+    arch = os.environ.get("CUDA_STAGE1_ARCH", "").strip()
+    if not arch:
+        return command
+    try:
+        parts = shlex.split(command, posix=os.name != "nt")
+    except ValueError:
+        return command
+    if not parts or Path(parts[0]).name.lower() not in {"nvcc", "nvcc.exe"}:
+        return command
+    if any(p.startswith(("-arch", "-gencode", "-code", "--gpu-architecture")) for p in parts):
+        return command
+    parts.insert(1, f"-arch={arch}")
+    return shell_command(parts)
+
+
 def prepare_cuda_build_command(command: str) -> str:
     command = add_windows_nvcc_flags(command)
+    command = add_nvcc_arch_flag(command)
     if os.name != "nt" or which("cl") is not None:
         return command
     vcvars = find_vcvars64()
